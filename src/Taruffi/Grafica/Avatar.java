@@ -1,46 +1,26 @@
-package Taruffi;
+package Taruffi.Grafica;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class AvatarNickname extends JPanel {
+//Classe che gestisce l'avatar del giocatore
+//TODO  : implementare il pattern MVC
+public class Avatar extends JPanel {
 
-    private static JLabel nickname;
     private static JLabel contenitoreAvatar;
-    private static AvatarNickname istanza;
+    private static Avatar istanza;
 
-    private AvatarNickname(){
-
+    private Avatar(){
         setLayout(new BoxLayout(this,BoxLayout.PAGE_AXIS));
-        setNickname();
         setAvatar();
         setVisible(true);
-
-
     }
 
-    public static AvatarNickname getAvatarNickname(){
-        if(istanza==null){
-            istanza = new AvatarNickname();
-        }
-        return istanza;
-    }
-
-    public void setNickname(String nick){
-
-        nickname.setText(nick);
-
-    }
-
-    public void setNickname(){
-        String nick = JOptionPane.showInputDialog("Inserisci il nickname");
-        nickname = new JLabel(nick);
-        Font font = new Font("SansSerif", Font.PLAIN, 20);
-        nickname.setFont(font);
-        nickname.setSize(50,20);
-        add(nickname);
-    }
-
+    /**
+     * Metodo che permette di settare l'avatar del giocatore
+     * @param avatar Stringa contenente il percorso dell'immagine
+     */
+    //TODO: sostituire la stringa con un filesystem a schermo ed unire i due metodi
     public void setAvatar(String avatar){
 
         ImageIcon immagineAvatar = new ImageIcon(avatar);
@@ -62,4 +42,11 @@ public class AvatarNickname extends JPanel {
         add(contenitoreAvatar);
     }
 
+    //implementa il pattern singleton
+    public static Avatar getAvatar(){
+        if(istanza==null){
+            istanza = new Avatar();
+        }
+        return istanza;
+    }
 }

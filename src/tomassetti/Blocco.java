@@ -1,4 +1,5 @@
 package tomassetti;
+import Taruffi.Disegnabile;
 //classe blocco che implementa l'interfaccia Disegnabile, rappresenta un blocco del gioco bomberman
 //dispone di due campi X e Y che rappresentano le coordinate del blocco
 public abstract class Blocco implements Disegnabile{
@@ -14,5 +15,10 @@ public abstract class Blocco implements Disegnabile{
     public int getY() {
         return Y;
     }
+
+    public void disegna() {
+        //TODO: implementare il metodo
+    }
+
 
 }

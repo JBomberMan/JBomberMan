@@ -1,8 +1,9 @@
-package Taruffi;
+package Taruffi.Grafica;
 
 import javax.swing.*;
 import java.awt.*;
 
+//Classe che gestisce il profilo dell'utente
 public class ProfiloUtente extends JFrame{
 
     private String nickname;
@@ -20,7 +21,10 @@ public class ProfiloUtente extends JFrame{
     private JLabel contenitoreNickname;
 
 
-
+    /**
+     * Costruttore della classe ProfiloUtente
+     * Privato per implementare il pattern singleton
+     */
     private ProfiloUtente(){
 
         super("JUNO");
@@ -31,8 +35,12 @@ public class ProfiloUtente extends JFrame{
         menu.setBackground(Color.gray);
         menu.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(Color.BLACK), BorderFactory.createLineBorder(Color.BLACK)));
         add(menu, BorderLayout.PAGE_START);
-        AvatarNickname av = AvatarNickname.getAvatarNickname();
-        add(av, BorderLayout.BEFORE_LINE_BEGINS);
+        Avatar av = Avatar.getAvatar();
+        Nickname nick = Nickname.getNickname();
+        add(av, BorderLayout.LINE_START);
+        add(nick, BorderLayout.LINE_END);
+        //AvatarNickname av = AvatarNickname.getAvatarNickname();
+        //add(av, BorderLayout.BEFORE_LINE_BEGINS);
         setVisible(true);
 
     }
@@ -43,7 +51,7 @@ public class ProfiloUtente extends JFrame{
 
     public void setNickname(String nickname) {
         this.nickname = nickname;
-        AvatarNickname.getAvatarNickname().setNickname(nickname);
+        Nickname.getNickname().setNickname(nickname);
     }
 
     public String getAvatar() {
@@ -52,7 +60,7 @@ public class ProfiloUtente extends JFrame{
 
     public void setAvatar(String avatar) {
         this.avatar = avatar;
-        AvatarNickname.getAvatarNickname().setAvatar(avatar);
+        Avatar.getAvatar().setAvatar(avatar);
     }
 
     public int getPartiteGiocate() {
