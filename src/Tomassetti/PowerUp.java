@@ -1,4 +1,4 @@
-package tomassetti;
+package Tomassetti;
 import java.awt.*;
 import Taruffi.Disegnabile;
 

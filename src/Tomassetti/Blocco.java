@@ -1,4 +1,4 @@
-package tomassetti;
+package Tomassetti;
 import Taruffi.Disegnabile;
 import java.awt.*;
 //classe blocco che implementa l'interfaccia Disegnabile, rappresenta un blocco del gioco bomberman
