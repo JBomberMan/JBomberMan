@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Porfiri/Bomba.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Porfiri/BomberMan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +80,7 @@
       <workItem from="1680822232902" duration="345000" />
       <workItem from="1680875257059" duration="448000" />
       <workItem from="1680878442416" duration="2751000" />
-      <workItem from="1681562286829" duration="1500000" />
+      <workItem from="1681562286829" duration="1525000" />
     </task>
     <servers />
   </component>

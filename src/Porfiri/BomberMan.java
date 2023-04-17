@@ -44,4 +44,8 @@ public class BomberMan implements Disegnabile{
     }
 
 
+    @Override
+    public void disegna() {
+        //TODO: implementare il disegno del bomberman
+    }
 }
