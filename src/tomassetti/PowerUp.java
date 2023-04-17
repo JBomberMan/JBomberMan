@@ -1,5 +1,5 @@
 package tomassetti;
-
+import java.awt.*;
 import Taruffi.Disegnabile;
 
 //classe che rappresenta powerup del gioco bomberman
@@ -8,9 +8,12 @@ import Taruffi.Disegnabile;
 public abstract  class PowerUp implements Disegnabile {
     private int X;
     private int Y;
+    Image[] Sprite;
+    int indiceAnimazione;
     public PowerUp(int X, int Y) {
         this.X = X;
         this.Y = Y;
+        this.indiceAnimazione = 0;
     }
     public int getX() {
         return X;
@@ -19,6 +22,8 @@ public abstract  class PowerUp implements Disegnabile {
         return Y;
     }
     public abstract void effetto();
+
+    public Image nextSprite() {return Sprite[indiceAnimazione++ % Sprite.length];}
 
     public void disegna() {
         //TODO  implementare il metodo

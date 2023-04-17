@@ -1,5 +1,5 @@
 package tomassetti;
-
+import java.awt.*;
 import java.util.Observable;
 
 //il blocco può contenere un powerup, se il blocco viene distrutto il powerup viene rilasciato
@@ -7,11 +7,16 @@ import java.util.Observable;
 public class BloccoDistruttibile extends Blocco implements Observable {
     private boolean distrutto = false;
     private PowerUp powerup;
+    int indiceAnimazione;
     public BloccoDistruttibile(int X, int Y, PowerUp powerup) {
         super(X, Y);
         this.powerup = powerup;
+        this.indiceAnimazione = 0;
     }
-
+    public void distruggi() {
+        setDistrutto(true);
+    }
+    public Image nextSprite() {return Sprite[indiceAnimazione++ % Sprite.length];}
     public boolean isDistrutto() {
         return distrutto;
     }
