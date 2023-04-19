@@ -41,6 +41,7 @@ public class BomberMan implements Disegnabile{
 
     public void setScore(int score){
         //perché avevamo detto di metterlo qua?
+        // non ricordo ma effettivamente non potremmo soltanto farlo aggiornare dal vivew?
     }
 
 
