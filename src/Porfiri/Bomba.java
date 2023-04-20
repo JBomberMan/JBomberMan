@@ -11,10 +11,9 @@ public class Bomba implements Disegnabile{
     Image[] Sprite; //immagini dell'animazione
     int indiceAnimazione; //indice dell'immagine corrente
 
-    public Bomba(int x, int y, int raggio, int timer, Image[] Sprite) {
+    public Bomba(int x, int y, int timer, Image[] Sprite) {
         this.x = x;
         this.y = y;
-        this.raggio = raggio;
         this.timer = timer;
         this.Sprite = Sprite;
         this.indiceAnimazione = 0;

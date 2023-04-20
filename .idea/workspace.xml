@@ -5,20 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Tomassetti/ControlExplosion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tomassetti/CupAndBall.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tomassetti/IceCreamCone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tomassetti/MaximumExplosion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tomassetti/OneUp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tomassetti/OvercomeBlock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tomassetti/OvercomeBombs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tomassetti/Time.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/SchermataSconfitta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/SchermataVittoria.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Porfiri/BomberMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Porfiri/BomberMan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tomassetti/Blocco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tomassetti/Block.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tomassetti/BloccoDistruttibile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tomassetti/DestructibleBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tomassetti/BloccoNonDistruttibile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tomassetti/IndestructibleBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Porfiri/Bomba.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Porfiri/Bomba.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prova.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,16 +41,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Taruffi.Grafica.Main" />
