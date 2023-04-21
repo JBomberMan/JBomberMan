@@ -8,6 +8,6 @@ public class Time extends PowerUp{
     @Override
     public void effetto() {
         // TODO Auto-generated method stub
-        
+        //resetta il timer del livello
     }
 }
