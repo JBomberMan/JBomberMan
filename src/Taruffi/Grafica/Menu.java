@@ -53,6 +53,27 @@ public class Menu extends JPanel {
                 ProfiloUtente.getProfilo().setNickname(nickname);
             }
         });
+
+        /**
+         * Classe anonima per avviare la partita
+         */
+        bottonePartita.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Partita partita = new Partita();
+                JFrame frame = new JFrame("Bomberman");
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.add(partita);
+                frame.pack();
+                frame.setVisible(true);
+                partita.startGameThread(); //fa partire direttamente la partita senza chiedere ulteriori cose
+                                           //leggasi "dovrebbe", va tutto debuggato
+            }
+        });
+
+
+
+
     }
 
 

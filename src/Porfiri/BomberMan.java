@@ -6,15 +6,15 @@ import java.awt.*;
 
 public class BomberMan implements Disegnabile{
 
-    int x,y; //posizione del bomberman
-    int vite; //punti vita del bomberman
-    int velocita; //velocità del bomberman
-    Image[] Sprite; //immagini dell'animazione
-    int indiceAnimazione; //indice dell'immagine corrente
+    private static int x,y; //posizione del bomberman
+    private int vite; //punti vita del bomberman
+    private static int velocita; //velocità del bomberman
+    private Image[] Sprite; //immagini dell'animazione
+    private int indiceAnimazione; //indice dell'immagine corrente
 
     public BomberMan(int x, int y, int puntiVita, int velocita, Image[] Sprite) {
-        this.x = x;
-        this.y = y;
+        this.x = 100;
+        this.y = 100; //posizioni di base
         this.vite = puntiVita;
         this.velocita = velocita;
         this.Sprite = Sprite;
@@ -48,5 +48,12 @@ public class BomberMan implements Disegnabile{
     @Override
     public void disegna() {
         //TODO: implementare il disegno del bomberman
+    }
+
+    public static int getX(){
+        return x;
+    }
+    public static int getY(){
+        return y;
     }
 }
