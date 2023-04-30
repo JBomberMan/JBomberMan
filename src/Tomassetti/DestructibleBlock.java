@@ -4,7 +4,7 @@ import java.util.Observable;
 
 //il blocco può contenere un powerup, se il blocco viene distrutto il powerup viene rilasciato
 // può essere visto da Livello per sapere se il blocco è distrutto(implementa l'interfaccia Observable)
-public class DestructibleBlock extends Block implements Observable {
+public class DestructibleBlock extends Blocco  {
     private boolean distrutto = false;
     private PowerUp powerup;
     int indiceAnimazione;
@@ -16,7 +16,6 @@ public class DestructibleBlock extends Block implements Observable {
     public void distruggi() {
         setDistrutto(true);
     }
-    public Image nextSprite() {return Sprite[indiceAnimazione++ % Sprite.length];}
     public boolean isDistrutto() {
         return distrutto;
     }
@@ -29,10 +28,13 @@ public class DestructibleBlock extends Block implements Observable {
     public void setPowerup(PowerUp powerup) {
         this.powerup = powerup;
     }
-    @Override
-    public void addObserver(Observer o) {
-        // TODO Auto-generated method stub
 
+    public void disegna() {
+        //TODO implementare il metodo
+    }
+
+    public void update() {
+        //TODO implementare il metodo
     }
 }
 

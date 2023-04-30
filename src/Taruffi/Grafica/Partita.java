@@ -7,17 +7,19 @@ import javax.swing.JPanel;
 public class Partita extends JPanel implements Runnable{ //equivale a GamePanel del tizio dei video che sto freebootando
 
 
-    private final int originalTileSize = 16;
-    private final int scale = 3;
+    private final int originalTileSize = 16; //ogni tile é un blocco 16x16 pixel
+    private final int scale = 4; //scalata 4x in quanto le AI che fanno upscale sono 2x o 4x
     private final int tileSize =  originalTileSize * scale; //risoluzione troppo bassa senza scale
                                                             //si puó aumentare la scale se é ancora troppo piccolo
-    private final int maxScreenCol = 16;
-    private final int maxScreenRow = 16; //dimensioni dello schermo in tiles
+    private final int maxScreenCol = 17;
+    private final int maxScreenRow = 13; //dimensioni dello schermo in tiles
                                         //si puó aumentare se si vuole vedere piú della mappa
-                                        //il bomberman originale pare essere 16x16
-                                        //inclusa la parte con score, timer eccetera
+                                        //il bomberman originale pare essere 13x17
+                                        //esclusa la parte con score, timer eccetera
+                                        //per includerla bisogna aumentare le dimensioni dello schermo
 
-    final int screenWidth = maxScreenCol * tileSize; // 768 x 768
+
+    final int screenWidth = maxScreenCol * tileSize;
     final int screenHeight = maxScreenRow * tileSize; //dimensioni dello schermo in pixel
 
     Thread gameThread; //thread che gestisce il gioco
@@ -88,15 +90,19 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
 
         if(keyHandler.up == true){
             //TODO: implementare movimento verso l'alto
+            System.out.println("up");
         }
         if(keyHandler.down == true){
             //TODO: implementare movimento verso il basso
+            System.out.println("down");
         }
         if(keyHandler.left == true){
             //TODO: implementare movimento a sx
+            System.out.println("left");
         }
         if(keyHandler.right == true){
             //TODO: implementare movimento a dx
+            System.out.println("right");
         }
 
     }
@@ -110,7 +116,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
                                         //come setRenderingHints()
         g2.setColor(Color.WHITE); //setta il colore di sfondo
 
-        g2.fillRect(BomberMan.getX(), BomberMan.getY(), screenWidth, screenHeight); //disegna qualcosa
+        g2.fillRect(BomberMan.getX(), BomberMan.getY(), tileSize, tileSize); //disegna qualcosa
                                                             //sará sostituito con il bomebrman
                                                             //con relative posizioni eccetera
 

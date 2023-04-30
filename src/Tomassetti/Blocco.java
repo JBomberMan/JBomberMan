@@ -1,13 +1,17 @@
 package Tomassetti;
+import Porfiri.BomberMan;
+import Porfiri.Esplosione;
 import Taruffi.Disegnabile;
+import Taruffi.Nemici.NemicoGenerico;
+
 import java.awt.*;
 //classe blocco che implementa l'interfaccia Disegnabile, rappresenta un blocco del gioco bomberman
 //dispone di due campi X e Y che rappresentano le coordinate del blocco
-public abstract class Block implements Disegnabile{
+public abstract class Blocco implements Disegnabile, Collidable{
     private int X;
     private int Y;
     Image[] Sprite;
-    public Block(int X, int Y) {
+    public Blocco(int X, int Y) {
         this.X = X;
         this.Y = Y;
     }
@@ -22,5 +26,16 @@ public abstract class Block implements Disegnabile{
         //TODO: implementare il metodo
     }
 
+    public void handleCollision(Esplosione e) {
+        //TODO: implementare il metodo
+    }
 
+    @Override
+    public void handleCollision(BomberMan b) {
+        //TODO: implementare il metodo
+    }
+
+    public void handleCollision(NemicoGenerico n){
+        //TODO: implementare il metodo
+    }
 }

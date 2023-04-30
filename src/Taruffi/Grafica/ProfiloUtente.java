@@ -27,10 +27,11 @@ public class ProfiloUtente extends JFrame{
      */
     private ProfiloUtente(){
 
-        super("JUNO");
+        super("JBomberMan");
+        /*AvatarNickname av = AvatarNickname.getAvatarNickname();
         setLayout(new BorderLayout());
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(500,500);
+        setSize(800,448);
         Menu menu = new Menu();
         menu.setBackground(Color.gray);
         menu.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(Color.BLACK), BorderFactory.createLineBorder(Color.BLACK)));
@@ -39,8 +40,38 @@ public class ProfiloUtente extends JFrame{
         Nickname nick = Nickname.getNickname();
         add(av, BorderLayout.LINE_START);
         add(nick, BorderLayout.LINE_END);
-        //AvatarNickname av = AvatarNickname.getAvatarNickname();
+        //
         //add(av, BorderLayout.BEFORE_LINE_BEGINS);
+        */
+        setLayout(new GridBagLayout());
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(800,448);
+        Menu menu = new Menu();
+        menu.setBackground(Color.gray);
+        menu.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(Color.BLACK), BorderFactory.createLineBorder(Color.BLACK)));
+        GridBagConstraints menuConstrains = new GridBagConstraints();
+        menuConstrains.gridx = 0;
+        menuConstrains.gridy = 0;
+        menuConstrains.gridwidth = 4;
+        menuConstrains.gridheight = 1;
+        menuConstrains.fill = GridBagConstraints.HORIZONTAL;
+        add(menu, menuConstrains);
+        Avatar av = Avatar.getAvatar();
+        GridBagConstraints avatarConstrains = new GridBagConstraints();
+        avatarConstrains.gridx = 0;
+        avatarConstrains.gridy = 2;
+        avatarConstrains.gridwidth = 1;
+        avatarConstrains.gridheight = 1;
+        avatarConstrains.fill = GridBagConstraints.VERTICAL;
+        add(av, avatarConstrains);
+        Nickname nick = Nickname.getNickname();
+        GridBagConstraints nicknameConstrains = new GridBagConstraints();
+        nicknameConstrains.gridx = 0;
+        nicknameConstrains.gridy = 1;
+        nicknameConstrains.gridwidth = 1;
+        nicknameConstrains.gridheight = 1;
+        nicknameConstrains.anchor = GridBagConstraints.PAGE_END;
+        add(nick, nicknameConstrains);
         setVisible(true);
 
     }
