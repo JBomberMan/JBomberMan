@@ -5,13 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/KeyHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Partita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_20_2023_10_42_AM_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_20_2023_10_42_AM__Changes_1.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/LVL1.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/lvl2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/lvl3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/lvl4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/lvl5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/lvl7 (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/lvl7 (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/lvl8.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Porfiri/BomberMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Porfiri/BomberMan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/KeyHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/KeyHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Partita.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Partita.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/ProfiloUtente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/ProfiloUtente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Nemici/NemicoGenerico.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Nemici/NemicoGenerico.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/KeyHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Partita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/ProfiloUtente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/ProfiloUtente.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,6 +128,11 @@
           <url>file://$PROJECT_DIR$/src/Taruffi/Grafica/Main.java</url>
           <line>6</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Taruffi/Grafica/Menu.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

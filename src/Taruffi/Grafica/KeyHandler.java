@@ -7,6 +7,16 @@ public class KeyHandler implements KeyListener {
 
     public Boolean up, down, left, right, space;
 
+    public KeyHandler(){
+        up = false;
+        down = false;
+        left = false;
+        right = false;
+        space = false;
+    }
+
+
+
 
     @Override
     public void keyTyped(KeyEvent e) {
@@ -17,23 +27,16 @@ public class KeyHandler implements KeyListener {
     public void keyPressed(KeyEvent e) {
 
         int code = e.getKeyCode();
-        switch (code) {
-            case KeyEvent.VK_UP:
-                up = true;
-                break;
-            case KeyEvent.VK_DOWN:
-                down = true;
-                break;
-            case KeyEvent.VK_LEFT:
-                left = true;
-                break;
-            case KeyEvent.VK_RIGHT:
-                right = true;
-                break;
-            case KeyEvent.VK_SPACE:
-                space = true;
-                break;
-        }
+        if(code == KeyEvent.VK_UP)
+            up = true;
+        if(code == KeyEvent.VK_DOWN)
+            down = true;
+        if(code == KeyEvent.VK_LEFT)
+            left = true;
+        if(code == KeyEvent.VK_RIGHT)
+            right = true;
+        if(code == KeyEvent.VK_SPACE)
+            space = true;
 
     }
 
@@ -41,22 +44,16 @@ public class KeyHandler implements KeyListener {
     public void keyReleased(KeyEvent e) {
 
         int code = e.getKeyCode();
-        switch (code) {
-            case KeyEvent.VK_UP:
-                up = false;
-                break;
-            case KeyEvent.VK_DOWN:
-                down = false;
-                break;
-            case KeyEvent.VK_LEFT:
-                left = false;
-                break;
-            case KeyEvent.VK_RIGHT:
-                right = false;
-                break;
-            case KeyEvent.VK_SPACE:
-                space = false;
-                break;
-        }
+        if(code == KeyEvent.VK_UP)
+            up = false;
+        if(code == KeyEvent.VK_DOWN)
+            down = false;
+        if(code == KeyEvent.VK_LEFT)
+            left = false;
+        if(code == KeyEvent.VK_RIGHT)
+            right = false;
+        if(code == KeyEvent.VK_SPACE)
+            space = false;
+
     }
 }
