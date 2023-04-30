@@ -1,5 +1,6 @@
 package Taruffi.Nemici;
 import java.awt.*;
+import java.awt.image.BufferedImage;
 
 public abstract class NemicoGenerico {
 
@@ -7,6 +8,8 @@ public abstract class NemicoGenerico {
     private int indiceAnimazione; //indice dell'immagine corrente
     private int x,y; //posizione del nemico sullo schermo
     private int puntiVita; //punti vita del nemico
+    public BufferedImage up1, up2, down1, down2, right1, right2, left1, left2;
+    public String direction;
 
     public NemicoGenerico(Image[] animazione, int x, int y, int puntiVita) {
         this.animazione = animazione;
