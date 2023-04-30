@@ -26,7 +26,6 @@ public abstract class NemicoGenerico {
         return animazione[indiceAnimazione++ % animazione.length];
     }
 
-
     /*
     *------------------------------
     *   GETTERS AND SETTERS
