@@ -5,22 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Images/LVL1.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/lvl2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/lvl3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/lvl4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/lvl5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/lvl7 (1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/lvl7 (2).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/lvl8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tomassetti/AudioManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_27_2023_12_46_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_27_2023_12_46_PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/KeyHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/KeyHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Partita.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Partita.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/ProfiloUtente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/ProfiloUtente.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Nemici/NemicoGenerico.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Nemici/NemicoGenerico.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/KeyHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Partita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Tomassetti/Prova.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Tomassetti/Prova.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/ProfiloUtente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/ProfiloUtente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tomassetti/Prova.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tomassetti/Prova.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +51,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lorenzo/Desktop/JBomberMan/src/Music&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lorenzo\Desktop\JBomberMan\src\Music" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lorenzo\Desktop\JBomberMan\src\Music" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Taruffi.Grafica.Main" />
@@ -59,6 +78,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Taruffi.Grafica.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Prova" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Tomassetti.Prova" />
+      <module name="JBomberMan" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tomassetti.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -76,6 +108,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Prova" />
         <item itemvalue="Application.prova" />
       </list>
     </recent_temporary>
@@ -95,6 +128,9 @@
       <workItem from="1680878442416" duration="2751000" />
       <workItem from="1681562286829" duration="1525000" />
       <workItem from="1681937693258" duration="1784000" />
+      <workItem from="1683360141540" duration="6421000" />
+      <workItem from="1683378056026" duration="3522000" />
+      <workItem from="1683440098687" duration="4215000" />
     </task>
     <servers />
   </component>
@@ -120,22 +156,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Taruffi/Grafica/Main.java</url>
-          <line>6</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Taruffi/Grafica/Menu.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

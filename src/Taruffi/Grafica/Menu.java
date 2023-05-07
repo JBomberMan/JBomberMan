@@ -1,5 +1,7 @@
 package Taruffi.Grafica;
 
+import Tomassetti.AudioManager;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -15,11 +17,13 @@ public class Menu extends JPanel {
     private JButton bottonePartita;
     private JButton bottoneNickname;
     private JButton bottoneEditor;
+    AudioManager audioManager = new AudioManager();
 
     /**
      * Costruttore che inizializza i bottoni e li aggiunge al pannello
      */
     public Menu(){
+
         bottoneAvatar = new JButton("Imposta avatar");
         bottonePartita = new JButton("Avvia partita");
         bottoneNickname = new JButton("Imposta nickname");
@@ -60,9 +64,12 @@ public class Menu extends JPanel {
         bottonePartita.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                ProfiloUtente.stop();
                 Partita partita = new Partita();
                 JFrame frame = new JFrame("Bomberman");
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                audioManager.setFile(1);
+                audioManager.play();
                 frame.add(partita);
                 frame.pack();
                 frame.setVisible(true);

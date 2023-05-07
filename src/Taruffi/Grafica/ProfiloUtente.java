@@ -1,11 +1,13 @@
 package Taruffi.Grafica;
 
+import Tomassetti.AudioManager;
+
 import javax.swing.*;
 import java.awt.*;
 
 //Classe che gestisce il profilo dell'utente
 public class ProfiloUtente extends JFrame{
-
+    static AudioManager audioManager = new AudioManager(); //i panel hanno bisogno di un audio manager, quindi lo dichiaro statico
     private String nickname;
     private String avatar;
     private int partiteGiocate;
@@ -72,6 +74,9 @@ public class ProfiloUtente extends JFrame{
         nicknameConstrains.gridheight = 1;
         nicknameConstrains.anchor = GridBagConstraints.PAGE_END;
         add(nick, nicknameConstrains);
+        audioManager.setFile(0);
+        audioManager.play();
+        audioManager.loop();
         setVisible(true);
 
     }
@@ -116,5 +121,9 @@ public class ProfiloUtente extends JFrame{
             istanza = new ProfiloUtente();
         }
         return istanza;
+    }
+
+    public static void stop(){ //permettere di essere richiamato da altre classi per fermare la musica di sottofondo
+        audioManager.stop();
     }
 }
