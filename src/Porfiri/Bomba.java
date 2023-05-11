@@ -44,7 +44,7 @@ public class Bomba implements Disegnabile{
 
 
     @Override
-    public void disegna() {
+    public void disegna(Graphics2D g2) {
         //TODO implementare il disegno della bomba
     }
 }

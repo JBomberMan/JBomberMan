@@ -28,7 +28,7 @@ public class Esplosione implements Disegnabile{
 
 
     @Override
-    public void disegna() {
+    public void disegna(Graphics2D g2) {
         // TODO Auto-generated method stub
     }
 

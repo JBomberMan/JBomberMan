@@ -9,7 +9,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
 
     private final int originalTileSize = 16; //ogni tile é un blocco 16x16 pixel
     private final int scale = 4; //scalata 4x in quanto le AI che fanno upscale sono 2x o 4x
-    private final int tileSize =  originalTileSize * scale; //risoluzione troppo bassa senza scale
+    public final int tileSize =  originalTileSize * scale; //risoluzione troppo bassa senza scale
                                                             //si puó aumentare la scale se é ancora troppo piccolo
     private final int maxScreenCol = 17;
     private final int maxScreenRow = 13; //dimensioni dello schermo in tiles
@@ -26,6 +26,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
                         //quando un Thread starta non si ferma finché nonglielo diciamo noi
                         //la classe implementa Runnable per usare i Threads
     KeyHandler keyHandler = new KeyHandler(); //gestisce gli input da tastiera
+    BomberMan bomberman = new BomberMan(100, 100, 40, 4, null, keyHandler, this);
 
 
     public Partita() {
@@ -88,22 +89,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
 
     public void update(){
 
-        if(keyHandler.up == true){
-            //TODO: implementare movimento verso l'alto
-            System.out.println("up");
-        }
-        if(keyHandler.down == true){
-            //TODO: implementare movimento verso il basso
-            System.out.println("down");
-        }
-        if(keyHandler.left == true){
-            //TODO: implementare movimento a sx
-            System.out.println("left");
-        }
-        if(keyHandler.right == true){
-            //TODO: implementare movimento a dx
-            System.out.println("right");
-        }
+       bomberman.Muovi();
 
     }
 
@@ -114,11 +100,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
         Graphics2D g2 = (Graphics2D) g; //casta il Graphics in Graphics2D
                                         //per poter usare le funzioni di Graphics2D
                                         //come setRenderingHints()
-        g2.setColor(Color.WHITE); //setta il colore di sfondo
-
-        g2.fillRect(BomberMan.getX(), BomberMan.getY(), tileSize, tileSize); //disegna qualcosa
-                                                            //sará sostituito con il bomebrman
-                                                            //con relative posizioni eccetera
+        bomberman.disegna(g2);
 
         g2.dispose(); //rilascia le risorse usate da g2, good practice
 

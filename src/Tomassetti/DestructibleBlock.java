@@ -29,7 +29,7 @@ public class DestructibleBlock extends Blocco  {
         this.powerup = powerup;
     }
 
-    public void disegna() {
+    public void disegna(Graphics2D g2) {
         //TODO implementare il metodo
     }
 

@@ -2,6 +2,7 @@ package Tomassetti;
 import Porfiri.BomberMan;
 import Taruffi.Disegnabile;
 
+import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.util.Random;
 
@@ -71,7 +72,7 @@ public class PowerUp implements Disegnabile, Collidable{
     }
 
 
-    public void disegna() {
+    public void disegna(Graphics2D g2) {
         //TODO  implementare il metodo
     }
 
