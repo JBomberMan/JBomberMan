@@ -9,23 +9,26 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
 
     private final int originalTileSize = 16; //ogni tile é un blocco 16x16 pixel
     private final int scale = 4; //scalata 4x in quanto le AI che fanno upscale sono 2x o 4x
-    private final int tileSize =  originalTileSize * scale; //risoluzione troppo bassa senza scale
+    public final int tileSize =  originalTileSize * scale; //risoluzione troppo bassa senza scale
                                                             //si puó aumentare la scale se é ancora troppo piccolo
-    private final int maxScreenCol = 17;
-    private final int maxScreenRow = 13; //dimensioni dello schermo in tiles
+    public final int maxScreenCol = 17;
+    public final int maxScreenRow = 13; //dimensioni dello schermo in tiles
                                         //si puó aumentare se si vuole vedere piú della mappa
                                         //il bomberman originale pare essere 13x17
                                         //esclusa la parte con score, timer eccetera
                                         //per includerla bisogna aumentare le dimensioni dello schermo
 
 
-    final int screenWidth = maxScreenCol * tileSize;
-    final int screenHeight = maxScreenRow * tileSize; //dimensioni dello schermo in pixel
+    public final int screenWidth = maxScreenCol * tileSize;
+    public final int screenHeight = maxScreenRow * tileSize; //dimensioni dello schermo in pixel
 
     Thread gameThread; //thread che gestisce il gioco
                         //quando un Thread starta non si ferma finché nonglielo diciamo noi
                         //la classe implementa Runnable per usare i Threads
     KeyHandler keyHandler = new KeyHandler(); //gestisce gli input da tastiera
+
+    TileMaganer tileM = new TileMaganer(this); //instanziamo il tileManager
+                                                    //passandogli questa istanza di un gamepanel
 
 
     public Partita() {
@@ -116,9 +119,12 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
                                         //come setRenderingHints()
         g2.setColor(Color.WHITE); //setta il colore di sfondo
 
-        g2.fillRect(BomberMan.getX(), BomberMan.getY(), tileSize, tileSize); //disegna qualcosa
+        tileM.draw(g2); //disegna i tiles
+
+        g2.fillRect(200, 200, tileSize, tileSize); //disegna qualcosa
                                                             //sará sostituito con il bomebrman
                                                             //con relative posizioni eccetera
+
 
         g2.dispose(); //rilascia le risorse usate da g2, good practice
 
