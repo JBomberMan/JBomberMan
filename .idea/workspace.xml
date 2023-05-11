@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
+<<<<<<< Updated upstream
       <change afterPath="$PROJECT_DIR$/src/FileLivelli/livello1.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Images/erbaprova.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Images/mattoneprova.png" afterDir="false" />
@@ -13,6 +14,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Partita.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Partita.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Partita.java" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/src/Tomassetti/CollisionChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tomassetti/GameEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,8 +122,12 @@
       <workItem from="1683360141540" duration="6421000" />
       <workItem from="1683378056026" duration="3522000" />
       <workItem from="1683440098687" duration="4215000" />
+<<<<<<< Updated upstream
       <workItem from="1683557385792" duration="5000" />
       <workItem from="1683813729131" duration="34000" />
+=======
+      <workItem from="1683616145733" duration="4294000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
