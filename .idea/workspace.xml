@@ -5,21 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Tomassetti/AudioManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_27_2023_12_46_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_27_2023_12_46_PM__Changes_.xml" beforeDir="false" />
+<<<<<<< Updated upstream
+      <change afterPath="$PROJECT_DIR$/src/FileLivelli/livello1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/erbaprova.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/mattoneprova.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Tile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/TileMaganer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/ProfiloUtente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/ProfiloUtente.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Tomassetti/Prova.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Tomassetti/Prova.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/ProfiloUtente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/ProfiloUtente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tomassetti/Prova.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tomassetti/Prova.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Partita.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Partita.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Partita.java" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/src/Tomassetti/CollisionChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tomassetti/GameEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,18 +50,10 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lorenzo/Desktop/JBomberMan/src/Music&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Lorenzo\Desktop\JBomberMan\src\Music" />
@@ -131,6 +122,12 @@
       <workItem from="1683360141540" duration="6421000" />
       <workItem from="1683378056026" duration="3522000" />
       <workItem from="1683440098687" duration="4215000" />
+<<<<<<< Updated upstream
+      <workItem from="1683557385792" duration="5000" />
+      <workItem from="1683813729131" duration="34000" />
+=======
+      <workItem from="1683616145733" duration="4294000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
@@ -160,5 +157,10 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/PowerUp_java$Main.ic" NAME="Main Coverage Results" MODIFIED="1682855214878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Taruffi.Grafica.*</FILTER>
+    </SUITE>
   </component>
 </project>
