@@ -68,8 +68,8 @@ public class Menu extends JPanel {
                 Partita partita = new Partita();
                 JFrame frame = new JFrame("Bomberman");
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                audioManager.setFile(1);
-                audioManager.play();
+                //audioManager.setFile(1);
+                //audioManager.play();
                 frame.add(partita);
                 frame.pack();
                 frame.setVisible(true);

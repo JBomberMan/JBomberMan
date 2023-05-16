@@ -107,12 +107,12 @@ public class BomberMan implements Disegnabile{
 
     @Override
     public void disegna(Graphics2D g2) {
-        //g2.setColor(Color.WHITE); //setta il colore di sfondo
+        g2.setColor(Color.WHITE); //setta il colore di sfondo
 
-       // g2.fillRect(x, y, play.tileSize, play.tileSize); //disegna qualcosa
+        g2.fillRect(x, y, play.tileSize, play.tileSize); //disegna qualcosa
                                                             //sará sostituito con il bomebrman
                                                             //con relative posizioni eccetera
-        BufferedImage image = null;
+        /**BufferedImage image = null;
 
         switch(direction) {
             case "up":
@@ -149,6 +149,7 @@ public class BomberMan implements Disegnabile{
                 break;    
         }
         g2.drawImage(image, x, y, play.tileSize, play.tileSize, null);
+         **/
     }
 
     public static int getX(){
