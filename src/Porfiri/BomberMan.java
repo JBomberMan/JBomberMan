@@ -150,6 +150,7 @@ public class BomberMan implements Disegnabile{
                 break;    
         }
         g2.drawImage(image, x, y, play.tileSize, play.tileSize, null);
+         **/
     }
 
     public static int getX(){

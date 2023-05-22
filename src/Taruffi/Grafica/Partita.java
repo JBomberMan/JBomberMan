@@ -90,6 +90,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
         }
     }
 
+
     public void update(){
 
        bomberman.Muovi();

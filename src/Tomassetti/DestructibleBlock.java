@@ -1,6 +1,7 @@
 package Tomassetti;
+import Gobjects.PowerUp;
+
 import java.awt.*;
-import java.util.Observable;
 
 //il blocco può contenere un powerup, se il blocco viene distrutto il powerup viene rilasciato
 // può essere visto da Livello per sapere se il blocco è distrutto(implementa l'interfaccia Observable)
