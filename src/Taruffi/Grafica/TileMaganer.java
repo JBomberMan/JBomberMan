@@ -85,8 +85,8 @@ public class TileMaganer {
         while(col < partita.maxScreenCol && row < partita.maxScreenRow){
 
             int tileNum = mapTileNum[col][row];
-
             g2.drawImage(tile[tileNum].immagine, x, y, partita.tileSize, partita.tileSize, null);
+            System.out.println(tile[tileNum].immagine);
             col ++;
             x += partita.tileSize;
 

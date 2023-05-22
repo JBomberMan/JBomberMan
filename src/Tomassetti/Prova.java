@@ -1,7 +1,7 @@
 package Tomassetti;
+import Gobjects.PowerUp;
 import Porfiri.BomberMan;
 import Taruffi.Disegnabile;
-import Tomassetti.PowerUp;
 import Tomassetti.AudioManager;
 
 import static java.lang.Thread.sleep;

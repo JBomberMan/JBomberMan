@@ -1,5 +1,7 @@
 package Tomassetti;
 
+import Gobjects.GameEntity;
+
 import javax.swing.*;
 
 public class CollisionChecker {
@@ -10,10 +12,10 @@ public class CollisionChecker {
 
     public void checkTileCollision(GameEntity gameObject){
         //TODO check if
-        int entityLeft = gameObject.x;
-        int entityRight = gameObject.x + gameObject.image.getWidth();
-        int entityTop = gameObject.y;
-        int entityBottom = gameObject.y + gameObject.image.getHeight();
+        int entityLeft = gameObject.getX();
+        int entityRight = gameObject.getX() + gameObject.getImage().getWidth();
+        int entityTop = gameObject.getY();
+        int entityBottom = gameObject.getY() + gameObject.getImage().getHeight();
 
         int entityLeftColumn = entityLeft / 32;
         int entityRightColumn = entityRight / 32;
