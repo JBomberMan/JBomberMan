@@ -1,5 +1,6 @@
 package Tomassetti;
 
+import Gobjects.PowerUp;
 import Porfiri.Bomba;
 import Porfiri.Esplosione;
 import Taruffi.Nemici.NemicoGenerico;

@@ -36,5 +36,8 @@ public abstract class GameEntity implements Disegnabile, Collidable {
     public void disegna(Graphics2D g2d){
         g2d.drawImage(image, x, y, null);
     }
+    public BufferedImage getImage(){
+        return image;
+    }
 
 }
