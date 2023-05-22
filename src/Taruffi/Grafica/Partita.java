@@ -103,11 +103,11 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
         Graphics2D g2 = (Graphics2D) g; //casta il Graphics in Graphics2D
                                         //per poter usare le funzioni di Graphics2D
                                         //come setRenderingHints()
-        bomberman.disegna(g2);
+        
         //g2.setColor(Color.WHITE); //setta il colore di sfondo
 
         tileM.draw(g2); //disegna i tiles
-
+        bomberman.disegna(g2);
         //g2.fillRect(200, 200, tileSize, tileSize); //disegna qualcosa
                                                             //sará sostituito con il bomebrman
                                                             //con relative posizioni eccetera

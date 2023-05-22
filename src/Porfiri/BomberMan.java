@@ -31,23 +31,24 @@ public class BomberMan implements Disegnabile{
         this.y = 100; //posizioni di base
         this.vite = puntiVita;
         this.velocita = velocita;
+        this.direction = "down";
         //this.Sprite = Sprite;
-       // this.indiceAnimazione = 0;
+       //this.indiceAnimazione = 0;
        this.keyH = keyH;
        this.play = play;
-        //getPlayerImage();
+        getPlayerImage();
     }
 
     public void getPlayerImage() {
         try {
-            up1 = ImageIO.read(getClass().getResourceAsStream("nome_file"));
-        up2 = ImageIO.read(getClass().getResourceAsStream("nome_file"));
-        down1 = ImageIO.read(getClass().getResourceAsStream("nome_file"));
-        down2 = ImageIO.read(getClass().getResourceAsStream("nome_file"));
-        right1 = ImageIO.read(getClass().getResourceAsStream("nome_file"));
-        right2 = ImageIO.read(getClass().getResourceAsStream("nome_file"));
-        left1 = ImageIO.read(getClass().getResourceAsStream("nome_file"));
-        left2 = ImageIO.read(getClass().getResourceAsStream("nome_file"));
+            up1 = ImageIO.read(getClass().getResourceAsStream("/Images/BomberMan_up1.png"));
+        up2 = ImageIO.read(getClass().getResourceAsStream("/Images/BomberMan_up2.png"));
+        down1 = ImageIO.read(getClass().getResourceAsStream("/Images/BomberMan_down1.png"));
+        down2 = ImageIO.read(getClass().getResourceAsStream("/Images/BomberMan_down2.png"));
+        right1 = ImageIO.read(getClass().getResourceAsStream("/Images/BomberMan_right1.png"));
+        right2 = ImageIO.read(getClass().getResourceAsStream("/Images/BomberMan_right2.png"));
+        left1 = ImageIO.read(getClass().getResourceAsStream("/Images/BomberMan_left1.png"));
+        left2 = ImageIO.read(getClass().getResourceAsStream("/Images/BomberMan_left2.png"));
         
     } catch(IOException e){
             e.printStackTrace();
@@ -109,10 +110,10 @@ public class BomberMan implements Disegnabile{
     public void disegna(Graphics2D g2) {
         //g2.setColor(Color.WHITE); //setta il colore di sfondo
 
-       // g2.fillRect(x, y, play.tileSize, play.tileSize); //disegna qualcosa
+       //g2.fillRect(x, y, play.tileSize, play.tileSize); //disegna qualcosa
                                                             //sará sostituito con il bomebrman
                                                             //con relative posizioni eccetera
-        BufferedImage image = null;
+        BufferedImage image = down1;
 
         switch(direction) {
             case "up":
