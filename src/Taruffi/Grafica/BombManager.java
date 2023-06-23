@@ -35,8 +35,7 @@ public class BombManager {
     }
 
     public static void piazzaBomba(){
-        if(bombeAttive < numeroBombe && keyHandler.space){
-            System.out.println("Piazzo una bomba");
+        if(bombeAttive < numeroBombe){
             bombe.add(new Bomba(BomberMan.getX(),BomberMan.getY()));
             bombeAttive++;
         }

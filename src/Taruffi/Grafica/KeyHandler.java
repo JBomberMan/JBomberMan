@@ -6,6 +6,7 @@ import java.awt.event.KeyListener;
 public class KeyHandler implements KeyListener {
 
     public Boolean up, down, left, right, space;
+    private int spaceTiming = 0;
 
     public KeyHandler(){
         up = false;
@@ -37,7 +38,10 @@ public class KeyHandler implements KeyListener {
             right = true;
         if(code == KeyEvent.VK_SPACE){
             space = true;
+            BombManager.piazzaBomba();
         }
+
+
 
 
     }

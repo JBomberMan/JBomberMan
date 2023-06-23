@@ -97,7 +97,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
     public void update(){
 
        bomberman.Muovi();
-       BombManager.piazzaBomba();
+
        //bombManager.update(); //aggiorna le bombe
 
     }
