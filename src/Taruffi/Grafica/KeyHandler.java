@@ -4,8 +4,8 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class KeyHandler implements KeyListener {
-
-    public Boolean up, down, left, right, space;
+    private boolean controlloRemoto = false;
+    public Boolean up, down, left, right, space, e;
     private int spaceTiming = 0;
 
     public KeyHandler(){
@@ -14,6 +14,7 @@ public class KeyHandler implements KeyListener {
         left = false;
         right = false;
         space = false;
+        e = false;
     }
 
 
@@ -25,9 +26,9 @@ public class KeyHandler implements KeyListener {
     }
 
     @Override
-    public void keyPressed(KeyEvent e) {
+    public void keyPressed(KeyEvent event) {
 
-        int code = e.getKeyCode();
+        int code = event.getKeyCode();
         if(code == KeyEvent.VK_UP)
             up = true;
         if(code == KeyEvent.VK_DOWN)
@@ -40,6 +41,11 @@ public class KeyHandler implements KeyListener {
             space = true;
             BombManager.piazzaBomba();
         }
+        if(code == KeyEvent.VK_E){
+            e = true;
+            if(controlloRemoto) BombManager.detonaDistanza();
+        }
+
 
 
 

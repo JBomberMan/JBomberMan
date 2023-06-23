@@ -75,6 +75,10 @@ public class Bomba extends Tile implements Disegnabile {
         loadAnimationFrames();
     }
 
+    public void setTimer(int timer) {
+        this.timer = timer;
+    }
+
     private void loadAnimationFrames() {
         try {
             // Load the animation frames

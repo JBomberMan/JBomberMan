@@ -40,5 +40,10 @@ public class BombManager {
             bombeAttive++;
         }
     }
+    public static void detonaDistanza(){
+        for(Bomba b : bombe){
+            b.setTimer(0);
+        }
+    }
 
 }
