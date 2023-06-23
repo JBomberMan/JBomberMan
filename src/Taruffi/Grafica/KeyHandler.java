@@ -35,8 +35,10 @@ public class KeyHandler implements KeyListener {
             left = true;
         if(code == KeyEvent.VK_RIGHT)
             right = true;
-        if(code == KeyEvent.VK_SPACE)
+        if(code == KeyEvent.VK_SPACE){
             space = true;
+        }
+
 
     }
 

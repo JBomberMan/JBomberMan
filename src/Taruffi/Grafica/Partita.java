@@ -31,6 +31,9 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
     TileMaganer tileM = new TileMaganer(this); //instanziamo il tileManager
                                                     //passandogli questa istanza di un gamepanel
 
+    BombManager bombM = new BombManager(keyHandler); //instanziamo il bombManager
+                                                    //passandogli questa istanza di un gamepanel
+
 
     public Partita() {
         this.setPreferredSize(new Dimension(screenWidth, screenHeight)); //setta la grandezza del pannello
@@ -94,6 +97,8 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
     public void update(){
 
        bomberman.Muovi();
+       BombManager.piazzaBomba();
+       //bombManager.update(); //aggiorna le bombe
 
     }
 
@@ -109,6 +114,8 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
 
         tileM.draw(g2); //disegna i tiles
         bomberman.disegna(g2);
+
+        BombManager.disegna(g2); //disegna le bombe
         //g2.fillRect(200, 200, tileSize, tileSize); //disegna qualcosa
                                                             //sará sostituito con il bomebrman
                                                             //con relative posizioni eccetera
