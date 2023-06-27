@@ -1,28 +1,16 @@
 package Tomassetti;
-import Gobjects.PowerUp;
-import Porfiri.BomberMan;
-import Taruffi.Disegnabile;
-import Tomassetti.AudioManager;
+import Taruffi.Grafica.Tile;
+import Taruffi.Grafica.TileManager;
 
 import static java.lang.Thread.sleep;
 
 public class Prova {
+    TileManager tileMaganer;
+
     public static void main(String[] args) {
-
-        try {
-            sleep(1000000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        // crea un array di 10 powerup
-        PowerUp[] powerups = new PowerUp[10];
-        // riempi l'array con powerup casuali
-        for (int i = 0; i < powerups.length; i++) {
-            powerups[i] = new PowerUp(0, 0);
-        }
-
-        for(PowerUp p : powerups){
-            System.out.println(p);
+        TileManager tileMaganer = new TileManager();
+        for(Tile tile : tileMaganer.tile){
+            System.out.println(tile.immagine);
         }
     }
 }

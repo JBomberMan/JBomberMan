@@ -1,6 +1,7 @@
 package Gobjects;
 import Porfiri.BomberMan;
 import Taruffi.Disegnabile;
+import Taruffi.Grafica.Partita;
 import Tomassetti.Collidable;
 
 import java.awt.Graphics2D;
@@ -65,14 +66,17 @@ public class PowerUp extends StationaryEntity{
         Random random = new Random();
         return PowerUp.Tipo.values()[random.nextInt(PowerUp.Tipo.values().length)];
     }
-    public PowerUp(int x, int y) {
-        super(x, y, null);
+    public PowerUp(int x, int y, Partita partita) {
+        super(x, y, null, partita);
         this.tipo = getRandomTipo();
     }
-    public PowerUp(int x, int y, BufferedImage image) {
-        super(x, y, image);
+    public PowerUp(int x, int y, BufferedImage image, Partita partita) {
+        super(x, y, image, partita);
         this.tipo = getRandomTipo();
     }
+
+
+
     public void update() {
         //TODO implementare il metodo
     }
@@ -87,5 +91,9 @@ public class PowerUp extends StationaryEntity{
                 ", X=" + y +
                 ", Y=" + x +
                 '}';
+    }
+
+    public void disegna(Graphics2D g2d) {
+        g2d.drawImage(image, x, y, null);
     }
 }

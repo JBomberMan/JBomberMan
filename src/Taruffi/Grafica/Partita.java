@@ -1,5 +1,4 @@
 package Taruffi.Grafica;
-import Porfiri.BomberMan;
 
 import java.awt.*;
 import javax.swing.JPanel;
@@ -25,13 +24,13 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
     Thread gameThread; //thread che gestisce il gioco
                         //quando un Thread starta non si ferma finché nonglielo diciamo noi
                         //la classe implementa Runnable per usare i Threads
-    KeyHandler keyHandler = new KeyHandler(); //gestisce gli input da tastiera
-    BomberMan bomberman = new BomberMan(100, 100, 40, 4, null, keyHandler, this);
+    KeyHandler keyHandler = new KeyHandler(this); //gestisce gli input da tastiera
 
-    TileMaganer tileM = new TileMaganer(this); //instanziamo il tileManager
+
+    TileManager tileM = new TileManager(this, keyHandler); //instanziamo il tileManager
                                                     //passandogli questa istanza di un gamepanel
 
-    BombManager bombM = new BombManager(keyHandler); //instanziamo il bombManager
+    //BombManager bombM = new BombManager(keyHandler, this); //instanziamo il bombManager
                                                     //passandogli questa istanza di un gamepanel
 
 
@@ -96,7 +95,6 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
 
     public void update(){
 
-       bomberman.Muovi();
 
        //bombManager.update(); //aggiorna le bombe
 
@@ -113,9 +111,9 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
         //g2.setColor(Color.WHITE); //setta il colore di sfondo
 
         tileM.draw(g2); //disegna i tiles
-        bomberman.disegna(g2);
 
-        BombManager.disegna(g2); //disegna le bombe
+
+         //disegna le bombe
         //g2.fillRect(200, 200, tileSize, tileSize); //disegna qualcosa
                                                             //sará sostituito con il bomebrman
                                                             //con relative posizioni eccetera

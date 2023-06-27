@@ -7,10 +7,9 @@ import java.awt.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class TileMaganer {
+public class TileManager {
 
     Partita partita; //equivale al suo gamepanel
     public Tile[] tile;
@@ -33,7 +32,7 @@ public class TileMaganer {
         stationaryEntities.add(entity);
     }
 
-    public TileMaganer(Partita partita, KeyHandler keyH){
+    public TileManager(Partita partita, KeyHandler keyH){
         this.partita = partita;
         tile = new Tile[10]; //rappresenta il numero di tile diverse che abbiamo a disposizione
         mapTileNum = new int[partita.maxScreenCol][partita.maxScreenRow];
@@ -44,7 +43,7 @@ public class TileMaganer {
     }
 
 
-    public TileMaganer(){
+    public TileManager(){
         tile = new Tile[10]; //rappresenta il numero di tile diverse che abbiamo a disposizione
         getTileImage();
 
@@ -86,8 +85,7 @@ public class TileMaganer {
 
                     String numbers[] = line.split(" ");
                     int num = Integer.parseInt(numbers[col]);
-                    System.out.println("num: " + num);
-                    System.out.println("col: " + col + " row: " + row);
+
                     mapTileNum[col][row] = num;
 
                     tiles.add(new TileObject(col*64, row*64, tile[0].immagine, partita));
@@ -144,18 +142,22 @@ public class TileMaganer {
         for(TileObject tile : tiles){
             tile.disegna(g2);
         }
+
         for(StationaryEntity entity : stationaryEntities){
             entity.disegna(g2);
 
         }
         for(MovingEntity entity : movingEntities){
             entity.disegna(g2);
+
             entity.update();
         }
         for(Bomba b : bombe){
             b.disegna(g2);
             b.update();
         }
+        checkCollision();
+
     }
     public void piazzaBomba(){
         if(bombeAttive < numeroBombe){
@@ -166,6 +168,15 @@ public class TileMaganer {
     public void detonaDistanza(){
         for(Bomba b : bombe){
             b.setTimer(0);
+        }
+    }
+    public void checkCollision(){
+        for(MovingEntity entity : movingEntities){
+            for(StationaryEntity entity2 : stationaryEntities){
+                if(entity.getHitbox().intersects(entity2.getHitbox())) {
+                    entity.handleCollision(entity2);
+                }
+            }
         }
     }
 }

@@ -7,14 +7,16 @@ public class KeyHandler implements KeyListener {
     private boolean controlloRemoto = false;
     public Boolean up, down, left, right, space, e;
     private int spaceTiming = 0;
+    Partita play;
 
-    public KeyHandler(){
+    public KeyHandler(Partita play){
         up = false;
         down = false;
         left = false;
         right = false;
         space = false;
         e = false;
+        this.play = play;
     }
 
 
@@ -39,11 +41,11 @@ public class KeyHandler implements KeyListener {
             right = true;
         if(code == KeyEvent.VK_SPACE){
             space = true;
-            BombManager.piazzaBomba();
+            play.tileM.piazzaBomba();
         }
         if(code == KeyEvent.VK_E){
             e = true;
-            if(controlloRemoto) BombManager.detonaDistanza();
+            if(controlloRemoto) play.tileM.detonaDistanza();
         }
 
 

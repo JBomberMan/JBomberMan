@@ -1,17 +1,11 @@
 package Tomassetti;
 
-import Gobjects.PowerUp;
-import Porfiri.Bomba;
-import Porfiri.Esplosione;
-import Taruffi.Nemici.NemicoGenerico;
-import Porfiri.BomberMan;
+import Gobjects.*;
 
 
 public interface Collidable {
 
-    default void handleCollision(Esplosione e) {
-        //TODO implementare il metodo
-    }
+
 
     default void handleCollision(PowerUp p) {
         //TODO implementare il metodo
@@ -21,15 +15,15 @@ public interface Collidable {
         //TODO implementare il metodo
     }
 
-    default void handleCollision(Blocco b) {
+    default void handleCollision(StationaryEntity b) {
         //TODO implementare il metodo
     }
 
-    default void handleCollision(BomberMan b) {
+    default void handleCollision(Bomberman b) {
         //TODO implementare il metodo
     }
 
-    default void handleCollision(NemicoGenerico n) {
+    default void handleCollision(MovingEntity n) {
         //TODO implementare il metodo
     }
 }

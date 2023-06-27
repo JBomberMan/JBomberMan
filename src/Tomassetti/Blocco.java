@@ -30,10 +30,7 @@ public abstract class Blocco implements Disegnabile, Collidable{
         //TODO: implementare il metodo
     }
 
-    @Override
-    public void handleCollision(BomberMan b) {
-        //TODO: implementare il metodo
-    }
+
 
     public void handleCollision(NemicoGenerico n){
         //TODO: implementare il metodo
