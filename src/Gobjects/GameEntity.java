@@ -22,10 +22,10 @@ public abstract class GameEntity implements Disegnabile, Collidable {
         if(image != null) this.hitbox = new Rectangle(x, y, this.image.getWidth()-15, this.image.getHeight()-15);
     }
 
-    public static int getX(){
+    public int getX(){
         return x;
     }
-    public static int getY(){
+    public int getY(){
         return y;
     }
     public Rectangle getHitbox(){
@@ -40,57 +40,5 @@ public abstract class GameEntity implements Disegnabile, Collidable {
         return image;
     }
 
-    void solidCollision(GameEntity obj) {
-        Rectangle2D intersection = this.hitbox.createIntersection(obj.hitbox);
-        System.out.println(intersection.getWidth() + " " + intersection.getHeight());
-        // Vertical collision
-        if (intersection.getWidth() >= intersection.getHeight()) {
-            // From the top
-            if (intersection.getMaxY() >= this.hitbox.getMaxY()) {
-                this.y -= 5;
-            }
-            // From the bottom
-            if (intersection.getMaxY() >= obj.hitbox.getMaxY()) {
 
-                this.y += 5;
-            }
-
-            // Smoothing around corners
-            if (intersection.getWidth() < 16) {
-                if (intersection.getMaxX() >= this.hitbox.getMaxX()) {
-
-                    this.x -= 0.5;
-                }
-                if (intersection.getMaxX() >= obj.hitbox.getMaxX()) {
-
-                    this.x += 0.5;
-                }
-            }
-        }
-
-        // Horizontal collision
-        if (intersection.getHeight() >= intersection.getWidth()) {
-            // From the left
-            if (intersection.getMaxX() >= this.hitbox.getMaxX()) {
-
-                this.x -= 5;
-            }
-            // From the right
-            if (intersection.getMaxX() >= obj.hitbox.getMaxX()) {
-
-                this.x += 5;
-            }
-
-            // Smoothing around corners
-            if (intersection.getHeight() < 16) {
-                if (intersection.getMaxY() >= this.hitbox.getMaxY()) {
-
-                    this.y -= 0.5;
-                }
-                if (intersection.getMaxY() >= obj.hitbox.getMaxY()) {
-                    this.y += 0.5;
-                }
-            }
-        }
-    }
 }

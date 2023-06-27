@@ -15,13 +15,15 @@ public class TileManager {
     public Tile[] tile;
     KeyHandler keyH;
     int mapTileNum[][];
-    private ArrayList<Bomba> bombe = new ArrayList<Bomba>();
+
     private int numeroBombe = 3;
     private int raggioBombe;
     private int bombeAttive = 0;
     ArrayList<MovingEntity> movingEntities = new ArrayList<>();
     ArrayList<StationaryEntity> stationaryEntities = new ArrayList<>();
     ArrayList<TileObject> tiles = new ArrayList<>();
+
+    Bomberman bomber;
     private int indexBomberman;
 
     public void addEntities(MovingEntity entity){
@@ -108,7 +110,7 @@ public class TileManager {
                             stationaryEntities.add(new Muro(col*64, row*64, tile[6].immagine, true, partita));
                             break;
                         case 7:
-                            movingEntities.add(new Bomberman(col*64, row*64,tile[6].immagine, 4, 4, keyH, partita));
+                            bomber = new Bomberman(col*64, row*64,tile[6].immagine, 4, 4, keyH, partita);
                             indexBomberman = movingEntities.size()-1;
                             break;
                     }
@@ -151,25 +153,27 @@ public class TileManager {
 
             entity.update();
         }
-        for(Bomba b : bombe){
+        for(Bomba b : partita.bombM.bombe){
             b.disegna(g2);
             b.update();
         }
+        bomber.update();
+        bomber.disegna(g2);
         checkCollision();
 
     }
-    public void piazzaBomba(){
-        if(bombeAttive < numeroBombe){
-            bombe.add(new Bomba(movingEntities.get(indexBomberman).getX(),movingEntities.get(indexBomberman).getY(),null, this.partita));
-            bombeAttive++;
-        }
-    }
+
     public void detonaDistanza(){
-        for(Bomba b : bombe){
+        for(Bomba b : partita.bombM.bombe){
             b.setTimer(0);
         }
     }
     public void checkCollision(){
+        for(StationaryEntity entity : stationaryEntities){ //controlla le collisioni tra bomberman e muri
+            if(bomber.getHitbox().intersects(entity.getHitbox())) {
+                bomber.handleCollision(entity);
+            }
+        }
         for(MovingEntity entity : movingEntities){ //controlla le collisioni tra bomberman e muri
             for(StationaryEntity entity2 : stationaryEntities){
                 if(entity.getHitbox().intersects(entity2.getHitbox())) {
@@ -178,7 +182,7 @@ public class TileManager {
             }
         }
         for(StationaryEntity entity : stationaryEntities){ //controlla le collisioni tra bombe e blocchi distruttibili
-            for(Bomba b : bombe){
+            for(Bomba b : partita.bombM.bombe){
                 if(entity.getHitbox().intersects(b.getHitbox())) {
                     b.handleCollision(entity);
                 }

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class BombManager {
 
-    private static ArrayList<Bomba> bombe = new ArrayList<Bomba>();
+    public static ArrayList<Bomba> bombe = new ArrayList<Bomba>();
     private int numeroBombe;
     private int raggioBombe;
     private static int bombeAttive = 0;
@@ -20,7 +20,7 @@ public class BombManager {
         raggioBombe = 1;
         this.keyHandler = keyHandler;
         this.play = play;
-        //bombe.add(new Bomba(100,100));
+
     }
 
     public void addBomba(){

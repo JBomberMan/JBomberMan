@@ -2,6 +2,8 @@ package Tomassetti;
 
 import Gobjects.*;
 
+import java.awt.geom.Rectangle2D;
+
 
 public interface Collidable {
 

@@ -6,10 +6,15 @@ import Taruffi.Grafica.Partita;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-public class Bomberman extends MovingEntity{
+public class Bomberman{
+        private static int x = 0;
+        private static int y= 0; //posizione del bomberman
+        private int vite; //punti vita del bomberman
+        private int velocita; //velocità del bomberman
 
         public BufferedImage up1, up2, down1, down2, right1, right2, left1, left2;
         public String direction;
@@ -17,19 +22,35 @@ public class Bomberman extends MovingEntity{
         Partita play;
         public int spriteCounter = 0;
         public int spriteNum = 1;
+        Rectangle hitbox;
 
 
         public Bomberman(int x, int y,BufferedImage image, int puntiVita, int velocita, KeyHandler keyH, Partita play) {
-            super(x, y, image, velocita, puntiVita, play);
+            Bomberman.x = x;
+            Bomberman.y = y; //posizioni di base
             this.direction = "down";
+            this.vite = puntiVita;
+            this.velocita = velocita;
             //this.Sprite = Sprite;
             //this.indiceAnimazione = 0;
             this.keyH = keyH;
             this.play = play;
+            this.hitbox = new Rectangle(x,y,play.tileSize -10,play.tileSize -10);
             getPlayerImage();
         }
 
-        public void getPlayerImage() {
+    public static int getX() {
+            return x;
+    }
+    public static int getY() {
+            return y;
+    }
+
+    public Rectangle getHitbox() {
+            return hitbox;
+    }
+
+    public void getPlayerImage() {
             try {
                 up1 = ImageIO.read(getClass().getResourceAsStream("/Images/BomberMan_up1.png"));
                 up2 = ImageIO.read(getClass().getResourceAsStream("/Images/BomberMan_up2.png"));
@@ -96,7 +117,7 @@ public class Bomberman extends MovingEntity{
 
 
 
-        @Override
+
         public void disegna(Graphics2D g2) {
             //g2.setColor(Color.WHITE); //setta il colore di sfondo
 
@@ -152,5 +173,58 @@ public class Bomberman extends MovingEntity{
             this.solidCollision(e);
     }
 
+    void solidCollision(GameEntity obj) {
+        Rectangle2D intersection = this.hitbox.createIntersection(obj.hitbox);
+        System.out.println(intersection.getWidth() + " " + intersection.getHeight());
+        // Vertical collision
+        if (intersection.getWidth() >= intersection.getHeight()) {
+            // From the top
+            if (intersection.getMaxY() >= this.hitbox.getMaxY()) {
+                this.y -= 5;
+            }
+            // From the bottom
+            if (intersection.getMaxY() >= obj.hitbox.getMaxY()) {
+
+                this.y += 5;
+            }
+
+            // Smoothing around corners
+            if (intersection.getWidth() < 16) {
+                if (intersection.getMaxX() >= this.hitbox.getMaxX()) {
+
+                    this.x -= 0.5;
+                }
+                if (intersection.getMaxX() >= obj.hitbox.getMaxX()) {
+
+                    this.x += 0.5;
+                }
+            }
+        }
+
+        // Horizontal collision
+        if (intersection.getHeight() >= intersection.getWidth()) {
+            // From the left
+            if (intersection.getMaxX() >= this.hitbox.getMaxX()) {
+
+                this.x -= 5;
+            }
+            // From the right
+            if (intersection.getMaxX() >= obj.hitbox.getMaxX()) {
+
+                this.x += 5;
+            }
+
+            // Smoothing around corners
+            if (intersection.getHeight() < 16) {
+                if (intersection.getMaxY() >= this.hitbox.getMaxY()) {
+
+                    this.y -= 0.5;
+                }
+                if (intersection.getMaxY() >= obj.hitbox.getMaxY()) {
+                    this.y += 0.5;
+                }
+            }
+        }
+    }
 
 }
