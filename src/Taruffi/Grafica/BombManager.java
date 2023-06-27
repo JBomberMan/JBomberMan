@@ -45,7 +45,12 @@ public class BombManager {
 
     public void piazzaBomba(){
         if(bombeAttive < numeroBombe){
-            bombe.add(new Bomba(Bomberman.getX(),Bomberman.getY(),null, this.play));
+            //spaghetti code per piazzarle sempre centrate nella tile
+            int tileOrizzontale = (Bomberman.getX() + play.tileSize/2) / play.tileSize;
+            int tileVerticale = (Bomberman.getY() + play.tileSize/2) / play.tileSize;
+            tileOrizzontale = tileOrizzontale * play.tileSize-1 + play.tileSize/4;
+            tileVerticale = tileVerticale * play.tileSize-1 + play.tileSize/4;
+            bombe.add(new Bomba(tileOrizzontale,tileVerticale,null, this.play));
             bombeAttive++;
         }
     }
