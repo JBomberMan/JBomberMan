@@ -5,30 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_20_2023_10_42_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_20_2023_10_42_AM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Porfiri/Bomba.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Porfiri/Bomba.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/KeyHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/KeyHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Partita.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Partita.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Tomassetti/Blocco.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Tomassetti/Blocco.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Tomassetti/Collidable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Tomassetti/Collidable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Tomassetti/Prova.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Tomassetti/Prova.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileLivelli/livello1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileLivelli/livello1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gobjects/Bomba.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/Bomba.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gobjects/Bomberman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/Bomberman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Gobjects/GameEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/GameEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gobjects/MovingEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/MovingEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gobjects/Muro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/Muro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gobjects/PowerUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/PowerUp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Gobjects/StationaryEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/StationaryEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gobjects/TileObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/TileObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/BombManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/BombManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/KeyHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Partita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Porfiri/Esplosione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Porfiri/Esplosione.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/TileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tomassetti/Blocco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tomassetti/Blocco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tomassetti/Collidable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tomassetti/Collidable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tomassetti/Prova.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tomassetti/Prova.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,19 +40,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Lorenzo\Desktop\JBomberMan\src\Music" />

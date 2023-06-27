@@ -171,10 +171,17 @@ public class TileManager {
         }
     }
     public void checkCollision(){
-        for(MovingEntity entity : movingEntities){
+        for(MovingEntity entity : movingEntities){ //controlla le collisioni tra bomberman e muri
             for(StationaryEntity entity2 : stationaryEntities){
                 if(entity.getHitbox().intersects(entity2.getHitbox())) {
                     entity.handleCollision(entity2);
+                }
+            }
+        }
+        for(StationaryEntity entity : stationaryEntities){ //controlla le collisioni tra bombe e blocchi distruttibili
+            for(Bomba b : bombe){
+                if(entity.getHitbox().intersects(b.getHitbox())) {
+                    b.handleCollision(entity);
                 }
             }
         }
