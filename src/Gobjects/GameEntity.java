@@ -22,10 +22,10 @@ public abstract class GameEntity implements Disegnabile, Collidable {
         if(image != null) this.hitbox = new Rectangle(x, y, this.image.getWidth()-15, this.image.getHeight()-15);
     }
 
-    public int getX(){
+    public static int getX(){
         return x;
     }
-    public int getY(){
+    public static int getY(){
         return y;
     }
     public Rectangle getHitbox(){

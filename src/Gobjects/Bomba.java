@@ -1,5 +1,6 @@
 package Gobjects;
 
+import Taruffi.Grafica.BombManager;
 import Taruffi.Grafica.Partita;
 
 import javax.imageio.ImageIO;
@@ -15,6 +16,7 @@ public class Bomba extends GameEntity{
     private int frameIndex; // Indice dell'immagine corrente dell'animazione
     private int timing = 0;
     Partita play;
+    Boolean esplosa = false;
 
     public Bomba(int x, int y,BufferedImage image, Partita play) {
         super(x, y, image);
@@ -46,21 +48,26 @@ public class Bomba extends GameEntity{
 
     @Override
     public void disegna(Graphics2D g2) {
-        if(timing == 20){
-            // Increment the frame index and wrap around if necessary
-            frameIndex = (frameIndex + 1) % 2;
-            timing = 0;
-        }
-        else {
-            timing++;
-        }
+        update();
         // Draw the current frame of the animation
         BufferedImage currentFrame = animationFrames[frameIndex];
-        g2.drawImage(currentFrame, x, y, null);
+        if(!esplosa){
+            g2.drawImage(currentFrame, x, y, null);
+        }
+
     }
 
     @Override
     public void update() {
-
+        if(timing%20 == 0){
+            // Increment the frame index and wrap around if necessary
+            frameIndex = (frameIndex + 1) % 2;
+        }
+        timing++;
+        if(timing == 201){
+            esplosa = true;
+            BombManager.togliBomba(this);
+            //esplodi();
+        }
     }
 }

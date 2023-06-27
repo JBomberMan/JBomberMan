@@ -8,10 +8,10 @@ import java.util.ArrayList;
 
 public class BombManager {
 
-    private ArrayList<Bomba> bombe = new ArrayList<Bomba>();
+    private static ArrayList<Bomba> bombe = new ArrayList<Bomba>();
     private int numeroBombe;
     private int raggioBombe;
-    private int bombeAttive = 0;
+    private static int bombeAttive = 0;
     private KeyHandler keyHandler;
     Partita play;
 
@@ -37,7 +37,12 @@ public class BombManager {
         }
     }
 
-    /***public void piazzaBomba(){
+    public static void togliBomba(Bomba bomba){
+        bombe.remove(bomba);
+        bombeAttive--;
+    }
+
+    public void piazzaBomba(){
         if(bombeAttive < numeroBombe){
             bombe.add(new Bomba(Bomberman.getX(),Bomberman.getY(),null, this.play));
             bombeAttive++;
@@ -47,7 +52,7 @@ public class BombManager {
         for(Bomba b : bombe){
             b.setTimer(0);
         }
-    }***/
+    }
 
 
 }

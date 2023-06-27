@@ -41,11 +41,12 @@ public class KeyHandler implements KeyListener {
             right = true;
         if(code == KeyEvent.VK_SPACE){
             space = true;
-            play.tileM.piazzaBomba();
+            play.bombM.piazzaBomba();
+
         }
         if(code == KeyEvent.VK_E){
             e = true;
-            if(controlloRemoto) play.tileM.detonaDistanza();
+            if(controlloRemoto) play.bombM.detonaDistanza();
         }
 
 

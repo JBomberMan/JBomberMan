@@ -15,7 +15,6 @@ public class TileManager {
     public Tile[] tile;
     KeyHandler keyH;
     int mapTileNum[][];
-    ArrayList<Bomba> bombs = new ArrayList<>();
     private ArrayList<Bomba> bombe = new ArrayList<Bomba>();
     private int numeroBombe = 3;
     private int raggioBombe;
