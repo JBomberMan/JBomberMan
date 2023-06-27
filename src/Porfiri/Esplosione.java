@@ -13,24 +13,25 @@ public class Esplosione extends StationaryEntity implements Disegnabile {
 
     int x,y;
     int raggio; //raggio dell'esplosione
-    int danno;// danno dell'esplosione
+
+
 
     //int indiceAnimazione; //indice dell'immagine corrente
 
 
     
-    public Esplosione(int raggio, int danno, BufferedImage Sprite, int x, int y, Partita play) {
+    public Esplosione(int raggio, BufferedImage Sprite, int x, int y, Partita play, Boolean direzione) {
         super(x, y, Sprite, play );
         this.raggio = raggio;
-        this.danno = danno;
-        //this.indiceAnimazione = 0;
+        if (direzione) {
+            this.hitbox = new Rectangle(x, y, 1, play.tileSize * raggio);
+            System.out.println("hitbox: " + this.hitbox);
+        } else {
+            this.hitbox = new Rectangle(x, y, play.tileSize * raggio, 1);
+            System.out.println("hitbox: " + this.hitbox);
+        }
+
     }
-
-   
-
-    /*public Image nextSprite(){
-        return Sprite[indiceAnimazione++ % Sprite.length];
-    }*/
 
 
     @Override

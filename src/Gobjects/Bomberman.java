@@ -3,6 +3,7 @@ package Gobjects;
 import Taruffi.Disegnabile;
 import Taruffi.Grafica.KeyHandler;
 import Taruffi.Grafica.Partita;
+import Taruffi.Grafica.Tile;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -226,5 +227,6 @@ public class Bomberman{
             }
         }
     }
+
 
 }

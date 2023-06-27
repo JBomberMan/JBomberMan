@@ -1,5 +1,6 @@
 package Gobjects;
 
+import Porfiri.Esplosione;
 import Taruffi.Grafica.BombManager;
 import Taruffi.Grafica.Partita;
 
@@ -25,6 +26,7 @@ public class Bomba extends GameEntity{
         this.frameIndex = 0;
         this.hitbox = new Rectangle(x,y,play.tileSize,play.tileSize);
         loadAnimationFrames();
+        this.raggio = 3; //per debug, da modificare andando a vedere quanto é il raggio effettivo della bomba
     }
 
     public void setTimer(int timer) {
@@ -67,7 +69,12 @@ public class Bomba extends GameEntity{
         if(timing == 201){
             esplosa = true;
             BombManager.togliBomba(this);
-            //esplodi();
+            esplodi();
         }
+    }
+
+    public void esplodi(){
+        BombManager.addEsplosione(new Esplosione(raggio,null,x,y,play,true));
+        BombManager.addEsplosione(new Esplosione(raggio,null,x,y,play,false));
     }
 }

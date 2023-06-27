@@ -2,6 +2,7 @@ package Taruffi.Grafica;
 import Gobjects.Bomberman;
 import Gobjects.Bomba;
 import Porfiri.BomberMan;
+import Porfiri.Esplosione;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -9,18 +10,18 @@ import java.util.ArrayList;
 public class BombManager {
 
     public static ArrayList<Bomba> bombe = new ArrayList<Bomba>();
-    private int numeroBombe;
-    private int raggioBombe;
+    private static int numeroBombe;
+    private static int raggioBombe;
     private static int bombeAttive = 0;
     private KeyHandler keyHandler;
     Partita play;
+    public static ArrayList<Esplosione> esplosioni = new ArrayList<Esplosione>();
 
     public BombManager(KeyHandler keyHandler, Partita play){
         numeroBombe = 3;
         raggioBombe = 1;
         this.keyHandler = keyHandler;
         this.play = play;
-
     }
 
     public void addBomba(){
@@ -52,6 +53,22 @@ public class BombManager {
         for(Bomba b : bombe){
             b.setTimer(0);
         }
+    }
+
+    public static int getRaggioBombe(){
+        return raggioBombe;
+    }
+
+    public static int getNumeroBombe(){
+        return numeroBombe;
+    }
+
+    public static int getBombeAttive() {
+        return bombeAttive;
+    }
+
+    public static void addEsplosione(Esplosione esplosione){
+        esplosioni.add(esplosione);
     }
 
 

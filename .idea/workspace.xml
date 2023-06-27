@@ -6,12 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Tomassetti/Collidable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Tomassetti/Collidable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gobjects/Bomberman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/Bomberman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gobjects/Bomba.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/Bomba.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Gobjects/GameEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/GameEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Porfiri/Esplosione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Porfiri/Esplosione.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/BombManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/BombManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/TileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tomassetti/Collidable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tomassetti/Collidable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,6 +132,7 @@
       <workItem from="1687191100661" duration="803000" />
       <workItem from="1687428214048" duration="5441000" />
       <workItem from="1687510113802" duration="1843000" />
+      <workItem from="1687873269894" duration="2028000" />
     </task>
     <servers />
   </component>

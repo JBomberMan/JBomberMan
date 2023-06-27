@@ -12,7 +12,7 @@ import java.io.File;
 
 public abstract class GameEntity implements Disegnabile, Collidable {
     int x,y;
-    Rectangle hitbox;
+    protected Rectangle hitbox;
     BufferedImage image;
 
     public GameEntity(int x, int y, BufferedImage image){
