@@ -4,7 +4,9 @@ import Taruffi.Disegnabile;
 import Taruffi.Grafica.Partita;
 import Tomassetti.Collidable;
 
-import java.awt.Graphics2D;
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.Random;
 
@@ -13,7 +15,9 @@ import java.util.Random;
 //un metodo che permette di eseguire l'effetto del powerup
 public class PowerUp extends StationaryEntity{
     private enum Tipo {
-        EsplosioneMassima(){
+
+        EsplosioneRange(){
+
             public void eseguiEffetto(BomberMan b) {
                 //TODO implementare il metodo
             }
@@ -38,7 +42,7 @@ public class PowerUp extends StationaryEntity{
                 //TODO implementare il metodo
             }
         }
-        ,ControlloRemoto(){
+        /***,ControlloRemoto(){
             public void eseguiEffetto(BomberMan b) {
                 //TODO implementare il metodo
             }
@@ -53,14 +57,24 @@ public class PowerUp extends StationaryEntity{
 
                 //TODO implementare il metodo
             }
-        }
+        }**/
     }
 
     private Tipo tipo;
 
-    private BufferedImage sprite;
-    public void eseguiEffetto(BomberMan b) {}
 
+    public void eseguiEffetto(BomberMan b) {}
+    public void loadSprite() {
+        try
+            {
+                this.image = ImageIO.read(getClass().getResourceAsStream("/Images/"+tipo+".png"));
+                this.hitbox = new Rectangle(this.x, this.y, image.getWidth(), image.getHeight());
+            }
+        catch(Exception e)
+            {
+                e.printStackTrace();
+            }
+    }
 
     private static PowerUp.Tipo getRandomTipo()  {
         Random random = new Random();
@@ -69,6 +83,8 @@ public class PowerUp extends StationaryEntity{
     public PowerUp(int x, int y, Partita partita) {
         super(x, y, null, partita);
         this.tipo = getRandomTipo();
+        this.isDistruttibile = false;
+        this.loadSprite();
     }
     public PowerUp(int x, int y, BufferedImage image, Partita partita) {
         super(x, y, image, partita);
@@ -79,6 +95,7 @@ public class PowerUp extends StationaryEntity{
 
     public void update() {
         //TODO implementare il metodo
+
     }
 
     public void handleCollision(BomberMan b) {

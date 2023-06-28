@@ -149,7 +149,6 @@ public class TileManager {
         for(StationaryEntity entity : stationaryEntities){
             entity.disegna(g2);
             entity.update();
-
         }
         for(MovingEntity entity : movingEntities){
             entity.disegna(g2);

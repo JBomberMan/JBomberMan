@@ -6,10 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Tomassetti/Collidable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Tomassetti/Collidable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gobjects/Bomberman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/Bomberman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gobjects/GameEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/GameEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Porfiri/Esplosione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Porfiri/Esplosione.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gobjects/Muro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/Muro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gobjects/PowerUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/PowerUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gobjects/StationaryEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/StationaryEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/BombPass.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/SuperaBombe.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/ExtendExplosion.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/EsplosioneRange.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Heart.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/ViteExtra.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/PassWall.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/SuperaBlocchi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Time.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/TempoExtra.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
