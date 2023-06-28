@@ -20,8 +20,8 @@ public class TileManager {
     private int numeroBombe = 3;
     private int raggioBombe;
     private int bombeAttive = 0;
-    ArrayList<MovingEntity> movingEntities = new ArrayList<>();
-    ArrayList<StationaryEntity> stationaryEntities = new ArrayList<>();
+    static ArrayList<MovingEntity> movingEntities = new ArrayList<>();
+    static ArrayList<StationaryEntity> stationaryEntities = new ArrayList<>();
     ArrayList<TileObject> tiles = new ArrayList<>();
 
     Bomberman bomber;
@@ -147,6 +147,7 @@ public class TileManager {
 
         for(StationaryEntity entity : stationaryEntities){
             entity.disegna(g2);
+            entity.update();
 
         }
         for(MovingEntity entity : movingEntities){
@@ -194,4 +195,26 @@ public class TileManager {
             }
         }
     }
+
+    public static void removeEntity(GameEntity entity){
+        if(entity instanceof MovingEntity){
+            movingEntities.remove(entity);
+        }
+        else if(entity instanceof StationaryEntity){
+            stationaryEntities.remove(entity);
+        }
+    }
+
+    public static void addEntity(GameEntity entity){
+        if(entity instanceof MovingEntity){
+            movingEntities.add((MovingEntity)entity);
+        }
+        else if(entity instanceof StationaryEntity){
+            stationaryEntities.add((StationaryEntity)entity);
+        }
+    }
+
+
+
+
 }

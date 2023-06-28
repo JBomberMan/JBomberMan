@@ -1,6 +1,7 @@
 package Tomassetti;
 
 import Gobjects.*;
+import Porfiri.Esplosione;
 
 import java.awt.geom.Rectangle2D;
 
@@ -26,6 +27,10 @@ public interface Collidable {
     }
 
     default void handleCollision(MovingEntity n) {
+        //TODO implementare il metodo
+    }
+
+    default void handleCollision(Esplosione e){
         //TODO implementare il metodo
     }
 }
