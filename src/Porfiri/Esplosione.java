@@ -9,6 +9,7 @@ import Tomassetti.Collidable;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -37,7 +38,7 @@ public class Esplosione extends StationaryEntity implements Disegnabile {
         }catch(IOException e){
             e.printStackTrace();
         }
-        this.hitbox = new Rectangle(x,y,sprite.getWidth(),sprite.getHeight());
+        this.hitbox = new Rectangle(this.x-10,this.y+10,sprite.getWidth()-10, sprite.getHeight()-10);
 
     }
 

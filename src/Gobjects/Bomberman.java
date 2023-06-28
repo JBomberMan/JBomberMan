@@ -176,7 +176,7 @@ public class Bomberman{
 
     void solidCollision(GameEntity obj) {
         Rectangle2D intersection = this.hitbox.createIntersection(obj.hitbox);
-        System.out.println(intersection.getWidth() + " " + intersection.getHeight());
+
         // Vertical collision
         if (intersection.getWidth() >= intersection.getHeight()) {
             // From the top

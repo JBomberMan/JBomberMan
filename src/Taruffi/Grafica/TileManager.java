@@ -5,6 +5,7 @@ import Porfiri.Esplosione;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.geom.Rectangle2D;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -180,17 +181,12 @@ public class TileManager {
                 bomber.handleCollision(entity);
             }
         }
-        for(MovingEntity entity : movingEntities){ //controlla le collisioni tra bomberman e muri
-            for(StationaryEntity entity2 : stationaryEntities){
-                if(entity.getHitbox().intersects(entity2.getHitbox())) {
-                    entity.handleCollision(entity2);
-                }
-            }
-        }
-        for(StationaryEntity entity : stationaryEntities){ //controlla le collisioni tra bombe e blocchi distruttibili
-            for(Bomba b : partita.bombM.bombe){
-                if(entity.getHitbox().intersects(b.getHitbox())) {
-                    b.handleCollision(entity);
+
+        for(Esplosione e : partita.bombM.esplosioni){ //controlla le collisioni tra bombe e blocchi distruttibili
+            for(StationaryEntity entity : stationaryEntities){
+                if(e.getHitbox().intersects(entity.getHitbox())){
+                    System.out.println("collisione");
+                    entity.handleCollision(e);
                 }
             }
         }
