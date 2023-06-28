@@ -1,6 +1,7 @@
 package Taruffi.Grafica;
 
 import Gobjects.*;
+import Porfiri.Esplosione;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -156,6 +157,10 @@ public class TileManager {
         for(Bomba b : partita.bombM.bombe){
             b.disegna(g2);
             b.update();
+        }
+        for(Esplosione e : partita.bombM.esplosioni){
+            e.disegna(g2);
+            e.update();
         }
         bomber.update();
         bomber.disegna(g2);

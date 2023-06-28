@@ -26,7 +26,7 @@ public class Bomba extends GameEntity{
         this.frameIndex = 0;
         this.hitbox = new Rectangle(x,y,play.tileSize,play.tileSize);
         loadAnimationFrames();
-        this.raggio = 3; //per debug, da modificare andando a vedere quanto é il raggio effettivo della bomba
+        this.raggio = 1; //per debug, da modificare andando a vedere quanto é il raggio effettivo della bomba
     }
 
     public void setTimer(int timer) {

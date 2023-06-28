@@ -36,6 +36,9 @@ public class BombManager {
         for(Bomba b : bombe){
             b.disegna(g2);
         }
+        for(Esplosione e : esplosioni){
+            e.disegna(g2);
+        }
     }
 
     public static void togliBomba(Bomba bomba){
@@ -45,12 +48,10 @@ public class BombManager {
 
     public void piazzaBomba(){
         if(bombeAttive < numeroBombe){
-            //spaghetti code per piazzarle sempre centrate nella tile
-            int tileOrizzontale = (Bomberman.getX() + play.tileSize/2) / play.tileSize;
-            int tileVerticale = (Bomberman.getY() + play.tileSize/2) / play.tileSize;
-            tileOrizzontale = tileOrizzontale * play.tileSize-1 + play.tileSize/4;
-            tileVerticale = tileVerticale * play.tileSize-1 + play.tileSize/4;
-            bombe.add(new Bomba(tileOrizzontale,tileVerticale,null, this.play));
+            //spaghetti code per piazzarle sempre centrate nella tile dove si trova il bomberman
+            int tileOrizzontale = (Bomberman.getX() + (play.tileSize/2)) / play.tileSize;
+            int tileVerticale = (Bomberman.getY() + (play.tileSize/2)) / play.tileSize;
+            bombe.add(new Bomba(tileOrizzontale* play.tileSize,tileVerticale* play.tileSize,null, this.play));
             bombeAttive++;
         }
     }
@@ -74,6 +75,10 @@ public class BombManager {
 
     public static void addEsplosione(Esplosione esplosione){
         esplosioni.add(esplosione);
+    }
+
+    public static void removeEsplosione(Esplosione esplosione){
+        esplosioni.remove(esplosione);
     }
 
 

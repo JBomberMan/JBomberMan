@@ -3,50 +3,58 @@ package Porfiri;
 import Gobjects.MovingEntity;
 import Gobjects.StationaryEntity;
 import Taruffi.Disegnabile;
+import Taruffi.Grafica.BombManager;
 import Taruffi.Grafica.Partita;
 import Tomassetti.Collidable;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 public class Esplosione extends StationaryEntity implements Disegnabile {
 
-    int x,y;
     int raggio; //raggio dell'esplosione
 
-
-
-    //int indiceAnimazione; //indice dell'immagine corrente
+    BufferedImage sprite;
+    private int counter = 0;
 
 
     
     public Esplosione(int raggio, BufferedImage Sprite, int x, int y, Partita play, Boolean direzione) {
-        super(x, y, Sprite, play );
+        super(x, y, Sprite, play);
         this.raggio = raggio;
-        if (direzione) {
-            //verticale
-            this.hitbox = new Rectangle(x+8, y+8, 1, play.tileSize * raggio); //il +8 dovrebbe centrare l'hitbox con la bomba
-            Graphics2D g2 = (Graphics2D) play.getGraphics();
-            g2.draw3DRect(x-(play.tileSize*raggio/2), y, 1, (play.tileSize-10) * raggio, true);
-            System.out.println("hitbox: " + this.hitbox);
-        } else {
-            //orizzontale
-            this.hitbox = new Rectangle(x+8, y+8, play.tileSize * raggio, 1);
-            Graphics2D g2 = (Graphics2D) play.getGraphics();
-            //g2.draw3DRect(x, y-(play.tileSize*raggio/2), (play.tileSize-10) * raggio, 1 * raggio, true);
-            System.out.println("hitbox: " + this.hitbox);
+        try{
+            if(direzione) {
+                this.x = x - (raggio * play.tileSize);
+                sprite = ImageIO.read(new File("src/Images/Orizzontale" + raggio + ".png")); //se direzione é true creiamo l'orizzontale
+            }
+            else{
+                this.y = y - (raggio * play.tileSize);
+                sprite = ImageIO.read(new File("src/Images/Verticale" + raggio + ".png"));
+            }
+        }catch(IOException e){
+            e.printStackTrace();
         }
+        this.hitbox = new Rectangle(x,y,sprite.getWidth(),sprite.getHeight());
+
     }
 
 
     @Override
     public void update() {
+        counter++;
+        if(counter == 70){
+            BombManager.removeEsplosione(this);
+        }
 
     }
 
     @Override
     public void disegna(Graphics2D g2) {
-        // TODO Auto-generated method stub
+        update();
+        g2.drawImage(sprite, x, y, null);
     }
 
 

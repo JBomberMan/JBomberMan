@@ -11,7 +11,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 
 public abstract class GameEntity implements Disegnabile, Collidable {
-    int x,y;
+    protected int x,y;
     protected Rectangle hitbox;
     BufferedImage image;
 
