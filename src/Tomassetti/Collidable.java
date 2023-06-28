@@ -9,7 +9,9 @@ import java.awt.geom.Rectangle2D;
 public interface Collidable {
 
 
-
+   default void handleCollision(Muro c) {
+        //TODO implementare il metodo
+    }
     default void handleCollision(PowerUp p) {
         //TODO implementare il metodo
     }
