@@ -4,6 +4,8 @@ import Taruffi.Disegnabile;
 import Taruffi.Grafica.KeyHandler;
 import Taruffi.Grafica.Partita;
 import Taruffi.Grafica.Tile;
+import Taruffi.Grafica.TileManager;
+import Tomassetti.Collidable;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -11,7 +13,7 @@ import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-public class Bomberman{
+public class Bomberman implements Collidable {
         private static int x = 0;
         private static int y= 0; //posizione del bomberman
         private int vite; //punti vita del bomberman
@@ -36,7 +38,7 @@ public class Bomberman{
             //this.indiceAnimazione = 0;
             this.keyH = keyH;
             this.play = play;
-            this.hitbox = new Rectangle(x,y,play.tileSize -10,play.tileSize -10);
+            this.hitbox = new Rectangle(x+5,y+5,play.tileSize -10,play.tileSize -10);
             getPlayerImage();
         }
 
@@ -166,12 +168,15 @@ public class Bomberman{
         }
 
         public void update(){
-            this.hitbox.setBounds(x, y, play.tileSize-15, play.tileSize-15);
+            this.hitbox.setBounds(x+5, y+5, play.tileSize-10, play.tileSize-10);
             muovi();
         }
-
+    @Override
     public void handleCollision(StationaryEntity e) {
             this.solidCollision(e);
+    }
+    public void handleCollision(PowerUp p){
+        p.raccogli();
     }
 
     void solidCollision(GameEntity obj) {

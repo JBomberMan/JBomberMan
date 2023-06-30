@@ -24,6 +24,7 @@ public class TileManager {
     static ArrayList<MovingEntity> movingEntities = new ArrayList<>();
     static ArrayList<StationaryEntity> stationaryEntities = new ArrayList<>();
     ArrayList<TileObject> tiles = new ArrayList<>();
+    static ArrayList<PowerUp> powerUps = new ArrayList<>();
 
     Bomberman bomber;
     private int indexBomberman;
@@ -163,6 +164,10 @@ public class TileManager {
             e.disegna(g2);
             e.update();
         }
+        for(PowerUp p : powerUps){
+            p.disegna(g2);
+            p.update();
+        }
         bomber.update();
         bomber.disegna(g2);
         checkCollision();
@@ -189,24 +194,37 @@ public class TileManager {
                 }
             }
         }
+        for(PowerUp p : powerUps){
+            if(bomber.getHitbox().intersects(p.getHitbox())){
+                bomber.handleCollision(p);
+            }
+        }
     }
 
     public static void removeEntity(GameEntity entity){
         if(entity instanceof MovingEntity){
             movingEntities.remove(entity);
         }
+        else if(entity instanceof PowerUp){
+            powerUps.remove(entity);
+        }
         else if(entity instanceof StationaryEntity){
             stationaryEntities.remove(entity);
         }
+
     }
 
     public static void addEntity(GameEntity entity){
         if(entity instanceof MovingEntity){
             movingEntities.add((MovingEntity)entity);
         }
+        else if(entity instanceof PowerUp){
+            powerUps.add((PowerUp)entity);
+        }
         else if(entity instanceof StationaryEntity){
             stationaryEntities.add((StationaryEntity)entity);
         }
+
     }
 
 
