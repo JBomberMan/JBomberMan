@@ -5,21 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/json-20230618.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Tomassetti/Collidable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Tomassetti/Collidable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gobjects/Bomberman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/Bomberman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gobjects/GameEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/GameEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gobjects/Muro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/Muro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gobjects/PowerUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/PowerUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/EsplosioneRange.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/EsplosioneRange.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/Remote.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Remote.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/SuperaBlocchi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/SuperaBlocchi.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/SuperaBombe.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/SuperaBombe.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/TempoExtra.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/TempoExtra.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/ViteExtra.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/ViteExtra.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Porfiri/Esplosione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Porfiri/Esplosione.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/TileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tomassetti/Collidable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tomassetti/Collidable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JBomberMan.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JBomberMan.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,19 +39,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/aless/JBomberMan/src/json-20230618.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Lorenzo\Desktop\JBomberMan\src\Music" />
@@ -144,6 +138,8 @@
       <workItem from="1687510113802" duration="1843000" />
       <workItem from="1687873269894" duration="5363000" />
       <workItem from="1687937914669" duration="2751000" />
+      <workItem from="1688132393087" duration="144000" />
+      <workItem from="1688132545464" duration="754000" />
     </task>
     <servers />
   </component>
