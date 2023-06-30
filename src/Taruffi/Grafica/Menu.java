@@ -6,6 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
 /**
  * Classe che rappresenta i bottoni necessari allo svolgimento delle varie azioni, ovvero
@@ -28,6 +29,7 @@ public class Menu extends JPanel {
         bottonePartita = new JButton("Avvia partita");
         bottoneNickname = new JButton("Imposta nickname");
         bottoneEditor = new JButton("Avvia editor livelli");
+        setOpaque(false);
 
         setLayout(new FlowLayout());
         add(bottoneAvatar);
@@ -41,8 +43,13 @@ public class Menu extends JPanel {
         bottoneAvatar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String immagine = JOptionPane.showInputDialog("Inserisci il percorso");
-                ProfiloUtente.getProfilo().setAvatar(immagine);
+                JFileChooser fileChooser = new JFileChooser();
+                int result = fileChooser.showOpenDialog(null);
+                if (result == JFileChooser.APPROVE_OPTION) {
+                    File selectedFile = fileChooser.getSelectedFile();
+                    String percorso = selectedFile.getAbsolutePath();
+                    ProfiloUtente.getProfilo().setAvatar(percorso);
+                }
 
             }
         });

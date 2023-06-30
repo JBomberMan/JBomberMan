@@ -5,16 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Images/avatarBase.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/backgroundBomberman.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gobjects/Muro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/Muro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gobjects/PowerUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/PowerUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gobjects/StationaryEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/StationaryEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/BombPass.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/SuperaBombe.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/ExtendExplosion.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/EsplosioneRange.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/Heart.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/ViteExtra.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/PassWall.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/SuperaBlocchi.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/Time.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/TempoExtra.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/TileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Avatar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Avatar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Nickname.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Nickname.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/ProfiloUtente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/ProfiloUtente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Avatar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Avatar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Nickname.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Nickname.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/ProfiloUtente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/ProfiloUtente.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,6 +143,7 @@
       <workItem from="1687510113802" duration="1843000" />
       <workItem from="1687873269894" duration="5363000" />
       <workItem from="1687937914669" duration="2751000" />
+      <workItem from="1687964923234" duration="266000" />
     </task>
     <servers />
   </component>
@@ -173,6 +178,10 @@
           <line>34</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
+          <option name="timeStamp" value="9" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>

@@ -29,12 +29,14 @@ public class Avatar extends JPanel {
         contenitoreAvatar.setSize(100,100);
         contenitoreAvatar.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(Color.BLACK), BorderFactory.createLineBorder(Color.BLACK)));
 
-
     }
 
     public void setAvatar(){
+        /*
         String avatar = JOptionPane.showInputDialog("Inserisci percorso");
         ImageIcon immagineAvatar = new ImageIcon(avatar);
+        */
+        ImageIcon immagineAvatar = new ImageIcon("src\\Images\\avatarBase.png");
         immagineAvatar = new ImageIcon(immagineAvatar.getImage().getScaledInstance(150,150, Image.SCALE_SMOOTH));
         contenitoreAvatar = new JLabel(immagineAvatar);
         contenitoreAvatar.setSize(20,20);

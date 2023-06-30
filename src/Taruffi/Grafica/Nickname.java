@@ -10,6 +10,7 @@ public class Nickname extends JPanel {
 
     public Nickname(){
         setNickname();
+        setOpaque(false);
         setVisible(true);
     }
 
