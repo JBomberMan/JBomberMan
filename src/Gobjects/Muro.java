@@ -40,9 +40,10 @@ public class Muro extends StationaryEntity{
     @Override
     public void update() {
         if(this.isDistrutto){
-            PowerUp prova = new PowerUp(this.x,this.y,play);
-            System.out.println(prova.toString());
-            TileManager.addEntity(prova);
+            double random = Math.random();
+            if(random < 0.3){
+                TileManager.addEntity(new PowerUp(this.x,this.y,play));
+            }
             TileManager.removeEntity(this);
         }
 }}

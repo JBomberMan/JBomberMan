@@ -19,7 +19,7 @@ public abstract class GameEntity implements Disegnabile, Collidable {
         this.x = x;
         this.y = y;
         this.image = image;
-        if(image != null) this.hitbox = new Rectangle(x, y, this.image.getWidth(), this.image.getHeight());
+        if(image != null) this.hitbox = new Rectangle(x+5, y+5, this.image.getWidth()-5, this.image.getHeight()-5);
     }
 
     public int getX(){

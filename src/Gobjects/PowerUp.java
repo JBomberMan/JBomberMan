@@ -2,6 +2,7 @@ package Gobjects;
 import Porfiri.BomberMan;
 import Taruffi.Disegnabile;
 import Taruffi.Grafica.Partita;
+import Taruffi.Grafica.TileManager;
 import Tomassetti.Collidable;
 
 import javax.imageio.ImageIO;
@@ -14,6 +15,7 @@ import java.util.Random;
 //implementa l'interfaccia Disegnabile, dispone di due campi X e Y che rappresentano le coordinate del powerup che si può trovare anche dentro ad un blocco
 //un metodo che permette di eseguire l'effetto del powerup
 public class PowerUp extends StationaryEntity{
+    private boolean isRaccolto = false;
     private enum Tipo {
 
         EsplosioneRange(){
@@ -42,12 +44,12 @@ public class PowerUp extends StationaryEntity{
                 //TODO implementare il metodo
             }
         }
-        /***,ControlloRemoto(){
+        ,ControlloRemoto(){
             public void eseguiEffetto(BomberMan b) {
                 //TODO implementare il metodo
             }
         }
-        ,CupAndBall(){
+        ,Crepe(){
             public void eseguiEffetto(BomberMan b) {
                 //TODO implementare il metodo
             }
@@ -57,7 +59,7 @@ public class PowerUp extends StationaryEntity{
 
                 //TODO implementare il metodo
             }
-        }**/
+        }
     }
 
     private Tipo tipo;
@@ -68,7 +70,7 @@ public class PowerUp extends StationaryEntity{
         try
             {
                 this.image = ImageIO.read(getClass().getResourceAsStream("/Images/"+tipo+".png"));
-                this.hitbox = new Rectangle(this.x, this.y, image.getWidth(), image.getHeight());
+                this.hitbox = new Rectangle(this.x+16, this.y+16, image.getWidth()-16, image.getHeight()-16);
             }
         catch(Exception e)
             {
@@ -96,6 +98,9 @@ public class PowerUp extends StationaryEntity{
     public void update() {
         //TODO implementare il metodo
 
+    }
+    public void raccogli(){
+        TileManager.removeEntity(this);
     }
 
     public void handleCollision(BomberMan b) {

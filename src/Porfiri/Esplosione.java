@@ -38,7 +38,7 @@ public class Esplosione extends StationaryEntity implements Disegnabile {
         }catch(IOException e){
             e.printStackTrace();
         }
-        this.hitbox = new Rectangle(this.x-10,this.y+10,sprite.getWidth()-10, sprite.getHeight()-10);
+        this.hitbox = new Rectangle(this.x+10,this.y+10,sprite.getWidth()-10, sprite.getHeight()-10);
 
     }
 
