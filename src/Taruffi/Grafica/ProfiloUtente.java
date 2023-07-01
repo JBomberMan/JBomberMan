@@ -89,7 +89,7 @@ public class ProfiloUtente extends JFrame{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(1200,800);
 
-        ImageIcon bg = new ImageIcon(getClass().getResource("src/Images/avatarBase.png"));
+        ImageIcon bg = new ImageIcon(getClass().getResource("/Images/avatarBase.png"));
         //prima era senza getClass.getResource, errore:
         //Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.net.URL.toExternalForm()" because "url" is null
         JLabel background = new JLabel(bg);
@@ -143,6 +143,7 @@ public class ProfiloUtente extends JFrame{
         c.gridy = 1;
         c.anchor = GridBagConstraints.FIRST_LINE_START;
         background.add(nick, c);
+        audioManager.setFile(0);
 
         Storico storico = Storico.getStorico();
         storico.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(Color.BLACK), BorderFactory.createLineBorder(Color.BLACK)));

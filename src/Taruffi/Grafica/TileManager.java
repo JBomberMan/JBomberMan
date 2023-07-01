@@ -185,11 +185,15 @@ public class TileManager {
                 bomber.handleCollision(entity);
             }
         }
+        for(Bomba b: partita.bombM.bombe){ //controlla le collisioni tra bomberman e bombe
+            if(bomber.getHitbox().intersects(b.getHitbox())){
+                bomber.handleCollision(b);
+            }
+        }
 
         for(Esplosione e : partita.bombM.esplosioni){ //controlla le collisioni tra bombe e blocchi distruttibili
             for(StationaryEntity entity : stationaryEntities){
                 if(e.getHitbox().intersects(entity.getHitbox())){
-                    System.out.println("collisione");
                     entity.handleCollision(e);
                 }
             }

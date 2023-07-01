@@ -12,8 +12,11 @@ import java.awt.*;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Bomberman implements Collidable {
+        private int score = 0;
         private static int x = 0;
         private static int y= 0; //posizione del bomberman
         private int vite; //punti vita del bomberman
@@ -26,6 +29,7 @@ public class Bomberman implements Collidable {
         public int spriteCounter = 0;
         public int spriteNum = 1;
         Rectangle hitbox;
+        Map<PowerUp.Tipo, Integer> powerUps = new HashMap<PowerUp.Tipo, Integer>();
 
 
         public Bomberman(int x, int y,BufferedImage image, int puntiVita, int velocita, KeyHandler keyH, Partita play) {
@@ -51,6 +55,11 @@ public class Bomberman implements Collidable {
 
     public Rectangle getHitbox() {
             return hitbox;
+    }
+
+    public void setExtraTime(int extraTime) {
+    }
+    public void setRaggioEsplosione(int raggioEsplosione) {
     }
 
     public void getPlayerImage() {
@@ -113,14 +122,6 @@ public class Bomberman implements Collidable {
         return Sprite[indiceAnimazione++ % Sprite.length];
     }*/
 
-        public void setScore(int score){
-            //perché avevamo detto di metterlo qua?
-            // non ricordo ma effettivamente non potremmo soltanto farlo aggiornare dal vivew?
-        }
-
-
-
-
         public void disegna(Graphics2D g2) {
             //g2.setColor(Color.WHITE); //setta il colore di sfondo
 
@@ -175,10 +176,33 @@ public class Bomberman implements Collidable {
     public void handleCollision(StationaryEntity e) {
             this.solidCollision(e);
     }
+
     public void handleCollision(PowerUp p){
-        p.raccogli();
+            p.raccogli(this);
     }
 
+    public void handleCollision(Bomba b){
+            if(powerUps.get(PowerUp.Tipo.SuperaBombe) > 0){
+            }
+            else{
+                this.solidCollision(b);
+            }
+    }
+    public void setScore(int score){
+            this.score += score;
+    }
+
+    public void addToMap(PowerUp.Tipo p){
+            if(powerUps.containsKey(p)){
+                powerUps.put(p ,180);
+            }
+            else{
+                powerUps.put(p, 180);
+            }
+    }
+    public void setVite(int vite){
+        this.vite += vite;
+    }
     void solidCollision(GameEntity obj) {
         Rectangle2D intersection = this.hitbox.createIntersection(obj.hitbox);
 

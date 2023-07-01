@@ -5,10 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Images/ControlloRemoto.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/Crepe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/IceCream.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Porfiri/Bomba.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Porfiri/BomberMan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Porfiri/Esplosione.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Porfiri/livelli/Livello1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Porfiri/livelli/Livello2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Porfiri/livelli/Livello3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Porfiri/livelli/Livello4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Porfiri/livelli/Livello5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Porfiri/livelli/Livello6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Porfiri/livelli/Livello7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Porfiri/livelli/Livello8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Porfiri/livelli/LivelloGenerico.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Disegnabile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Avatar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/KeyHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Menu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Nickname.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/Partita.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/ProfiloUtente.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/SchermataSconfitta$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/SchermataSconfitta$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/SchermataSconfitta.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/SchermataVittoria$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Grafica/SchermataVittoria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Nemici/Nemico1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Nemici/Nemico2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Nemici/Nemico3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Nemici/Nemico4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Nemici/Nemico5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Taruffi/Nemici/NemicoGenerico.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Tomassetti/Blocco.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Tomassetti/Collidable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Tomassetti/DestructibleBlock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JBomberMan/Tomassetti/Prova.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gobjects/Bomberman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/Bomberman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gobjects/PowerUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/PowerUp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/ProfiloUtente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/ProfiloUtente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Storico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Storico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,27 +83,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/donmatteo/Desktop/JBomberman/JBomberMan/src/json-20230618.jar&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/Lorenzo/Desktop/JBomberMan/out/production/JBomberMan/json-20230618.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Lorenzo\Desktop\JBomberMan\src\Music" />
@@ -178,11 +221,6 @@
           <url>file://$PROJECT_DIR$/src/Porfiri/Bomba.java</url>
           <line>34</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Taruffi/Grafica/Storico.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

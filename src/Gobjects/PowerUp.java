@@ -1,5 +1,5 @@
 package Gobjects;
-import Porfiri.BomberMan;
+import Gobjects.Bomberman;
 import Taruffi.Disegnabile;
 import Taruffi.Grafica.Partita;
 import Taruffi.Grafica.TileManager;
@@ -16,56 +16,60 @@ import java.util.Random;
 //un metodo che permette di eseguire l'effetto del powerup
 public class PowerUp extends StationaryEntity{
     private boolean isRaccolto = false;
-    private enum Tipo {
+    public enum Tipo {
 
         EsplosioneRange(){
 
-            public void eseguiEffetto(BomberMan b) {
-                //TODO implementare il metodo
+            public void eseguiEffetto(Bomberman b) {
+                b.setRaggioEsplosione(1);
+
             }
         }
         ,ViteExtra(){
-            public void eseguiEffetto(BomberMan b) {
-                //TODO implementare il metodo
+            public void eseguiEffetto(Bomberman b) {
+                b.setVite(1);
+
             }
         }
         ,SuperaBlocchi(){
-            public void eseguiEffetto(BomberMan b) {
-                //TODO implementare il metodo
+            public void eseguiEffetto(Bomberman b) {
+
+                b.addToMap(this);
             }
         }
         ,SuperaBombe(){
-            public void eseguiEffetto(BomberMan b) {
-                //TODO implementare il metodo
+            public void eseguiEffetto(Bomberman b) {
+                b.addToMap(this);
+
             }
         }
         ,TempoExtra(){
-            public void eseguiEffetto(BomberMan b) {
-                //TODO implementare il metodo
+            public void eseguiEffetto(Bomberman b) {
+                b.setExtraTime(20);
+
             }
         }
         ,ControlloRemoto(){
-            public void eseguiEffetto(BomberMan b) {
-                //TODO implementare il metodo
+            public void eseguiEffetto(Bomberman b) {
+                b.addToMap(this);
             }
         }
         ,Crepe(){
-            public void eseguiEffetto(BomberMan b) {
-                //TODO implementare il metodo
+            public void eseguiEffetto(Bomberman b) {
+                b.setScore(50);
             }
         }
         ,IceCream(){
-            public void eseguiEffetto(BomberMan b) {
-
-                //TODO implementare il metodo
+            public void eseguiEffetto(Bomberman b) {
+                b.setScore(100);
             }
-        }
+        };
+        public abstract void eseguiEffetto(Bomberman b);
+
     }
 
     private Tipo tipo;
 
-
-    public void eseguiEffetto(BomberMan b) {}
     public void loadSprite() {
         try
             {
@@ -99,13 +103,12 @@ public class PowerUp extends StationaryEntity{
         //TODO implementare il metodo
 
     }
-    public void raccogli(){
+    public void raccogli(Bomberman b){
         TileManager.removeEntity(this);
+        this.tipo.eseguiEffetto(b);
     }
 
-    public void handleCollision(BomberMan b) {
-        this.eseguiEffetto(b);
-    }
+
 
     public String toString() {
         return "PowerUp{" +
