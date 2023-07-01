@@ -21,6 +21,9 @@ public class ProfiloUtente extends JFrame{
     private ImageIcon immagineProfilo;
     private JLabel contenitoreImmagine;
     private JLabel contenitoreNickname;
+    private JLabel contenitoreStorico;
+
+    private Storico storico;
 
 
     /**
@@ -86,7 +89,9 @@ public class ProfiloUtente extends JFrame{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(1200,800);
 
-        ImageIcon bg = new ImageIcon("src\\Images\\backgroundBomberman.png");
+        ImageIcon bg = new ImageIcon(getClass().getResource("src/Images/avatarBase.png"));
+        //prima era senza getClass.getResource, errore:
+        //Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.net.URL.toExternalForm()" because "url" is null
         JLabel background = new JLabel(bg);
         background.setLayout(new GridBagLayout());
         background.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(Color.BLACK), BorderFactory.createLineBorder(Color.BLACK)));
@@ -138,6 +143,19 @@ public class ProfiloUtente extends JFrame{
         c.gridy = 1;
         c.anchor = GridBagConstraints.FIRST_LINE_START;
         background.add(nick, c);
+
+        Storico storico = Storico.getStorico();
+        storico.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(Color.BLACK), BorderFactory.createLineBorder(Color.BLACK)));
+        c.fill = GridBagConstraints.BOTH;
+        c.insets = new Insets(10,10,10,10); //specifica il padding rispetto ad altri elementi
+        c.weightx = 1;
+        c.weighty = 1;
+        //c.gridwidth = 1;
+        //c.gridheight = 1;
+        c.gridx = 1;
+        c.gridy = 0;
+        c.anchor = GridBagConstraints.FIRST_LINE_START;
+        background.add(storico, c);
 
         //audioManager.setFile(0);
         //audioManager.play();
