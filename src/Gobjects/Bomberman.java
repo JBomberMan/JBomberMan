@@ -1,5 +1,6 @@
 package Gobjects;
 
+import Porfiri.Esplosione;
 import Taruffi.Disegnabile;
 import Taruffi.Grafica.KeyHandler;
 import Taruffi.Grafica.Partita;
@@ -16,6 +17,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Bomberman implements Collidable {
+        private int invTimer = 0;
         private int score = 0;
         private static int x = 0;
         private static int y= 0; //posizione del bomberman
@@ -23,7 +25,7 @@ public class Bomberman implements Collidable {
         private int velocita; //velocità del bomberman
 
         public BufferedImage up1, up2, down1, down2, right1, right2, left1, left2;
-        public String direction;
+        public static String direction;
         KeyHandler keyH;
         Partita play;
         public int spriteCounter = 0;
@@ -31,6 +33,9 @@ public class Bomberman implements Collidable {
         Rectangle hitbox;
         Map<PowerUp.Tipo, Integer> powerUps = new HashMap<PowerUp.Tipo, Integer>();
 
+        public static String getDirezione(){
+            return direction;
+        }
 
         public Bomberman(int x, int y,BufferedImage image, int puntiVita, int velocita, KeyHandler keyH, Partita play) {
             Bomberman.x = x;
@@ -44,6 +49,8 @@ public class Bomberman implements Collidable {
             this.play = play;
             this.hitbox = new Rectangle(x+5,y+5,play.tileSize -10,play.tileSize -10);
             getPlayerImage();
+            powerUps.put(PowerUp.Tipo.SuperaBlocchi, 0);
+            powerUps.put(PowerUp.Tipo.SuperaBombe, 0);
         }
 
     public static int getX() {
@@ -171,10 +178,23 @@ public class Bomberman implements Collidable {
         public void update(){
             this.hitbox.setBounds(x+5, y+5, play.tileSize-10, play.tileSize-10);
             muovi();
+            if(invTimer > 0){
+                invTimer--;
+            }
+            for(PowerUp.Tipo p : powerUps.keySet()){
+                if(powerUps.get(p) > 0){
+                    powerUps.put(p, powerUps.get(p) - 1);
+                }
+            }
         }
     @Override
     public void handleCollision(StationaryEntity e) {
-            this.solidCollision(e);
+            if(powerUps.get(PowerUp.Tipo.SuperaBlocchi) > 0 && e.isDistruttibile){
+            }
+            else{
+                this.solidCollision(e);
+            }
+
     }
 
     public void handleCollision(PowerUp p){
@@ -182,6 +202,7 @@ public class Bomberman implements Collidable {
     }
 
     public void handleCollision(Bomba b){
+
             if(powerUps.get(PowerUp.Tipo.SuperaBombe) > 0){
             }
             else{
@@ -191,13 +212,20 @@ public class Bomberman implements Collidable {
     public void setScore(int score){
             this.score += score;
     }
+    public void handleCollision(Esplosione e){
+            if(this.invTimer == 0){
+                this.vite--;
+                this.invTimer = 30;
+                System.out.println("Vite rimaste: " + this.vite);
+            }
 
+    }
     public void addToMap(PowerUp.Tipo p){
             if(powerUps.containsKey(p)){
-                powerUps.put(p ,180);
+                powerUps.put(p ,600);
             }
             else{
-                powerUps.put(p, 180);
+                powerUps.put(p, 600);
             }
     }
     public void setVite(int vite){
@@ -256,6 +284,8 @@ public class Bomberman implements Collidable {
             }
         }
     }
-
+    public boolean getDetona(){
+            return powerUps.get(PowerUp.Tipo.ControlloRemoto) > 0;
+    }
 
 }

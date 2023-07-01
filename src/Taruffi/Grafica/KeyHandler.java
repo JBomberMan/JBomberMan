@@ -4,7 +4,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class KeyHandler implements KeyListener {
-    private boolean controlloRemoto = false;
+
     public Boolean up, down, left, right, space, e;
     private int spaceTiming = 0;
     Partita play;
@@ -46,7 +46,10 @@ public class KeyHandler implements KeyListener {
         }
         if(code == KeyEvent.VK_E){
             e = true;
-            if(controlloRemoto) play.bombM.detonaDistanza();
+            if(play.tileM.bomber.getDetona()) {
+                System.out.println("kaboom");
+                play.bombM.detonaDistanza();
+            };
         }
 
 

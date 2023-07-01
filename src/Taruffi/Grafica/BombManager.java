@@ -1,6 +1,7 @@
 package Taruffi.Grafica;
 import Gobjects.Bomberman;
 import Gobjects.Bomba;
+import Gobjects.StationaryEntity;
 import Porfiri.BomberMan;
 import Porfiri.Esplosione;
 
@@ -49,15 +50,40 @@ public class BombManager {
     public void piazzaBomba(){
         if(bombeAttive < numeroBombe){
             //spaghetti code per piazzarle sempre centrate nella tile dove si trova il bomberman
-            int tileOrizzontale = (Bomberman.getX() + (play.tileSize/2)) / play.tileSize;
-            int tileVerticale = (Bomberman.getY() + (play.tileSize/2)) / play.tileSize;
+            String direzione = Bomberman.getDirezione();
+            int tileOrizzontale = 0;
+            int tileVerticale = 0;
+            switch (direzione){
+                case("up"):
+                    tileOrizzontale = (Bomberman.getX() + (play.tileSize/2)) / play.tileSize;
+                    tileVerticale = (Bomberman.getY()-64 + (play.tileSize/2)) / play.tileSize;
+                    break;
+                case("down"):
+                    tileOrizzontale = (Bomberman.getX() + (play.tileSize/2)) / play.tileSize;
+                    tileVerticale = (Bomberman.getY()+64 + (play.tileSize/2)) / play.tileSize;
+                    break;
+                case("left"):
+                    tileOrizzontale = (Bomberman.getX()-64 + (play.tileSize/2)) / play.tileSize;
+                    tileVerticale = (Bomberman.getY() + (play.tileSize/2)) / play.tileSize;
+                    break;
+                case("right"):
+                    tileOrizzontale = (Bomberman.getX()+64 + (play.tileSize/2)) / play.tileSize;
+                    tileVerticale = (Bomberman.getY() + (play.tileSize/2)) / play.tileSize;
+                    break;
+            }
+            for(StationaryEntity e: play.tileM.stationaryEntities){
+                if(e.getX() == tileOrizzontale* play.tileSize && e.getY() == tileVerticale* play.tileSize){
+                    return;
+                }
+            }
             bombe.add(new Bomba(tileOrizzontale* play.tileSize,tileVerticale* play.tileSize,null, this.play));
             bombeAttive++;
         }
     }
     public void detonaDistanza(){
         for(Bomba b : bombe){
-            b.setTimer(0);
+            b.esplodi();
+            BombManager.togliBomba(b);
         }
     }
 

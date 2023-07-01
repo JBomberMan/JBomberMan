@@ -22,7 +22,7 @@ public class TileManager {
     private int raggioBombe;
     private int bombeAttive = 0;
     static ArrayList<MovingEntity> movingEntities = new ArrayList<>();
-    static ArrayList<StationaryEntity> stationaryEntities = new ArrayList<>();
+    public static ArrayList<StationaryEntity> stationaryEntities = new ArrayList<>();
     ArrayList<TileObject> tiles = new ArrayList<>();
     static ArrayList<PowerUp> powerUps = new ArrayList<>();
 
@@ -196,6 +196,9 @@ public class TileManager {
                 if(e.getHitbox().intersects(entity.getHitbox())){
                     entity.handleCollision(e);
                 }
+            }
+            if(bomber.getHitbox().intersects(e.getHitbox())){
+                bomber.handleCollision(e);
             }
         }
         for(PowerUp p : powerUps){

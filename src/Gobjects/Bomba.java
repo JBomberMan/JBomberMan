@@ -31,6 +31,7 @@ public class Bomba extends GameEntity{
 
     public void setTimer(int timer) {
         this.timer = timer;
+        System.out.println("Timer settato a " + timer);
     }
 
     private void loadAnimationFrames() {
@@ -58,7 +59,9 @@ public class Bomba extends GameEntity{
         }
 
     }
-
+    public int getTimer(){
+        return timer;
+    }
     @Override
     public void update() {
         if(timing%20 == 0){
