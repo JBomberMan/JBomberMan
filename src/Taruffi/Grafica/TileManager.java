@@ -15,6 +15,7 @@ public class TileManager {
 
     Partita partita; //equivale al suo gamepanel
     public Tile[] tile;
+    public int prova;
     KeyHandler keyH;
     int mapTileNum[][];
 
