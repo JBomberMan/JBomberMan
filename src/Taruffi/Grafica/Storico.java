@@ -2,6 +2,7 @@ package Taruffi.Grafica;
 import org.json.*;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.File;
 import java.io.InputStream;
 import java.nio.file.Files;
@@ -15,7 +16,7 @@ public class Storico extends JPanel {
 
     public Storico(){
         setStorico();
-        setOpaque(false);
+        //setOpaque(false);
         setVisible(true);
     }
 
@@ -24,9 +25,9 @@ public class Storico extends JPanel {
             File file = new File(percorso);
             String content = new String(Files.readAllBytes(Paths.get(file.toURI())));
             JSONObject obj = new JSONObject(content);
-            storico = new JLabel("<html>Partite giocate: " + obj.getInt("giocate")
+            storico = new JLabel("<html><h1>Partite giocate: " + obj.getInt("giocate")
                     + "<br>" + "Partite vinte: " + obj.getInt("vinte") + "<br>"
-                    + "Partite perse: " + obj.getInt("perse") + "</html>");
+                    + "Partite perse: " + obj.getInt("perse") + "</h1></html>");
             add(storico);
         }catch (Exception e){
             e.printStackTrace();
