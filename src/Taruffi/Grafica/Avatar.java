@@ -23,7 +23,7 @@ public class Avatar extends JPanel {
     //TODO: sostituire la stringa con un filesystem a schermo ed unire i due metodi
     public void setAvatar(String avatar){
 
-        ImageIcon immagineAvatar = new ImageIcon(avatar);
+        ImageIcon immagineAvatar = new ImageIcon(getClass().getResource(avatar));
         immagineAvatar = new ImageIcon(immagineAvatar.getImage().getScaledInstance(150,150, Image.SCALE_SMOOTH));
         contenitoreAvatar.setIcon(immagineAvatar);
         contenitoreAvatar.setSize(100,100);
@@ -36,7 +36,7 @@ public class Avatar extends JPanel {
         String avatar = JOptionPane.showInputDialog("Inserisci percorso");
         ImageIcon immagineAvatar = new ImageIcon(avatar);
         */
-        ImageIcon immagineAvatar = new ImageIcon("src\\Images\\avatarBase.png");
+        ImageIcon immagineAvatar = new ImageIcon(getClass().getResource("/Images/avatarBase.png"));
         immagineAvatar = new ImageIcon(immagineAvatar.getImage().getScaledInstance(150,150, Image.SCALE_SMOOTH));
         contenitoreAvatar = new JLabel(immagineAvatar);
         contenitoreAvatar.setSize(20,20);

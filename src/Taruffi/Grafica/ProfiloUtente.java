@@ -89,7 +89,7 @@ public class ProfiloUtente extends JFrame{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(1200,800);
 
-        ImageIcon bg = new ImageIcon(getClass().getResource("/Images/avatarBase.png"));
+        ImageIcon bg = new ImageIcon(getClass().getResource("/Images/backgroundBomberman.png"));
         //prima era senza getClass.getResource, errore:
         //Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.net.URL.toExternalForm()" because "url" is null
         JLabel background = new JLabel(bg);

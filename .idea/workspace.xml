@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="" />
+    <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Avatar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Avatar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/ProfiloUtente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/ProfiloUtente.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -140,6 +144,7 @@
       <workItem from="1688132545464" duration="754000" />
       <workItem from="1688192854491" duration="121000" />
       <workItem from="1688192998824" duration="4252000" />
+      <workItem from="1688384205084" duration="1002000" />
     </task>
     <servers />
   </component>
