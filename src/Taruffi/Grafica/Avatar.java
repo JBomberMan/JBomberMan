@@ -33,10 +33,10 @@ public class Avatar extends JPanel {
             String content = new String(Files.readAllBytes(Paths.get(file.toURI())));
             JSONObject obj = new JSONObject(content);
             obj.put("avatar", avatar);
-            ImageIcon immagineAvatar = new ImageIcon(getClass().getResource(obj.getString("avatar")));
+            ImageIcon immagineAvatar = new ImageIcon((obj.getString("avatar")));
             immagineAvatar = new ImageIcon(immagineAvatar.getImage().getScaledInstance(150,150, Image.SCALE_SMOOTH));
             contenitoreAvatar.setIcon(immagineAvatar);
-            contenitoreAvatar.setSize(100,100);
+            contenitoreAvatar.setSize(20,20);
             contenitoreAvatar.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(Color.BLACK), BorderFactory.createLineBorder(Color.BLACK)));
         }catch (Exception e){
             e.printStackTrace();
