@@ -21,7 +21,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
     public final int screenWidth = maxScreenCol * tileSize;
     public final int screenHeight = maxScreenRow * tileSize; //dimensioni dello schermo in pixel
 
-    Thread gameThread; //thread che gestisce il gioco
+    static Thread gameThread; //thread che gestisce il gioco
                         //quando un Thread starta non si ferma finché nonglielo diciamo noi
                         //la classe implementa Runnable per usare i Threads
     KeyHandler keyHandler = new KeyHandler(this); //gestisce gli input da tastiera
@@ -107,20 +107,15 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
         Graphics2D g2 = (Graphics2D) g; //casta il Graphics in Graphics2D
                                         //per poter usare le funzioni di Graphics2D
                                         //come setRenderingHints()
-        
-        //g2.setColor(Color.WHITE); //setta il colore di sfondo
 
         tileM.draw(g2); //disegna i tiles
 
-
-         //disegna le bombe
-        //g2.fillRect(200, 200, tileSize, tileSize); //disegna qualcosa
-                                                            //sará sostituito con il bomebrman
-                                                            //con relative posizioni eccetera
-
-
         g2.dispose(); //rilascia le risorse usate da g2, good practice
 
+    }
+
+    public static void stopGameThread(){
+        gameThread.stop(); //ferma il thread
     }
 
 }

@@ -4,19 +4,20 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class SchermataSconfitta extends JPanel{
+public class SchermataSconfitta extends JFrame{
 
     private JButton tornaALMenu;
     private JButton riprova;
-    private SchermataSconfitta istanza;
+    private static SchermataSconfitta istanza;
 
     private SchermataSconfitta(){
 
+        setSize(300, 300);
         tornaALMenu = new JButton("Torna al Menu Principale");
         riprova = new JButton("Riprova");
-        setLayout(new BorderLayout());
-        add(tornaALMenu, BorderLayout.CENTER);
-        add(riprova, BorderLayout.CENTER);
+        setLayout(new FlowLayout());
+        add(tornaALMenu);
+        add(riprova);
 
         tornaALMenu.addActionListener(new ActionListener() {
 
@@ -32,6 +33,12 @@ public class SchermataSconfitta extends JPanel{
             }
         });
 
+    }
+
+    public static SchermataSconfitta getIstanza(){
+        if(istanza == null)
+            istanza = new SchermataSconfitta();
+        return istanza;
     }
 
 }

@@ -2,10 +2,7 @@ package Gobjects;
 
 import Porfiri.Esplosione;
 import Taruffi.Disegnabile;
-import Taruffi.Grafica.KeyHandler;
-import Taruffi.Grafica.Partita;
-import Taruffi.Grafica.Tile;
-import Taruffi.Grafica.TileManager;
+import Taruffi.Grafica.*;
 import Tomassetti.Collidable;
 
 import javax.imageio.ImageIO;
@@ -217,6 +214,11 @@ public class Bomberman implements Collidable {
                 this.vite--;
                 this.invTimer = 30;
                 System.out.println("Vite rimaste: " + this.vite);
+                if (this.vite <= 0){
+                    System.out.println("Hai perso!");
+                    SchermataSconfitta.getIstanza().setVisible(true);
+                    Partita.stopGameThread();
+                }
             }
 
     }

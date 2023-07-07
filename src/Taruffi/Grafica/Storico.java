@@ -16,7 +16,6 @@ public class Storico extends JPanel {
 
     public Storico(){
         setStorico();
-        //setOpaque(false);
         setVisible(true);
     }
 
