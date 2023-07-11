@@ -69,6 +69,9 @@ public class TileManager {
             tile[5].immagine = ImageIO.read(getClass().getResourceAsStream("/Images/blocco.jpg"));
             tile[6] = new Tile();
             tile[6].immagine = ImageIO.read(getClass().getResourceAsStream("/Images/bloccoDistruttibile.jpg"));
+            tile[7] = new Tile();
+            tile[7].immagine = ImageIO.read(getClass().getResourceAsStream("/Images/white.png"));
+
 
             //possiamo aggiungere le altre dopo
         }catch(IOException e){
@@ -92,8 +95,11 @@ public class TileManager {
                     int num = Integer.parseInt(numbers[col]);
 
                     mapTileNum[col][row] = num;
-
-                    tiles.add(new TileObject(col*64, row*64, tile[0].immagine, partita));
+                    if (num == 8){
+                        tiles.add(new TileObject(col*64, row*64, tile[7].immagine, partita));
+                    }else{
+                        tiles.add(new TileObject(col*64, row*64, tile[0].immagine, partita));
+                    }
                     switch (num) {
                         case 1:
                             stationaryEntities.add(new Muro(col*64, row*64, tile[1].immagine, false, partita));

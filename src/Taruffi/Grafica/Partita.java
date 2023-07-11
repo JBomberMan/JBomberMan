@@ -10,8 +10,9 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
     private final int scale = 4; //scalata 4x in quanto le AI che fanno upscale sono 2x o 4x
     public final int tileSize =  originalTileSize * scale; //risoluzione troppo bassa senza scale
                                                             //si puó aumentare la scale se é ancora troppo piccolo
-    public final int maxScreenCol = 17;
-    public final int maxScreenRow = 13; //dimensioni dello schermo in tiles
+    public final int maxScreenCol = 17; //era 17
+    public final int maxScreenRow = 14; //era 13
+                                        //dimensioni dello schermo in tiles
                                         //si puó aumentare se si vuole vedere piú della mappa
                                         //il bomberman originale pare essere 13x17
                                         //esclusa la parte con score, timer eccetera
@@ -32,6 +33,8 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
 
     BombManager bombM = new BombManager(keyHandler, this); //instanziamo il bombManager
                                                     //passandogli questa istanza di un gamepanel
+
+    PunteggioManager punteggioManager = new PunteggioManager(); //instanziamo il punteggioManager
 
 
     public Partita() {
@@ -109,6 +112,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
                                         //come setRenderingHints()
 
         tileM.draw(g2); //disegna i tiles
+        punteggioManager.disegna(g2); //disegna il punteggio
 
         g2.dispose(); //rilascia le risorse usate da g2, good practice
 
