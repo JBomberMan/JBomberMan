@@ -216,7 +216,7 @@ public class Bomberman implements Collidable {
     public void handleCollision(Esplosione e){
             if(this.invTimer == 0){
                 this.vite--;
-                this.invTimer = 30;
+                this.invTimer = 71;
                 System.out.println("Vite rimaste: " + this.vite);
                 if (this.vite <= 0){
                     System.out.println("Hai perso!");

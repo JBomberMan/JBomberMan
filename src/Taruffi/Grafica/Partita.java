@@ -65,8 +65,10 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
         Window window = SwingUtilities.getWindowAncestor(this);
         if (window instanceof JFrame) {
             JFrame frame = (JFrame) window;
-            frame.dispose();
+            frame.dispose(); //chiude la finestra
         }
+        gameThread = null; //ferma il thread
+        BombManager.esplosioni.clear(); //rimuove le esplosioni per evitare ci siano quando si riavvia la partita
     }
 
     public static Partita getIstanza(){
