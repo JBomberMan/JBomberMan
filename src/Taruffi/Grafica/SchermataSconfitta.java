@@ -10,6 +10,7 @@ public class SchermataSconfitta extends JFrame{
     private JButton riprova;
     private static SchermataSconfitta istanza;
 
+
     private SchermataSconfitta(){
 
         setSize(300, 300);
@@ -22,7 +23,9 @@ public class SchermataSconfitta extends JFrame{
         tornaALMenu.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                //TODO ritorna al menu principale
+                Partita partita = Partita.getIstanza();
+                partita.chiudi();
+                istanza.dispose();
             }
         });
 

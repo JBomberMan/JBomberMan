@@ -1,7 +1,7 @@
 package Taruffi.Grafica;
 
 import java.awt.*;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 public class Partita extends JPanel implements Runnable{ //equivale a GamePanel del tizio dei video che sto freebootando
 
@@ -37,9 +37,11 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
     PunteggioManager punteggioManager = new PunteggioManager(); //instanziamo il punteggioManager
 
     ViteManager viteManager = new ViteManager(); //instanziamo il viteManager
+    private static Partita istanza;
 
 
     public Partita() {
+        istanza = this;
         this.setPreferredSize(new Dimension(screenWidth, screenHeight)); //setta la grandezza del pannello
         this.setBackground(Color.BLACK); //gli dá un background nero di base
                                         //poi da sostituire con sfondo
@@ -57,6 +59,18 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
             gameThread = new Thread(this); //crea il thread
             gameThread.start(); //lo starta e chiama run() automaticamente
         }
+    }
+
+    public void chiudi(){
+        Window window = SwingUtilities.getWindowAncestor(this);
+        if (window instanceof JFrame) {
+            JFrame frame = (JFrame) window;
+            frame.dispose();
+        }
+    }
+
+    public static Partita getIstanza(){
+        return istanza;
     }
 
     @Override
