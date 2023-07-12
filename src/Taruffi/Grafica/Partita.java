@@ -36,6 +36,8 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
 
     PunteggioManager punteggioManager = new PunteggioManager(); //instanziamo il punteggioManager
 
+    ViteManager viteManager = new ViteManager(); //instanziamo il viteManager
+
 
     public Partita() {
         this.setPreferredSize(new Dimension(screenWidth, screenHeight)); //setta la grandezza del pannello
@@ -113,6 +115,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
 
         tileM.draw(g2); //disegna i tiles
         punteggioManager.disegna(g2); //disegna il punteggio
+        viteManager.disegna(g2); //disegna le vite
 
         g2.dispose(); //rilascia le risorse usate da g2, good practice
 

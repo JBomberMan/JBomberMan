@@ -18,7 +18,7 @@ public class Bomberman implements Collidable {
         private int score = 0;
         private static int x = 0;
         private static int y= 0; //posizione del bomberman
-        private int vite; //punti vita del bomberman
+        private static int vite; //punti vita del bomberman
         private int velocita; //velocità del bomberman
 
         public BufferedImage up1, up2, down1, down2, right1, right2, left1, left2;
@@ -55,6 +55,10 @@ public class Bomberman implements Collidable {
     }
     public static int getY() {
             return y;
+    }
+
+    public static int getVite() {
+            return vite;
     }
 
     public Rectangle getHitbox() {
