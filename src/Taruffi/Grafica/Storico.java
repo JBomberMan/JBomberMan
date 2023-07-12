@@ -41,9 +41,9 @@ public class Storico extends JPanel {
             obj.put("giocate", obj.getInt("giocate")+1);
             obj.put("vinte", obj.getInt("vinte")+1);
             Files.write(Paths.get(file.toURI()), obj.toString().getBytes());
-            storico.setText("<html>Partite giocate: " + obj.getInt("giocate")
+            storico.setText("<html><h1>Partite giocate: " + obj.getInt("giocate")
                     + "<br>" + "Partite vinte: " + obj.getInt("vinte") + "<br>"
-                    + "Partite perse: " + obj.getInt("perse") + "</html>");
+                    + "Partite perse: " + obj.getInt("perse") + "</h1></html>");
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -57,9 +57,9 @@ public class Storico extends JPanel {
             obj.put("giocate", obj.getInt("giocate")+1);
             obj.put("perse", obj.getInt("perse")+1);
             Files.write(Paths.get(file.toURI()), obj.toString().getBytes());
-            storico.setText("<html>Partite giocate: " + obj.getInt("giocate")
+            storico.setText("<html><h1>Partite giocate: " + obj.getInt("giocate")
                     + "<br>" + "Partite vinte: " + obj.getInt("vinte") + "<br>"
-                    + "Partite perse: " + obj.getInt("perse") + "</html>");
+                    + "Partite perse: " + obj.getInt("perse") + "</h1></html>");
         }catch (Exception e){
             e.printStackTrace();
         }

@@ -23,6 +23,7 @@ public class SchermataSconfitta extends JFrame{
         tornaALMenu.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
+                Storico.addSconfitta();
                 Partita partita = Partita.getIstanza();
                 partita.chiudi();
                 istanza.dispose();
