@@ -10,7 +10,7 @@ import java.awt.image.BufferedImage;
 
 public abstract class StationaryEntity extends GameEntity implements Collidable {
     protected boolean isDistrutto;
-    protected boolean isDistruttibile;
+    public boolean isDistruttibile;
     protected Partita play;
 
 

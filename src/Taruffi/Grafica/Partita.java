@@ -38,6 +38,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
 
     ViteManager viteManager = new ViteManager(); //instanziamo il viteManager
     private static Partita istanza;
+    private MouseHandler mouseHandler = new MouseHandler(); //gestisce gli input da mouse
 
 
     public Partita() {
@@ -51,6 +52,9 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
         this.addKeyListener(keyHandler); //aggiunge il keylistener al pannello
                                         //perché il pannello é il componente che ha il focus
                                         //e quindi riceve gli input da tastiera
+
+        this.addMouseListener(mouseHandler); //aggiunge il mouselistener al pannello
+
         this.setFocusable(true); //perché il pannello possa ricevere gli input da tastiera
     }
 

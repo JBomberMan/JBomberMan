@@ -117,7 +117,7 @@ public class TileManager {
                             stationaryEntities.add(new Muro(col*64, row*64, tile[5].immagine, false, partita));
                             break;
                         case 6:
-                            stationaryEntities.add(new Muro(col*64, row*64, tile[6].immagine, true, partita));
+                            stationaryEntities.add(new Muro(col*64, row*64, tile[6].immagine, true, partita)); //ogni blocco distruttibile ha true
                             break;
                         case 7:
                             bomber = new Bomberman(col*64, row*64,tile[6].immagine, 4, 4, keyH, partita);
@@ -137,6 +137,10 @@ public class TileManager {
         }catch(Exception e){
             e.printStackTrace();
         }
+    }
+
+    public static ArrayList<StationaryEntity> getStationaryEntities(){
+        return stationaryEntities;
     }
 
     public void draw(Graphics2D g2){
