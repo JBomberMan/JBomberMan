@@ -10,7 +10,6 @@ public class Coordinate {
         this.x = x;
         this.y = y;
     }
-
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
@@ -23,4 +22,14 @@ public class Coordinate {
     public int hashCode() {
         return Objects.hash(x, y);
     }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+
 }

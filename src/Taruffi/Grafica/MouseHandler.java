@@ -40,19 +40,21 @@ public class MouseHandler  extends MouseAdapter{
             for(ArrayList<Integer> row : map){
                 System.out.println(row);
             }
-            int bomberx = Bomberman.getX()/64;
-            int bombery = Bomberman.getY()/64;
+            int bomberx = (Bomberman.getX() + 32)/64;
+            int bombery = (Bomberman.getY() +32)/64;
             map.get(bombery).set(bomberx, 2);
             //a questo punto 1=blocco 0=libero 2=bomberman
             System.out.println("--------------------");
             System.out.println("bomberman " + bomberx + " " + bombery);
             System.out.println("cliccato " + mousex + " " + mousey);
-            List<Coordinate> path = findShortestPath(bomberx, bombery, mousex, mousey, map);
+            ArrayList<Coordinate> path = findShortestPath(bomberx, bombery, mousex, mousey, map);
 
             // Stampa il percorso
             for (Coordinate coordinate : path) {
                 System.out.println("Casella: " + coordinate.x + " " + coordinate.y);
             }
+            Bomberman.switchMovimentoMouse(path);
+
         }
         else if (e.getButton() == MouseEvent.BUTTON2)
             System.out.println("Mouse Middle Clicked");
@@ -60,7 +62,7 @@ public class MouseHandler  extends MouseAdapter{
             System.out.println("Mouse Right Clicked");
     }
 
-    public static List<Coordinate> findShortestPath(int bomberx, int bombery, int mousex, int mousey, ArrayList<ArrayList<Integer>> map) {
+    public static ArrayList<Coordinate> findShortestPath(int bomberx, int bombery, int mousex, int mousey, ArrayList<ArrayList<Integer>> map) {
         int[][] directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}}; // Direzioni possibili: sinistra, destra, alto, basso
         Queue<Coordinate> queue = new LinkedList<>();
         boolean[][] visited = new boolean[map.size()][map.get(0).size()];
@@ -103,7 +105,7 @@ public class MouseHandler  extends MouseAdapter{
         }
 
         // Costruisci il percorso dalla casella premuta fino alla casella del giocatore
-        List<Coordinate> path = new ArrayList<>();
+        ArrayList<Coordinate> path = new ArrayList<>();
         if (!visited[mousey][mousex]) {
             return path; // Nessun percorso disponibile
         }
