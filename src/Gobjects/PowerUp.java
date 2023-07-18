@@ -104,7 +104,7 @@ public class PowerUp extends StationaryEntity{
 
     }
     public void raccogli(Bomberman b){
-        TileManager.removeEntity(this);
+        TileManager.addEntityR(this);
         this.tipo.eseguiEffetto(b);
     }
 

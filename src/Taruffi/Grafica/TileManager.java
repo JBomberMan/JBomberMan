@@ -27,6 +27,10 @@ public class TileManager {
     ArrayList<TileObject> tiles = new ArrayList<>();
     static ArrayList<PowerUp> powerUps = new ArrayList<>();
 
+     static ArrayList<MovingEntity> movingEntitiesR = new ArrayList<>();
+     static ArrayList<StationaryEntity> stationaryEntitiesR = new ArrayList<>();
+     static ArrayList<PowerUp> powerUpsR = new ArrayList<>();
+
     Bomberman bomber;
     private int indexBomberman;
 
@@ -162,6 +166,7 @@ public class TileManager {
             entity.disegna(g2);
             entity.update();
         }
+
         for(MovingEntity entity : movingEntities){
             entity.disegna(g2);
 
@@ -179,6 +184,26 @@ public class TileManager {
             p.disegna(g2);
             p.update();
         }
+        for (StationaryEntity r: stationaryEntitiesR){
+            removeEntity(r);
+        }
+        stationaryEntitiesR.clear();
+        for (MovingEntity r: movingEntitiesR){
+            removeEntity(r);
+        }
+        movingEntitiesR.clear();
+        for (PowerUp r: powerUpsR){
+            removeEntity(r);
+        }
+        for(Bomba r : BombManager.bombeR){
+            BombManager.removeBomba(r);
+        }
+        for(Esplosione r : BombManager.esplosioniR){
+            BombManager.removeEsplosione(r);
+        }
+        BombManager.bombeR.clear();
+        BombManager.esplosioniR.clear();
+        powerUpsR.clear();
         bomber.update();
         bomber.disegna(g2);
         checkCollision();
@@ -232,20 +257,23 @@ public class TileManager {
 
     }
 
-    public static void addEntity(GameEntity entity){
-        if(entity instanceof MovingEntity){
-            movingEntities.add((MovingEntity)entity);
-        }
-        else if(entity instanceof PowerUp){
-            powerUps.add((PowerUp)entity);
-        }
-        else if(entity instanceof StationaryEntity){
-            stationaryEntities.add((StationaryEntity)entity);
-        }
+    public static void addEntity(GameEntity entity) {
+        if (entity instanceof MovingEntity) {
+            movingEntities.add((MovingEntity) entity);
+        } else if (entity instanceof PowerUp) {
+            powerUps.add((PowerUp) entity);
+        } else if (entity instanceof StationaryEntity) {
+            stationaryEntities.add((StationaryEntity) entity);
+        }}
 
+    public static void addEntityR (GameEntity entity){
+        if (entity instanceof MovingEntity) {
+            movingEntitiesR.add((MovingEntity) entity);
+        } else if (entity instanceof PowerUp) {
+            powerUpsR.add((PowerUp) entity);
+        } else if (entity instanceof StationaryEntity) {
+            stationaryEntitiesR.add((StationaryEntity) entity);
+        }
     }
-
-
-
 
 }

@@ -44,6 +44,6 @@ public class Muro extends StationaryEntity{
             if(random < 0.3){
                 TileManager.addEntity(new PowerUp(this.x,this.y,play));
             }
-            TileManager.removeEntity(this);
+            TileManager.addEntityR(this);
         }
 }}

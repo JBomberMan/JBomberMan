@@ -47,7 +47,7 @@ public class Esplosione extends StationaryEntity implements Disegnabile {
     public void update() {
         counter++;
         if(counter == 70){
-            BombManager.removeEsplosione(this);
+            BombManager.addEsplosioniR(this);
         }
 
     }

@@ -17,6 +17,8 @@ public class BombManager {
     private KeyHandler keyHandler;
     Partita play;
     public static ArrayList<Esplosione> esplosioni = new ArrayList<Esplosione>();
+    static ArrayList<Bomba> bombeR = new ArrayList<Bomba>();
+    static ArrayList<Esplosione> esplosioniR = new ArrayList<Esplosione>();
 
     public BombManager(KeyHandler keyHandler, Partita play){
         numeroBombe = 3;
@@ -43,7 +45,7 @@ public class BombManager {
     }
 
     public static void togliBomba(Bomba bomba){
-        bombe.remove(bomba);
+        bombeR.add(bomba);
         bombeAttive--;
     }
 
@@ -107,5 +109,10 @@ public class BombManager {
         esplosioni.remove(esplosione);
     }
 
-
+    public static void addEsplosioniR(Esplosione esplosione){
+        esplosioniR.add(esplosione);
+    }
+    public static void removeBomba(Bomba bomba){
+        bombe.remove(bomba);
+    }
 }
