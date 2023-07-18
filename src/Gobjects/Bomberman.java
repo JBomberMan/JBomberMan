@@ -27,8 +27,8 @@ public class Bomberman implements Collidable {
         public static String direction;
         KeyHandler keyH;
         Partita play;
-        public int spriteCounter = 0;
-        public int spriteNum = 1;
+        public static int spriteCounter = 0;
+        public static int spriteNum = 1;
         Rectangle hitbox;
         Map<PowerUp.Tipo, Integer> powerUps = new HashMap<PowerUp.Tipo, Integer>();
 
@@ -320,7 +320,7 @@ public class Bomberman implements Collidable {
     public static void muoviConMouse(){
         boolean finito = false;
         if(pathIterator.hasNext()) {
-            if (posizioneAttuale.getX() == prossimaPosizione.getX() && posizioneAttuale.getY() == prossimaPosizione.getY()) {
+            if (x == prossimaPosizione.getX()*64 && y == prossimaPosizione.getY()*64) {
                 System.out.println("posizione attuale: " + posizioneAttuale.getX() + " " + posizioneAttuale.getY());
                 prossimaPosizione = pathIterator.next();
 
@@ -329,26 +329,35 @@ public class Bomberman implements Collidable {
 
 
 
-        posizioneAttuale = new Coordinate((x)/64, (y) /64);
+
         System.out.println("posizione attuale: " + posizioneAttuale.getX() + " " + posizioneAttuale.getY());
-        if (prossimaPosizione.getX() > posizioneAttuale.getX()) {
+        if (prossimaPosizione.getX()*64 > x) {
             direction = "right";
             x += velocita;
 
         }
-        if (prossimaPosizione.getX() < posizioneAttuale.getX()) {
+        if (prossimaPosizione.getX()*64 < x) {
             direction = "left";
             x -= velocita;
         }
-        if (prossimaPosizione.getY() > posizioneAttuale.getY()) {
+        if (prossimaPosizione.getY()*64 > y) {
             direction = "down";
             y += velocita;
         }
-        if (prossimaPosizione.getY() < posizioneAttuale.getY()) {
+        if (prossimaPosizione.getY()*64 < y) {
             direction = "up";
             y -= velocita;
         }
-        if(posizioneAttuale.getX() == arrivo.getX() && posizioneAttuale.getY() == arrivo.getY()) movimentoMouse = false;
+        spriteCounter++;
+        if (spriteCounter > 10) {
+            if (spriteNum == 1) {
+                spriteNum = 2;
+            } else if (spriteNum == 2) {
+                spriteNum = 1;
+            }
+            spriteCounter = 0;
+        }
+        if(x == arrivo.getX()*64 && y == arrivo.getY() * 64) movimentoMouse = false;
 
     }
 

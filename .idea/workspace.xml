@@ -7,11 +7,9 @@
     <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Gobjects/Bomberman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/Bomberman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Coordinate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Coordinate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/MouseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/MouseHandler.java" afterDir="false" />
     </list>
     <list id="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" name="Changes by Lorenzo" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Coordinate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Coordinate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gobjects/Bomberman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/Bomberman.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,10 +28,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/Taruffi/Grafica/Coordinate.java">
+    <file path="$PROJECT_DIR$/src/Gobjects/Bomberman.java">
       <ranges>
-        <range start1="12" end1="13" start2="12" end2="12" changelist="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" />
-        <range start1="25" end1="25" start2="24" end2="34" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="322" end1="323" start2="322" end2="323" changelist="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" />
+        <range start1="331" end1="332" start2="331" end2="332" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="333" end1="334" start2="333" end2="334" changelist="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" />
+        <range start1="338" end1="339" start2="338" end2="339" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="342" end1="343" start2="342" end2="343" changelist="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" />
+        <range start1="346" end1="347" start2="346" end2="347" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
       </ranges>
     </file>
   </component>
@@ -167,7 +169,7 @@
       <workItem from="1689255883815" duration="5205000" />
       <workItem from="1689599285255" duration="3541000" />
       <workItem from="1689686807144" duration="98000" />
-      <workItem from="1689686942935" duration="6389000" />
+      <workItem from="1689686942935" duration="7106000" />
     </task>
     <servers />
   </component>
