@@ -38,7 +38,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
 
     ViteManager viteManager = new ViteManager(); //instanziamo il viteManager
     private static Partita istanza;
-    private MouseHandler mouseHandler = new MouseHandler(); //gestisce gli input da mouse
+    private MouseHandler mouseHandler = new MouseHandler(this); //gestisce gli input da mouse
 
 
     public Partita() {

@@ -6,7 +6,15 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.*;
 
-public class MouseHandler  extends MouseAdapter{
+public class MouseHandler extends MouseAdapter{
+
+    private Partita play;
+
+    public MouseHandler(Partita play){
+        this.play = play;
+    }
+
+
 
     public void mouseClicked(MouseEvent e){
         if (e.getButton() == MouseEvent.BUTTON1){
@@ -59,7 +67,10 @@ public class MouseHandler  extends MouseAdapter{
         else if (e.getButton() == MouseEvent.BUTTON2)
             System.out.println("Mouse Middle Clicked");
         else if (e.getButton() == MouseEvent.BUTTON3)
-            System.out.println("Mouse Right Clicked");
+            play.bombM.piazzaBomba();
+
+
+
     }
 
     public static ArrayList<Coordinate> findShortestPath(int bomberx, int bombery, int mousex, int mousey, ArrayList<ArrayList<Integer>> map) {
