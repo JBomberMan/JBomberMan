@@ -111,7 +111,11 @@ public class Bomberman implements Collidable {
 
     public void muovi(){
         if(movimentoMouse){
-            muoviConMouse();
+            if(!(keyH.down || keyH.up || keyH.left || keyH.right)){
+                muoviConMouse();
+            }else{
+                movimentoMouse = false;
+            }
         }
         else {
 
@@ -141,10 +145,6 @@ public class Bomberman implements Collidable {
                 spriteCounter = 0;
             }
         }
-    }
-
-    public void piazzaBomba(){
-        //TODO  implementare il piazzamento della bomba
     }
 
     public void DetonaADistanza(){
@@ -321,16 +321,10 @@ public class Bomberman implements Collidable {
         boolean finito = false;
         if(pathIterator.hasNext()) {
             if (x == prossimaPosizione.getX()*64 && y == prossimaPosizione.getY()*64) {
-                System.out.println("posizione attuale: " + posizioneAttuale.getX() + " " + posizioneAttuale.getY());
                 prossimaPosizione = pathIterator.next();
-
             }
         }
 
-
-
-
-        System.out.println("posizione attuale: " + posizioneAttuale.getX() + " " + posizioneAttuale.getY());
         if (prossimaPosizione.getX()*64 > x) {
             direction = "right";
             x += velocita;
