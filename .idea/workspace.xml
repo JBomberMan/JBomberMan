@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gobjects/Bomberman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/Bomberman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/KeyHandler.java" afterDir="false" />
     </list>
     <list id="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" name="Changes by Lorenzo" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -157,7 +155,7 @@
       <workItem from="1689599285255" duration="3541000" />
       <workItem from="1689686807144" duration="98000" />
       <workItem from="1689686942935" duration="7683000" />
-      <workItem from="1689759415644" duration="1624000" />
+      <workItem from="1689759415644" duration="2641000" />
     </task>
     <servers />
   </component>
