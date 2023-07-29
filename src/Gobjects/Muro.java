@@ -14,7 +14,6 @@ public class Muro extends StationaryEntity{
         this.isDistruttibile = isDistruttibile;
     }
 
-
     public void afterDistruzione(){
         float random = (float) Math.random();
         if(random < 0.5){
@@ -34,6 +33,7 @@ public class Muro extends StationaryEntity{
     public void handleCollision(Esplosione e) {
         if(this.isDistruttibile){
             this.setDistrutto();
+
         }
     }
 

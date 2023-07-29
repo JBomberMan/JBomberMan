@@ -19,14 +19,14 @@ public class Bomba extends GameEntity{
     Partita play;
     Boolean esplosa = false;
 
-    public Bomba(int x, int y,BufferedImage image, Partita play) {
+    public Bomba(int x, int y,BufferedImage image, Partita play, int raggio) {
         super(x, y, image);
         this.play = play;
         this.timer = 0;
         this.frameIndex = 0;
         this.hitbox = new Rectangle(x,y,play.tileSize,play.tileSize);
         loadAnimationFrames();
-        this.raggio = 1; //per debug, da modificare andando a vedere quanto é il raggio effettivo della bomba
+        this.raggio = raggio; //per debug, da modificare andando a vedere quanto é il raggio effettivo della bomba
     }
 
     public void setTimer(int timer) {
@@ -77,7 +77,6 @@ public class Bomba extends GameEntity{
     }
 
     public void esplodi(){
-        BombManager.addEsplosione(new Esplosione(raggio,null,x,y,play,true));
-        BombManager.addEsplosione(new Esplosione(raggio,null,x,y,play,false));
+        BombManager.addEsplosione(new Esplosione(raggio,null,x,y,play,"centrale"));
     }
 }

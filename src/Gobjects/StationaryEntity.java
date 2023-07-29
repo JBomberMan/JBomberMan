@@ -21,6 +21,9 @@ public abstract class StationaryEntity extends GameEntity implements Collidable 
     }
 
 
+    public boolean isDistruttibile() {
+        return isDistruttibile;
+    }
 
     public abstract void disegna(Graphics2D g2d);
 

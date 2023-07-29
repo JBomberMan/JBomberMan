@@ -78,7 +78,7 @@ public class BombManager {
                     return;
                 }
             }
-            bombe.add(new Bomba(tileOrizzontale* play.tileSize,tileVerticale* play.tileSize,null, this.play));
+            bombe.add(new Bomba(tileOrizzontale* play.tileSize,tileVerticale* play.tileSize,null, this.play, raggioBombe));
             bombeAttive++;
         }
     }
@@ -114,5 +114,8 @@ public class BombManager {
     }
     public static void removeBomba(Bomba bomba){
         bombe.remove(bomba);
+    }
+    public void setRaggioBombe(int raggioBombe) {
+        this.raggioBombe += raggioBombe;
     }
 }

@@ -31,7 +31,8 @@ public class TileManager {
      static ArrayList<MovingEntity> movingEntitiesR = new ArrayList<>();
      static ArrayList<StationaryEntity> stationaryEntitiesR = new ArrayList<>();
      static ArrayList<PowerUp> powerUpsR = new ArrayList<>();
-
+    static ArrayList<Esplosione> codaAggiunte = new ArrayList<>();
+    static ArrayList<Esplosione> codaRimozioni = new ArrayList<>();
     Bomberman bomber;
     private int indexBomberman;
 
@@ -182,6 +183,24 @@ public class TileManager {
             b.disegna(g2);
             b.update();
         }
+        for(Esplosione e : codaAggiunte){ //controlla le collisioni tra bombe e blocchi distruttibili
+            for(StationaryEntity entity : stationaryEntities){
+                if(entity instanceof Muro){
+                    if(e.getHitbox().intersects(entity.getHitbox()) && !entity.isDistruttibile()){
+                        this.codaRimozioni.add(e);
+                    }
+
+                }
+
+                }
+            }
+        for (Esplosione e : codaRimozioni){
+            codaAggiunte.remove(e);
+        }
+        this.codaRimozioni.clear();
+        partita.bombM.esplosioni.addAll(codaAggiunte);
+        this.codaAggiunte.clear();
+
         for(Esplosione e : partita.bombM.esplosioni){
             e.disegna(g2);
             e.update();
@@ -192,10 +211,12 @@ public class TileManager {
         }
         for (StationaryEntity r: stationaryEntitiesR){
             removeEntity(r);
+            bomber.setScore(10);
         }
         stationaryEntitiesR.clear();
         for (MovingEntity r: movingEntitiesR){
             removeEntity(r);
+            bomber.setScore(50);
         }
         movingEntitiesR.clear();
         for (PowerUp r: powerUpsR){
@@ -251,6 +272,7 @@ public class TileManager {
             for(StationaryEntity entity : stationaryEntities){
                 if(e.getHitbox().intersects(entity.getHitbox())){
                     entity.handleCollision(e);
+
                 }
             }
             for(MovingEntity mentity : movingEntities){
@@ -300,5 +322,7 @@ public class TileManager {
             stationaryEntitiesR.add((StationaryEntity) entity);
         }
     }
-
+    public static void AggiungiACoda(Esplosione e){
+        codaAggiunte.add(e);
+    }
 }
