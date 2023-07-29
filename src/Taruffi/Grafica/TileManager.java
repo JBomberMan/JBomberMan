@@ -2,7 +2,11 @@ package Taruffi.Grafica;
 
 import Gobjects.*;
 import Porfiri.Esplosione;
-import Taruffi.Nemici.Nemico1;
+import Taruffi.Nemici.Oneal;
+import Taruffi.Nemici.Baloon;
+import Taruffi.Nemici.Doll;
+import Taruffi.Nemici.Kondoria;
+import Taruffi.Nemici.Ovapi;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -130,7 +134,19 @@ public class TileManager {
                             indexBomberman = movingEntities.size()-1;
                             break;
                         case 9:
-                            movingEntities.add(new Nemico1(col*64, row*64,tile[6].immagine, 4, 3, partita));
+                            movingEntities.add(new Oneal(col*64, row*64,tile[6].immagine, 1, 1, partita));
+                            break;
+                        case 10:
+                            movingEntities.add(new Baloon(col*64, row*64,tile[6].immagine, 1, 1, partita));
+                            break;
+                        case 11:
+                            movingEntities.add(new Kondoria(col*64, row*64,tile[6].immagine, 1, 1, partita));
+                            break;
+                        case 12:
+                            movingEntities.add(new Doll(col*64, row*64,tile[6].immagine, 1, 1, partita));
+                            break;
+                        case 13:
+                            movingEntities.add(new Ovapi(col*64, row*64,tile[6].immagine, 1, 1, partita));
                             break;
                     }
 
@@ -172,13 +188,7 @@ public class TileManager {
             entity.update();
         }
 
-        for(MovingEntity entity : movingEntities){
-            if (entity.vite <= 0) {
-                addEntityR(entity);
-            }
-            entity.update();
-            entity.disegna(g2);
-        }
+        
         for(Bomba b : partita.bombM.bombe){
             b.disegna(g2);
             b.update();
@@ -204,6 +214,13 @@ public class TileManager {
         for(Esplosione e : partita.bombM.esplosioni){
             e.disegna(g2);
             e.update();
+        }
+        for(MovingEntity entity : movingEntities){
+            if (entity.vite <= -1) {
+                addEntityR(entity);
+            }
+            entity.update();
+            entity.disegna(g2);
         }
         for(PowerUp p : powerUps){
             p.disegna(g2);
