@@ -78,6 +78,7 @@ public class Bomberman implements Collidable {
     public void setExtraTime(int extraTime) {
     }
     public void setRaggioEsplosione(int raggioEsplosione) {
+            play.bombM.setRaggioBombe(raggioEsplosione);
     }
 
     public void getPlayerImage() {

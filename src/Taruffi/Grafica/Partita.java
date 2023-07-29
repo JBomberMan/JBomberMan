@@ -31,7 +31,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
     TileManager tileM = new TileManager(this, keyHandler); //instanziamo il tileManager
                                                     //passandogli questa istanza di un gamepanel
 
-    BombManager bombM = new BombManager(keyHandler, this); //instanziamo il bombManager
+    public BombManager bombM = new BombManager(keyHandler, this); //instanziamo il bombManager
                                                     //passandogli questa istanza di un gamepanel
 
     public PunteggioManager punteggioManager = new PunteggioManager(); //instanziamo il punteggioManager
