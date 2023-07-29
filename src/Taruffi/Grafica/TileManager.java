@@ -2,6 +2,7 @@ package Taruffi.Grafica;
 
 import Gobjects.*;
 import Porfiri.Esplosione;
+import Taruffi.Nemici.Nemico1;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -127,6 +128,9 @@ public class TileManager {
                             bomber = new Bomberman(col*64, row*64,tile[6].immagine, 4, 4, keyH, partita);
                             indexBomberman = movingEntities.size()-1;
                             break;
+                        case 9:
+                            movingEntities.add(new Nemico1(col*64, row*64,tile[6].immagine, 4, 3, partita));
+                            break;
                     }
 
                     col++;
@@ -168,9 +172,11 @@ public class TileManager {
         }
 
         for(MovingEntity entity : movingEntities){
-            entity.disegna(g2);
-
+            if (entity.vite <= 0) {
+                addEntityR(entity);
+            }
             entity.update();
+            entity.disegna(g2);
         }
         for(Bomba b : partita.bombM.bombe){
             b.disegna(g2);
@@ -226,11 +232,30 @@ public class TileManager {
                 bomber.handleCollision(b);
             }
         }
-
+        for(MovingEntity mentity : movingEntities){ //controlla le collisioni tra bomberman e nemici
+            for(StationaryEntity entity : stationaryEntities){
+                if(mentity.getHitbox().intersects(entity.getHitbox())){
+                    mentity.handleCollision(entity);
+                }
+            }
+            for(Bomba b : partita.bombM.bombe){
+                if(mentity.getHitbox().intersects(b.getHitbox())){
+                    mentity.handleCollision(b);
+                }
+            }
+            if(bomber.getHitbox().intersects(mentity.getHitbox())) {
+                bomber.handleCollision(mentity);
+            }
+        }
         for(Esplosione e : partita.bombM.esplosioni){ //controlla le collisioni tra bombe e blocchi distruttibili
             for(StationaryEntity entity : stationaryEntities){
                 if(e.getHitbox().intersects(entity.getHitbox())){
                     entity.handleCollision(e);
+                }
+            }
+            for(MovingEntity mentity : movingEntities){
+                if(e.getHitbox().intersects(mentity.getHitbox())){
+                    mentity.handleCollision(e);
                 }
             }
             if(bomber.getHitbox().intersects(e.getHitbox())){

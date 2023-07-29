@@ -249,6 +249,23 @@ public class Bomberman implements Collidable {
             }
 
     }
+
+    public void handleCollision(MovingEntity n){
+        this.solidCollision(n);
+        if(this.invTimer == 0){
+            this.vite--;
+            this.invTimer = 71;
+        
+            System.out.println("Vite rimaste: " + this.vite);
+            if (this.vite <= 0){
+                System.out.println("Hai perso!");
+                SchermataSconfitta.getIstanza().setVisible(true);
+                Partita.stopGameThread();
+            }
+        }
+
+    }
+
     public void addToMap(PowerUp.Tipo p){
             if(powerUps.containsKey(p)){
                 powerUps.put(p ,600);
