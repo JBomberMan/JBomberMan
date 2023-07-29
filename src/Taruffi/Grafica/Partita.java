@@ -34,7 +34,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
     BombManager bombM = new BombManager(keyHandler, this); //instanziamo il bombManager
                                                     //passandogli questa istanza di un gamepanel
 
-    PunteggioManager punteggioManager = new PunteggioManager(); //instanziamo il punteggioManager
+    public PunteggioManager punteggioManager = new PunteggioManager(); //instanziamo il punteggioManager
 
     ViteManager viteManager = new ViteManager(); //instanziamo il viteManager
     private static Partita istanza;

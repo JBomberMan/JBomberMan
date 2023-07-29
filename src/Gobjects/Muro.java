@@ -34,6 +34,7 @@ public class Muro extends StationaryEntity{
     public void handleCollision(Esplosione e) {
         if(this.isDistruttibile){
             this.setDistrutto();
+
         }
     }
 

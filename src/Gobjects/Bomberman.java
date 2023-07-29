@@ -200,7 +200,7 @@ public class Bomberman implements Collidable {
     }
 
     public void update(){
-        this.hitbox.setBounds(x+5, y+5, play.tileSize-10, play.tileSize-10);
+        this.hitbox.setBounds(x+10, y+10, play.tileSize-10, play.tileSize-10);
         muovi();
         if(invTimer > 0){
             invTimer--;
@@ -234,7 +234,7 @@ public class Bomberman implements Collidable {
             }
     }
     public void setScore(int score){
-            this.score += score;
+            this.play.punteggioManager.addPunteggio(score);
     }
     public void handleCollision(Esplosione e){
             if(this.invTimer == 0){

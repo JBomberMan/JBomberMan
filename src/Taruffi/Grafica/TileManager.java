@@ -186,10 +186,12 @@ public class TileManager {
         }
         for (StationaryEntity r: stationaryEntitiesR){
             removeEntity(r);
+            bomber.setScore(10);
         }
         stationaryEntitiesR.clear();
         for (MovingEntity r: movingEntitiesR){
             removeEntity(r);
+            bomber.setScore(50);
         }
         movingEntitiesR.clear();
         for (PowerUp r: powerUpsR){

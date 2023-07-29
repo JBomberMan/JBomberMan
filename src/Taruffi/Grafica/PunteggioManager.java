@@ -10,7 +10,7 @@ public class PunteggioManager {
     private int y;
 
     public PunteggioManager(){
-        punteggio = 1000;
+        punteggio = 0;
         x = 10;
         y = 870;
     }
@@ -28,7 +28,7 @@ public class PunteggioManager {
     }
 
     public void disegna(Graphics2D g){
-        addPunteggio(1);
+        //addPunteggio(1);
         punteggioDisegno.disegna(g, x, y, punteggio); //fatto per rispettare MVC (credo)
     }
 
