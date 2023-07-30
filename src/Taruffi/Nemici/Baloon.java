@@ -188,12 +188,20 @@ public class Baloon  extends MovingEntity implements Collidable{
     }
 
     public void handleCollision(StationaryEntity se){
-        this.solidCollision(se);
+        if(se.isDistruttibile){
+        }
+        else{
+            this.solidCollision(se);
+            probabilitàDirezione = (probabilitàDirezione +1) % 4;
+            attesaMovimento = 0;
+        }
         
     }
 
     public void handleCollision(Bomba b){
         this.solidCollision(b);
+        probabilitàDirezione = (probabilitàDirezione +1) % 4;
+        attesaMovimento = 0;
             
     }
 

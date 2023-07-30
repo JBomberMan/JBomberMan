@@ -82,6 +82,11 @@ public class BombManager {
             bombeAttive++;
         }
     }
+
+    
+
+
+
     public void detonaDistanza(){
         for(Bomba b : bombe){
             b.esplodi();

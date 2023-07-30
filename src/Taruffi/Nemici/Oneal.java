@@ -24,8 +24,8 @@ public class Oneal  extends MovingEntity implements Collidable{
 
         public BufferedImage up1, up2, down1, down2, right1, right2, left1, left2, damaged1, damaged2, dead1, dead2;
         public static String direction = "down";
-        private int probabilitàDirezione ;
-        private int attesaMovimento = 30;
+        private int probabilitàDirezione = 0;
+        //private int attesaMovimento = 30;
         public static int spriteCounter = 0;
         public static int spriteNum = 1;
         private int invTimer;
@@ -78,11 +78,11 @@ public class Oneal  extends MovingEntity implements Collidable{
     @Override
     public void muovi() {
         if(invTimer == 0 && !dead) {
-            if(attesaMovimento > 20){
-                probabilitàDirezione = (int) (Math.random() * 4);
+           /*if(attesaMovimento > 20){
+                probabilitàDirezione = (int) (Math.random() * 2);
                 attesaMovimento = 0;
             }
-            attesaMovimento++;
+            attesaMovimento++;*/
             if (probabilitàDirezione == 0) {
                 direction = "up";
                 y -= velocita;
@@ -91,14 +91,14 @@ public class Oneal  extends MovingEntity implements Collidable{
                 direction = "down";
                 y += velocita;
             }
-            else if (probabilitàDirezione == 2) {
+            /*else if (probabilitàDirezione == 2) {
                 direction = "left";
                 x -= velocita;
             }
             else if (probabilitàDirezione == 3) {
                 direction = "right";
                 x += velocita;
-            }
+            }*/
         }
         spriteCounter++;
         if (spriteCounter > 10) {
@@ -189,12 +189,13 @@ public class Oneal  extends MovingEntity implements Collidable{
 
     public void handleCollision(StationaryEntity se){
         this.solidCollision(se);
+        probabilitàDirezione = (probabilitàDirezione + 1) % 2;
         
     }
 
     public void handleCollision(Bomba b){
         this.solidCollision(b);
-            
+        probabilitàDirezione = (probabilitàDirezione + 1) % 2;
     }
 
     

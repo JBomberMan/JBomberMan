@@ -134,16 +134,16 @@ public class TileManager {
                             indexBomberman = movingEntities.size()-1;
                             break;
                         case 9:
-                            movingEntities.add(new Oneal(col*64, row*64,tile[6].immagine, 1, 1, partita));
+                            movingEntities.add(new Oneal(col*64, row*64,tile[6].immagine, 2, 3, partita));
                             break;
                         case 10:
-                            movingEntities.add(new Baloon(col*64, row*64,tile[6].immagine, 1, 1, partita));
+                            movingEntities.add(new Baloon(col*64, row*64,tile[6].immagine, 3, 3, partita));
                             break;
                         case 11:
-                            movingEntities.add(new Kondoria(col*64, row*64,tile[6].immagine, 1, 1, partita));
+                            movingEntities.add(new Kondoria(col*64, row*64,tile[6].immagine, 3, 4, partita));
                             break;
                         case 12:
-                            movingEntities.add(new Doll(col*64, row*64,tile[6].immagine, 1, 1, partita));
+                            movingEntities.add(new Doll(col*64, row*64,tile[6].immagine, 3, 5, partita));
                             break;
                         case 13:
                             movingEntities.add(new Ovapi(col*64, row*64,tile[6].immagine, 1, 1, partita));
