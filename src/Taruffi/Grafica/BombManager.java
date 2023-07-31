@@ -82,6 +82,12 @@ public class BombManager {
             bombeAttive++;
         }
     }
+    public void piazzaBomba(int x, int y){
+        int tileOrizzontale = (x / play.tileSize) * play.tileSize;
+        int tileVerticale = (y / play.tileSize) * play.tileSize;
+        bombe.add(new Bomba(tileOrizzontale,tileVerticale,null, this.play, raggioBombe));
+
+    }
 
     
 

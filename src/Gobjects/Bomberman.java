@@ -217,7 +217,9 @@ public class Bomberman implements Collidable {
             if(powerUps.get(PowerUp.Tipo.SuperaBlocchi) > 0 && e.isDistruttibile){
             }
             else{
+
                 this.solidCollision(e);
+
             }
 
     }
@@ -252,7 +254,7 @@ public class Bomberman implements Collidable {
     }
 
     public void handleCollision(MovingEntity n){
-        this.solidCollision(n);
+
         if(this.invTimer == 0){
             this.vite--;
             this.invTimer = 71;
@@ -264,6 +266,7 @@ public class Bomberman implements Collidable {
                 Partita.stopGameThread();
             }
         }
+
 
     }
 

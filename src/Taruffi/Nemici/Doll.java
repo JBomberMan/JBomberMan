@@ -31,6 +31,7 @@ public class Doll  extends MovingEntity implements Collidable{
         private int invTimer;
         public boolean dead = false;
         public int dtimer = 50;
+
         
         
 
@@ -67,11 +68,15 @@ public class Doll  extends MovingEntity implements Collidable{
         muovi();
         if(dead){
             this.dtimer--;
+            if(dtimer == 0){
+                play.bombM.piazzaBomba(this.x, this.y); //potrebbe infrangere MVC
+            }
             if(dtimer == 0) this.vite--;
         }
         else if(invTimer > 0){
             invTimer--;
         }
+
         
     }
 
@@ -182,6 +187,7 @@ public class Doll  extends MovingEntity implements Collidable{
 
             if (this.vite <= 0){
                 dead = true;
+                //play.bombM.piazzaBomba();
                 System.out.println("Nemico Sconfitto!");
             }
         }
