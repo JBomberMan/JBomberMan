@@ -2,11 +2,13 @@ package Gobjects;
 
 import Taruffi.Disegnabile;
 import Tomassetti.Collidable;
+import org.w3c.dom.css.Rect;
 
 
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
+import java.awt.geom.RectangularShape;
 import java.awt.image.BufferedImage;
 import java.io.File;
 

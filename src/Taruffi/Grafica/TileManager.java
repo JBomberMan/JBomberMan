@@ -2,11 +2,7 @@ package Taruffi.Grafica;
 
 import Gobjects.*;
 import Porfiri.Esplosione;
-import Taruffi.Nemici.Oneal;
-import Taruffi.Nemici.Baloon;
-import Taruffi.Nemici.Doll;
-import Taruffi.Nemici.Kondoria;
-import Taruffi.Nemici.Ovapi;
+import Taruffi.Nemici.*;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -37,6 +33,7 @@ public class TileManager {
      static ArrayList<PowerUp> powerUpsR = new ArrayList<>();
     static ArrayList<Esplosione> codaAggiunte = new ArrayList<>();
     static ArrayList<Esplosione> codaRimozioni = new ArrayList<>();
+    private Boss1 boss;
     Bomberman bomber;
     private int indexBomberman;
 
@@ -148,6 +145,8 @@ public class TileManager {
                         case 13:
                             movingEntities.add(new Ovapi(col*64, row*64,tile[6].immagine, 1, 1, partita));
                             break;
+                        case 14:
+                            boss = new Boss1(col*64, row*64,tile[6].immagine, 2, 3, partita);
                     }
 
                     col++;
@@ -179,6 +178,7 @@ public class TileManager {
         int row = 0;
         int x = 0;
         int y = 0;
+
         for(TileObject tile : tiles){
             tile.disegna(g2);
         }
@@ -192,6 +192,10 @@ public class TileManager {
         for(Bomba b : partita.bombM.bombe){
             b.disegna(g2);
             b.update();
+        }
+        if(!boss.dead){
+            boss.disegna(g2);
+            boss.update();
         }
         for(Esplosione e : codaAggiunte){ //controlla le collisioni tra bombe e blocchi distruttibili
             for(StationaryEntity entity : stationaryEntities){
@@ -245,6 +249,7 @@ public class TileManager {
         for(Esplosione r : BombManager.esplosioniR){
             BombManager.removeEsplosione(r);
         }
+
         BombManager.bombeR.clear();
         BombManager.esplosioniR.clear();
         powerUpsR.clear();
@@ -260,6 +265,7 @@ public class TileManager {
         }
     }
     public void checkCollision(){
+
         for(StationaryEntity entity : stationaryEntities){ //controlla le collisioni tra bomberman e muri
             if(bomber.getHitbox().intersects(entity.getHitbox())) {
                 bomber.handleCollision(entity);
@@ -300,10 +306,22 @@ public class TileManager {
             if(bomber.getHitbox().intersects(e.getHitbox())){
                 bomber.handleCollision(e);
             }
+            if(!boss.dead) {
+                if (boss.getHitboxPorcata().intersects(e.getHitbox())) {
+                    boss.handleCollision(e);
+                }
+            }
         }
         for(PowerUp p : powerUps){
             if(bomber.getHitbox().intersects(p.getHitbox())){
                 bomber.handleCollision(p);
+            }
+        }
+        if(!boss.dead) {
+            for (StationaryEntity entity : stationaryEntities) {
+                if (boss.getHitboxPorcata().intersects(entity.getHitbox())) {
+                    boss.handleCollision(entity);
+                }
             }
         }
     }
@@ -331,6 +349,7 @@ public class TileManager {
         }}
 
     public static void addEntityR (GameEntity entity){
+
         if (entity instanceof MovingEntity) {
             movingEntitiesR.add((MovingEntity) entity);
         } else if (entity instanceof PowerUp) {

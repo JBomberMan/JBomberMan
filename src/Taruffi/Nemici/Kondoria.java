@@ -368,9 +368,6 @@ public class Kondoria  extends MovingEntity implements Collidable{
         return path;
     }
 
-    private static boolean isValidCoordinate(int x, int y, int rows, int cols) {
-        return x >= 0 && x < cols && y >= 0 && y < rows;
-    }
 
 
 
