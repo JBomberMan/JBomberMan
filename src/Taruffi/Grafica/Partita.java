@@ -28,7 +28,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
     KeyHandler keyHandler = new KeyHandler(this); //gestisce gli input da tastiera
 
 
-    TileManager tileM = new TileManager(this, keyHandler); //instanziamo il tileManager
+    public TileManager tileM = new TileManager(this, keyHandler); //instanziamo il tileManager
                                                     //passandogli questa istanza di un gamepanel
 
     public BombManager bombM = new BombManager(keyHandler, this); //instanziamo il bombManager

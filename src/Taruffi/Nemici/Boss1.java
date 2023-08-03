@@ -4,14 +4,12 @@ import java.awt.*;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.stream.IntStream;
 
 import javax.imageio.ImageIO;
 
-import Gobjects.Bomba;
-import Gobjects.GameEntity;
-import Gobjects.MovingEntity;
-import Gobjects.PowerUp;
-import Gobjects.StationaryEntity;
+import Gobjects.*;
+import Porfiri.BomberMan;
 import Porfiri.Esplosione;
 import Taruffi.Grafica.Partita;
 import Taruffi.Grafica.SchermataSconfitta;
@@ -21,13 +19,13 @@ import Tomassetti.Collidable;
 public class Boss1 extends MovingEntity implements Collidable{
 
     private static int velocita;
-    public BufferedImage standard, hit;
+    public BufferedImage standard, hit, cry1, cry2, cry3;
 
     public static String direction = "left";
     private int spriteCounter = 0;
-    private int invTimer = 0;
+    private int invTimer = 0, incazzatoTimer = 0;
     public Boolean dead = false;
-    private Boolean collision = false;
+    private Boolean collision = false, incazzato = false;
     private Polygon hitboxPorcata;
 
 
@@ -35,7 +33,7 @@ public class Boss1 extends MovingEntity implements Collidable{
 
     public Boss1(int x, int y, BufferedImage image, int velocita, int vite, Partita play) {
         super(x, y, image, velocita, vite, play);
-        this.velocita = 2;
+        this.velocita = 1;
         this.hitboxPorcata = new Polygon(new int[]{this.x + 166,
                 this.x + 246, this.x + 294, this.x + 332, this.x + 412, this.x + 412, this.x + 363,
                 this.x + 332, this.x + 304, this.x + 206, this.x + 108, this.x + 80, this.x + 49,
@@ -53,6 +51,9 @@ public class Boss1 extends MovingEntity implements Collidable{
         try {
             standard = ImageIO.read(getClass().getResourceAsStream("/Images/clown/clown1.png"));
             hit = ImageIO.read(getClass().getResourceAsStream("/Images/clown/clownHit.png"));
+            cry1 = ImageIO.read(getClass().getResourceAsStream("/Images/clown/cry1.png"));
+            cry2 = ImageIO.read(getClass().getResourceAsStream("/Images/clown/cry2.png"));
+            cry3 = ImageIO.read(getClass().getResourceAsStream("/Images/clown/cry3.png"));
 
         } catch(IOException e){
             e.printStackTrace();
@@ -78,24 +79,55 @@ public class Boss1 extends MovingEntity implements Collidable{
 
     @Override
     public void muovi() {
-        switch(direction){
-            case "left":
-                x -= velocita;
-                break;
-            case "right":
+        if(!incazzato){
+            /*
+            switch(direction){
+                case "left":
+                    x -= velocita;
+                    break;
+                case "right":
+                    x += velocita;
+                    break;
+            }*/
+            if(this.x + this.standard.getWidth()/2 < Bomberman.getX()){
                 x += velocita;
-                break;
+            }else{
+                x -= velocita;
+            }
+            if(this.y + this.standard.getHeight()/2 < Bomberman.getY()){
+                y += velocita;
+            }else{
+                y -= velocita;
+            }
         }
     }
 
     @Override
     public void disegna(Graphics2D g2d) {
+        BufferedImage sprite = null;
+
         if(invTimer > 0){
-            g2d.drawImage(hit, x, y, null);
+            sprite = hit;
             invTimer--;
-        } else {
-            g2d.drawImage(standard, x, y, null);
         }
+        else if(incazzato){
+            if(incazzatoTimer < 30){
+                sprite = cry1;
+                incazzatoTimer++;
+            } else if(incazzatoTimer < 60){
+                sprite = cry2;
+                incazzatoTimer++;
+            } else if(incazzatoTimer < 90){
+                sprite = cry3;
+                incazzatoTimer++;
+            } else {
+                incazzato = false;
+                incazzatoTimer = 0;
+            }
+        }else {
+            sprite = standard;
+        }
+        g2d.drawImage(sprite, x, y, null);
         g2d.draw(new Polygon(new int[]{this.x + 166,
                 this.x + 246, this.x + 294, this.x + 332, this.x + 412, this.x + 412, this.x + 363,
                 this.x + 332, this.x + 304, this.x + 206, this.x + 108, this.x + 80, this.x + 49,
@@ -129,7 +161,10 @@ public class Boss1 extends MovingEntity implements Collidable{
                 dead = true;
                 System.out.println("Nemico Sconfitto!");
             }
+            incazzati();
+
         }
+
     }
 
     void solidCollision(GameEntity obj) {
@@ -190,5 +225,15 @@ public class Boss1 extends MovingEntity implements Collidable{
 
     public Polygon getHitboxPorcata() {
         return this.hitboxPorcata;
+    }
+
+    private void incazzati(){
+        incazzato = true;
+        int xp = this.x + (standard.getWidth()/2);
+        int yp = this.y + (standard.getHeight()/2);
+        IntStream.range(0,8).forEach(i -> {
+            TileManager.addEntity(new Proiettile(xp, yp, null, 2, 1, play, i)); //aggiunge le 8 bombe
+        });
+
     }
 }
