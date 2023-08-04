@@ -146,7 +146,7 @@ public class TileManager {
                             movingEntities.add(new Ovapi(col*64, row*64,tile[6].immagine, 1, 1, partita));
                             break;
                         case 14:
-                            boss = new Boss1(col*64, row*64,tile[6].immagine, 2, 3, partita);
+                            boss = new Boss1(col*64, row*64,tile[6].immagine, 2, 10, partita);
                     }
 
                     col++;

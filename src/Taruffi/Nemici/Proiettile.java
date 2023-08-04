@@ -1,9 +1,9 @@
 package Taruffi.Nemici;
 
-import Gobjects.Bomberman;
-import Gobjects.GameEntity;
-import Gobjects.MovingEntity;
+import Gobjects.*;
+import Porfiri.Esplosione;
 import Taruffi.Grafica.Partita;
+import Taruffi.Grafica.TileManager;
 import Tomassetti.Collidable;
 
 import javax.imageio.ImageIO;
@@ -11,6 +11,7 @@ import java.awt.*;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.Random;
 
 public class Proiettile extends MovingEntity implements Collidable {
 
@@ -20,6 +21,7 @@ public class Proiettile extends MovingEntity implements Collidable {
     private int spriteNum = 0;
     private Boolean dead = false;
     private int direzione;
+
 
 
     public Proiettile(int x, int y, BufferedImage image, int velocita, int vite, Partita play, int direzione) {
@@ -47,6 +49,7 @@ public class Proiettile extends MovingEntity implements Collidable {
     public void update() {
         this.hitbox.setBounds(x, y, up.getWidth(), up.getHeight());
         muovi();
+
 
     }
 
@@ -94,22 +97,26 @@ public class Proiettile extends MovingEntity implements Collidable {
 
     @Override
     public void disegna(Graphics2D g2d) {
-        BufferedImage image = null;
-        switch(spriteNum){
-            case 0:
-                image = up;
-                break;
-            case 1:
-                image = right;
-                break;
-            case 2:
-                image = down;
-                break;
-            case 3:
-                image = left;
-                break;
+        if (!dead) {
+            BufferedImage image = null;
+            switch(spriteNum){
+                case 0:
+                    image = up;
+                    break;
+                case 1:
+                    image = right;
+                    break;
+                case 2:
+                    image = down;
+                    break;
+                case 3:
+                    image = left;
+                    break;
+            }
+            g2d.drawImage(image, x, y, null);
         }
-        g2d.drawImage(image, x, y, null);
+
 
     }
+
 }

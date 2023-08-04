@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Images/clown/cry1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/clown/cry2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/clown/cry3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/proiettile/proiettileDown.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/proiettile/proiettileLeft.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/proiettile/proiettileRight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/proiettile/proiettileUp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Taruffi/Nemici/Proiettile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Partita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/TileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Taruffi/Nemici/Boss1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Nemici/Boss1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Nemici/Proiettile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Nemici/Proiettile.java" afterDir="false" />
     </list>
     <list id="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" name="Changes by Lorenzo" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -171,7 +164,8 @@
       <workItem from="1690901916882" duration="5198000" />
       <workItem from="1690986452401" duration="5337000" />
       <workItem from="1690992089966" duration="102000" />
-      <workItem from="1691063709570" duration="4752000" />
+      <workItem from="1691063709570" duration="5558000" />
+      <workItem from="1691090470207" duration="1344000" />
     </task>
     <servers />
   </component>
@@ -218,7 +212,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Taruffi/Nemici/Proiettile.java</url>
-          <line>35</line>
+          <line>37</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">

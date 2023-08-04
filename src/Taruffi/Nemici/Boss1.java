@@ -23,7 +23,7 @@ public class Boss1 extends MovingEntity implements Collidable{
 
     public static String direction = "left";
     private int spriteCounter = 0;
-    private int invTimer = 0, incazzatoTimer = 0;
+    private int invTimer = 0, incazzatoTimer = 0, invSprite = 0;
     public Boolean dead = false;
     private Boolean collision = false, incazzato = false;
     private Polygon hitboxPorcata;
@@ -80,15 +80,6 @@ public class Boss1 extends MovingEntity implements Collidable{
     @Override
     public void muovi() {
         if(!incazzato){
-            /*
-            switch(direction){
-                case "left":
-                    x -= velocita;
-                    break;
-                case "right":
-                    x += velocita;
-                    break;
-            }*/
             if(this.x + this.standard.getWidth()/2 < Bomberman.getX()){
                 x += velocita;
             }else{
@@ -107,20 +98,29 @@ public class Boss1 extends MovingEntity implements Collidable{
         BufferedImage sprite = null;
 
         if(invTimer > 0){
-            sprite = hit;
             invTimer--;
+            //sprite = hit;
+        }
+        if(invSprite > 0){
+            invSprite--;
+            sprite = hit;
         }
         else if(incazzato){
-            if(incazzatoTimer < 30){
+            if(incazzatoTimer < 40){
                 sprite = cry1;
                 incazzatoTimer++;
-            } else if(incazzatoTimer < 60){
+            } else if(incazzatoTimer < 80){
                 sprite = cry2;
                 incazzatoTimer++;
-            } else if(incazzatoTimer < 90){
+            } else if(incazzatoTimer < 120){
                 sprite = cry3;
                 incazzatoTimer++;
-            } else {
+            }
+            else if(incazzatoTimer < 160){
+                sprite = cry2;
+                incazzatoTimer++;
+            }
+            else {
                 incazzato = false;
                 incazzatoTimer = 0;
             }
@@ -154,7 +154,11 @@ public class Boss1 extends MovingEntity implements Collidable{
     public void handleCollision(Esplosione e){
         if(this.invTimer == 0){
             this.vite--;
-            this.invTimer = 40;
+            if(this.vite == 4){
+                velocita = 2;
+            }
+            this.invTimer = 160;
+            this.invSprite = 40;
             System.out.println("Vite rimaste Nemico: " + this.vite);
 
             if (this.vite <= 0){
@@ -166,6 +170,9 @@ public class Boss1 extends MovingEntity implements Collidable{
         }
 
     }
+
+
+
 
     void solidCollision(GameEntity obj) {
         Rectangle2D intersection = this.hitbox.createIntersection(obj.hitbox);
@@ -229,10 +236,10 @@ public class Boss1 extends MovingEntity implements Collidable{
 
     private void incazzati(){
         incazzato = true;
-        int xp = this.x + (standard.getWidth()/2);
-        int yp = this.y + (standard.getHeight()/2);
+        int xp = this.x + (standard.getWidth()/2) - 30;
+        int yp = this.y + (standard.getHeight()/2) -30;
         IntStream.range(0,8).forEach(i -> {
-            TileManager.addEntity(new Proiettile(xp, yp, null, 2, 1, play, i)); //aggiunge le 8 bombe
+            TileManager.addEntity(new Proiettile(xp, yp, null, this.vite<5 ? 3:2, 1, play, i)); //aggiunge le 8 bombe
         });
 
     }
