@@ -23,7 +23,7 @@ public class Bomberman implements Collidable {
         private static int vite; //punti vita del bomberman
         private static int velocita; //velocità del bomberman
 
-        public BufferedImage up1, up2, down1, down2, right1, right2, left1, left2;
+        public BufferedImage up1, up2, down1, down2, right1, right2, left1, left2, damaged1, damaged2, dead1, dead2;
         public static String direction;
         KeyHandler keyH;
         Partita play;
@@ -38,6 +38,9 @@ public class Bomberman implements Collidable {
         private static Coordinate posizioneAttuale;
         private static Coordinate prossimaPosizione;
         private  static Coordinate arrivo;
+
+        public static boolean dead = false;
+        public int dtimer = 50;
 
         public static String getDirezione(){
             return direction;
@@ -91,6 +94,10 @@ public class Bomberman implements Collidable {
                 right2 = ImageIO.read(getClass().getResourceAsStream("/Images/BomberMan_right2.png"));
                 left1 = ImageIO.read(getClass().getResourceAsStream("/Images/BomberMan_left1.png"));
                 left2 = ImageIO.read(getClass().getResourceAsStream("/Images/BomberMan_left2.png"));
+                damaged1 = ImageIO.read(getClass().getResourceAsStream("/Images/BomberMan_damaged1.png"));
+                damaged2 = ImageIO.read(getClass().getResourceAsStream("/Images/BomberMan_damaged2.png"));
+                dead1 = ImageIO.read(getClass().getResourceAsStream("/Images/BomberMan_dead1.png"));
+                dead2 = ImageIO.read(getClass().getResourceAsStream("/Images/BomberMan_dead2.png")); 
 
             } catch(IOException e){
                 e.printStackTrace();
@@ -111,39 +118,41 @@ public class Bomberman implements Collidable {
 
 
     public void muovi(){
-        if(movimentoMouse){
-            if(!(keyH.down || keyH.up || keyH.left || keyH.right)){
-                muoviConMouse();
-            }else{
-                movimentoMouse = false;
-            }
-        }
-        else {
-
-            if (keyH.up == true) {
-                direction = "up";
-                y -= velocita;
-            }
-            if (keyH.down == true) {
-                direction = "down";
-                y += velocita;
-            }
-            if (keyH.left == true) {
-                direction = "left";
-                x -= velocita;
-            }
-            if (keyH.right == true) {
-                direction = "right";
-                x += velocita;
-            }
-            spriteCounter++;
-            if (spriteCounter > 10) {
-                if (spriteNum == 1) {
-                    spriteNum = 2;
-                } else if (spriteNum == 2) {
-                    spriteNum = 1;
+        if(!dead){
+            if(movimentoMouse){
+                if(!(keyH.down || keyH.up || keyH.left || keyH.right)){
+                    muoviConMouse();
+                }else{
+                    movimentoMouse = false;
                 }
-                spriteCounter = 0;
+            }
+            else {
+
+                if (keyH.up == true) {
+                    direction = "up";
+                    y -= velocita;
+                }
+                if (keyH.down == true) {
+                    direction = "down";
+                    y += velocita;
+                }
+                if (keyH.left == true) {
+                    direction = "left";
+                    x -= velocita;
+                }
+                if (keyH.right == true) {
+                    direction = "right";
+                    x += velocita;
+                }
+                spriteCounter++;
+                if (spriteCounter > 10) {
+                    if (spriteNum == 1) {
+                        spriteNum = 2;
+                    } else if (spriteNum == 2) {
+                        spriteNum = 1;
+                    }
+                    spriteCounter = 0;
+                }
             }
         }
     }
@@ -161,7 +170,7 @@ public class Bomberman implements Collidable {
         //sará sostituito con il bomebrman
         //con relative posizioni eccetera
         BufferedImage image = down1;
-
+        if(invTimer == 0 && !dead){
         switch(direction) {
             case "up":
                 if(spriteNum == 1){
@@ -195,6 +204,22 @@ public class Bomberman implements Collidable {
                     image = right2;
                 }
                 break;
+        }}
+        else if (dead) {
+            if(spriteNum == 1){
+                    image = dead1;
+                }
+                if(spriteNum == 2){
+                    image = dead2;
+                }
+        }
+        else {
+            if(spriteNum == 1){
+                    image = damaged1;
+                }
+                if(spriteNum == 2){
+                    image = damaged2;
+                }
         }
         g2.drawImage(image, x, y, play.tileSize, play.tileSize, null);
 
@@ -203,7 +228,15 @@ public class Bomberman implements Collidable {
     public void update(){
         this.hitbox.setBounds(x+10, y+10, play.tileSize-10, play.tileSize-10);
         muovi();
-        if(invTimer > 0){
+        if(dead){
+            this.dtimer--;
+            if(dtimer == 0) {
+                System.out.println("Hai perso!");
+                SchermataSconfitta.getIstanza().setVisible(true);
+                Partita.stopGameThread();
+            }
+        }
+        else if(invTimer > 0){
             invTimer--;
         }
         for(PowerUp.Tipo p : powerUps.keySet()){
@@ -245,9 +278,7 @@ public class Bomberman implements Collidable {
                 this.invTimer = 71;
                 System.out.println("Vite rimaste: " + this.vite);
                 if (this.vite <= 0){
-                    System.out.println("Hai perso!");
-                    SchermataSconfitta.getIstanza().setVisible(true);
-                    Partita.stopGameThread();
+                    dead = true;
                 }
             }
 
@@ -261,9 +292,8 @@ public class Bomberman implements Collidable {
         
             System.out.println("Vite rimaste: " + this.vite);
             if (this.vite <= 0){
-                System.out.println("Hai perso!");
-                SchermataSconfitta.getIstanza().setVisible(true);
-                Partita.stopGameThread();
+                dead = true;
+                
             }
         }
 
@@ -339,41 +369,43 @@ public class Bomberman implements Collidable {
     }
 
     public static void muoviConMouse(){
-        boolean finito = false;
-        if(pathIterator.hasNext()) {
-            if (x == prossimaPosizione.getX()*64 && y == prossimaPosizione.getY()*64) {
-                prossimaPosizione = pathIterator.next();
+        if(!dead){
+            boolean finito = false;
+            if(pathIterator.hasNext()) {
+                if (x == prossimaPosizione.getX()*64 && y == prossimaPosizione.getY()*64) {
+                    prossimaPosizione = pathIterator.next();
+                }
             }
-        }
 
-        if (prossimaPosizione.getX()*64 > x) {
-            direction = "right";
-            x += velocita;
+            if (prossimaPosizione.getX()*64 > x) {
+                direction = "right";
+                x += velocita;
 
-        }
-        if (prossimaPosizione.getX()*64 < x) {
-            direction = "left";
-            x -= velocita;
-        }
-        if (prossimaPosizione.getY()*64 > y) {
-            direction = "down";
-            y += velocita;
-        }
-        if (prossimaPosizione.getY()*64 < y) {
-            direction = "up";
-            y -= velocita;
-        }
-        spriteCounter++;
-        if (spriteCounter > 10) {
-            if (spriteNum == 1) {
-                spriteNum = 2;
-            } else if (spriteNum == 2) {
-                spriteNum = 1;
             }
-            spriteCounter = 0;
-        }
-        if(x == arrivo.getX()*64 && y == arrivo.getY() * 64) movimentoMouse = false;
+            if (prossimaPosizione.getX()*64 < x) {
+                direction = "left";
+                x -= velocita;
+            }
+            if (prossimaPosizione.getY()*64 > y) {
+                direction = "down";
+                y += velocita;
+            }
+            if (prossimaPosizione.getY()*64 < y) {
+                direction = "up";
+                y -= velocita;
+            }
+            spriteCounter++;
+            if (spriteCounter > 10) {
+                if (spriteNum == 1) {
+                    spriteNum = 2;
+                } else if (spriteNum == 2) {
+                    spriteNum = 1;
+                }
+                spriteCounter = 0;
+            }
+            if(x == arrivo.getX()*64 && y == arrivo.getY() * 64) movimentoMouse = false;
 
+        }
     }
 
 
