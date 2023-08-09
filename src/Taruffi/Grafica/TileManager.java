@@ -36,6 +36,7 @@ public class TileManager {
     private Boss1 boss;
     Bomberman bomber;
     private int indexBomberman;
+    private static int livello = 1;
 
     public void addEntities(MovingEntity entity){
         movingEntities.add(entity);
@@ -88,7 +89,7 @@ public class TileManager {
 
     public void loadMap(){
         try{
-            InputStream is = getClass().getResourceAsStream("/FileLivelli/livello1.txt");
+            InputStream is = getClass().getResourceAsStream("/FileLivelli/livello" + livello + ".txt");
             BufferedReader br = new BufferedReader(new java.io.InputStreamReader(is));
 
             int col = 0;
@@ -193,10 +194,13 @@ public class TileManager {
             b.disegna(g2);
             b.update();
         }
-        if(!boss.dead){
-            boss.disegna(g2);
-            boss.update();
+        if(boss != null){
+            if(!boss.dead){
+                boss.disegna(g2);
+                boss.update();
+            }
         }
+
         for(Esplosione e : codaAggiunte){ //controlla le collisioni tra bombe e blocchi distruttibili
             for(StationaryEntity entity : stationaryEntities){
                 if(entity instanceof Muro){
@@ -256,6 +260,24 @@ public class TileManager {
         bomber.update();
         bomber.disegna(g2);
         checkCollision();
+        if(boss != null){
+            if(boss.dead){
+                System.out.println("Hai vinto");
+                livello++;
+                SchermataVittoria.getIstanza().setVisible(true);
+                Partita.stopGameThread();
+
+                //ferma il thread, carica prossimo livello
+            }
+        } else if (movingEntities.size() == 0){
+            System.out.println("Hai vinto");
+            livello++;
+            SchermataVittoria.getIstanza().setVisible(true);
+            Partita.stopGameThread();
+
+
+            //ferma il thread, carica prossimo livello
+        }
 
     }
 
@@ -306,9 +328,11 @@ public class TileManager {
             if(bomber.getHitbox().intersects(e.getHitbox())){
                 bomber.handleCollision(e);
             }
-            if(!boss.dead) {
-                if (boss.getHitboxPorcata().intersects(e.getHitbox())) {
-                    boss.handleCollision(e);
+            if(boss != null){
+                if(!boss.dead) {
+                    if (boss.getHitboxPorcata().intersects(e.getHitbox())) {
+                        boss.handleCollision(e);
+                    }
                 }
             }
         }
@@ -317,10 +341,12 @@ public class TileManager {
                 bomber.handleCollision(p);
             }
         }
-        if(!boss.dead) {
-            for (StationaryEntity entity : stationaryEntities) {
-                if (boss.getHitboxPorcata().intersects(entity.getHitbox())) {
-                    boss.handleCollision(entity);
+        if(boss != null){
+            if(!boss.dead) {
+                for (StationaryEntity entity : stationaryEntities) {
+                    if (boss.getHitboxPorcata().intersects(entity.getHitbox())) {
+                        boss.handleCollision(entity);
+                    }
                 }
             }
         }
@@ -361,4 +387,5 @@ public class TileManager {
     public static void AggiungiACoda(Esplosione e){
         codaAggiunte.add(e);
     }
+
 }

@@ -266,7 +266,7 @@ public class Kondoria  extends MovingEntity implements Collidable{
         //trova la casella dove si é cliccato
         int bombx = Bomberman.getX()/64;
         int bomby = Bomberman.getY()/64;
-        System.out.println("bomberman " + bombx + " " + bomby);
+
 
         ArrayList<ArrayList<Integer>> map = new ArrayList<>();
         for (int i = 0; i < 13; i++) {
@@ -288,16 +288,12 @@ public class Kondoria  extends MovingEntity implements Collidable{
 
         map.get(this.getY()/64).set(this.getX()/64, 2);
         //map.get(Bomberman.getY()/64).set(Bomberman.getX()/64, 3);
-        for (ArrayList<Integer> row : map) {
-            System.out.println(row);
-        }
+
         //a questo punto 1=blocco 0=libero 2=nemico 3=bomberman
         ArrayList<Coordinate> path = findShortestPath(this.getX()/64, this.getY()/64, Bomberman.getX()/64, Bomberman.getY()/64, map);
 
         // Stampa il percorso
-        for (Coordinate coordinate : path) {
-            System.out.print("Casella: " + coordinate.getX() + " " + coordinate.getY());
-        }
+
         return path;
 
     }

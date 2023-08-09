@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/FileLivelli/livello2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FileLivelli/livello3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FileLivelli/livello4.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FileLivelli/livello5.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FileLivelli/livello6.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileLivelli/livello1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileLivelli/livello1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Partita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/SchermataVittoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/SchermataVittoria.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/TileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Taruffi/Nemici/Boss1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Nemici/Boss1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Nemici/Proiettile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Nemici/Proiettile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Nemici/Kondoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Nemici/Kondoria.java" afterDir="false" />
     </list>
     <list id="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" name="Changes by Lorenzo" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -166,6 +174,11 @@
       <workItem from="1690992089966" duration="102000" />
       <workItem from="1691063709570" duration="5558000" />
       <workItem from="1691090470207" duration="1344000" />
+      <workItem from="1691140746670" duration="169000" />
+      <workItem from="1691141139024" duration="48000" />
+      <workItem from="1691497819028" duration="5446000" />
+      <workItem from="1691511967663" duration="1356000" />
+      <workItem from="1691594268631" duration="602000" />
     </task>
     <servers />
   </component>
@@ -204,16 +217,6 @@
           <url>file://$PROJECT_DIR$/src/Taruffi/Grafica/Avatar.java</url>
           <line>32</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Taruffi/Nemici/Kondoria.java</url>
-          <line>317</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Taruffi/Nemici/Proiettile.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="22" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.util.NoSuchElementException" package="java.util" />

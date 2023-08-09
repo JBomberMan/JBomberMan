@@ -58,6 +58,18 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
         this.setFocusable(true); //perché il pannello possa ricevere gli input da tastiera
     }
 
+    public void riavvia(){
+        gameThread = null;
+        BombManager.esplosioni.clear();
+        tileM = new TileManager(this, keyHandler);
+        bombM = new BombManager(keyHandler, this);
+        punteggioManager = new PunteggioManager();
+        viteManager = new ViteManager();
+        this.addKeyListener(keyHandler);
+        this.addMouseListener(mouseHandler);
+        this.setFocusable(true);
+    }
+
     public void startGameThread(){
         if(gameThread == null){
             gameThread = new Thread(this); //crea il thread
@@ -78,6 +90,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
     public static Partita getIstanza(){
         return istanza;
     }
+
 
     @Override
     public void run() { //il metodo che viene eseguito dal thread
@@ -142,7 +155,8 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
     }
 
     public static void stopGameThread(){
-        gameThread.stop(); //ferma il thread
+        gameThread.stop();
+         //ferma il thread
     }
 
 }
