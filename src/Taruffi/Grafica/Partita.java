@@ -61,9 +61,10 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
     public void riavvia(){
         gameThread = null;
         BombManager.esplosioni.clear();
-        tileM = new TileManager(this, keyHandler);
+        BombManager.esplosioniR.clear();
+        tileM = new TileManager(this, keyHandler); //sostituibile da un metodo reset()
         bombM = new BombManager(keyHandler, this);
-        punteggioManager = new PunteggioManager();
+        punteggioManager = new PunteggioManager(); //dovrebbe esare lo stesso o tenere il punteggio
         viteManager = new ViteManager();
         this.addKeyListener(keyHandler);
         this.addMouseListener(mouseHandler);

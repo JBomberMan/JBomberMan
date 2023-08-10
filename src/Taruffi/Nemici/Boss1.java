@@ -32,7 +32,7 @@ public class Boss1 extends MovingEntity implements Collidable{
 
 
     public Boss1(int x, int y, BufferedImage image, int velocita, int vite, Partita play) {
-        super(x, y, image, velocita, 1, play);
+        super(x, y, image, velocita, vite, play);
         this.velocita = 1;
         this.hitboxPorcata = new Polygon(new int[]{this.x + 166,
                 this.x + 246, this.x + 294, this.x + 332, this.x + 412, this.x + 412, this.x + 363,

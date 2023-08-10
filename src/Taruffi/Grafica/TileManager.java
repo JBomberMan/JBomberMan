@@ -46,6 +46,7 @@ public class TileManager {
     }
 
     public TileManager(Partita partita, KeyHandler keyH){
+        pulisci();
         this.partita = partita;
         tile = new Tile[10]; //rappresenta il numero di tile diverse che abbiamo a disposizione
         mapTileNum = new int[partita.maxScreenCol][partita.maxScreenRow];
@@ -53,6 +54,18 @@ public class TileManager {
         getTileImage();
         loadMap();
 
+    }
+
+    private void pulisci(){
+        movingEntities.clear();
+        stationaryEntities.clear();
+        tiles.clear();
+        powerUps.clear();
+        movingEntitiesR.clear();
+        stationaryEntitiesR.clear();
+        powerUpsR.clear();
+        codaAggiunte.clear();
+        codaRimozioni.clear();
     }
 
 
