@@ -33,6 +33,7 @@ public class Avatar extends JPanel {
             String content = new String(Files.readAllBytes(Paths.get(file.toURI())));
             JSONObject obj = new JSONObject(content);
             obj.put("avatar", avatar);
+            Files.write(Paths.get(file.toURI()), obj.toString().getBytes()); //salva le modifiche al file
             ImageIcon immagineAvatar = new ImageIcon((obj.getString("avatar")));
             immagineAvatar = new ImageIcon(immagineAvatar.getImage().getScaledInstance(150,150, Image.SCALE_SMOOTH));
             contenitoreAvatar.setIcon(immagineAvatar);
