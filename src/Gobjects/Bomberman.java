@@ -16,56 +16,56 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class Bomberman implements Collidable {
-        private int invTimer = 0;
-        private int score = 0;
-        private static int x = 0;
-        private static int y= 0; //posizione del bomberman
-        private static int vite; //punti vita del bomberman
-        private static int velocita; //velocità del bomberman
+    private int invTimer = 0;
+    private int score = 0;
+    private static int x = 0;
+    private static int y= 0; //posizione del bomberman
+    private static int vite; //punti vita del bomberman
+    private static int velocita; //velocità del bomberman
 
-        public BufferedImage up1, up2, down1, down2, right1, right2, left1, left2, damaged1, damaged2, dead1, dead2;
-        public static String direction;
-        KeyHandler keyH;
-        Partita play;
-        public static int spriteCounter = 0;
-        public static int spriteNum = 1;
-        Rectangle hitbox;
-        Map<PowerUp.Tipo, Integer> powerUps = new HashMap<PowerUp.Tipo, Integer>();
+    public BufferedImage up1, up2, down1, down2, right1, right2, left1, left2, damaged1, damaged2, dead1, dead2;
+    public static String direction;
+    KeyHandler keyH;
+    Partita play;
+    public static int spriteCounter = 0;
+    public static int spriteNum = 1;
+    Rectangle hitbox;
+    Map<PowerUp.Tipo, Integer> powerUps = new HashMap<PowerUp.Tipo, Integer>();
 
-        private static Boolean movimentoMouse;
-        private static ArrayList<Coordinate> path;
-        private static Iterator<Coordinate> pathIterator;
-        private static Coordinate posizioneAttuale;
-        private static Coordinate prossimaPosizione;
-        private  static Coordinate arrivo;
+    private static Boolean movimentoMouse;
+    private static ArrayList<Coordinate> path;
+    private static Iterator<Coordinate> pathIterator;
+    private static Coordinate posizioneAttuale;
+    private static Coordinate prossimaPosizione;
+    private  static Coordinate arrivo;
 
-        public static boolean dead = false;
-        public int dtimer = 50;
-        public static int gettoni = 3;
+    public boolean dead = false;
+    public int dtimer = 50;
+    public static int gettoni = 1;
 
-        public static String getDirezione(){
-            return direction;
-        }
-        public static int getGettoni(){
-            return gettoni;
-        }
+    public static String getDirezione(){
+        return direction;
+    }
+    public static int getGettoni(){
+        return gettoni;
+    }
 
-        public Bomberman(int x, int y,BufferedImage image, int puntiVita, int velocita, KeyHandler keyH, Partita play) {
-            Bomberman.x = x;
-            Bomberman.y = y; //posizioni di base
-            this.direction = "down";
-            this.vite = puntiVita;
-            this.velocita = velocita;
-            //this.Sprite = Sprite;
-            //this.indiceAnimazione = 0;
-            this.keyH = keyH;
-            this.play = play;
-            this.hitbox = new Rectangle(x+5,y+5,play.tileSize -10,play.tileSize -10);
-            getPlayerImage();
-            powerUps.put(PowerUp.Tipo.SuperaBlocchi, 0);
-            powerUps.put(PowerUp.Tipo.SuperaBombe, 0);
-            movimentoMouse = false;
-        }
+    public Bomberman(int x, int y,BufferedImage image, int puntiVita, int velocita, KeyHandler keyH, Partita play) {
+        Bomberman.x = x;
+        Bomberman.y = y; //posizioni di base
+        this.direction = "down";
+        this.vite = puntiVita;
+        this.velocita = velocita;
+        //this.Sprite = Sprite;
+        //this.indiceAnimazione = 0;
+        this.keyH = keyH;
+        this.play = play;
+        this.hitbox = new Rectangle(x+5,y+5,play.tileSize -10,play.tileSize -10);
+        getPlayerImage();
+        powerUps.put(PowerUp.Tipo.SuperaBlocchi, 0);
+        powerUps.put(PowerUp.Tipo.SuperaBombe, 0);
+        movimentoMouse = false;
+    }
 
     public static int getX() {
             return x;
@@ -372,7 +372,7 @@ public class Bomberman implements Collidable {
             return powerUps.get(PowerUp.Tipo.ControlloRemoto) > 0;
     }
 
-    public static void muoviConMouse(){
+    public void muoviConMouse(){
         if(!dead){
             boolean finito = false;
             if(pathIterator.hasNext()) {

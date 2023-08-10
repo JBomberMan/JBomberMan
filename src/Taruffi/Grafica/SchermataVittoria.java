@@ -48,7 +48,6 @@ public class SchermataVittoria extends JFrame {
 
 
                 //TODO avvia il prossimo livello
-                //dovrebbe usare thread.sleep ma non va
                 Partita.getIstanza().riavvia();
                 Partita.getIstanza().startGameThread();
                 istanza.dispose();

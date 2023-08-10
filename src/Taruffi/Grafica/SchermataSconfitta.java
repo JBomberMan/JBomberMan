@@ -1,4 +1,6 @@
 package Taruffi.Grafica;
+import Gobjects.Bomberman;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -33,7 +35,15 @@ public class SchermataSconfitta extends JFrame{
         riprova.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                //TODO controlla le vite e se sono finite ritorna al menu principale
+                if(Bomberman.gettoni > 0){
+                    //SwingUtilities.getWindowAncestor(Partita.getIstanza()).dispose();
+                    Bomberman.gettoni--;
+                    Partita.getIstanza().riavvia();
+                    Partita.getIstanza().startGameThread();
+                    istanza.dispose();
+                }
+                else
+                    JOptionPane.showMessageDialog(null, "Non hai più gettoni, torna al menu principale", "Errore", JOptionPane.ERROR_MESSAGE);
             }
         });
 
