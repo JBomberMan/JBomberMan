@@ -37,6 +37,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
     public PunteggioManager punteggioManager = new PunteggioManager(); //instanziamo il punteggioManager
 
     ViteManager viteManager = new ViteManager(); //instanziamo il viteManager
+    GettoniManager gettoniManager = new GettoniManager(); //instanziamo il gettoniManager
     private static Partita istanza;
     private MouseHandler mouseHandler = new MouseHandler(this); //gestisce gli input da mouse
 
@@ -150,6 +151,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
         tileM.draw(g2); //disegna i tiles
         punteggioManager.disegna(g2); //disegna il punteggio
         viteManager.disegna(g2); //disegna le vite
+        gettoniManager.disegna(g2); //disegna i gettoni
 
         g2.dispose(); //rilascia le risorse usate da g2, good practice
 

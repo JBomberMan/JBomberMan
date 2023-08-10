@@ -41,9 +41,13 @@ public class Bomberman implements Collidable {
 
         public static boolean dead = false;
         public int dtimer = 50;
+        public static int gettoni = 3;
 
         public static String getDirezione(){
             return direction;
+        }
+        public static int getGettoni(){
+            return gettoni;
         }
 
         public Bomberman(int x, int y,BufferedImage image, int puntiVita, int velocita, KeyHandler keyH, Partita play) {
