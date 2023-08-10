@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Gettoni.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/GettoniManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gobjects/Bomberman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/Bomberman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileLivelli/livello1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileLivelli/livello1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileLivelli/storico.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileLivelli/storico.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Partita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/SchermataSconfitta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/SchermataSconfitta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Nemici/Baloon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Nemici/Baloon.java" afterDir="false" />
     </list>
     <list id="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" name="Changes by Lorenzo" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -171,7 +173,7 @@
       <workItem from="1691497819028" duration="5446000" />
       <workItem from="1691511967663" duration="1356000" />
       <workItem from="1691594268631" duration="602000" />
-      <workItem from="1691669336918" duration="4090000" />
+      <workItem from="1691669336918" duration="6930000" />
     </task>
     <servers />
   </component>
@@ -210,6 +212,11 @@
           <url>file://$PROJECT_DIR$/src/Taruffi/Grafica/Avatar.java</url>
           <line>32</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Taruffi/Grafica/TileManager.java</url>
+          <line>147</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.util.NoSuchElementException" package="java.util" />

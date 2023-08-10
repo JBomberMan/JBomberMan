@@ -24,9 +24,9 @@ public class SchermataSconfitta extends JFrame{
 
             public void actionPerformed(ActionEvent e) {
                 Storico.addSconfitta();
-                Partita partita = Partita.getIstanza();
-                partita.chiudi();
+                SwingUtilities.getWindowAncestor(Partita.getIstanza()).dispose();
                 istanza.dispose();
+                ProfiloUtente.getProfilo().setVisible(true);
             }
         });
 

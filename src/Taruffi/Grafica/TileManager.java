@@ -56,7 +56,7 @@ public class TileManager {
 
     }
 
-    private void pulisci(){
+    public void pulisci(){
         movingEntities.clear();
         stationaryEntities.clear();
         tiles.clear();
