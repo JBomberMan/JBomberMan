@@ -13,17 +13,32 @@ public class SchermataVittoria extends JFrame {
 
     private SchermataVittoria(){
 
-        setSize(300, 300);
+        setSize(400, 200);
         tornaALMenu = new JButton("Torna al Menu Principale");
         prossimoLivello = new JButton("Prossimo Livello");
-        setLayout(new BorderLayout());
-        add(tornaALMenu, BorderLayout.CENTER);
-        add(prossimoLivello, BorderLayout.SOUTH);
+        setLayout(new GridBagLayout());
+        //add(tornaALMenu);
+        //(prossimoLivello);
+        GridBagConstraints c = new GridBagConstraints();
+        c.gridx = 0;
+        c.gridy = 0;
+        c.weightx = 0.5;
+        c.weighty = 0.5;
+        add(tornaALMenu, c);
+        c.gridx = 1;
+        c.gridy = 0;
+        c.weightx = 0.5;
+        c.weighty = 0.5;
+        add(prossimoLivello, c);
+
 
         tornaALMenu.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                //TODO ritorna al menu principale
+
+                SwingUtilities.getWindowAncestor(Partita.getIstanza()).dispose();
+                istanza.dispose();
+                ProfiloUtente.getProfilo().setVisible(true);
             }
         });
 
