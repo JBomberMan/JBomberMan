@@ -66,6 +66,7 @@ public class TileManager {
         powerUpsR.clear();
         codaAggiunte.clear();
         codaRimozioni.clear();
+        boss = null;
     }
 
 
@@ -283,6 +284,10 @@ public class TileManager {
                 //ferma il thread, carica prossimo livello
             }
         } else if (movingEntities.size() == 0){
+            if(livello == 5){
+                System.out.println("debug");
+
+                }
             System.out.println("Hai vinto");
             livello++;
             SchermataVittoria.getIstanza().setVisible(true);

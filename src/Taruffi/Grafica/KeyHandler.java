@@ -21,6 +21,15 @@ public class KeyHandler implements KeyListener {
         this.play = play;
     }
 
+    public void pulisci(){
+        up = false;
+        down = false;
+        left = false;
+        right = false;
+        space = false;
+        e = false;
+    }
+
 
 
 
@@ -44,6 +53,7 @@ public class KeyHandler implements KeyListener {
         if(code == KeyEvent.VK_SPACE){
             space = true;
             play.bombM.piazzaBomba();
+            System.out.println(play.bombM.getBombeAttive());
 
         }
         if(code == KeyEvent.VK_E){

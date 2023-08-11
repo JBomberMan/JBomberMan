@@ -262,7 +262,7 @@ public class Kondoria  extends MovingEntity implements Collidable{
 
     public ArrayList<Coordinate> trovaBomberman(){
 
-        System.out.println(this.getX()/64 + " " + this.getY()/64);
+
         //trova la casella dove si é cliccato
         int bombx = Bomberman.getX()/64;
         int bomby = Bomberman.getY()/64;

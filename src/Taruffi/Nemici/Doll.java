@@ -26,8 +26,8 @@ public class Doll  extends MovingEntity implements Collidable{
         public static String direction = "down";
         private int probabilitàDirezione ;
         private int attesaMovimento = 30;
-        public static int spriteCounter = 0;
-        public static int spriteNum = 1;
+        public int spriteCounter = 0;
+        public int spriteNum = 1;
         private int invTimer;
         public boolean dead = false;
         public int dtimer = 50;

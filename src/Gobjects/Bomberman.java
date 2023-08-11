@@ -412,6 +412,4 @@ public class Bomberman implements Collidable {
         }
     }
 
-
-
 }

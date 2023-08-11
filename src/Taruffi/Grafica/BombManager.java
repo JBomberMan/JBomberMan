@@ -44,6 +44,17 @@ public class BombManager {
         }
     }
 
+    public void pulisci(){
+        bombe.clear();
+        esplosioni.clear();
+        bombeR.clear();
+        esplosioniR.clear();
+        bombeAttive = 0;
+        numeroBombe = 3;
+        raggioBombe = 1;
+        System.out.println(getBombeAttive());
+    }
+
     public static void togliBomba(Bomba bomba){
         bombeR.add(bomba);
         bombeAttive--;
@@ -108,7 +119,7 @@ public class BombManager {
         return numeroBombe;
     }
 
-    public static int getBombeAttive() {
+    public int getBombeAttive() {
         return bombeAttive;
     }
 
