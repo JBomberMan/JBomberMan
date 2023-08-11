@@ -37,7 +37,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
                                                     //passandogli questa istanza di un gamepanel
 
     public PunteggioManager punteggioManager = new PunteggioManager(); //instanziamo il punteggioManager
-
+    public TempoManager tempoManager = new TempoManager(); //instanziamo il tempoManager
     ViteManager viteManager = new ViteManager(); //instanziamo il viteManager
     GettoniManager gettoniManager = new GettoniManager(); //instanziamo il gettoniManager
     private static Partita istanza;
@@ -163,6 +163,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
         punteggioManager.disegna(g2); //disegna il punteggio
         viteManager.disegna(g2); //disegna le vite
         gettoniManager.disegna(g2); //disegna i gettoni
+        tempoManager.disegna(g2); //disegna il tempo
 
         g2.dispose(); //rilascia le risorse usate da g2, good practice
 

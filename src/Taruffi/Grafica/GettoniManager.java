@@ -8,7 +8,7 @@ public class GettoniManager {
 
     private int x, y;
     public GettoniManager(){
-        this.x = 600;
+        this.x = 400;
         this.y = 870;
     }
 

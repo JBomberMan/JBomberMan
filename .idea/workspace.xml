@@ -5,21 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/FileLivelli/livello7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FileLivelli/livello8.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Tempo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/TempoManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileLivelli/livello2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileLivelli/livello2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileLivelli/profilo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileLivelli/profilo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gobjects/Bomberman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/Bomberman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/BombManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/BombManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/KeyHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Partita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/TileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Nemici/Baloon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Nemici/Baloon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Nemici/Doll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Nemici/Doll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Nemici/Kondoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Nemici/Kondoria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Nemici/Oneal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Nemici/Oneal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Nemici/Ovapi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Nemici/Ovapi.java" afterDir="false" />
     </list>
     <list id="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" name="Changes by Lorenzo" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -183,7 +172,7 @@
       <workItem from="1691511967663" duration="1356000" />
       <workItem from="1691594268631" duration="602000" />
       <workItem from="1691669336918" duration="8279000" />
-      <workItem from="1691766351154" duration="3634000" />
+      <workItem from="1691766351154" duration="4348000" />
     </task>
     <servers />
   </component>

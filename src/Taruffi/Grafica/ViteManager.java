@@ -8,7 +8,7 @@ public class ViteManager {
 
     private int x, y;
     public ViteManager(){
-        this.x = 400;
+        this.x = 200;
         this.y = 870;
     }
 
