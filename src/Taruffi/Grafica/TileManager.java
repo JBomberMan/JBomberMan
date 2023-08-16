@@ -48,7 +48,7 @@ public class TileManager {
     public TileManager(Partita partita, KeyHandler keyH){
         pulisci();
         this.partita = partita;
-        tile = new Tile[10]; //rappresenta il numero di tile diverse che abbiamo a disposizione
+        tile = new Tile[20]; //rappresenta il numero di tile diverse che abbiamo a disposizione
         mapTileNum = new int[partita.maxScreenCol][partita.maxScreenRow];
         this.keyH = keyH;
         getTileImage();
@@ -71,14 +71,14 @@ public class TileManager {
 
 
     public TileManager(){
-        tile = new Tile[10]; //rappresenta il numero di tile diverse che abbiamo a disposizione
+        tile = new Tile[20]; //rappresenta il numero di tile diverse che abbiamo a disposizione
         getTileImage();
 
     }
     public void getTileImage(){
         try{
             tile[0] = new Tile();
-            tile[0].immagine = ImageIO.read(getClass().getResourceAsStream("/Images/grass.jpg"));
+            tile[0].immagine = ImageIO.read(getClass().getResourceAsStream("/Images/grass.png"));
             tile[1] = new Tile();
             tile[1].immagine = ImageIO.read(getClass().getResourceAsStream("/Images/muroUp.png"));
             tile[2] = new Tile();
@@ -88,11 +88,19 @@ public class TileManager {
             tile[4] = new Tile();
             tile[4].immagine = ImageIO.read(getClass().getResourceAsStream("/Images/muroRight.png"));
             tile[5] = new Tile();
-            tile[5].immagine = ImageIO.read(getClass().getResourceAsStream("/Images/blocco.jpg"));
+            tile[5].immagine = ImageIO.read(getClass().getResourceAsStream("/Images/blocco.png"));
             tile[6] = new Tile();
-            tile[6].immagine = ImageIO.read(getClass().getResourceAsStream("/Images/bloccoDistruttibile.jpg"));
+            tile[6].immagine = ImageIO.read(getClass().getResourceAsStream("/Images/bloccoDistruttibile.png"));
             tile[7] = new Tile();
             tile[7].immagine = ImageIO.read(getClass().getResourceAsStream("/Images/white.png"));
+            tile[8] = new Tile();
+            tile[8].immagine = ImageIO.read(getClass().getResourceAsStream("/Images/angoloDownLeft.png"));
+            tile[9] = new Tile();
+            tile[9].immagine = ImageIO.read(getClass().getResourceAsStream("/Images/angoloUpLeft.png"));
+            tile[10] = new Tile();
+            tile[10].immagine = ImageIO.read(getClass().getResourceAsStream("/Images/angoloDownRight.png"));
+            tile[11] = new Tile();
+            tile[11].immagine = ImageIO.read(getClass().getResourceAsStream("/Images/angoloUpRight.png"));
 
 
             //possiamo aggiungere le altre dopo
@@ -162,6 +170,19 @@ public class TileManager {
                             break;
                         case 14:
                             boss = new Boss1(col*64, row*64,tile[6].immagine, 2, 10, partita);
+                            break;
+                        case 15:
+                            stationaryEntities.add(new Muro(col*64, row*64, tile[8].immagine, false, partita));
+                            break;
+                        case 16:
+                            stationaryEntities.add(new Muro(col*64, row*64, tile[9].immagine, false, partita));
+                            break;
+                        case 17:
+                            stationaryEntities.add(new Muro(col*64, row*64, tile[10].immagine, false, partita));
+                            break;
+                        case 18:
+                            stationaryEntities.add(new Muro(col*64, row*64, tile[11].immagine, false, partita));
+                            break;
                     }
 
                     col++;
