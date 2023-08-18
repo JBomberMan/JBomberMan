@@ -86,6 +86,78 @@ public class Menu extends JPanel {
             }
         });
 
+        bottoneEditor.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame frame = new JFrame("Editor Livello");
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+                
+                JPanel eLvlPanel = new JPanel(new BorderLayout());
+                
+
+                //pannello di sinistra
+                JPanel leftPanel = new JPanel(new GridBagLayout());
+                GridBagConstraints gbc = new GridBagConstraints();
+
+
+                JButton leftArrowButton = new JButton("\u2190");
+                JButton rightArrowButton = new JButton("\u2192");
+
+                JLabel imageLabel = new JLabel(new ImageIcon("\\src\\Images\\avatarBase.png")); 
+
+                leftArrowButton.setPreferredSize(new Dimension(50, 50));
+                rightArrowButton.setPreferredSize(new Dimension(50, 50));
+                imageLabel.setPreferredSize(new Dimension(80, 80));
+
+                gbc.gridx = 1;
+                gbc.gridy = 1;
+                gbc.fill = GridBagConstraints.NONE;
+                leftPanel.add(leftArrowButton, gbc);
+
+                gbc.gridx = 2;
+                gbc.gridy = 1;
+                gbc.fill = GridBagConstraints.NONE;
+                leftPanel.add(imageLabel, gbc);
+
+                gbc.gridx = 3;
+                gbc.gridy = 1;
+                gbc.fill = GridBagConstraints.NONE;
+                leftPanel.add(rightArrowButton, gbc);
+
+                
+                
+                
+
+                eLvlPanel.add(leftPanel, BorderLayout.WEST);
+                
+
+                // Pannello destro con la griglia di bottoni
+                JPanel rightPanel = new JPanel(new GridBagLayout());
+                GridBagConstraints gbc2 = new GridBagConstraints();
+        
+                for (int i = 0; i < 13; i++) {
+                    for (int j = 0; j < 17; j++) {
+                        JButton button = new JButton();
+                        button.setPreferredSize(new Dimension(32, 32));
+                        gbc2.gridx = j;
+                        gbc2.gridy = i;
+                        gbc2.fill = GridBagConstraints.NONE;
+                        rightPanel.add(button, gbc2);
+                    }
+                }
+
+                eLvlPanel.add(rightPanel, BorderLayout.EAST);
+
+                // Aggiungi il pannello alla finestra
+                frame.getContentPane().add(eLvlPanel);
+                
+                // Imposta le dimensioni della finestra
+                frame.setSize(1200, 800);
+                
+                // Rendi la finestra visibile
+                frame.setVisible(true); 
+                    }
+        });
 
 
 
