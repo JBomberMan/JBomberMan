@@ -12,10 +12,17 @@ public class TileObject extends GameEntity{
         this.play = play;
     }
 
+    public TileObject(int x, int y, BufferedImage image){
+        super(x,y,image);
+        play = null;
+    }
+
     public void update(){}
 
 
     public void disegna(Graphics2D g2d){
-        g2d.drawImage(image, x, y,play.tileSize, play.tileSize, null);
+        if(play == null){g2d.drawImage(image,x,y,32,32,null);}
+        else{g2d.drawImage(image, x, y,play.tileSize, play.tileSize, null);}
+
     }
 }
