@@ -33,7 +33,7 @@ public class TileManager {
      static ArrayList<PowerUp> powerUpsR = new ArrayList<>();
     static ArrayList<Esplosione> codaAggiunte = new ArrayList<>();
     static ArrayList<Esplosione> codaRimozioni = new ArrayList<>();
-    private Boss1 boss;
+    private Boss2 boss;
     Bomberman bomber;
     private int indexBomberman;
     private static int livello = 1;
@@ -161,7 +161,7 @@ public class TileManager {
                             movingEntities.add(new Ovapi(col*64, row*64,tile[6].immagine, 1, 1, partita));
                             break;
                         case 14:
-                            boss = new Boss1(col*64, row*64,tile[6].immagine, 2, 10, partita);
+                            boss = new Boss2(col*64, row*64,tile[6].immagine, 2, 10, partita);
                     }
 
                     col++;
@@ -348,7 +348,7 @@ public class TileManager {
             }
             if(boss != null){
                 if(!boss.dead) {
-                    if (boss.getHitboxPorcata().intersects(e.getHitbox())) {
+                    if (boss.getHitbox().intersects(e.getHitbox())) {
                         boss.handleCollision(e);
                     }
                 }
@@ -362,9 +362,12 @@ public class TileManager {
         if(boss != null){
             if(!boss.dead) {
                 for (StationaryEntity entity : stationaryEntities) {
-                    if (boss.getHitboxPorcata().intersects(entity.getHitbox())) {
+                    if (boss.getHitbox().intersects(entity.getHitbox())) {
                         boss.handleCollision(entity);
                     }
+                }
+                if(bomber.getHitbox().intersects(boss.getHitbox())){
+                    bomber.handleCollision(boss);
                 }
             }
         }
