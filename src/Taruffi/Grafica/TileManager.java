@@ -33,7 +33,7 @@ public class TileManager {
      static ArrayList<PowerUp> powerUpsR = new ArrayList<>();
     static ArrayList<Esplosione> codaAggiunte = new ArrayList<>();
     static ArrayList<Esplosione> codaRimozioni = new ArrayList<>();
-    private Boss1 boss;
+    private Boss2 boss;
     Bomberman bomber;
     private int indexBomberman;
     private static int livello = 1;
@@ -48,7 +48,7 @@ public class TileManager {
     public TileManager(Partita partita, KeyHandler keyH){
         pulisci();
         this.partita = partita;
-        tile = new Tile[20]; //rappresenta il numero di tile diverse che abbiamo a disposizione
+        tile = new Tile[10]; //rappresenta il numero di tile diverse che abbiamo a disposizione
         mapTileNum = new int[partita.maxScreenCol][partita.maxScreenRow];
         this.keyH = keyH;
         getTileImage();
@@ -71,7 +71,7 @@ public class TileManager {
 
 
     public TileManager(){
-        tile = new Tile[20]; //rappresenta il numero di tile diverse che abbiamo a disposizione
+        tile = new Tile[10]; //rappresenta il numero di tile diverse che abbiamo a disposizione
         getTileImage();
 
     }
@@ -93,14 +93,6 @@ public class TileManager {
             tile[6].immagine = ImageIO.read(getClass().getResourceAsStream("/Images/bloccoDistruttibile.png"));
             tile[7] = new Tile();
             tile[7].immagine = ImageIO.read(getClass().getResourceAsStream("/Images/white.png"));
-            tile[8] = new Tile();
-            tile[8].immagine = ImageIO.read(getClass().getResourceAsStream("/Images/angoloDownLeft.png"));
-            tile[9] = new Tile();
-            tile[9].immagine = ImageIO.read(getClass().getResourceAsStream("/Images/angoloUpLeft.png"));
-            tile[10] = new Tile();
-            tile[10].immagine = ImageIO.read(getClass().getResourceAsStream("/Images/angoloDownRight.png"));
-            tile[11] = new Tile();
-            tile[11].immagine = ImageIO.read(getClass().getResourceAsStream("/Images/angoloUpRight.png"));
 
 
             //possiamo aggiungere le altre dopo
@@ -169,20 +161,7 @@ public class TileManager {
                             movingEntities.add(new Ovapi(col*64, row*64,tile[6].immagine, 1, 1, partita));
                             break;
                         case 14:
-                            boss = new Boss1(col*64, row*64,tile[6].immagine, 2, 10, partita);
-                            break;
-                        case 15:
-                            stationaryEntities.add(new Muro(col*64, row*64, tile[8].immagine, false, partita));
-                            break;
-                        case 16:
-                            stationaryEntities.add(new Muro(col*64, row*64, tile[9].immagine, false, partita));
-                            break;
-                        case 17:
-                            stationaryEntities.add(new Muro(col*64, row*64, tile[10].immagine, false, partita));
-                            break;
-                        case 18:
-                            stationaryEntities.add(new Muro(col*64, row*64, tile[11].immagine, false, partita));
-                            break;
+                            boss = new Boss2(col*64, row*64,tile[6].immagine, 2, 10, partita);
                     }
 
                     col++;
@@ -369,7 +348,7 @@ public class TileManager {
             }
             if(boss != null){
                 if(!boss.dead) {
-                    if (boss.getHitboxPorcata().intersects(e.getHitbox())) {
+                    if (boss.getHitbox().intersects(e.getHitbox())) {
                         boss.handleCollision(e);
                     }
                 }
@@ -383,9 +362,12 @@ public class TileManager {
         if(boss != null){
             if(!boss.dead) {
                 for (StationaryEntity entity : stationaryEntities) {
-                    if (boss.getHitboxPorcata().intersects(entity.getHitbox())) {
+                    if (boss.getHitbox().intersects(entity.getHitbox())) {
                         boss.handleCollision(entity);
                     }
+                }
+                if(bomber.getHitbox().intersects(boss.getHitbox())){
+                    bomber.handleCollision(boss);
                 }
             }
         }
