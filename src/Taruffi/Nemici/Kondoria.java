@@ -66,7 +66,12 @@ public class Kondoria  extends MovingEntity implements Collidable{
     public void update() {
         if(trovaTimer == 0){
             pathIterator = trovaBomberman().iterator();
-            prossimaPosizione = pathIterator.next();
+            try{
+                prossimaPosizione = pathIterator.next();
+            }catch(NoSuchElementException e){
+                prossimaPosizione = prossimaPosizione;
+            }
+            //prossimaPosizione = pathIterator.next();
             trovaTimer = 64;
         }
         trovaTimer--;
