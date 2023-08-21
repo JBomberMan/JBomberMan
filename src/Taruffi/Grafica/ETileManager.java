@@ -160,6 +160,7 @@ public class ETileManager {
             }
             if(!tiles[bombx][bomby].getImage().equals(tile[7].immagine)){
                 bomberman = false;
+
             }
 
         }
@@ -176,16 +177,61 @@ public class ETileManager {
 
     public static void salvaLivello(){
         try{
+            if(bomberman == false) {return;}
             String fileName = JOptionPane.showInputDialog("Inserisci nome file");
             String path = "src/LivelliPersonalizzati";
             File outputfile = new File(path, fileName + ".txt");
             PrintWriter pw = new PrintWriter(new FileWriter(outputfile));
             for(int i = 0; i<13; i++){
                 for(int j = 0; j<17; j++){
-                    pw.print(tiles[j][i] + " ");
+                    if(tiles[j][i].getImage().equals(tile[0].immagine) ){
+                        pw.print("0" + " ");
+                    }
+                    if(tiles[j][i].getImage().equals(tile[1].immagine) ){
+                        pw.print("1" + " ");
+                    }
+                    if(tiles[j][i].getImage().equals(tile[2].immagine) ){
+                        pw.print("2" + " ");
+                    }
+                    if(tiles[j][i].getImage().equals(tile[3].immagine) ){
+                        pw.print("3" + " ");
+                    }
+                    if(tiles[j][i].getImage().equals(tile[4].immagine) ){
+                        pw.print("4" + " ");
+                    }
+                    if(tiles[j][i].getImage().equals(tile[5].immagine) ){
+                        pw.print("5" + " ");
+                    }
+                    if(tiles[j][i].getImage().equals(tile[6].immagine) ){
+                        pw.print("6" + " ");
+                    }
+                    if(tiles[j][i].getImage().equals(tile[7].immagine) ){
+                        pw.print("7" + " ");
+                    }
+                    if(tiles[j][i].getImage().equals(tile[9].immagine) ){
+                        pw.print("9" + " ");
+                    }
+                    if(tiles[j][i].getImage().equals(tile[10].immagine) ){
+                        pw.print("10" + " ");
+                    }
+                    if(tiles[j][i].getImage().equals(tile[11].immagine) ){
+                        pw.print("11" + " ");
+                    }
+                    if(tiles[j][i].getImage().equals(tile[12].immagine) ){
+                        pw.print("12" + " ");
+                    }
+                    if(tiles[j][i].getImage().equals(tile[13].immagine) ){
+                        pw.print("13" + " ");
+                    }
+                    if(tiles[j][i].getImage().equals(tile[14].immagine) ){
+                        pw.print("14" + " ");
+                    }
+                    if(tiles[j][i].getImage().equals(tile[15].immagine) ){
+                        pw.print("15" + " ");
+                    }
                 }
-                pw.println();
-            }
+                pw.println();}
+            pw.print("8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8");
             pw.close();
 
         }catch(Exception e){

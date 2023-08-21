@@ -8,6 +8,7 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -37,6 +38,7 @@ public class TileManager {
     Bomberman bomber;
     private int indexBomberman;
     private static int livello = 1;
+    File path;
 
     public void addEntities(MovingEntity entity){
         movingEntities.add(entity);
@@ -47,6 +49,19 @@ public class TileManager {
 
     public TileManager(Partita partita, KeyHandler keyH){
         pulisci();
+        path = new File("src/FileLivelli/livello" + livello + ".txt");
+        this.partita = partita;
+        tile = new Tile[10]; //rappresenta il numero di tile diverse che abbiamo a disposizione
+        mapTileNum = new int[partita.maxScreenCol][partita.maxScreenRow];
+        this.keyH = keyH;
+        getTileImage();
+        loadMap();
+
+    }
+
+    public TileManager(Partita partita, KeyHandler keyH, String percorso){
+        pulisci();
+        path = new File(percorso);
         this.partita = partita;
         tile = new Tile[10]; //rappresenta il numero di tile diverse che abbiamo a disposizione
         mapTileNum = new int[partita.maxScreenCol][partita.maxScreenRow];
@@ -103,7 +118,8 @@ public class TileManager {
 
     public void loadMap(){
         try{
-            InputStream is = getClass().getResourceAsStream("/FileLivelli/livello" + livello + ".txt");
+            InputStream is = getClass().getResourceAsStream("/" + path.toString().replace("src\\","").replace("\\","/"));
+            System.out.println("/" + path.toString().replace("src\\","").replace("\\","/"));
             BufferedReader br = new BufferedReader(new java.io.InputStreamReader(is));
 
             int col = 0;

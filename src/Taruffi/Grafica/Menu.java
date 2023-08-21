@@ -18,6 +18,7 @@ public class Menu extends JPanel {
     private JButton bottonePartita;
     private JButton bottoneNickname;
     private JButton bottoneEditor;
+    private JButton bottoneLivelliPers;
     AudioManager audioManager = new AudioManager();
 
     /**
@@ -29,13 +30,15 @@ public class Menu extends JPanel {
         bottonePartita = new JButton("Avvia partita");
         bottoneNickname = new JButton("Imposta nickname");
         bottoneEditor = new JButton("Avvia editor livelli");
+        bottoneLivelliPers = new JButton("Livelli personalizzati");
         setOpaque(false);
 
         setLayout(new FlowLayout());
         add(bottoneAvatar);
-        add(bottonePartita); //TODO: aggiungere l'azione di avviare la partita
+        add(bottonePartita);
         add(bottoneNickname);
-        add(bottoneEditor); //TODO: aggiungere l'azione di avviare l'editor dei livelli
+        add(bottoneEditor);
+        add(bottoneLivelliPers);
 
         /**
          * Classe anonima per impostare il percorso dell'avatar
@@ -90,6 +93,14 @@ public class Menu extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 EditorLiveli editorLiveli = new EditorLiveli();
+
+            }
+        });
+
+        bottoneLivelliPers.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                LivelloSelect livelloSelect = new LivelloSelect();
 
             }
         });

@@ -30,7 +30,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
     KeyHandler keyHandler = new KeyHandler(this); //gestisce gli input da tastiera
 
 
-    public TileManager tileM = new TileManager(this, keyHandler); //instanziamo il tileManager
+    public TileManager tileM;//instanziamo il tileManager
                                                     //passandogli questa istanza di un gamepanel
 
     public BombManager bombM = new BombManager(keyHandler, this); //instanziamo il bombManager
@@ -45,6 +45,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
 
 
     public Partita() {
+        tileM = new TileManager(this, keyHandler);
         istanza = this;
         this.setPreferredSize(new Dimension(screenWidth, screenHeight)); //setta la grandezza del pannello
         this.setBackground(Color.BLACK); //gli dá un background nero di base
@@ -55,6 +56,24 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
         this.addKeyListener(keyHandler); //aggiunge il keylistener al pannello
                                         //perché il pannello é il componente che ha il focus
                                         //e quindi riceve gli input da tastiera
+
+        this.addMouseListener(mouseHandler); //aggiunge il mouselistener al pannello
+
+        this.setFocusable(true); //perché il pannello possa ricevere gli input da tastiera
+    }
+
+    public Partita(String livello) {
+        tileM = new TileManager(this, keyHandler, livello);
+        istanza = this;
+        this.setPreferredSize(new Dimension(screenWidth, screenHeight)); //setta la grandezza del pannello
+        this.setBackground(Color.BLACK); //gli dá un background nero di base
+        //poi da sostituire con sfondo
+
+        this.setDoubleBuffered(true);  //per evitare flickering e migliorare la performance
+
+        this.addKeyListener(keyHandler); //aggiunge il keylistener al pannello
+        //perché il pannello é il componente che ha il focus
+        //e quindi riceve gli input da tastiera
 
         this.addMouseListener(mouseHandler); //aggiunge il mouselistener al pannello
 
