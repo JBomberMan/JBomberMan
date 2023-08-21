@@ -6,9 +6,11 @@ import java.awt.*;
 public class ELvlPanel extends JPanel implements Runnable{
 
     ETileManager tileM = new ETileManager(this);
+    EMouseHandler mouseHandler = new EMouseHandler();
     Thread thread;
     public ELvlPanel() {
         super();
+        this.addMouseListener(mouseHandler);
         thread = new Thread(this);
         setFocusable(true);
         thread.start();
@@ -18,8 +20,9 @@ public class ELvlPanel extends JPanel implements Runnable{
     @Override
     public void run() {
 
-        repaint();
-
+        while (thread.isAlive()){
+            repaint();
+        }
 
     }
 
