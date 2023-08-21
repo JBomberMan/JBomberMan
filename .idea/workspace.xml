@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Bottoni.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/EMouseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/ELvlPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/ELvlPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/ETileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/ETileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/EditorLiveli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/EditorLiveli.java" afterDir="false" />
-    </list>
-    <list id="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" name="Changes by Lorenzo" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/ETileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/ETileManager.java" afterDir="false" />
-    </list>
+    <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="" />
+    <list id="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" name="Changes by Lorenzo" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,34 +21,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/Taruffi/Grafica/ETileManager.java">
-      <ranges>
-        <range start1="8" end1="8" start2="8" end2="9" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
-        <range start1="9" end1="12" start2="10" end2="11" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
-        <range start1="18" end1="21" start2="17" end2="22" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
-        <range start1="26" end1="26" start2="27" end2="28" changelist="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" />
-        <range start1="88" end1="89" start2="90" end2="91" changelist="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" />
-        <range start1="91" end1="92" start2="93" end2="94" changelist="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" />
-        <range start1="94" end1="95" start2="96" end2="97" changelist="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" />
-        <range start1="97" end1="98" start2="99" end2="100" changelist="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" />
-        <range start1="100" end1="101" start2="102" end2="103" changelist="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" />
-        <range start1="103" end1="104" start2="105" end2="106" changelist="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" />
-        <range start1="106" end1="107" start2="108" end2="109" changelist="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" />
-        <range start1="109" end1="110" start2="111" end2="112" changelist="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" />
-        <range start1="112" end1="113" start2="114" end2="115" changelist="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" />
-        <range start1="115" end1="116" start2="117" end2="118" changelist="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" />
-        <range start1="118" end1="119" start2="120" end2="121" changelist="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" />
-        <range start1="121" end1="122" start2="123" end2="124" changelist="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" />
-        <range start1="124" end1="125" start2="126" end2="127" changelist="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" />
-        <range start1="127" end1="128" start2="129" end2="130" changelist="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" />
-        <range start1="130" end1="131" start2="132" end2="133" changelist="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" />
-        <range start1="146" end1="146" start2="148" end2="168" changelist="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" />
-        <range start1="147" end1="149" start2="169" end2="173" changelist="150673f6-f6ce-4b02-bc5d-ef28ea2745e8" />
-        <range start1="151" end1="151" start2="175" end2="192" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -211,7 +174,7 @@
       <workItem from="1692367918197" duration="6062000" />
       <workItem from="1692375250169" duration="149000" />
       <workItem from="1692375414682" duration="75000" />
-      <workItem from="1692622817564" duration="7236000" />
+      <workItem from="1692622817564" duration="7554000" />
     </task>
     <servers />
   </component>
