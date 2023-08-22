@@ -114,7 +114,13 @@ public class Bomberman implements Collidable {
     public static void switchMovimentoMouse(ArrayList<Coordinate> pathh) {
         movimentoMouse = !movimentoMouse; //abilita o disabilita il movimento con mouse
         path = pathh; //copia il path calcolato dal mouse
-        posizioneAttuale = path.get(0);
+        try{
+            posizioneAttuale = path.get(0);
+        }catch(IndexOutOfBoundsException e){
+            movimentoMouse = false;
+            return;
+        }
+
         arrivo = path.get(path.size()-1);
         x = (posizioneAttuale.getX()*64);
         y = (posizioneAttuale.getY()*64);
