@@ -5,6 +5,7 @@ import Porfiri.Esplosione;
 import Taruffi.Nemici.*;
 
 import javax.imageio.ImageIO;
+import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
 import java.io.BufferedReader;
@@ -37,8 +38,12 @@ public class TileManager {
     private Boss2 boss;
     Bomberman bomber;
     private int indexBomberman;
-    private static int livello = 1;
+    private static int livello = 2;
+    BufferedReader br;
     File path;
+    int numero;
+
+    Boolean personalizzato;
 
     public void addEntities(MovingEntity entity){
         movingEntities.add(entity);
@@ -48,18 +53,20 @@ public class TileManager {
     }
 
     public TileManager(Partita partita, KeyHandler keyH){
+        personalizzato = false;
         pulisci();
         path = new File("src/FileLivelli/livello" + livello + ".txt");
         this.partita = partita;
         tile = new Tile[10]; //rappresenta il numero di tile diverse che abbiamo a disposizione
         mapTileNum = new int[partita.maxScreenCol][partita.maxScreenRow];
         this.keyH = keyH;
+        numero = 0;
         getTileImage();
         loadMap();
-
     }
 
     public TileManager(Partita partita, KeyHandler keyH, String percorso){
+        personalizzato = true;
         pulisci();
         path = new File(percorso);
         this.partita = partita;
@@ -68,7 +75,6 @@ public class TileManager {
         this.keyH = keyH;
         getTileImage();
         loadMap();
-
     }
 
     public void pulisci(){
@@ -82,6 +88,11 @@ public class TileManager {
         codaAggiunte.clear();
         codaRimozioni.clear();
         boss = null;
+        path = new File("src/FileLivelli/livello" + livello + ".txt");
+    }
+
+    public static void setLivello(int liv){
+        livello = liv;
     }
 
 
@@ -119,8 +130,14 @@ public class TileManager {
     public void loadMap(){
         try{
             InputStream is = getClass().getResourceAsStream("/" + path.toString().replace("src\\","").replace("\\","/"));
-            System.out.println("/" + path.toString().replace("src\\","").replace("\\","/"));
-            BufferedReader br = new BufferedReader(new java.io.InputStreamReader(is));
+            if(is == null){
+                //ritorna al menu principale se é l'ultimo livello
+                //TODO implementa schermata vittoria (?)
+                SwingUtilities.getWindowAncestor(Partita.getIstanza()).dispose();
+                ProfiloUtente.getProfilo().setVisible(true);
+                return;
+            }
+            br = new BufferedReader(new java.io.InputStreamReader(is));
 
             int col = 0;
             int row = 0;
@@ -292,22 +309,25 @@ public class TileManager {
         checkCollision();
         if(boss != null){
             if(boss.dead){
-                System.out.println("Hai vinto");
-                livello++;
-                SchermataVittoria.getIstanza().setVisible(true);
+
+                System.out.println("Hai vinto boss");
+                if(!personalizzato) livello++;
                 Partita.stopGameThread();
+                SchermataVittoria.getIstanza(personalizzato).setVisible(true);
+
 
                 //ferma il thread, carica prossimo livello
             }
         } else if (movingEntities.size() == 0){
-            if(livello == 5){
-                System.out.println("debug");
 
-                }
-            System.out.println("Hai vinto");
-            livello++;
-            SchermataVittoria.getIstanza().setVisible(true);
+            System.out.println("Hai vinto nemici");
+            System.out.println(numero);
+            if(!personalizzato) {
+                livello++;
+            }
             Partita.stopGameThread();
+            SchermataVittoria.getIstanza(personalizzato).setVisible(true);
+
 
 
             //ferma il thread, carica prossimo livello
@@ -423,6 +443,9 @@ public class TileManager {
     }
     public static void AggiungiACoda(Esplosione e){
         codaAggiunte.add(e);
+    }
+    public void addNumero(){
+        numero++;
     }
 
 }

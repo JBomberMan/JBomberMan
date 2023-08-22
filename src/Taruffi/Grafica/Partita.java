@@ -30,7 +30,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
     KeyHandler keyHandler = new KeyHandler(this); //gestisce gli input da tastiera
 
 
-    public TileManager tileM;//instanziamo il tileManager
+    public static TileManager tileM;//instanziamo il tileManager
                                                     //passandogli questa istanza di un gamepanel
 
     public BombManager bombM = new BombManager(keyHandler, this); //instanziamo il bombManager
@@ -95,11 +95,6 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
         tileM.loadMap();
 
 
-        //bombM = new BombManager(keyHandler, this);
-
-        //this.addKeyListener(keyHandler);
-        //this.addMouseListener(mouseHandler);
-        //this.setFocusable(true);
     }
 
     public void startGameThread(){
@@ -134,7 +129,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
         double nextDrawTime = System.nanoTime() + drawInterval; //tempo in nanosecondi del prossimo frame
 
         while(gameThread != null){
-
+            tileM.addNumero();
             //1: update delle informazioni su ció che accade su schermo
             update();
 

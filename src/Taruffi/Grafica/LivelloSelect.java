@@ -36,6 +36,7 @@ public class LivelloSelect extends JFrame {
                             partita.startGameThread(); //fa partire direttamente la partita senza chiedere ulteriori cose
                             //leggasi "dovrebbe", va tutto debuggato
                             ProfiloUtente.getProfilo().dispose();
+                            dispose();
                         }
                     });
                     add(bottone);
