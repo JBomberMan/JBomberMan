@@ -1,5 +1,7 @@
 package Taruffi.Grafica;
 
+import Gobjects.Bomberman;
+
 import java.awt.*;
 import java.util.Timer;
 
@@ -14,7 +16,7 @@ public class TempoManager {
     private int y;
 
     public TempoManager(){
-        minuti = 10;
+        minuti = 5;
         secondi = 0;
         x = 600;
         y = 870;
@@ -32,7 +34,7 @@ public class TempoManager {
     }
 
     public void resetTempo(){
-        minuti = 10;
+        minuti = 5;
         secondi = 0;
     }
 
@@ -47,7 +49,11 @@ public class TempoManager {
             }
 
         }
-        //addPunteggio(1);
         tempoDisegno.disegna(g, x, y, minuti, secondi); //fatto per rispettare MVC (credo)
+        if (minuti == 0 && secondi == 0){
+            Bomberman.setDead(true);
+            //SchermataSconfitta.getIstanza().setVisible(true);
+            //Partita.stopGameThread();
+        }
     }
 }

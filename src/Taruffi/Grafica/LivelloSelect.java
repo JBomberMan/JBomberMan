@@ -51,7 +51,7 @@ public class LivelloSelect extends JFrame {
 
         setSize(livelli/2 * 200,livelli/2 * 100);
         setVisible(true);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
 
 

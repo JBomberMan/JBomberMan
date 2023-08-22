@@ -39,7 +39,7 @@ public class Bomberman implements Collidable {
     private static Coordinate prossimaPosizione;
     private  static Coordinate arrivo;
 
-    public boolean dead = false;
+    public static boolean dead = false;
     public int dtimer = 50;
     public static int gettoni = 1;
 
@@ -74,6 +74,9 @@ public class Bomberman implements Collidable {
             return y;
     }
 
+    public static void setDead(Boolean death){
+        dead = death;
+    }
     public static int getVite() {
             return vite;
     }

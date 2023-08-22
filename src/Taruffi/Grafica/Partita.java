@@ -90,6 +90,8 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
         //ricrea il keyHandler
         keyHandler.pulisci();
 
+        tempoManager.resetTempo();
+
         //pulisce il tile manager e il bomb manager
         tileM.pulisci();
         tileM.loadMap();

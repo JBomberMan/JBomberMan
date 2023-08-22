@@ -38,6 +38,7 @@ public class SchermataSconfitta extends JFrame{
                 if(Bomberman.gettoni > 0){
                     //SwingUtilities.getWindowAncestor(Partita.getIstanza()).dispose();
                     Bomberman.gettoni--;
+                    Bomberman.setDead(false);
                     Partita.getIstanza().riavvia();
                     Partita.getIstanza().startGameThread();
                     istanza.dispose();

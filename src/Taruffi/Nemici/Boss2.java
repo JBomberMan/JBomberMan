@@ -154,9 +154,6 @@ public class Boss2 extends MovingEntity implements Collidable{
         g2d.drawImage(sprite, x, y, null);
         g2d.draw(hitbox);
 
-        //g2d.fillRect(x, y+130, standard.getWidth(), standard.getHeight()-200); //orecchie
-        //g2d.fillRect(x+100, y, standard.getWidth()-200, standard.getHeight()); //testa
-
     }
 
     public void handleCollision(StationaryEntity se){
@@ -172,10 +169,10 @@ public class Boss2 extends MovingEntity implements Collidable{
         if(this.invTimer == 0){
             this.vite--;
             if(this.vite == 4){
-                velocita = 2;
+                velocita = 1;
             }
-            this.invTimer = 160;
-            this.invSprite = 40;
+            this.invTimer = 60;
+            this.invSprite = 60;
             System.out.println("Vite rimaste Nemico: " + this.vite);
 
             if (this.vite <= 0){
@@ -186,10 +183,7 @@ public class Boss2 extends MovingEntity implements Collidable{
             incazzati();
 
         }
-
     }
-
-
 
 
     void solidCollision(GameEntity obj) {
