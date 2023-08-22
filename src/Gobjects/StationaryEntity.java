@@ -1,8 +1,6 @@
 package Gobjects;
 
-import Porfiri.Esplosione;
 import Taruffi.Grafica.Partita;
-import Taruffi.Grafica.TileManager;
 import Tomassetti.Collidable;
 
 import java.awt.*;

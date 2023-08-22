@@ -2,8 +2,7 @@ package Taruffi.Grafica;
 import Gobjects.Bomberman;
 import Gobjects.Bomba;
 import Gobjects.StationaryEntity;
-import Porfiri.BomberMan;
-import Porfiri.Esplosione;
+import Gobjects.Esplosione;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -25,14 +24,6 @@ public class BombManager {
         raggioBombe = 1;
         this.keyHandler = keyHandler;
         this.play = play;
-    }
-
-    public void addBomba(){
-        numeroBombe++;
-    }
-
-    public void addRaggio(){
-        raggioBombe++;
     }
 
     public void disegna(Graphics2D g2){
@@ -93,6 +84,7 @@ public class BombManager {
             bombeAttive++;
         }
     }
+
     public void piazzaBomba(int x, int y){
         int tileOrizzontale = (x / play.tileSize) * play.tileSize;
         int tileVerticale = (y / play.tileSize) * play.tileSize;
@@ -100,23 +92,12 @@ public class BombManager {
 
     }
 
-    
-
-
 
     public void detonaDistanza(){
         for(Bomba b : bombe){
             b.esplodi();
             BombManager.togliBomba(b);
         }
-    }
-
-    public static int getRaggioBombe(){
-        return raggioBombe;
-    }
-
-    public static int getNumeroBombe(){
-        return numeroBombe;
     }
 
     public int getBombeAttive() {

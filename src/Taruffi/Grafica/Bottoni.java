@@ -124,16 +124,6 @@ public class Bottoni extends JPanel {
         });
         add(salva);
 
-        /*
-        add(new JButton(muroIndScaled));
-        add(new JButton(muroDestScaled));
-        add(new JButton(baloonScaled));
-        add(new JButton(dollScaled));
-        add(new JButton(kondoriaScaled));
-        add(new JButton(onealScaled));
-        add(new JButton(ovapiScaled));
-
-         */
 
     }
 }

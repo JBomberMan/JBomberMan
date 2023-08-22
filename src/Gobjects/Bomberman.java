@@ -1,6 +1,6 @@
 package Gobjects;
 
-import Porfiri.Esplosione;
+import Gobjects.Esplosione;
 import Taruffi.Disegnabile;
 import Taruffi.Grafica.*;
 import Tomassetti.Collidable;

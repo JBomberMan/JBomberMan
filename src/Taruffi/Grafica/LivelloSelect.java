@@ -12,7 +12,6 @@ public class LivelloSelect extends JFrame {
 
     public LivelloSelect(){
 
-        //setLayout(new FlowLayout());
 
         String directoryPath = "src/LivelliPersonalizzati"; // Sostituisci con il percorso della directory
 
@@ -34,7 +33,6 @@ public class LivelloSelect extends JFrame {
                             frame.pack();
                             frame.setVisible(true);
                             partita.startGameThread(); //fa partire direttamente la partita senza chiedere ulteriori cose
-                            //leggasi "dovrebbe", va tutto debuggato
                             ProfiloUtente.getProfilo().dispose();
                             dispose();
                         }

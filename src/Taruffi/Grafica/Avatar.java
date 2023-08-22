@@ -48,10 +48,7 @@ public class Avatar extends JPanel {
     }
 
     public void setAvatar(){
-        /*
-        String avatar = JOptionPane.showInputDialog("Inserisci percorso");
-        ImageIcon immagineAvatar = new ImageIcon(avatar);
-        */
+
         try{
             String content = new String(Files.readAllBytes(Paths.get(file.toURI())));
             JSONObject obj = new JSONObject(content);

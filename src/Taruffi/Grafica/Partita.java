@@ -67,7 +67,6 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
         istanza = this;
         this.setPreferredSize(new Dimension(screenWidth, screenHeight)); //setta la grandezza del pannello
         this.setBackground(Color.BLACK); //gli dá un background nero di base
-        //poi da sostituire con sfondo
 
         this.setDoubleBuffered(true);  //per evitare flickering e migliorare la performance
 
@@ -104,16 +103,6 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
             gameThread = new Thread(this); //crea il thread
             gameThread.start(); //lo starta e chiama run() automaticamente
         }
-    }
-
-    public void chiudi(){
-        Window window = SwingUtilities.getWindowAncestor(this);
-        if (window instanceof JFrame) {
-            JFrame frame = (JFrame) window;
-            frame.dispose(); //chiude la finestra
-        }
-        gameThread = null; //ferma il thread
-        BombManager.esplosioni.clear(); //rimuove le esplosioni per evitare ci siano quando si riavvia la partita
     }
 
     public static Partita getIstanza(){
@@ -161,9 +150,6 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
 
 
     public void update(){
-
-
-       //bombManager.update(); //aggiorna le bombe
 
     }
 

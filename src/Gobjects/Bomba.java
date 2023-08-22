@@ -1,6 +1,6 @@
 package Gobjects;
 
-import Porfiri.Esplosione;
+import Gobjects.Esplosione;
 import Taruffi.Grafica.BombManager;
 import Taruffi.Grafica.Partita;
 

@@ -1,4 +1,4 @@
-package Porfiri;
+package Gobjects;
 
 import Gobjects.MovingEntity;
 import Gobjects.Muro;
@@ -26,7 +26,7 @@ public class Esplosione extends StationaryEntity implements Disegnabile {
     private boolean espaso = false;
 
 
-    
+
     public Esplosione(int raggio, BufferedImage Sprite, int x, int y, Partita play, String direzione){
         super(x, y, Sprite, play);
         this.raggio = raggio;

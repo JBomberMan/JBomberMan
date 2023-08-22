@@ -1,10 +1,8 @@
 package Gobjects;
 
-import Porfiri.Esplosione;
+
 import Taruffi.Grafica.Partita;
 import Taruffi.Grafica.TileManager;
-
-import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 

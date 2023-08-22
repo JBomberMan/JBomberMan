@@ -9,8 +9,8 @@ import java.util.stream.IntStream;
 import javax.imageio.ImageIO;
 
 import Gobjects.*;
-import Porfiri.BomberMan;
-import Porfiri.Esplosione;
+import Gobjects.Bomberman;
+import Gobjects.Esplosione;
 import Taruffi.Grafica.Partita;
 import Taruffi.Grafica.SchermataSconfitta;
 import Taruffi.Grafica.TileManager;

@@ -1,7 +1,4 @@
 package Taruffi.Grafica;
-
-import Gobjects.Bomberman;
-
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 

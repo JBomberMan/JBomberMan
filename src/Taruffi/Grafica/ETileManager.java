@@ -1,16 +1,10 @@
 package Taruffi.Grafica;
-
-import Gobjects.Bomberman;
-import Gobjects.Muro;
 import Gobjects.TileObject;
-import Taruffi.Nemici.*;
-
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.io.*;
-import java.sql.SQLOutput;
-import java.util.ArrayList;
+
 
 public class ETileManager {
 
@@ -62,7 +56,6 @@ public class ETileManager {
             tile[15] = new Tile();
             tile[15].immagine = ImageIO.read(getClass().getResourceAsStream("/Images/Ciccio/normale.png"));
 
-            //possiamo aggiungere le altre dopo
         }catch(IOException e){
             e.printStackTrace();
         }

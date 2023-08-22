@@ -5,14 +5,9 @@ import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.stream.IntStream;
-
 import javax.imageio.ImageIO;
-
 import Gobjects.*;
-import Porfiri.BomberMan;
-import Porfiri.Esplosione;
 import Taruffi.Grafica.Partita;
-import Taruffi.Grafica.SchermataSconfitta;
 import Taruffi.Grafica.TileManager;
 import Tomassetti.Collidable;
 
@@ -22,8 +17,8 @@ public class Boss1 extends MovingEntity implements Collidable{
     public BufferedImage standard, hit, cry1, cry2, cry3;
 
     public static String direction = "left";
-    private int spriteCounter = 0;
     private int invTimer = 0, incazzatoTimer = 0, invSprite = 0;
+
     public Boolean dead = false;
     private Boolean collision = false, incazzato = false;
     private Polygon hitboxPorcata;
@@ -63,7 +58,6 @@ public class Boss1 extends MovingEntity implements Collidable{
 
     @Override
     public void update() {
-        //this.hitbox.setBounds(x, y+130, standard.getWidth(), standard.getHeight()-200);
         this.hitboxPorcata = new Polygon(new int[]{this.x + 166,
                 this.x + 246, this.x + 294, this.x + 332, this.x + 412, this.x + 412, this.x + 363,
                 this.x + 332, this.x + 304, this.x + 206, this.x + 108, this.x + 80, this.x + 49,
@@ -72,7 +66,6 @@ public class Boss1 extends MovingEntity implements Collidable{
                 this.y + 254, this.y + 304, this.y + 348, this.y + 304, this.y + 254, this.y + 278,
                 this.y + 241, this.y + 172, this.y + 117, this.y + 27
         }, 17);
-        // 168,0
         collision = false;
         muovi();
 
@@ -138,8 +131,6 @@ public class Boss1 extends MovingEntity implements Collidable{
                 this.y + 241, this.y + 172, this.y + 117, this.y + 27
         }, 17));
 
-        //g2d.fillRect(x, y+130, standard.getWidth(), standard.getHeight()-200); //orecchie
-        //g2d.fillRect(x+100, y, standard.getWidth()-200, standard.getHeight()); //testa
 
     }
 

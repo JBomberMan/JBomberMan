@@ -12,7 +12,7 @@ import Gobjects.GameEntity;
 import Gobjects.MovingEntity;
 import Gobjects.PowerUp;
 import Gobjects.StationaryEntity;
-import Porfiri.Esplosione;
+import Gobjects.Esplosione;
 import Taruffi.Grafica.Partita;
 import Taruffi.Grafica.SchermataSconfitta;
 import Taruffi.Grafica.TileManager;

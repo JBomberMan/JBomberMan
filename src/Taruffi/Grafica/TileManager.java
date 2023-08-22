@@ -1,13 +1,12 @@
 package Taruffi.Grafica;
 
 import Gobjects.*;
-import Porfiri.Esplosione;
+
 import Taruffi.Nemici.*;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.geom.Rectangle2D;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
@@ -18,13 +17,9 @@ public class TileManager {
 
     Partita partita; //equivale al suo gamepanel
     public Tile[] tile;
-    public int prova;
     KeyHandler keyH;
     int mapTileNum[][];
 
-    private int numeroBombe = 3;
-    private int raggioBombe;
-    private int bombeAttive = 0;
     static ArrayList<MovingEntity> movingEntities = new ArrayList<>();
     public static ArrayList<StationaryEntity> stationaryEntities = new ArrayList<>();
     ArrayList<TileObject> tiles = new ArrayList<>();
@@ -133,6 +128,7 @@ public class TileManager {
             if(is == null){
                 //ritorna al menu principale se é l'ultimo livello
                 //TODO implementa schermata vittoria (?)
+                Storico.addVittoria();
                 SwingUtilities.getWindowAncestor(Partita.getIstanza()).dispose();
                 ProfiloUtente.getProfilo().setVisible(true);
                 return;

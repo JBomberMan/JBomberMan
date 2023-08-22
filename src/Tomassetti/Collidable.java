@@ -1,7 +1,7 @@
 package Tomassetti;
 
 import Gobjects.*;
-import Porfiri.Esplosione;
+import Gobjects.Esplosione;
 
 import java.awt.geom.Rectangle2D;
 

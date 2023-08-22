@@ -19,7 +19,6 @@ public class MouseHandler extends MouseAdapter{
     public void mouseClicked(MouseEvent e){
         if (e.getButton() == MouseEvent.BUTTON1){
             System.out.println(e.getX() + " " + e.getY());
-            //trova la casella dove si é cliccato
             int mousex = e.getX()/64;
             int mousey = e.getY()/64;
             System.out.println("casella " + mousex + " " + mousey);
@@ -51,13 +50,11 @@ public class MouseHandler extends MouseAdapter{
             int bomberx = (Bomberman.getX() + 32)/64;
             int bombery = (Bomberman.getY() +32)/64;
             map.get(bombery).set(bomberx, 2);
-            //a questo punto 1=blocco 0=libero 2=bomberman
             System.out.println("--------------------");
             System.out.println("bomberman " + bomberx + " " + bombery);
             System.out.println("cliccato " + mousex + " " + mousey);
             ArrayList<Coordinate> path = findShortestPath(bomberx, bombery, mousex, mousey, map);
 
-            // Stampa il percorso
             for (Coordinate coordinate : path) {
                 System.out.println("Casella: " + coordinate.x + " " + coordinate.y);
             }

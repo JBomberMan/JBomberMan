@@ -7,15 +7,10 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-import Gobjects.Bomba;
-import Gobjects.GameEntity;
-import Gobjects.MovingEntity;
-import Gobjects.PowerUp;
-import Gobjects.StationaryEntity;
-import Porfiri.Esplosione;
+import Gobjects.*;
+
 import Taruffi.Grafica.Partita;
-import Taruffi.Grafica.SchermataSconfitta;
-import Taruffi.Grafica.TileManager;
+
 import Tomassetti.Collidable;
 
 public class Oneal  extends MovingEntity implements Collidable{

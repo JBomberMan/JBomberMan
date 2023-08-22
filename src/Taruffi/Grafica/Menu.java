@@ -83,8 +83,7 @@ public class Menu extends JPanel {
                 frame.add(partita);
                 frame.pack();
                 frame.setVisible(true);
-                partita.startGameThread(); //fa partire direttamente la partita senza chiedere ulteriori cose
-                                           //leggasi "dovrebbe", va tutto debuggato
+                partita.startGameThread();
                 ProfiloUtente.getProfilo().dispose();
             }
         });

@@ -19,14 +19,6 @@ public class PunteggioManager {
         punteggio += p;
     }
 
-    public int getPunteggio(){
-        return punteggio;
-    }
-
-    public void resetPunteggio(){
-        punteggio = 0;
-    }
-
     public void disegna(Graphics2D g){
         //addPunteggio(1);
         punteggioDisegno.disegna(g, x, y, punteggio); //fatto per rispettare MVC (credo)

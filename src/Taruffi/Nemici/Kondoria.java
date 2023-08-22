@@ -5,12 +5,8 @@ import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.*;
-import java.util.List;
-
 import javax.imageio.ImageIO;
-
 import Gobjects.*;
-import Porfiri.Esplosione;
 import Taruffi.Grafica.Coordinate;
 import Taruffi.Grafica.Partita;
 import Taruffi.Grafica.TileManager;

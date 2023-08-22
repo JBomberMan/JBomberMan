@@ -1,17 +1,17 @@
 package Taruffi.Nemici;
 
 import Gobjects.*;
-import Porfiri.Esplosione;
+
 import Taruffi.Grafica.Partita;
-import Taruffi.Grafica.TileManager;
+
 import Tomassetti.Collidable;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
-import java.awt.geom.Rectangle2D;
+
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.util.Random;
+
 
 public class Proiettile extends MovingEntity implements Collidable {
 
