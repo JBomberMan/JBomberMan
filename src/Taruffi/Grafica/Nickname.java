@@ -39,6 +39,7 @@ public class Nickname extends JPanel {
     public void setNickname(){
 
         try{
+            //TODO fixa che se apri e non inserisci nulla cancella la entry dal json
             String content = new String(Files.readAllBytes(Paths.get(file.toURI())));
             JSONObject obj = new JSONObject(content);
             nickname = new JLabel(obj.getString("nickname"));
