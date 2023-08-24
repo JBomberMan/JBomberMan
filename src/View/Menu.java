@@ -95,7 +95,7 @@ public class Menu extends JPanel {
         bottoneLivelliPers.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                LivelloSelect livelloSelect = new LivelloSelect();
+                LivelloSelect livelloSelect = LivelloSelect.getIstanza();
 
             }
         });

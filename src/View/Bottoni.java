@@ -10,9 +10,11 @@ import java.awt.event.ActionListener;
 
 public class Bottoni extends JPanel {
 
+    private static Bottoni istanza;
 
 
-    public Bottoni(){
+
+    private Bottoni(){
         setLayout(new GridLayout(5,2));
         ImageIcon grass = new ImageIcon("src/Images/grass.png");
         ImageIcon bomberman = new ImageIcon("src/Images/BomberMan_down1.png");
@@ -127,5 +129,12 @@ public class Bottoni extends JPanel {
         add(salva);
 
 
+    }
+
+    public static Bottoni getIstanza(){
+        if(istanza == null){
+            istanza = new Bottoni();
+        }
+        return istanza;
     }
 }

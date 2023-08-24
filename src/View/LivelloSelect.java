@@ -11,8 +11,9 @@ import java.nio.file.*;
 public class LivelloSelect extends JFrame {
 
     int livelli = 0;
+    private static LivelloSelect istanza;
 
-    public LivelloSelect(){
+    private LivelloSelect(){
 
 
         String directoryPath = "src/LivelliPersonalizzati"; // Sostituisci con il percorso della directory
@@ -55,6 +56,13 @@ public class LivelloSelect extends JFrame {
 
 
 
+    }
+
+    public static LivelloSelect getIstanza(){
+        if(istanza == null){
+            istanza = new LivelloSelect();
+        }
+        return istanza;
     }
 
 

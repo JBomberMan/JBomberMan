@@ -12,7 +12,7 @@ public class Storico extends JPanel {
     private static Storico istanza;
     private static String percorso = new String("src/FileLivelli/storico.json");
 
-    public Storico(){
+    private Storico(){
         setStorico();
         setVisible(true);
     }

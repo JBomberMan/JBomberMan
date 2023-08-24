@@ -14,7 +14,7 @@ public class EditorLiveli extends JFrame {
         GridBagConstraints c = new GridBagConstraints();
         c.fill = GridBagConstraints.HORIZONTAL;
         c.insets = new Insets(40,20,10,10);
-        Bottoni bottoni = new Bottoni();
+        Bottoni bottoni = Bottoni.getIstanza();
         c.gridx = 0;
         c.gridy = 0;
         add(bottoni,c);
@@ -25,7 +25,7 @@ public class EditorLiveli extends JFrame {
         c.weighty = 1;
         c.weightx = 1;
         c.fill = GridBagConstraints.BOTH;
-        ELvlPanel pannello = new ELvlPanel();
+        ELvlPanel pannello = ELvlPanel.getIstanza();
         add(pannello,c);
 
         setVisible(true);

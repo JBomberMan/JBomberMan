@@ -8,10 +8,12 @@ import java.awt.*;
 
 public class ELvlPanel extends JPanel implements Runnable{
 
+    private static ELvlPanel istanza;
+
     ETileManager tileM = new ETileManager(this);
     EMouseHandler mouseHandler = new EMouseHandler();
     Thread thread;
-    public ELvlPanel() {
+    private ELvlPanel() {
         super();
         this.addMouseListener(mouseHandler);
         thread = new Thread(this);
@@ -36,5 +38,11 @@ public class ELvlPanel extends JPanel implements Runnable{
 
     }
 
+    public static ELvlPanel getIstanza(){
+        if(istanza == null){
+            istanza = new ELvlPanel();
+        }
+        return istanza;
+    }
 
 }

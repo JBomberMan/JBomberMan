@@ -13,7 +13,7 @@ public class Nickname extends JPanel {
     private static Nickname istanza;
     private File file = new File("src/FileLivelli/profilo.json");
 
-    public Nickname(){
+    private Nickname(){
         setNickname();
         setOpaque(false);
         setVisible(true);
