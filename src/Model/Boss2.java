@@ -7,7 +7,6 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-import Controller.Gobjects.*;
 
 public class Boss2 extends Boss implements Collidable{
 

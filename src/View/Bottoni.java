@@ -132,9 +132,9 @@ public class Bottoni extends JPanel {
     }
 
     public static Bottoni getIstanza(){
-        if(istanza == null){
-            istanza = new Bottoni();
-        }
+
+        istanza = new Bottoni();
+
         return istanza;
     }
 }

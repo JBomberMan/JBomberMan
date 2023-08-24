@@ -59,10 +59,10 @@ public class LivelloSelect extends JFrame {
     }
 
     public static LivelloSelect getIstanza(){
-        if(istanza == null){
-            istanza = new LivelloSelect();
-        }
+
+        istanza = new LivelloSelect();
         return istanza;
+
     }
 
 

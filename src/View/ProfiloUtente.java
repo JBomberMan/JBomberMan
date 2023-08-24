@@ -98,9 +98,10 @@ public class ProfiloUtente extends JFrame{
     }
 
     public static ProfiloUtente getProfilo(){
-        if(istanza == null){
-            istanza = new ProfiloUtente();
-        }
+
+        if(istanza == null)
+        istanza = new ProfiloUtente();
+
         return istanza;
     }
 

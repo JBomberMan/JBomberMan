@@ -64,9 +64,9 @@ public class Storico extends JPanel {
     }
 
     public static Storico getStorico(){
-        if(istanza==null){
-            istanza = new Storico();
-        }
+
+        istanza = new Storico();
+
         return istanza;
     }
 

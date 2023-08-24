@@ -39,9 +39,7 @@ public class ELvlPanel extends JPanel implements Runnable{
     }
 
     public static ELvlPanel getIstanza(){
-        if(istanza == null){
-            istanza = new ELvlPanel();
-        }
+        istanza = new ELvlPanel();
         return istanza;
     }
 

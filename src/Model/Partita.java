@@ -93,7 +93,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
 
         //pulisce il tile manager e il bomb manager
         tileM.pulisci();
-        tileM.loadMap();
+        //tileM.loadMap();
 
 
     }

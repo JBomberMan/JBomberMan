@@ -57,9 +57,7 @@ public class Avatar extends JPanel {
     }
 
     public static Avatar getAvatar(){
-        if(istanza==null){
-            istanza = new Avatar();
-        }
+        istanza = new Avatar();
         return istanza;
     }
 }

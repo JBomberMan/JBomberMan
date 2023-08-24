@@ -169,11 +169,13 @@ public class ETileManager {
     }
 
     public static void salvaLivello(){
+
         try{
             if(bomberman == false) {return;}
-            String fileName = JOptionPane.showInputDialog("Inserisci nome file");
+            String fileName = JOptionPane.showInputDialog("Inserisci nome filge");
             String path = "src/LivelliPersonalizzati";
             File outputfile = new File(path, fileName + ".txt");
+
             PrintWriter pw = new PrintWriter(new FileWriter(outputfile));
             for(int i = 0; i<13; i++){
                 for(int j = 0; j<17; j++){
@@ -223,12 +225,17 @@ public class ETileManager {
                         pw.print("15" + " ");
                     }
                 }
-                pw.println();}
+                pw.println();
+            }
             pw.print("8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8");
             pw.close();
+            
 
         }catch(Exception e){
             e.printStackTrace();
         }
+
+
+
     }
 }

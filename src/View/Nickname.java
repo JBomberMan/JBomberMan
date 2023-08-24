@@ -51,9 +51,9 @@ public class Nickname extends JPanel {
     }
 
     public static Nickname getNickname(){
-        if(istanza==null){
-            istanza = new Nickname();
-        }
+
+        istanza = new Nickname();
+
         return istanza;
     }
 

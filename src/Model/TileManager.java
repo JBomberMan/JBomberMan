@@ -121,6 +121,7 @@ public class TileManager {
     public void loadMap(){
         try{
             InputStream is = getClass().getResourceAsStream("/" + path.toString().replace("src\\","").replace("\\","/"));
+            System.out.println("/" + path.toString().replace("src\\","").replace("\\","/"));
             if(is == null){
                 //ritorna al menu principale se é l'ultimo livello
                 //TODO implementa schermata vittoria (?)

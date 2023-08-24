@@ -69,8 +69,8 @@ public class SchermataSconfitta extends JFrame{
     }
 
     public static SchermataSconfitta getIstanza(){
-        if(istanza == null)
-            istanza = new SchermataSconfitta();
+
+        istanza = new SchermataSconfitta();
         return istanza;
     }
 
