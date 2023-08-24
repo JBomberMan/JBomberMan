@@ -12,7 +12,7 @@ public class EditorLiveli extends JFrame {
 
         setLayout(new GridBagLayout());
         setSize(800,600);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
 
         GridBagConstraints c = new GridBagConstraints();
