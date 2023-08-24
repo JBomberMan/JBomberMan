@@ -5,19 +5,25 @@ import java.awt.*;
 
 public class EditorLiveli extends JFrame {
 
+    private Image bgImage;
+
     public EditorLiveli(){
 
 
         setLayout(new GridBagLayout());
+        setSize(800,600);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
         GridBagConstraints c = new GridBagConstraints();
+        c.fill = GridBagConstraints.HORIZONTAL;
         c.insets = new Insets(40,20,10,10);
         Bottoni bottoni = new Bottoni();
         c.gridx = 0;
         c.gridy = 0;
         add(bottoni,c);
 
+        c.insets = new Insets(80,20,10,20);
         c.gridx = 1;
         c.gridy = 0;
         c.weighty = 1;
@@ -26,9 +32,9 @@ public class EditorLiveli extends JFrame {
         ELvlPanel pannello = new ELvlPanel();
         add(pannello,c);
 
-        setSize(800,600);
+
         setVisible(true);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 
 
 

@@ -5,47 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Images/vittoria.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileLivelli/profilo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileLivelli/profilo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Porfiri/livelli/Livello1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Porfiri/livelli/Livello2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Porfiri/livelli/Livello3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Porfiri/livelli/Livello4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Porfiri/livelli/Livello5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Porfiri/livelli/Livello6.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Porfiri/livelli/Livello7.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Porfiri/livelli/Livello8.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Porfiri/livelli/LivelloGenerico.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Avatar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Avatar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/BombManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/BombManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Bottoni.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Bottoni.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/EMouseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/EMouseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/ETileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/ETileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/KeyHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/LivelloSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/LivelloSelect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/MouseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/MouseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/Partita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/PunteggioManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/PunteggioManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/TileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/EditorLiveli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/EditorLiveli.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/SchermataSconfitta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/SchermataSconfitta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/SchermataVittoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/SchermataVittoria.java" afterDir="false" />
     </list>
-    <list id="d8707499-0969-4e90-8527-29b34c0957ef" name="Changes by Lorenzo" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Gobjects/Esplosione.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gobjects/Bomba.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/Bomba.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gobjects/Bomberman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/Bomberman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Porfiri/Bomba.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Porfiri/BomberMan.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Porfiri/Esplosione.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/MouseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/MouseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Grafica/TileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Nemici/Baloon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Nemici/Baloon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taruffi/Nemici/Boss2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taruffi/Nemici/Boss2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tomassetti/Blocco.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tomassetti/Collidable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tomassetti/Collidable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tomassetti/CollisionChecker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tomassetti/DestructibleBlock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tomassetti/Prova.java" beforeDir="false" />
-    </list>
+    <list id="d8707499-0969-4e90-8527-29b34c0957ef" name="Changes by Lorenzo" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,24 +27,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/Taruffi/Grafica/MouseHandler.java">
-      <ranges>
-        <range start1="21" end1="22" start2="21" end2="21" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
-        <range start1="53" end1="54" start2="52" end2="52" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
-        <range start1="59" end1="60" start2="57" end2="57" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/Taruffi/Grafica/TileManager.java">
-      <ranges>
-        <range start1="3" end1="4" start2="3" end2="4" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
-        <range start1="9" end1="10" start2="9" end2="9" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
-        <range start1="20" end1="21" start2="19" end2="19" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
-        <range start1="24" end1="27" start2="22" end2="22" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
-        <range start1="135" end1="135" start2="130" end2="131" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -234,7 +182,8 @@
       <workItem from="1692375414682" duration="75000" />
       <workItem from="1692622817564" duration="10401000" />
       <workItem from="1692709790923" duration="6898000" />
-      <workItem from="1692716795589" duration="3629000" />
+      <workItem from="1692716795589" duration="3861000" />
+      <workItem from="1692868239669" duration="2978000" />
     </task>
     <servers />
   </component>
