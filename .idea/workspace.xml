@@ -6,11 +6,59 @@
   <component name="ChangeListManager">
     <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileLivelli/profilo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileLivelli/profilo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gobjects/Bomba.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Bomba.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gobjects/Bomberman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Bomberman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gobjects/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Boss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gobjects/Esplosione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Esplosione.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gobjects/GameEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/GameEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gobjects/MovingEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MovingEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gobjects/Muro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Muro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gobjects/PowerUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PowerUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gobjects/StationaryEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/StationaryEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gobjects/TileObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TileObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Disegnabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Disegnabile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Avatar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Avatar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/BombManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BombManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Bottoni.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Bottoni.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Coordinate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Coordinate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/ELvlPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/ELvlPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/EMouseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/EMouseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/ETileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ETileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/EditorLiveli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/EditorLiveli.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Gettoni.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Gettoni.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/GettoniManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/GettoniManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/KeyHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/LivelloSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/LivelloSelect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/MouseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MouseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Nickname.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Nickname.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Partita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/ProfiloUtente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/ProfiloUtente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Punteggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Punteggio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/PunteggioManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/PunteggioManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/SchermataSconfitta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SchermataSconfitta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/SchermataVittoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SchermataVittoria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Storico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Storico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Tempo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Tempo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/TempoManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TempoManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/TileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/Vite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Vite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Grafica/ViteManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/ViteManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Nemici/Baloon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Baloon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Nemici/Boss1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Boss1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Nemici/Boss2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Boss2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Nemici/Doll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Doll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Nemici/Kondoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Kondoria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Nemici/NemicoGenerico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/NemicoGenerico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Nemici/Oneal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Oneal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Nemici/Ovapi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Ovapi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taruffi/Nemici/Proiettile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Proiettile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tomassetti/AudioManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AudioManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tomassetti/Collidable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Collidable.java" afterDir="false" />
     </list>
-    <list id="d8707499-0969-4e90-8527-29b34c0957ef" name="Changes by Lorenzo" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Gobjects/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gobjects/Boss.java" afterDir="false" />
-    </list>
+    <list id="d8707499-0969-4e90-8527-29b34c0957ef" name="Changes by Lorenzo" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,11 +122,11 @@
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Taruffi.Grafica.Main" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="JBomberMan" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Taruffi.Grafica.*" />
+          <option name="PATTERN" value="View.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -91,7 +139,7 @@
       <module name="JBomberMan" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Tomassetti.*" />
+          <option name="PATTERN" value="View.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -182,7 +230,7 @@
       <workItem from="1692622817564" duration="10401000" />
       <workItem from="1692709790923" duration="6898000" />
       <workItem from="1692716795589" duration="3861000" />
-      <workItem from="1692868239669" duration="6231000" />
+      <workItem from="1692868239669" duration="7692000" />
     </task>
     <servers />
   </component>
@@ -213,7 +261,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Taruffi/Grafica/TileManager.java</url>
+          <url>file://$PROJECT_DIR$/src/Model/TileManager.java</url>
           <line>312</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
