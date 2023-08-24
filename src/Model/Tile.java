@@ -1,11 +1,7 @@
-package View;
-
-import View.Disegnabile;
-
+package Model;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
-//classe che rappresenta una casella di gioco disegnabile
 public class Tile implements Disegnabile {
 
     public BufferedImage immagine;

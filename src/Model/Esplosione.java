@@ -1,7 +1,5 @@
 package Model;
 
-import View.Disegnabile;
-
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -10,7 +8,7 @@ import java.io.IOException;
 
 public class Esplosione extends StationaryEntity implements Disegnabile {
 
-    int raggio; //raggio dell'esplosione
+    int raggio;
 
     BufferedImage sprite;
     private int counter = 0;
@@ -57,7 +55,6 @@ public class Esplosione extends StationaryEntity implements Disegnabile {
     }
 
     public void espandi() {
-        //espande l'esplosione
         if (!espaso && this.direzione.equals("centrale")) {
             TileManager.AggiungiACoda(new Esplosione(raggio - 1, sprite, x, y, play, "destra"));
             TileManager.AggiungiACoda(new Esplosione(raggio - 1, sprite, x, y, play, "sinistra"));
@@ -85,7 +82,6 @@ public class Esplosione extends StationaryEntity implements Disegnabile {
     public void disegna(Graphics2D g2) {
         update();
         g2.drawImage(sprite, x, y, null);
-        //g2.draw(this.hitbox);
     }
 
 

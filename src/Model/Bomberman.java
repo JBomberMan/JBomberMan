@@ -50,12 +50,10 @@ public class Bomberman implements Collidable {
 
     public Bomberman(int x, int y,BufferedImage image, int puntiVita, int velocita, KeyHandler keyH, Partita play) {
         Bomberman.x = x;
-        Bomberman.y = y; //posizioni di base
+        Bomberman.y = y;
         this.direction = "down";
         this.vite = puntiVita;
         this.velocita = velocita;
-        //this.Sprite = Sprite;
-        //this.indiceAnimazione = 0;
         this.keyH = keyH;
         this.play = play;
         this.hitbox = new Rectangle(x+5,y+5,play.tileSize -10,play.tileSize -10);
@@ -110,8 +108,8 @@ public class Bomberman implements Collidable {
         }
 
     public static void switchMovimentoMouse(ArrayList<Coordinate> pathh) {
-        movimentoMouse = !movimentoMouse; //abilita o disabilita il movimento con mouse
-        path = pathh; //copia il path calcolato dal mouse
+        movimentoMouse = !movimentoMouse;
+        path = pathh;
         try{
             posizioneAttuale = path.get(0);
         }catch(IndexOutOfBoundsException e){
@@ -122,7 +120,7 @@ public class Bomberman implements Collidable {
         arrivo = path.get(path.size()-1);
         x = (posizioneAttuale.getX()*64);
         y = (posizioneAttuale.getY()*64);
-        pathIterator = path.iterator(); //inizializza l'iteratore
+        pathIterator = path.iterator();
         prossimaPosizione = pathIterator.next();
     }
 
@@ -168,18 +166,10 @@ public class Bomberman implements Collidable {
         }
     }
 
-    public void DetonaADistanza(){
-        //TODO: implementare detonazione a distanza
-        //Idea: metodo che restituisce ogni bomba presente sul campo da gioco
-        //e per ognuna setta il suo timer a 0 in modo che al prossimo update esplodano tutte
-    }
+
 
     public void disegna(Graphics2D g2) {
-        //g2.setColor(Color.WHITE); //setta il colore di sfondo
 
-        //g2.fillRect(x, y, play.tileSize, play.tileSize); //disegna qualcosa
-        //sará sostituito con il bomebrman
-        //con relative posizioni eccetera
         BufferedImage image = down1;
         if(invTimer == 0 && !dead){
         switch(direction) {
@@ -256,6 +246,7 @@ public class Bomberman implements Collidable {
             }
         }
     }
+
     @Override
     public void handleCollision(StationaryEntity e) {
             if(powerUps.get(PowerUp.Tipo.SuperaBlocchi) > 0 && e.isDistruttibile){
@@ -265,7 +256,6 @@ public class Bomberman implements Collidable {
                 this.solidCollision(e);
 
             }
-
     }
 
     public void handleCollision(PowerUp p){
@@ -280,9 +270,11 @@ public class Bomberman implements Collidable {
                 this.solidCollision(b);
             }
     }
+
     public void setScore(int score){
             this.play.punteggioManager.addPunteggio(score);
     }
+
     public void handleCollision(Esplosione e){
             if(this.invTimer == 0){
                 this.vite--;
@@ -308,7 +300,6 @@ public class Bomberman implements Collidable {
             }
         }
 
-
     }
 
     public void addToMap(PowerUp.Tipo p){
@@ -319,9 +310,11 @@ public class Bomberman implements Collidable {
                 powerUps.put(p, 600);
             }
     }
+
     public void setVite(int vite){
         this.vite += vite;
     }
+
     void solidCollision(GameEntity obj) {
         Rectangle2D intersection = this.hitbox.createIntersection(obj.hitbox);
 
@@ -375,6 +368,7 @@ public class Bomberman implements Collidable {
             }
         }
     }
+
     public boolean getDetona(){
             return powerUps.get(PowerUp.Tipo.ControlloRemoto) > 0;
     }

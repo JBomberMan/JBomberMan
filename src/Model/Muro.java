@@ -10,18 +10,10 @@ public class Muro extends StationaryEntity {
         this.isDistruttibile = isDistruttibile;
     }
 
-    public void afterDistruzione(){
-        float random = (float) Math.random();
-        if(random < 0.5){
-            PowerUp powerUp = new PowerUp(this.x,this.y,play);
-        }
-    }
     public void disegna(Graphics2D g2d){
         g2d.drawImage(image, x, y,play.tileSize, play.tileSize, null);
     }
-    public boolean checkEsplosione(){
-        return this.isDistrutto; //rimane così per adesso, una volta che ci sarà la classe esplosione si modificherà
-    }
+
     public void setDistrutto(){
         this.isDistrutto = true;
     }
@@ -42,4 +34,5 @@ public class Muro extends StationaryEntity {
             }
             TileManager.addEntityR(this);
         }
-}}
+    }
+}

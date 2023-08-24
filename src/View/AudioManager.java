@@ -1,11 +1,9 @@
 package View;
-
-import java.io.*;
 import java.net.URL;
 import javax.sound.sampled.*;
 
 public class AudioManager {
-    //audio manager to manage music on panels
+
     Clip clip;
     URL[] soundURL = new URL[2];
 

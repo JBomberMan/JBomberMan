@@ -1,11 +1,10 @@
 package Model;
 
-import Controller.*;
+import Controller.KeyHandler;
 
 import View.ProfiloUtente;
 import View.SchermataVittoria;
 import View.Storico;
-import View.Tile;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -27,7 +26,6 @@ public class TileManager {
     public static ArrayList<StationaryEntity> stationaryEntities = new ArrayList<>();
     ArrayList<TileObject> tiles = new ArrayList<>();
     static ArrayList<PowerUp> powerUps = new ArrayList<>();
-
      static ArrayList<MovingEntity> movingEntitiesR = new ArrayList<>();
      static ArrayList<StationaryEntity> stationaryEntitiesR = new ArrayList<>();
      static ArrayList<PowerUp> powerUpsR = new ArrayList<>();
@@ -44,12 +42,6 @@ public class TileManager {
     Boolean personalizzato;
     Boolean hitboxSpecial;
 
-    public void addEntities(MovingEntity entity){
-        movingEntities.add(entity);
-    }
-    public void addEntities(StationaryEntity entity){
-        stationaryEntities.add(entity);
-    }
 
     public TileManager(Partita partita, KeyHandler keyH){
         personalizzato = false;

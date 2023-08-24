@@ -4,8 +4,8 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 
 public abstract class  MovingEntity extends GameEntity {
-    protected int velocita; //velocità di movimento del bomberman
-    public int vite; //punti vita del bomberman
+    protected int velocita;
+    public int vite;
     protected Partita play;
 
     public MovingEntity(int x, int y, BufferedImage image, int velocita, int vite, Partita play){

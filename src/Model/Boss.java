@@ -7,9 +7,6 @@ public abstract class Boss extends MovingEntity implements Collidable {
 
 
     public static String direction = "left";
-    
-
-
 
 
     public Boss(int x, int y, BufferedImage image, int velocita, int vite, Partita play) {

@@ -5,15 +5,11 @@ import java.awt.*;
 
 public class EditorLiveli extends JFrame {
 
-    private Image bgImage;
-
     public EditorLiveli(){
-
 
         setLayout(new GridBagLayout());
         setSize(800,600);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-
 
         GridBagConstraints c = new GridBagConstraints();
         c.fill = GridBagConstraints.HORIZONTAL;
@@ -32,11 +28,7 @@ public class EditorLiveli extends JFrame {
         ELvlPanel pannello = new ELvlPanel();
         add(pannello,c);
 
-
         setVisible(true);
-
-
-
 
     }
 }

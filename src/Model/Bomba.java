@@ -55,9 +55,7 @@ public class Bomba extends GameEntity {
         }
 
     }
-    public int getTimer(){
-        return timer;
-    }
+
     @Override
     public void update() {
         if(timing%20 == 0){

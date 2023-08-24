@@ -5,14 +5,12 @@ import java.awt.*;
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-
 import org.json.*;
 
 public class Nickname extends JPanel {
 
     private static JLabel nickname;
     private static Nickname istanza;
-
     private File file = new File("src/FileLivelli/profilo.json");
 
     public Nickname(){
@@ -52,7 +50,6 @@ public class Nickname extends JPanel {
         }
     }
 
-    //implementa il pattern singleton
     public static Nickname getNickname(){
         if(istanza==null){
             istanza = new Nickname();

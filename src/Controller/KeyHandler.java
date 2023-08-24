@@ -53,7 +53,6 @@ public class KeyHandler implements KeyListener {
         if(code == KeyEvent.VK_SPACE){
             space = true;
             play.bombM.piazzaBomba();
-            System.out.println(play.bombM.getBombeAttive());
 
         }
         if(code == KeyEvent.VK_E){

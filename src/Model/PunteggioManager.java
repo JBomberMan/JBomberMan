@@ -22,7 +22,6 @@ public class PunteggioManager {
     }
 
     public void disegna(Graphics2D g){
-        //addPunteggio(1);
         punteggioDisegno.disegna(g, x, y, punteggio); //fatto per rispettare MVC (credo)
     }
 

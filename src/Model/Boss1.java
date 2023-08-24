@@ -7,8 +7,6 @@ import java.io.IOException;
 import java.util.stream.IntStream;
 import javax.imageio.ImageIO;
 
-import Controller.Gobjects.*;
-
 public class Boss1 extends Boss implements Collidable{
 
     private static int velocita;

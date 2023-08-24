@@ -3,27 +3,15 @@ package View;
 import javax.swing.*;
 import java.awt.*;
 
-//Classe che gestisce il profilo dell'utente
 public class ProfiloUtente extends JFrame{
     static AudioManager audioManager = new AudioManager(); //i panel hanno bisogno di un audio manager, quindi lo dichiaro statico
     private String nickname;
     private String avatar;
     private static ProfiloUtente istanza;
 
-
-    /**
-     * Costruttore della classe ProfiloUtente
-     * Privato per implementare il pattern singleton
-     */
     private ProfiloUtente(){
 
         super("JBomberMan");
-        /**
-        audioManager.setFile(0);
-        audioManager.play();
-        audioManager.loop();
-        setVisible(true);
-         **/
         setLayout(new GridBagLayout());
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(1200,800);
@@ -63,8 +51,6 @@ public class ProfiloUtente extends JFrame{
         c.insets = new Insets(100,10,0,10); //specifica il padding rispetto ad altri elementi
         c.weightx = 0;
         c.weighty = 0;
-        //c.gridwidth = 1;
-        //c.gridheight = 1;
         c.gridx = 0;
         c.gridy = 0;
         c.anchor = GridBagConstraints.FIRST_LINE_START;
@@ -76,8 +62,6 @@ public class ProfiloUtente extends JFrame{
         c.insets = new Insets(0,10,400,10); //specifica il padding rispetto ad altri elementi
         c.weightx = 0;
         c.weighty = 1;
-        //c.gridwidth = 1;
-        //c.gridheight = 1;
         c.gridx = 0;
         c.gridy = 1;
         c.anchor = GridBagConstraints.FIRST_LINE_START;
@@ -91,8 +75,6 @@ public class ProfiloUtente extends JFrame{
         c.insets = new Insets(10,10,10,10); //specifica il padding rispetto ad altri elementi
         c.weightx = 1;
         c.weighty = 1;
-        //c.gridwidth = 1;
-        //c.gridheight = 1;
         c.gridx = 1;
         c.gridy = 0;
         c.anchor = GridBagConstraints.FIRST_LINE_START;
@@ -115,7 +97,6 @@ public class ProfiloUtente extends JFrame{
         Avatar.getAvatar().setAvatar(avatar);
     }
 
-    //SINGLETON
     public static ProfiloUtente getProfilo(){
         if(istanza == null){
             istanza = new ProfiloUtente();

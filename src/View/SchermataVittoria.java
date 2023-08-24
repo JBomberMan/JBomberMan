@@ -24,7 +24,6 @@ public class SchermataVittoria extends JFrame {
         tornaALMenu = new JButton("Torna al Menu Principale");
         prossimoLivello = new JButton("Prossimo Livello");
         bgImage = new ImageIcon("src\\Images\\vittoria.png").getImage();
-        //setLayout(new GridBagLayout());
 
         JPanel panel = new JPanel() {
             @Override
@@ -103,7 +102,6 @@ public class SchermataVittoria extends JFrame {
         tornaALMenu = new JButton("Torna al Menu Principale");
         prossimoLivello = new JButton("Prossimo Livello");
         bgImage = new ImageIcon("src\\Images\\vittoria.png").getImage();
-        //setLayout(new GridBagLayout());
 
         JPanel panel = new JPanel() {
             @Override
@@ -126,7 +124,6 @@ public class SchermataVittoria extends JFrame {
 
             panel.add(tornaALMenu, c);
             c.gridx = 1;
-            //c.gridy = 0;
             panel.add(prossimoLivello, c);
 
         }

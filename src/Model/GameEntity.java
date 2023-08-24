@@ -1,7 +1,5 @@
 package Model;
 
-import View.Disegnabile;
-
 
 import java.awt.*;
 import java.awt.image.BufferedImage;

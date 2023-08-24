@@ -15,7 +15,6 @@ public class EMouseHandler extends MouseAdapter {
             //trova la casella dove si é cliccato
             int mousex = e.getX() / 32;
             int mousey = e.getY() / 32;
-            System.out.println("casella " + mousex + " " + mousey);
             ETileManager.modificaVista(mousex, mousey, selectedEntity);
 
 

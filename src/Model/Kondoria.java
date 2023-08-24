@@ -7,15 +7,12 @@ import java.io.IOException;
 import java.util.*;
 import javax.imageio.ImageIO;
 
-import Controller.Gobjects.*;
-
 public class Kondoria  extends MovingEntity implements Collidable{
 
         private static int velocita;
         public BufferedImage up1, up2, down1, down2, right1, right2, left1, left2, damaged1, damaged2, dead1, dead2;
+
         public static String direction = "down";
-        private int probabilitàDirezione ;
-        private int attesaMovimento = 30;
         public int spriteCounter = 0;
         public int spriteNum = 1;
         private int invTimer;
@@ -29,7 +26,7 @@ public class Kondoria  extends MovingEntity implements Collidable{
 
     public Kondoria(int x, int y,BufferedImage image, int puntiVita, int velocita, Partita play) {
         super(x, y, image, velocita, puntiVita, play);
-        this.velocita = 1;//velocita
+        this.velocita = 1;
 
         getEnemiesImage();
     }
@@ -64,7 +61,6 @@ public class Kondoria  extends MovingEntity implements Collidable{
             }catch(NoSuchElementException e){
                 prossimaPosizione = prossimaPosizione;
             }
-            //prossimaPosizione = pathIterator.next();
             trovaTimer = 64;
         }
         trovaTimer--;
@@ -83,7 +79,6 @@ public class Kondoria  extends MovingEntity implements Collidable{
 
     public void muovi(){
 
-        //Coordinate prossimaPosizione = pathIterator.next();
         if(pathIterator.hasNext()) {
             if (x == prossimaPosizione.getX()*64 && y == prossimaPosizione.getY()*64) {
                 prossimaPosizione = pathIterator.next();
@@ -198,7 +193,6 @@ public class Kondoria  extends MovingEntity implements Collidable{
         if(!se.isDistruttibile()){
             this.solidCollision(se);
         }
-        
     }
 
 
@@ -261,11 +255,6 @@ public class Kondoria  extends MovingEntity implements Collidable{
     public ArrayList<Coordinate> trovaBomberman(){
 
 
-        //trova la casella dove si é cliccato
-        int bombx = Bomberman.getX()/64;
-        int bomby = Bomberman.getY()/64;
-
-
         ArrayList<ArrayList<Integer>> map = new ArrayList<>();
         for (int i = 0; i < 13; i++) {
             ArrayList<Integer> row = new ArrayList<>();
@@ -285,12 +274,8 @@ public class Kondoria  extends MovingEntity implements Collidable{
         }
 
         map.get(this.getY()/64).set(this.getX()/64, 2);
-        //map.get(Bomberman.getY()/64).set(Bomberman.getX()/64, 3);
 
-        //a questo punto 1=blocco 0=libero 2=nemico 3=bomberman
         ArrayList<Coordinate> path = findShortestPath(this.getX()/64, this.getY()/64, Bomberman.getX()/64, Bomberman.getY()/64, map);
-
-        // Stampa il percorso
 
         return path;
 

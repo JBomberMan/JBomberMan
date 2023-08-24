@@ -5,11 +5,8 @@ import java.awt.*;
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-
 import org.json.*;
 
-//Classe che gestisce l'avatar del giocatore
-//TODO  : implementare il pattern MVC
 public class Avatar extends JPanel {
 
     private static JLabel contenitoreAvatar;
@@ -22,11 +19,6 @@ public class Avatar extends JPanel {
         setVisible(true);
     }
 
-    /**
-     * Metodo che permette di settare l'avatar del giocatore
-     * @param avatar Stringa contenente il percorso dell'immagine
-     */
-    //TODO: sostituire la stringa con un filesystem a schermo ed unire i due metodi
     public void setAvatar(String avatar){
 
         try{
@@ -64,7 +56,6 @@ public class Avatar extends JPanel {
 
     }
 
-    //implementa il pattern singleton
     public static Avatar getAvatar(){
         if(istanza==null){
             istanza = new Avatar();

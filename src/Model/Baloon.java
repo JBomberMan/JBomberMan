@@ -99,10 +99,7 @@ public class Baloon  extends MovingEntity implements Collidable{
             spriteCounter = 0;
         }
     }
-        
-    
 
-    
 
     @Override
     public void disegna(Graphics2D g2d) {

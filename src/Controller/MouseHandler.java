@@ -134,7 +134,6 @@ public class MouseHandler extends MouseAdapter{
         return path;
     }
 
-    // Metodo per verificare se una casella è all'interno dei limiti della mappa
     private static boolean isValid(int x, int y, ArrayList<ArrayList<Integer>> map) {
         return x >= 0 && x < map.get(0).size() && y >= 0 && y < map.size();
     }

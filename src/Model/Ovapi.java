@@ -4,10 +4,9 @@ import java.awt.*;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-
 import javax.imageio.ImageIO;
 
-import Controller.Gobjects.*;
+
 
 public class Ovapi  extends MovingEntity implements Collidable{
 
@@ -16,7 +15,6 @@ public class Ovapi  extends MovingEntity implements Collidable{
         public BufferedImage up1, up2, down1, down2, right1, right2, left1, left2, damaged1, damaged2, dead1, dead2;
         public static String direction = "down";
         private int probabilitàDirezione = 0;
-        //private int attesaMovimento = 30;
         public int spriteCounter = 0;
         public int spriteNum = 1;
         private int invTimer;
@@ -69,19 +67,7 @@ public class Ovapi  extends MovingEntity implements Collidable{
     @Override
     public void muovi() {
         if(invTimer == 0 && !dead) {
-            /*if(attesaMovimento > 20){
-                probabilitàDirezione = (int) (Math.random() * 2);
-                attesaMovimento = 0;
-            }
-            attesaMovimento++;
-            if (probabilitàDirezione == 0) {
-                direction = "up";
-                y -= velocita;
-            }
-            else if (probabilitàDirezione == 1) {
-                direction = "down";
-                y += velocita;
-            }*/
+
             if (probabilitàDirezione == 0) {
                 direction = "left";
                 x -= velocita;

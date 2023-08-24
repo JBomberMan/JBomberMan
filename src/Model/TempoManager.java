@@ -41,11 +41,10 @@ public class TempoManager {
             }
 
         }
-        tempoDisegno.disegna(g, x, y, minuti, secondi); //fatto per rispettare MVC (credo)
+        tempoDisegno.disegna(g, x, y, minuti, secondi);
         if (minuti == 0 && secondi == 0){
             Bomberman.setDead(true);
-            //SchermataSconfitta.getIstanza().setVisible(true);
-            //Partita.stopGameThread();
+
         }
     }
 }

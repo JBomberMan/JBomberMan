@@ -1,6 +1,5 @@
 package View;
 
-import javax.imageio.ImageIO;
 import java.awt.*;
 
 public class Vite {

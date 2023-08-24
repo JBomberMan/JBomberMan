@@ -1,10 +1,7 @@
 package Model;
 
-import Controller.Gobjects.*;
-
 import javax.imageio.ImageIO;
 import java.awt.*;
-
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
@@ -83,7 +80,7 @@ public class Proiettile extends MovingEntity implements Collidable {
         }
         spriteCounter++;
         if(spriteCounter == 10){
-            spriteNum = (spriteNum + 1) % 4; //ogni 10 frame cambia sprite
+            spriteNum = (spriteNum + 1) % 4;
             spriteCounter = 0;
         }
 

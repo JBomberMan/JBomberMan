@@ -5,9 +5,6 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.Random;
 
-//classe che rappresenta powerup del gioco bomberman
-//implementa l'interfaccia Disegnabile, dispone di due campi X e Y che rappresentano le coordinate del powerup che si può trovare anche dentro ad un blocco
-//un metodo che permette di eseguire l'effetto del powerup
 public class PowerUp extends StationaryEntity {
     private boolean isRaccolto = false;
     public enum Tipo {

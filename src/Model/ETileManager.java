@@ -1,7 +1,5 @@
 package Model;
-import Model.TileObject;
 import View.ELvlPanel;
-import View.Tile;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -74,7 +72,6 @@ public class ETileManager {
 
             while(col < 17 && row < 13){
                 String line = br.readLine();
-                System.out.println(line);
                 while (col < 17) {
 
                     String numbers[] = line.split(" ");

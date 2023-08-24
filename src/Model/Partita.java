@@ -1,7 +1,6 @@
 package Model;
 
 import Controller.*;
-import View.ViteManager;
 
 import java.awt.*;
 import javax.swing.*;

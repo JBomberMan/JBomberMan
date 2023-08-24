@@ -1,17 +1,13 @@
 package View;
 
 import Model.Partita;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 
-/**
- * Classe che rappresenta i bottoni necessari allo svolgimento delle varie azioni, ovvero
- * Impostare avatar, Impostare il nickname, Avviare una partita, Avviare l'editor dei livelli
- */
+
 public class Menu extends JPanel {
 
     private JButton bottoneAvatar;

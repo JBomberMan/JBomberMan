@@ -1,6 +1,5 @@
 package Model;
 
-import Model.Bomberman;
 import View.Gettoni;
 
 import java.awt.*;

@@ -1,6 +1,6 @@
-package View;
+package Model;
 
-import Model.Bomberman;
+import View.Vite;
 
 import java.awt.*;
 
