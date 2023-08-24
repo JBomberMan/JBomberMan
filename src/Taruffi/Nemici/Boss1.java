@@ -11,7 +11,7 @@ import Taruffi.Grafica.Partita;
 import Taruffi.Grafica.TileManager;
 import Tomassetti.Collidable;
 
-public class Boss1 extends MovingEntity implements Collidable{
+public class Boss1 extends Boss implements Collidable{
 
     private static int velocita;
     public BufferedImage standard, hit, cry1, cry2, cry3;
@@ -38,7 +38,7 @@ public class Boss1 extends MovingEntity implements Collidable{
                 this.y + 254, this.y + 304, this.y + 348, this.y + 304, this.y + 254, this.y + 278,
                 this.y + 241, this.y + 172, this.y + 117, this.y + 27
         }, 17);
-        getEnemiesImage();
+        this.getEnemiesImage();
 
 
     }
@@ -227,6 +227,10 @@ public class Boss1 extends MovingEntity implements Collidable{
         return this.hitboxPorcata;
     }
 
+
+
+
+
     private void incazzati(){
         incazzato = true;
         int xp = this.x + (standard.getWidth()/2) - 30;
@@ -235,5 +239,10 @@ public class Boss1 extends MovingEntity implements Collidable{
             TileManager.addEntity(new Proiettile(xp, yp, null, this.vite<5 ? 3:2, 1, play, i)); //aggiunge le 8 bombe
         });
 
+    }
+
+    @Override
+    public boolean isDead() {
+        return this.dead;
     }
 }

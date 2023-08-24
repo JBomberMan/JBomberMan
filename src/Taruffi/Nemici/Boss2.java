@@ -16,7 +16,7 @@ import Taruffi.Grafica.SchermataSconfitta;
 import Taruffi.Grafica.TileManager;
 import Tomassetti.Collidable;
 
-public class Boss2 extends MovingEntity implements Collidable{
+public class Boss2 extends Boss implements Collidable{
 
     private static int velocita;
     public BufferedImage standard, hit, cry1, cry2, cry3;
@@ -248,4 +248,11 @@ public class Boss2 extends MovingEntity implements Collidable{
     private void Attacco(){
         attaccando = true;
     }
+
+    @Override
+    public boolean isDead() {
+        return this.dead;
+    }
+
+    public Polygon getHitboxPorcata(){return new Polygon();}
 }

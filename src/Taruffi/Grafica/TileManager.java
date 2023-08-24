@@ -30,7 +30,7 @@ public class TileManager {
      static ArrayList<PowerUp> powerUpsR = new ArrayList<>();
     static ArrayList<Esplosione> codaAggiunte = new ArrayList<>();
     static ArrayList<Esplosione> codaRimozioni = new ArrayList<>();
-    private Boss2 boss;
+    private Boss boss;
     Bomberman bomber;
     private int indexBomberman;
     private static int livello = 1;
@@ -39,6 +39,7 @@ public class TileManager {
     int numero;
 
     Boolean personalizzato;
+    Boolean hitboxSpecial;
 
     public void addEntities(MovingEntity entity){
         movingEntities.add(entity);
@@ -190,7 +191,13 @@ public class TileManager {
                             movingEntities.add(new Ovapi(col*64, row*64,tile[6].immagine, 1, 1, partita));
                             break;
                         case 14:
+                            boss = new Boss1(col*64, row*64,tile[6].immagine, 2, 10, partita);
+                            this.hitboxSpecial = true;
+                            break;
+                        case 15:
                             boss = new Boss2(col*64, row*64,tile[6].immagine, 2, 10, partita);
+                            this.hitboxSpecial = false;
+                            break;
                     }
 
                     col++;
@@ -238,7 +245,7 @@ public class TileManager {
             b.update();
         }
         if(boss != null){
-            if(!boss.dead){
+            if(!boss.isDead()){
                 boss.disegna(g2);
                 boss.update();
             }
@@ -304,7 +311,7 @@ public class TileManager {
         bomber.disegna(g2);
         checkCollision();
         if(boss != null){
-            if(boss.dead){
+            if(boss.isDead()){
 
                 System.out.println("Hai vinto boss");
                 if(!personalizzato) livello++;
@@ -379,8 +386,13 @@ public class TileManager {
                 bomber.handleCollision(e);
             }
             if(boss != null){
-                if(!boss.dead) {
-                    if (boss.getHitbox().intersects(e.getHitbox())) {
+                if(!boss.isDead()) {
+                    if(hitboxSpecial){
+                        if (boss.getHitboxPorcata().intersects(e.getHitbox())) {
+                            boss.handleCollision(e);
+                        }
+                    }
+                    else if (boss.getHitbox().intersects(e.getHitbox())) {
                         boss.handleCollision(e);
                     }
                 }
@@ -392,14 +404,26 @@ public class TileManager {
             }
         }
         if(boss != null){
-            if(!boss.dead) {
-                for (StationaryEntity entity : stationaryEntities) {
-                    if (boss.getHitbox().intersects(entity.getHitbox())) {
-                        boss.handleCollision(entity);
+            if(!boss.isDead()) {
+                for (StationaryEntity e : stationaryEntities) {
+                    if(hitboxSpecial){
+                        if (boss.getHitboxPorcata().intersects(e.getHitbox())) {
+                            boss.handleCollision(e);
+                        }
+                    }
+                    else if (boss.getHitbox().intersects(e.getHitbox())) {
+                        boss.handleCollision(e);
                     }
                 }
-                if(bomber.getHitbox().intersects(boss.getHitbox())){
-                    bomber.handleCollision(boss);
+                if(hitboxSpecial){
+                    if (boss.getHitboxPorcata().intersects(bomber.getHitbox())){
+                        bomber.handleCollision(boss);
+                    }
+                }
+                else{
+                    if (bomber.getHitbox().intersects(boss.getHitbox())) {
+                        bomber.handleCollision(boss);
+                    }
                 }
             }
         }
