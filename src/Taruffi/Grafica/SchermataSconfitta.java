@@ -11,6 +11,7 @@ public class SchermataSconfitta extends JFrame{
     private JButton tornaALMenu;
     private JButton riprova;
     private static SchermataSconfitta istanza;
+    private Image bgImage;
 
 
     private SchermataSconfitta(){
@@ -18,9 +19,26 @@ public class SchermataSconfitta extends JFrame{
         setSize(300, 300);
         tornaALMenu = new JButton("Torna al Menu Principale");
         riprova = new JButton("Riprova");
-        setLayout(new FlowLayout());
-        add(tornaALMenu);
-        add(riprova);
+        bgImage = new ImageIcon("src\\Images\\vittoria.png").getImage();
+        //setLayout(new GridBagLayout());
+        JPanel panel = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.drawImage(bgImage, 0, 0, getWidth(), getHeight(), this);
+            }
+        };
+        panel.setLayout(new GridBagLayout());
+
+        GridBagConstraints c = new GridBagConstraints();
+        c.gridx = 0;
+        c.gridy = 0;
+        c.weightx = 0.5;
+        c.weighty = 0.5;
+        panel.add(tornaALMenu, c);
+        c.gridx = 1;
+        panel.add(riprova, c);
+        setContentPane(panel);
 
         tornaALMenu.addActionListener(new ActionListener() {
 

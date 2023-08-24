@@ -11,33 +11,45 @@ public class SchermataVittoria extends JFrame {
     private static SchermataVittoria istanza;
 
     private Boolean personalizzato;
+    private Image bgImage;
 
 
     private SchermataVittoria(Boolean persona){
+
         this.personalizzato = persona;
-        setSize(400, 200);
+        setSize(400, 250);
         tornaALMenu = new JButton("Torna al Menu Principale");
         prossimoLivello = new JButton("Prossimo Livello");
-        setLayout(new GridBagLayout());
-        //add(tornaALMenu);
-        //(prossimoLivello);
-        GridBagConstraints c = new GridBagConstraints();
+        bgImage = new ImageIcon("src\\Images\\vittoria.png").getImage();
+        //setLayout(new GridBagLayout());
 
-        c.gridx = 1;
+        JPanel panel = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.drawImage(bgImage, 0, 0, getWidth(), getHeight(), this);
+            }
+        };
+        panel.setLayout(new GridBagLayout());
+
+        GridBagConstraints c = new GridBagConstraints();
+        c.gridx = 0;
         c.gridy = 0;
         c.weightx = 0.5;
         c.weighty = 0.5;
         if(personalizzato) {
-            add(tornaALMenu, c);
+            panel.add(tornaALMenu, c);
         }
         else{
 
-            add(tornaALMenu, c);
-            c.gridx = 2;
-            c.gridy = 0;
-            add(prossimoLivello, c);
+            panel.add(tornaALMenu, c);
+            c.gridx = 1;
+            //c.gridy = 0;
+            panel.add(prossimoLivello, c);
 
         }
+
+        setContentPane(panel);
         setVisible(true);
 
 
@@ -83,29 +95,40 @@ public class SchermataVittoria extends JFrame {
     }
 
     public void setPersonalizzato(Boolean b){
-        personalizzato = b;
-        remove(tornaALMenu);
-        remove(prossimoLivello);
-        setLayout(new GridBagLayout());
-        //add(tornaALMenu);
-        //(prossimoLivello);
-        GridBagConstraints c = new GridBagConstraints();
+        this.personalizzato = b;
+        setSize(400, 250);
+        tornaALMenu = new JButton("Torna al Menu Principale");
+        prossimoLivello = new JButton("Prossimo Livello");
+        bgImage = new ImageIcon("src\\Images\\vittoria.png").getImage();
+        //setLayout(new GridBagLayout());
 
-        c.gridx = 1;
+        JPanel panel = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.drawImage(bgImage, 0, 0, getWidth(), getHeight(), this);
+            }
+        };
+        panel.setLayout(new GridBagLayout());
+
+        GridBagConstraints c = new GridBagConstraints();
+        c.gridx = 0;
         c.gridy = 0;
         c.weightx = 0.5;
         c.weighty = 0.5;
         if(personalizzato) {
-            add(tornaALMenu, c);
+            panel.add(tornaALMenu, c);
         }
         else{
 
-            add(tornaALMenu, c);
-            c.gridx = 2;
-            c.gridy = 0;
-            add(prossimoLivello, c);
+            panel.add(tornaALMenu, c);
+            c.gridx = 1;
+            //c.gridy = 0;
+            panel.add(prossimoLivello, c);
 
         }
+
+        setContentPane(panel);
         setVisible(true);
 
 
@@ -116,6 +139,7 @@ public class SchermataVittoria extends JFrame {
                 SwingUtilities.getWindowAncestor(Partita.getIstanza()).dispose();
                 dispose();
                 Partita.getIstanza().riavvia();
+                TileManager.setLivello(1);
                 ProfiloUtente.getProfilo().setVisible(true);
             }
         });
@@ -135,6 +159,11 @@ public class SchermataVittoria extends JFrame {
             }
         });
 
+    }
+
+    public void paint(Graphics g){
+        g.drawImage(bgImage, 0, 0, getWidth(), getHeight(), this);
+        super.paint(g);
     }
 
 }
