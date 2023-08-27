@@ -25,12 +25,9 @@ public class BombManager {
     }
 
     public void disegna(Graphics2D g2){
-        for(Bomba b : bombe){
-            b.disegna(g2);
-        }
-        for(Esplosione e : esplosioni){
-            e.disegna(g2);
-        }
+        bombe.forEach(b -> b.disegna(g2));
+        esplosioni.forEach(e -> e.disegna(g2));
+
     }
 
     public void pulisci(){
@@ -73,11 +70,12 @@ public class BombManager {
                     tileVerticale = (Bomberman.getY() + (play.tileSize/2)) / play.tileSize;
                     break;
             }
-            for(StationaryEntity e: play.tileM.stationaryEntities){
+            for(StationaryEntity e: TileManager.stationaryEntities){
                 if(e.getX() == tileOrizzontale* play.tileSize && e.getY() == tileVerticale* play.tileSize){
                     return;
                 }
             }
+
             bombe.add(new Bomba(tileOrizzontale* play.tileSize,tileVerticale* play.tileSize,null, this.play, raggioBombe));
             bombeAttive++;
         }
@@ -92,10 +90,10 @@ public class BombManager {
 
 
     public void detonaDistanza(){
-        for(Bomba b : bombe){
+        bombe.forEach(b -> {
             b.esplodi();
             BombManager.togliBomba(b);
-        }
+        });
     }
 
     public int getBombeAttive() {
@@ -117,6 +115,6 @@ public class BombManager {
         bombe.remove(bomba);
     }
     public void setRaggioBombe(int raggioBombe) {
-        this.raggioBombe += raggioBombe;
+        BombManager.raggioBombe += raggioBombe;
     }
 }

@@ -13,6 +13,27 @@ import java.awt.*;
 import java.io.*;
 import java.util.ArrayList;
 
+/***
+ * Classe che gestisce le Tile e le entità del gioco
+ * @see Tile
+ * @see GameEntity
+ * @see MovingEntity
+ * @see StationaryEntity
+ * @see Bomberman
+ * @see Muro
+ * @see Oneal
+ * @see Baloon
+ * @see Kondoria
+ * @see Doll
+ * @see Ovapi
+ * @see Boss
+ * @see Boss1
+ * @see Boss2
+ * @see PowerUp
+ *
+ * Il fulcro delle partite, si occupa di aggiornare e tenere traccia di tutte le entità del gioco, di disegnarle e di gestire le collisioni
+ *
+ */
 public class TileManager {
 
     Partita partita; //equivale al suo gamepanel
@@ -40,7 +61,13 @@ public class TileManager {
     Boolean personalizzato;
     Boolean hitboxSpecial;
 
-
+    /***
+     * costruttore che inizializza il TileManager
+     * @param partita la partita in cui si sta giocando
+     * @param keyH il keyhandler che gestisce gli input da tastiera
+     *
+     *             inizializza il TileManager, crea le tile, carica la mappa e le entità
+     */
     public TileManager(Partita partita, KeyHandler keyH){
         personalizzato = false;
         pulisci();
@@ -54,6 +81,12 @@ public class TileManager {
         loadMap();
     }
 
+    /***
+     * costruttore che inizializza il TileManager con livelli custom
+     * @param partita la partita in cui si sta giocando
+     * @param keyH il keyhandler che gestisce gli input da tastiera
+     * @param percorso il percorso del file da cui caricare la mappa
+     */
     public TileManager(Partita partita, KeyHandler keyH, String percorso){
         personalizzato = true;
         pulisci();
@@ -66,6 +99,10 @@ public class TileManager {
         loadMap();
     }
 
+    /***
+     * metodo che pulisce il TileManager
+     * prepara il TileManager per un nuovo livello
+     */
     public void pulisci(){
         movingEntities.clear();
         stationaryEntities.clear();
@@ -80,6 +117,10 @@ public class TileManager {
         path = new File("src/FileLivelli/livello" + livello + ".txt");
     }
 
+    /***
+     * metodo per settare il livello della partita
+     * @param liv il livello da settare
+     */
     public static void setLivello(int liv){
         livello = liv;
     }
@@ -215,80 +256,76 @@ public class TileManager {
         int row = 0;
         int x = 0;
         int y = 0;
+        //uso stream per disegnare le tile
+        tiles.forEach((tile) -> tile.disegna(g2));
 
-        for(TileObject tile : tiles){
-            tile.disegna(g2);
-        }
 
-        for(StationaryEntity entity : stationaryEntities){
-            entity.disegna(g2);
+        stationaryEntities.forEach((entity) -> {entity.disegna(g2);
             entity.update();
-        }
+        });
 
         
-        for(Bomba b : partita.bombM.bombe){
-            b.disegna(g2);
-            b.update();
-        }
+
+        BombManager.bombe.forEach((bomba) -> {
+            bomba.disegna(g2);
+            bomba.update();
+        });
+
         if(boss != null){
             if(!boss.isDead()){
                 boss.disegna(g2);
                 boss.update();
             }
         }
-
-        for(Esplosione e : codaAggiunte){ //controlla le collisioni tra bombe e blocchi distruttibili
-            for(StationaryEntity entity : stationaryEntities){
+        codaAggiunte.forEach((e) -> {
+            stationaryEntities.forEach((entity) -> {
                 if(entity instanceof Muro){
                     if(e.getHitbox().intersects(entity.getHitbox()) && !entity.isDistruttibile()){
-                        this.codaRimozioni.add(e);
+                        codaRimozioni.add(e);
                     }
 
                 }
 
-                }
-            }
-        for (Esplosione e : codaRimozioni){
-            codaAggiunte.remove(e);
-        }
-        this.codaRimozioni.clear();
-        partita.bombM.esplosioni.addAll(codaAggiunte);
-        this.codaAggiunte.clear();
+            });
+        });
 
-        for(Esplosione e : partita.bombM.esplosioni){
-            e.disegna(g2);
-            e.update();
-        }
-        for(MovingEntity entity : movingEntities){
-            if (entity.vite <= -1) {
+        codaRimozioni.forEach(codaAggiunte::remove);
+        codaRimozioni.clear();
+        BombManager.esplosioni.addAll(codaAggiunte);
+        codaAggiunte.clear();
+
+
+        BombManager.esplosioni.forEach((esplosione) -> {
+            esplosione.disegna(g2);
+            esplosione.update();
+        });
+
+        movingEntities.forEach((entity)->{
+            if(entity.vite <= -1){
                 addEntityR(entity);
             }
             entity.update();
             entity.disegna(g2);
-        }
-        for(PowerUp p : powerUps){
-            p.disegna(g2);
-            p.update();
-        }
-        for (StationaryEntity r: stationaryEntitiesR){
-            removeEntity(r);
+        });
+
+        powerUps.forEach((powerUp)->{
+           powerUp.disegna(g2);
+           powerUp.update();
+        });
+
+        stationaryEntitiesR.forEach((entity)->{
+            removeEntity(entity);
             bomber.setScore(10);
-        }
+        });
         stationaryEntitiesR.clear();
-        for (MovingEntity r: movingEntitiesR){
-            removeEntity(r);
+        movingEntitiesR.forEach((entity)->{
+            removeEntity(entity);
             bomber.setScore(50);
-        }
+        });
         movingEntitiesR.clear();
-        for (PowerUp r: powerUpsR){
-            removeEntity(r);
-        }
-        for(Bomba r : BombManager.bombeR){
-            BombManager.removeBomba(r);
-        }
-        for(Esplosione r : BombManager.esplosioniR){
-            BombManager.removeEsplosione(r);
-        }
+        powerUpsR.forEach(TileManager::removeEntity);
+        BombManager.bombeR.forEach(BombManager::removeBomba);
+        BombManager.esplosioniR.forEach(BombManager::removeEsplosione);
 
         BombManager.bombeR.clear();
         BombManager.esplosioniR.clear();
@@ -326,52 +363,53 @@ public class TileManager {
     }
 
     public void detonaDistanza(){
-        for(Bomba b : partita.bombM.bombe){
-            b.setTimer(0);
-        }
+
+        BombManager.bombe.forEach(bomba -> bomba.setTimer(0));
     }
     public void checkCollision(){
 
-        for(StationaryEntity entity : stationaryEntities){ //controlla le collisioni tra bomberman e muri
-            if(bomber.getHitbox().intersects(entity.getHitbox())) {
+        stationaryEntities.forEach((entity)->{
+            if(bomber.getHitbox().intersects(entity.getHitbox())){
                 bomber.handleCollision(entity);
             }
-        }
-        for(Bomba b: partita.bombM.bombe){ //controlla le collisioni tra bomberman e bombe
-            if(bomber.getHitbox().intersects(b.getHitbox())){
-                bomber.handleCollision(b);
+        });
+
+        BombManager.bombe.forEach((bomba)->{
+            if(bomber.getHitbox().intersects(bomba.getHitbox())){
+                bomber.handleCollision(bomba);
             }
-        }
-        for(MovingEntity mentity : movingEntities){ //controlla le collisioni tra bomberman e nemici
-            for(StationaryEntity entity : stationaryEntities){
+        });
+
+        movingEntities.forEach((mentity)->{
+            stationaryEntities.forEach((entity)->{
                 if(mentity.getHitbox().intersects(entity.getHitbox())){
                     mentity.handleCollision(entity);
                 }
-            }
-            for(Bomba b : partita.bombM.bombe){
-                if(mentity.getHitbox().intersects(b.getHitbox())){
-                    mentity.handleCollision(b);
+            });
+            BombManager.bombe.forEach((bomba)->{
+                if(mentity.getHitbox().intersects(bomba.getHitbox())){
+                    mentity.handleCollision(bomba);
                 }
-            }
-            if(bomber.getHitbox().intersects(mentity.getHitbox())) {
+            });
+            if(bomber.getHitbox().intersects(mentity.getHitbox())){
                 bomber.handleCollision(mentity);
             }
-        }
-        for(Esplosione e : partita.bombM.esplosioni){ //controlla le collisioni tra bombe e blocchi distruttibili
-            for(StationaryEntity entity : stationaryEntities){
-                if(e.getHitbox().intersects(entity.getHitbox())){
-                    entity.handleCollision(e);
+        });
 
-                }
-            }
-            for(MovingEntity mentity : movingEntities){
-                if(e.getHitbox().intersects(mentity.getHitbox())){
-                    mentity.handleCollision(e);
-                }
-            }
+        BombManager.esplosioni.forEach((e)->{
             if(bomber.getHitbox().intersects(e.getHitbox())){
                 bomber.handleCollision(e);
             }
+            stationaryEntities.forEach((entity)->{
+                if(e.getHitbox().intersects(entity.getHitbox())){
+                    entity.handleCollision(e);
+                }
+            });
+            movingEntities.forEach((mentity)->{
+                if(e.getHitbox().intersects(mentity.getHitbox())){
+                    mentity.handleCollision(e);
+                }
+            });
             if(boss != null){
                 if(!boss.isDead()) {
                     if(hitboxSpecial){
@@ -384,24 +422,15 @@ public class TileManager {
                     }
                 }
             }
-        }
-        for(PowerUp p : powerUps){
-            if(bomber.getHitbox().intersects(p.getHitbox())){
-                bomber.handleCollision(p);
+        });
+        powerUps.forEach((powerUp)->{
+            if(bomber.getHitbox().intersects(powerUp.getHitbox())){
+                bomber.handleCollision(powerUp);
             }
-        }
+        });
         if(boss != null){
             if(!boss.isDead()) {
-                for (StationaryEntity e : stationaryEntities) {
-                    if(hitboxSpecial){
-                        if (boss.getHitboxPorcata().intersects(e.getHitbox())) {
-                            boss.handleCollision(e);
-                        }
-                    }
-                    else if (boss.getHitbox().intersects(e.getHitbox())) {
-                        boss.handleCollision(e);
-                    }
-                }
+
                 if(hitboxSpecial){
                     if (boss.getHitboxPorcata().intersects(bomber.getHitbox())){
                         bomber.handleCollision(boss);
@@ -446,6 +475,7 @@ public class TileManager {
             powerUpsR.add((PowerUp) entity);
         } else if (entity instanceof StationaryEntity) {
             stationaryEntitiesR.add((StationaryEntity) entity);
+            System.out.println("Rimosso");
         }
     }
     public static void AggiungiACoda(Esplosione e){

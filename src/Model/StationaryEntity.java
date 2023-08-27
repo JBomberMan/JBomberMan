@@ -3,7 +3,7 @@ package Model;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-public abstract class StationaryEntity extends GameEntity implements Collidable {
+public abstract class StationaryEntity extends GameEntity implements Collidable, Disegnabile {
     protected boolean isDistrutto;
     public boolean isDistruttibile;
     protected Partita play;
@@ -19,9 +19,6 @@ public abstract class StationaryEntity extends GameEntity implements Collidable 
     public boolean isDistruttibile() {
         return isDistruttibile;
     }
-
-    public abstract void disegna(Graphics2D g2d);
-
 
 
 }

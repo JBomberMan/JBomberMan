@@ -171,7 +171,7 @@ public class ETileManager {
     public static void salvaLivello(){
 
         try{
-            if(bomberman == false) {return;}
+            if(!bomberman) {return;}
             String fileName = JOptionPane.showInputDialog("Inserisci nome filge");
             String path = "src/LivelliPersonalizzati";
             File outputfile = new File(path, fileName + ".txt");
