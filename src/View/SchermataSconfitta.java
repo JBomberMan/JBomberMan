@@ -46,6 +46,8 @@ public class SchermataSconfitta extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 Storico.addSconfitta();
                 SwingUtilities.getWindowAncestor(Partita.getIstanza()).dispose();
+                Partita.getIstanza().pulisci();
+                Bomberman.setDead(false);
                 istanza.dispose();
                 ProfiloUtente.getProfilo().setVisible(true);
             }

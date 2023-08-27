@@ -93,9 +93,24 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
 
         //pulisce il tile manager e il bomb manager
         tileM.pulisci();
-        //tileM.loadMap();
+        tileM.loadMap();
 
 
+    }
+
+    public void pulisci(){
+        gameThread = null;
+
+        //pulisce le esplosioni e le bombe
+        bombM.pulisci();
+
+        //ricrea il keyHandler
+        keyHandler.pulisci();
+
+        tempoManager.resetTempo();
+
+        //pulisce il tile manager e il bomb manager
+        tileM.pulisci();
     }
 
     public void startGameThread(){

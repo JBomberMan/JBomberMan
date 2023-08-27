@@ -3,16 +3,14 @@ package Model;
 import Controller.KeyHandler;
 
 import View.ProfiloUtente;
+import View.SchermataCompletamento;
 import View.SchermataVittoria;
 import View.Storico;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.ArrayList;
 
 public class TileManager {
@@ -34,7 +32,7 @@ public class TileManager {
     private Boss boss;
     public Bomberman bomber;
     private int indexBomberman;
-    private static int livello = 1;
+    private static int livello = 8;
     BufferedReader br;
     File path;
     int numero;
@@ -87,11 +85,7 @@ public class TileManager {
     }
 
 
-    public TileManager(){
-        tile = new Tile[10]; //rappresenta il numero di tile diverse che abbiamo a disposizione
-        getTileImage();
 
-    }
     public void getTileImage(){
         try{
             tile[0] = new Tile();
@@ -120,17 +114,13 @@ public class TileManager {
 
     public void loadMap(){
         try{
-            InputStream is = getClass().getResourceAsStream("/" + path.toString().replace("src\\","").replace("\\","/"));
-            System.out.println("/" + path.toString().replace("src\\","").replace("\\","/"));
-            if(is == null){
-                //ritorna al menu principale se é l'ultimo livello
-                //TODO implementa schermata vittoria (?)
-                Storico.addVittoria();
-                SwingUtilities.getWindowAncestor(Partita.getIstanza()).dispose();
-                ProfiloUtente.getProfilo().setVisible(true);
-                return;
-            }
-            br = new BufferedReader(new java.io.InputStreamReader(is));
+
+
+
+                FileReader fr = new FileReader(path.getAbsolutePath());
+                br = new BufferedReader(fr);
+
+
 
             int col = 0;
             int row = 0;
@@ -325,7 +315,8 @@ public class TileManager {
                 livello++;
             }
             Partita.stopGameThread();
-            SchermataVittoria.getIstanza(personalizzato).setVisible(true);
+            if(livello > 8) SchermataCompletamento.getIstanza().setVisible(true);
+            else SchermataVittoria.getIstanza(personalizzato).setVisible(true);
 
 
 
