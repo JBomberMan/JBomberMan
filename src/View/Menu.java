@@ -7,7 +7,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 
-
+/***
+ * Classe per visualizzare a schermo il menu
+ */
 public class Menu extends JPanel {
 
     private JButton bottoneAvatar;
@@ -83,7 +85,9 @@ public class Menu extends JPanel {
                 ProfiloUtente.getProfilo().dispose();
             }
         });
-
+        /***
+         * Classe anonima oer avviare l'editor dei livelli
+         */
         bottoneEditor.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -91,7 +95,9 @@ public class Menu extends JPanel {
 
             }
         });
-
+        /***
+         * Classe anonima per aprire la schermata di selezione dei livelli custom
+         */
         bottoneLivelliPers.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

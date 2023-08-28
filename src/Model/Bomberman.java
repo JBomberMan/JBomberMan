@@ -416,8 +416,8 @@ public class Bomberman implements Collidable {
 
 
     /**
-     *
-     * @param obj
+     * Metodo che implementa la collisione solida tra due entità
+     * @param obj l'entità con cui si è verificata la collisione
      */
     void solidCollision(GameEntity obj) {
         Rectangle2D intersection = this.hitbox.createIntersection(obj.hitbox);
@@ -473,10 +473,17 @@ public class Bomberman implements Collidable {
         }
     }
 
+    /**
+     * metodo per controllare che ilbomberman abbuia il detona a distanza
+     * @return booleano che indica se il bomberman ha il detona a distanza o no
+     */
     public boolean getDetona(){
             return powerUps.get(PowerUp.Tipo.ControlloRemoto) > 0;
     }
 
+    /**
+     * metodo per far mouvere il bomberman col mouse
+     */
     public void muoviConMouse(){
         if(!dead){
             boolean finito = false;

@@ -6,6 +6,9 @@ import Model.ETileManager;
 import javax.swing.*;
 import java.awt.*;
 
+/***
+ * Classe per visualizzare la bozza di come verrà il livello
+ */
 public class ELvlPanel extends JPanel implements Runnable{
 
     private static ELvlPanel istanza;
@@ -13,6 +16,10 @@ public class ELvlPanel extends JPanel implements Runnable{
     ETileManager tileM = new ETileManager(this);
     EMouseHandler mouseHandler = new EMouseHandler();
     Thread thread;
+
+    /***
+     * Costruttore della schermata
+     */
     private ELvlPanel() {
         super();
         this.addMouseListener(mouseHandler);
@@ -22,6 +29,9 @@ public class ELvlPanel extends JPanel implements Runnable{
 
     }
 
+    /***
+     * Metodo per runnare il pannello
+     */
     @Override
     public void run() {
 
@@ -31,6 +41,10 @@ public class ELvlPanel extends JPanel implements Runnable{
 
     }
 
+    /***
+     * Per visualizzare a schermo il pannello
+     * @param g il contesto grafico
+     */
     public void paintComponent(Graphics g){
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D)g;
@@ -38,6 +52,10 @@ public class ELvlPanel extends JPanel implements Runnable{
 
     }
 
+    /***
+     *
+     * @return l'istanza corrente del pannello
+     */
     public static ELvlPanel getIstanza(){
         istanza = new ELvlPanel();
         return istanza;

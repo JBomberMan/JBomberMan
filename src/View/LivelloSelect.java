@@ -8,11 +8,17 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.nio.file.*;
 
+/***
+ * Schermata di selezione dei livelli custom
+ */
 public class LivelloSelect extends JFrame {
 
     int livelli = 0;
     private static LivelloSelect istanza;
 
+    /***
+     * Costruttore del selettore dei livelli
+     */
     private LivelloSelect(){
 
 
@@ -58,6 +64,10 @@ public class LivelloSelect extends JFrame {
 
     }
 
+    /***
+     *
+     * @return l'istanza corrente del selettore
+     */
     public static LivelloSelect getIstanza(){
 
         istanza = new LivelloSelect();

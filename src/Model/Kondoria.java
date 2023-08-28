@@ -7,6 +7,9 @@ import java.io.IOException;
 import java.util.*;
 import javax.imageio.ImageIO;
 
+/**
+ * Classe per rappresentare il nemico Kondoria
+ */
 public class Kondoria  extends MovingEntity implements Collidable{
 
         private static int velocita;
@@ -21,9 +24,17 @@ public class Kondoria  extends MovingEntity implements Collidable{
         public int trovaTimer = 0;
         private Iterator<Coordinate> pathIterator;
         Coordinate prossimaPosizione;
-        
-        
 
+
+    /**
+     * Costruttore che inizializza le variabili e imposta l'immagine del nemico
+     * @param x posizione x
+     * @param y posizione y
+     * @param image immagine del nemico
+     * @param puntiVita punti vita del nemico
+     * @param velocita velocità del nemico
+     * @param play partita
+     */
     public Kondoria(int x, int y,BufferedImage image, int puntiVita, int velocita, Partita play) {
         super(x, y, image, velocita, puntiVita, play);
         this.velocita = 1;
@@ -32,6 +43,9 @@ public class Kondoria  extends MovingEntity implements Collidable{
     }
 
 
+    /**
+     * Metodo per caricare le immagini del nemico
+     */
     public void getEnemiesImage() {
         try {
             up1 = ImageIO.read(getClass().getResourceAsStream("/Images/Kondoria/Kondoria (1).png"));
@@ -52,6 +66,9 @@ public class Kondoria  extends MovingEntity implements Collidable{
         }
     }
 
+    /**
+     * Metodo per aggiornare il nemico
+     */
     @Override
     public void update() {
         if(trovaTimer == 0){
@@ -76,7 +93,9 @@ public class Kondoria  extends MovingEntity implements Collidable{
         
     }
 
-
+    /**
+     * metodo per far muovere il nemico
+     */
     public void muovi(){
 
         if(pathIterator.hasNext()) {
@@ -112,11 +131,12 @@ public class Kondoria  extends MovingEntity implements Collidable{
             spriteCounter = 0;
         }
     }
-        
-    
 
-    
 
+    /**
+     * Metodo per disegnare il nemico
+     * @param g2d il contesto grafico
+     */
     @Override
     public void disegna(Graphics2D g2d) {
         BufferedImage image = down1;
@@ -176,6 +196,10 @@ public class Kondoria  extends MovingEntity implements Collidable{
     }
 
 
+    /**
+     * Metodo per gestire la collisione con un'esplosione
+     * @param e l'esplosione con cui si è verificata la collisione
+     */
     public void handleCollision(Esplosione e){
         if(this.invTimer == 0){
             this.vite--;
@@ -189,6 +213,10 @@ public class Kondoria  extends MovingEntity implements Collidable{
         }
     }
 
+    /**
+     * Metodo per gestire la collisione con un'entitá stazionaria
+     * @param se l'entitá stazionaria con cui si è verificata la collisione
+     */
     public void handleCollision(StationaryEntity se){
         if(!se.isDistruttibile()){
             this.solidCollision(se);
@@ -196,8 +224,10 @@ public class Kondoria  extends MovingEntity implements Collidable{
     }
 
 
-    
-
+    /**
+     * Metodo che implementa la collisione solida tra due entità
+     * @param obj l'entità con cui si è verificata la collisione
+     */
     void solidCollision(GameEntity obj) {
         Rectangle2D intersection = this.hitbox.createIntersection(obj.hitbox);
 
@@ -252,6 +282,10 @@ public class Kondoria  extends MovingEntity implements Collidable{
         }
     }
 
+    /**
+     * Metodo per trovare il percorso più breve tra il nemico ed il bomberman
+     * @return la lista di coordinate che rappresenta il percorso più breve
+     */
     public ArrayList<Coordinate> trovaBomberman(){
 
 
@@ -280,6 +314,16 @@ public class Kondoria  extends MovingEntity implements Collidable{
         return path;
 
     }
+
+    /**
+     * Metodo per trovare il percorso più breve tra due punti
+     * @param bomberx coordinate x del bomberman
+     * @param bombery coordinate y del bomberman
+     * @param mousex coordinate x del nemico
+     * @param mousey coordinate y del nemico
+     * @param map mappa di gioco
+     * @return la lista di coordinate che rappresenta il percorso più breve
+     */
     public static ArrayList<Coordinate> findShortestPath(int bomberx, int bombery, int mousex, int mousey, ArrayList<ArrayList<Integer>> map) {
         int[][] directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}}; // Direzioni possibili: sinistra, destra, alto, basso
         Queue<Coordinate> queue = new LinkedList<>();
@@ -348,8 +392,13 @@ public class Kondoria  extends MovingEntity implements Collidable{
     }
 
 
-
-
+    /**
+     * Metodo per controllare se le coordinate sono valide
+     * @param x coordinate x
+     * @param y coordinate y
+     * @param map mappa di gioco
+     * @return true se le coordinate sono valide, false altrimenti
+     */
     private static boolean isValid(int x, int y, ArrayList<ArrayList<Integer>> map) {
         return x >= 0 && x < map.get(0).size() && y >= 0 && y < map.size();
     }

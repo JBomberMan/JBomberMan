@@ -173,7 +173,8 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
 
         while(gameThread != null){
             tileM.addNumero();
-
+            //1: update delle informazioni su ció che accade su schermo
+            //update();g
 
             //2: disegna il frame
             repaint();
@@ -200,12 +201,8 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
     }
 
 
-    /**
-     * 
-     * Metodo per disegnare i vari elementi del gioco
-     * @param g il contesto grafico
-     * 
-     */ 
+
+
     public void paintComponent(Graphics g){
 
         super.paintComponent(g); //superclasse == Jpanel

@@ -7,6 +7,9 @@ import java.io.IOException;
 import java.util.stream.IntStream;
 import javax.imageio.ImageIO;
 
+/**
+ * classe che modella il boss clown
+ */
 public class Boss1 extends Boss implements Collidable{
 
     private static int velocita;
@@ -17,16 +20,23 @@ public class Boss1 extends Boss implements Collidable{
 
     public Boolean dead = false;
     private Boolean collision = false, incazzato = false;
-    private Polygon hitboxPorcata;
+    private Polygon hitboxSpecial;
 
 
-
-
+    /**
+     * costruttore
+     * @param x coordinate x
+     * @param y coordinate y
+     * @param image immagione iniziale
+     * @param velocita velocità
+     * @param vite vite
+     * @param play riferimento alla partita
+     */
     public Boss1(int x, int y, BufferedImage image, int velocita, int vite, Partita play) {
         super(x, y, image, velocita, vite, play);
         this.velocita = 1;
         this.vite = 10;
-        this.hitboxPorcata = new Polygon(new int[]{this.x + 166,
+        this.hitboxSpecial = new Polygon(new int[]{this.x + 166,
                 this.x + 246, this.x + 294, this.x + 332, this.x + 412, this.x + 412, this.x + 363,
                 this.x + 332, this.x + 304, this.x + 206, this.x + 108, this.x + 80, this.x + 49,
                 this.x + 0, this.x + 0, this.x + 80, this.x + 118}, new int[]{this.y + 0,
@@ -39,6 +49,9 @@ public class Boss1 extends Boss implements Collidable{
 
     }
 
+    /**
+     * metodo per ottenere l'immagine del clown
+     */
     public void getEnemiesImage() {
         try {
             standard = ImageIO.read(getClass().getResourceAsStream("/Images/clown/clown1.png"));
@@ -52,9 +65,12 @@ public class Boss1 extends Boss implements Collidable{
         }
     }
 
+    /**
+     * metodo per aggiornare il clown
+     */
     @Override
     public void update() {
-        this.hitboxPorcata = new Polygon(new int[]{this.x + 166,
+        this.hitboxSpecial = new Polygon(new int[]{this.x + 166,
                 this.x + 246, this.x + 294, this.x + 332, this.x + 412, this.x + 412, this.x + 363,
                 this.x + 332, this.x + 304, this.x + 206, this.x + 108, this.x + 80, this.x + 49,
                 this.x + 0, this.x + 0, this.x + 80, this.x + 118}, new int[]{this.y + 0,
@@ -67,6 +83,9 @@ public class Boss1 extends Boss implements Collidable{
 
     }
 
+    /**
+     * metodo per far muovere il boss
+     */
     @Override
     public void muovi() {
         if(!incazzato){
@@ -83,6 +102,10 @@ public class Boss1 extends Boss implements Collidable{
         }
     }
 
+    /**
+     * metodo per disegnare il boss
+     * @param g2d il contesto grafico
+     */
     @Override
     public void disegna(Graphics2D g2d) {
         BufferedImage sprite = null;
@@ -130,6 +153,10 @@ public class Boss1 extends Boss implements Collidable{
 
     }
 
+    /**
+     * metodo per gestire le collisioni con una entitá stazionaria
+     * @param se entitá stazionaria
+     */
     public void handleCollision(StationaryEntity se){
         if(! collision){
             collision = true;
@@ -139,6 +166,10 @@ public class Boss1 extends Boss implements Collidable{
         }
     }
 
+    /**
+     * metodo per gestire le collisioni con le esplosioni
+     * @param e esplosione
+     */
     public void handleCollision(Esplosione e){
         if(this.invTimer == 0){
             this.vite--;
@@ -154,15 +185,17 @@ public class Boss1 extends Boss implements Collidable{
                 TileManager.removeEntity(this);
                 System.out.println("Nemico Sconfitto!");
             }
-            incazzati();
+            rage();
 
         }
 
     }
 
 
-
-
+    /**
+     * Metodo che implementa la collisione solida tra due entità
+     * @param obj entità con cui si vuole controllare la collisione
+     */
     void solidCollision(GameEntity obj) {
         Rectangle2D intersection = this.hitbox.createIntersection(obj.hitbox);
 
@@ -219,15 +252,19 @@ public class Boss1 extends Boss implements Collidable{
     }
 
 
-    public Polygon getHitboxPorcata() {
-        return this.hitboxPorcata;
+    /**
+     * metodo per ottenere la hitbox del boss
+     * @return hitbox del boss
+     */
+    public Polygon getHitboxSpecial() {
+        return this.hitboxSpecial;
     }
 
 
-
-
-
-    private void incazzati(){
+    /**
+     * metodo per attivare la rage mode del boss
+     */
+    private void rage(){
         incazzato = true;
         int xp = this.x + (standard.getWidth()/2) - 30;
         int yp = this.y + (standard.getHeight()/2) -30;
@@ -237,6 +274,10 @@ public class Boss1 extends Boss implements Collidable{
 
     }
 
+    /**
+     * metodo per controllare che il boss sia morto
+     * @return un booleano che rappresenta se il boss è morto
+     */
     @Override
     public boolean isDead() {
         return this.dead;

@@ -6,7 +6,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.*;
 
-
+/**
+ * classe che implementa un tile manager virtuale per la gestione dei livelli personalizzati
+ */
 public class ETileManager {
 
     ELvlPanel eLvlPanel;
@@ -16,6 +18,10 @@ public class ETileManager {
     static int[][] mapTileNum;
     public static TileObject[][] tiles;
 
+    /**
+     * costruttore
+     * @param eLvlPanel pannello nel quale si trova il tile manager
+     */
     public ETileManager(ELvlPanel eLvlPanel) {
         this.eLvlPanel = eLvlPanel;
         //bomberman = false;
@@ -25,6 +31,10 @@ public class ETileManager {
         getTileImage();
         loadMap();
     }
+
+    /**
+     * metodo per caricare le immagini delle tiles
+     */
     public void getTileImage(){
         try{
             tile[0] = new Tile();
@@ -63,6 +73,9 @@ public class ETileManager {
         }
     }
 
+    /**
+     * metodo per caricare la mappa vuota
+     */
     public void loadMap(){
         try{
             InputStream is = getClass().getResourceAsStream("/FileLivelli/livelloTemplate.txt");
@@ -140,6 +153,13 @@ public class ETileManager {
             e.printStackTrace();
         }
     }
+
+    /**
+     * metodo per aggiungere entitá alla mappa
+     * @param colonna colonna selezionata
+     * @param riga riga selezionata
+     * @param numero numero dell'entitá da aggiungere
+     */
     public static void modificaVista(int colonna, int riga, int numero){
 
         if(colonna == 0 || colonna == 16 || riga == 0 || riga == 12 || (numero == 7 && bomberman)) {
@@ -161,6 +181,11 @@ public class ETileManager {
 
 
     }
+
+    /**
+     * metodo per disegnare la mappa
+     * @param g2d contesto grafico
+     */
     public void disegna(Graphics2D g2d){
         for(int i =0; i< 17; i++){
             for(int j = 0; j<13  ; j ++){
@@ -169,6 +194,9 @@ public class ETileManager {
         }
     }
 
+    /**
+     * metodo per salvare la mappa
+     */
     public static void salvaLivello(){
 
         try{
@@ -242,6 +270,10 @@ public class ETileManager {
 
     }
 
+    /**
+     * metodo per settare la presenza del bomberman
+     * @param b il booleano che rappresenta la presenza del bomberman
+     */
     public static void setBomber(Boolean b){
         bomberman = b;
     }
