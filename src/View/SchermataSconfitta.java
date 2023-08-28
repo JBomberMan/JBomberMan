@@ -1,5 +1,6 @@
 package View;
 import Model.Bomberman;
+import Model.GettoniManager;
 import Model.Partita;
 
 import javax.swing.*;
@@ -45,6 +46,7 @@ public class SchermataSconfitta extends JFrame{
 
             public void actionPerformed(ActionEvent e) {
                 Storico.addSconfitta();
+                Bomberman.resetVite();
                 SwingUtilities.getWindowAncestor(Partita.getIstanza()).dispose();
                 Partita.getIstanza().pulisci();
                 Bomberman.setDead(false);

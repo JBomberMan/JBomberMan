@@ -122,6 +122,7 @@ public class Bottoni extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 ETileManager.salvaLivello();
+                ETileManager.setBomber(false);
                 SwingUtilities.getWindowAncestor(salva).dispose();
 
             }

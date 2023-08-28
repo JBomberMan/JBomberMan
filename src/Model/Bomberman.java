@@ -77,11 +77,16 @@ public class Bomberman implements Collidable {
             return vite;
     }
 
+    public static void resetVite() {
+            gettoni = 1;
+    }
+
     public Rectangle getHitbox() {
             return hitbox;
     }
 
     public void setExtraTime(int extraTime) {
+        play.tempoManager.addSec(extraTime);
     }
     public void setRaggioEsplosione(int raggioEsplosione) {
             play.bombM.setRaggioBombe(raggioEsplosione);

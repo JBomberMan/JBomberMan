@@ -172,7 +172,9 @@ public class ETileManager {
     public static void salvaLivello(){
 
         try{
-            if(!bomberman) {return;}
+            if(!bomberman) {
+                System.out.println("Bomberman non presente");
+                return;}
             String fileName = JOptionPane.showInputDialog("Inserisci nome filge");
             String path = "src/LivelliPersonalizzati";
             File outputfile = new File(path, fileName + ".txt");
@@ -238,5 +240,9 @@ public class ETileManager {
 
 
 
+    }
+
+    public static void setBomber(Boolean b){
+        bomberman = b;
     }
 }

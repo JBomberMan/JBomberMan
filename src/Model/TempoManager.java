@@ -47,4 +47,11 @@ public class TempoManager {
 
         }
     }
+    public void addSec(int s){
+        if(secondi+s > 59){
+            minuti+=1;
+            secondi+= s - 59;
+        }
+        else secondi += s;
+    }
 }

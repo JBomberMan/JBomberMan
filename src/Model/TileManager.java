@@ -53,7 +53,7 @@ public class TileManager {
     private Boss boss;
     public Bomberman bomber;
     private int indexBomberman;
-    private static int livello = 8;
+    private static int livello = 1;
     BufferedReader br;
     File path;
     int numero;
@@ -66,7 +66,7 @@ public class TileManager {
      * @param partita la partita in cui si sta giocando
      * @param keyH il keyhandler che gestisce gli input da tastiera
      *
-     *             inizializza il TileManager, crea le tile, carica la mappa e le entità
+     * inizializza il TileManager, crea le tile, carica la mappa e le entità
      */
     public TileManager(Partita partita, KeyHandler keyH){
         personalizzato = false;
@@ -114,7 +114,7 @@ public class TileManager {
         codaAggiunte.clear();
         codaRimozioni.clear();
         boss = null;
-        path = new File("src/FileLivelli/livello" + livello + ".txt");
+
     }
 
     /***
@@ -362,10 +362,7 @@ public class TileManager {
 
     }
 
-    public void detonaDistanza(){
 
-        BombManager.bombe.forEach(bomba -> bomba.setTimer(0));
-    }
     public void checkCollision(){
 
         stationaryEntities.forEach((entity)->{

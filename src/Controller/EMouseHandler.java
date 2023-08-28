@@ -11,7 +11,6 @@ public class EMouseHandler extends MouseAdapter {
 
     public void mouseClicked(MouseEvent e) {
         if (e.getButton() == MouseEvent.BUTTON1) {
-            System.out.println(e.getX() + " " + e.getY());
             //trova la casella dove si é cliccato
             int mousex = e.getX() / 32;
             int mousey = e.getY() / 32;

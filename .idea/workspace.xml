@@ -5,18 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/LivelliPersonalizzati/livello1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LivelliPersonalizzati/livello5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LivelliPersonalizzati/livello7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LivelliPersonalizzati/livello8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LivelliPersonalizzati/provaquesto.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileLivelli/livello1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileLivelli/livello1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LivelliPersonalizzati/livello2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/LivelliPersonalizzati/livello2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LivelliPersonalizzati/livello3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/LivelliPersonalizzati/livello3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/EMouseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/EMouseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileLivelli/storico.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileLivelli/storico.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LivelliPersonalizzati/prova.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LivelliPersonalizzati/provaplz.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LivelliPersonalizzati/provaprova.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LivelliPersonalizzati/provaquesto.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LivelliPersonalizzati/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Boss1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Boss1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/ETileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ETileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/TileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/SchermataSconfitta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SchermataSconfitta.java" afterDir="false" />
     </list>
-    <list id="d8707499-0969-4e90-8527-29b34c0957ef" name="Changes by Lorenzo" comment="" />
+    <list id="d8707499-0969-4e90-8527-29b34c0957ef" name="Changes by Lorenzo" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Model/Bomberman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Bomberman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/ETileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ETileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/PowerUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/PowerUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/TempoManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/TempoManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/TileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Bottoni.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Bottoni.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +41,23 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/Model/ETileManager.java">
+      <ranges>
+        <range start1="174" end1="175" start2="174" end2="177" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="241" end1="241" start2="243" end2="247" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/Model/TileManager.java">
+      <ranges>
+        <range start1="55" end1="56" start2="55" end2="56" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="68" end1="69" start2="68" end2="69" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="116" end1="117" start2="116" end2="117" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="364" end1="365" start2="364" end2="364" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="366" end1="368" start2="365" end2="365" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -192,7 +218,7 @@
       <workItem from="1692902493827" duration="17000" />
       <workItem from="1692907845308" duration="21000" />
       <workItem from="1692988045862" duration="280000" />
-      <workItem from="1693226276552" duration="817000" />
+      <workItem from="1693226276552" duration="3007000" />
     </task>
     <servers />
   </component>
@@ -222,11 +248,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Model/TileManager.java</url>
-          <line>339</line>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.util.NoSuchElementException" package="java.util" />
           <option name="timeStamp" value="17" />

@@ -7,6 +7,9 @@ import java.util.Random;
 
 public class PowerUp extends StationaryEntity {
     private boolean isRaccolto = false;
+
+
+
     public enum Tipo {
 
         EsplosioneRange(){
@@ -36,7 +39,7 @@ public class PowerUp extends StationaryEntity {
         }
         ,TempoExtra(){
             public void eseguiEffetto(Bomberman b) {
-                b.setExtraTime(20);
+                b.setExtraTime(30);
 
             }
         }
@@ -79,14 +82,11 @@ public class PowerUp extends StationaryEntity {
     }
     public PowerUp(int x, int y, Partita partita) {
         super(x, y, null, partita);
-        this.tipo = getRandomTipo();
+        this.tipo = Tipo.TempoExtra;
         this.isDistruttibile = false;
         this.loadSprite();
     }
-    public PowerUp(int x, int y, BufferedImage image, Partita partita) {
-        super(x, y, image, partita);
-        this.tipo = getRandomTipo();
-    }
+
 
 
 
