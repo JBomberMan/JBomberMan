@@ -12,6 +12,9 @@ public class ProfiloUtente extends JFrame{
     private String avatar;
     private static ProfiloUtente istanza;
 
+    /***
+     * Costruttore della schermata
+     */
     private ProfiloUtente(){
 
         super("JBomberMan");
@@ -90,16 +93,28 @@ public class ProfiloUtente extends JFrame{
 
     }
 
+    /***
+     * Metodo per settare il nickname dell'utente
+     * @param nickname la stringa contenente il nome utente
+     */
     public void setNickname(String nickname) {
         this.nickname = nickname;
         Nickname.getNickname().setNickname(nickname);
     }
 
+    /***
+     * Per cambiare l'immagine dell'avatar a schermo
+     * @param avatar il percorso contenente l'immagine
+     */
     public void setAvatar(String avatar) {
         this.avatar = avatar;
         Avatar.getAvatar().setAvatar(avatar);
     }
 
+    /***
+     *
+     * @return l'istanza corrente della schermata
+     */
     public static ProfiloUtente getProfilo(){
 
         if(istanza == null)
@@ -108,6 +123,9 @@ public class ProfiloUtente extends JFrame{
         return istanza;
     }
 
+    /***
+     * ferma la musica di sottofondo
+     */
     public static void stop(){ //permettere di essere richiamato da altre classi per fermare la musica di sottofondo
         audioManager.stop();
     }

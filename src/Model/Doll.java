@@ -7,6 +7,9 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 
+/**
+ * Classe per rappresentare il nemico Doll
+ */
 public class Doll  extends MovingEntity implements Collidable{
 
         private static int velocita;
@@ -21,9 +24,16 @@ public class Doll  extends MovingEntity implements Collidable{
         public boolean dead = false;
         public int dtimer = 50;
 
-        
-        
 
+    /**
+     * Costruttore
+     * @param x coordinata x
+     * @param y coordinata y
+     * @param image immagine
+     * @param puntiVita punti vita
+     * @param velocita velocità
+     * @param play riferimento a partita
+     */
     public Doll(int x, int y,BufferedImage image, int puntiVita, int velocita, Partita play) {
         super(x, y, image, velocita, puntiVita, play);
         this.velocita = velocita;
@@ -31,6 +41,9 @@ public class Doll  extends MovingEntity implements Collidable{
     }
 
 
+    /**
+     * metodo per caricare le immagini del nemico
+     */
     public void getEnemiesImage() {
         try {
             up1 = ImageIO.read(getClass().getResourceAsStream("/Images/Doll/Doll (1).png"));
@@ -51,6 +64,9 @@ public class Doll  extends MovingEntity implements Collidable{
         }
     }
 
+    /**
+     * metodo per aggiornare il nemico
+     */
     @Override
     public void update() {
         this.hitbox.setBounds(x+5, y+5, play.tileSize-10, play.tileSize-10);
@@ -69,6 +85,9 @@ public class Doll  extends MovingEntity implements Collidable{
         
     }
 
+    /**
+     * metodo per far muovere il nemico
+     */
     @Override
     public void muovi() {
         if(invTimer == 0 && !dead) {
@@ -104,11 +123,12 @@ public class Doll  extends MovingEntity implements Collidable{
             spriteCounter = 0;
         }
     }
-        
-    
 
-    
 
+    /**
+     * metodo per disegnare il nemico
+     * @param g2d il contesto grafico
+     */
     @Override
     public void disegna(Graphics2D g2d) {
         BufferedImage image = down1;
@@ -168,6 +188,10 @@ public class Doll  extends MovingEntity implements Collidable{
     }
 
 
+    /**
+     * metodo per gestire la collisione con un'esplosione
+     * @param e l'esplosione con cui si è verificata la collisione
+     */
     public void handleCollision(Esplosione e){
         if(this.invTimer == 0){
             this.vite--;
@@ -182,18 +206,29 @@ public class Doll  extends MovingEntity implements Collidable{
         }
     }
 
+    /**
+     * metodo per gestire la collisione con un'entitá stazionaria
+     * @param se l'entitá stazionaria con cui si è verificata la collisione
+     */
     public void handleCollision(StationaryEntity se){
         this.solidCollision(se);
         
     }
 
+    /**
+     * metodo per gestire la collisione con una bomba
+     * @param b la bomba con cui si è verificata la collisione
+     */
     public void handleCollision(Bomba b){
         this.solidCollision(b);
             
     }
 
-    
 
+    /**
+     * Metodo che implementa la collisione solida tra due entità
+     * @param obj l'entità con cui si è verificata la collisione
+     */
     void solidCollision(GameEntity obj) {
         Rectangle2D intersection = this.hitbox.createIntersection(obj.hitbox);
 

@@ -7,18 +7,28 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import org.json.*;
 
+/***
+ * Classe che serve per disegnare il nickname a schermo
+ */
 public class Nickname extends JPanel {
 
     private static JLabel nickname;
     private static Nickname istanza;
     private File file = new File("src/FileLivelli/profilo.json");
 
+    /***
+     * Costruttore della classe
+     */
     private Nickname(){
         setNickname();
         setOpaque(false);
         setVisible(true);
     }
 
+    /***
+     * Metodo per settare il nickname corrente
+     * @param nick la stringa contenente il nickname che si vuole
+     */
     public void setNickname(String nick){
 
 
@@ -34,6 +44,9 @@ public class Nickname extends JPanel {
 
     }
 
+    /***
+     * Per settare il nickname di default
+     */
     public void setNickname(){
 
         try{
@@ -50,6 +63,10 @@ public class Nickname extends JPanel {
         }
     }
 
+    /***
+     *
+     * @return l'istanza corrente del nickname
+     */
     public static Nickname getNickname(){
 
         istanza = new Nickname();

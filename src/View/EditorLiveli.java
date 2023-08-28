@@ -3,8 +3,13 @@ package View;
 import javax.swing.*;
 import java.awt.*;
 
+/***
+ * Classe per visualizzare a schermo l'editor dei livelli
+ */
 public class EditorLiveli extends JFrame {
-
+    /***
+     * Costruttore dell'editor
+     */
     public EditorLiveli(){
 
         setLayout(new GridBagLayout());

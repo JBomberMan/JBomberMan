@@ -2,13 +2,10 @@ package Model;
 
 import Controller.KeyHandler;
 
-import View.ProfiloUtente;
 import View.SchermataCompletamento;
 import View.SchermataVittoria;
-import View.Storico;
 
 import javax.imageio.ImageIO;
-import javax.swing.*;
 import java.awt.*;
 import java.io.*;
 import java.util.ArrayList;
@@ -410,7 +407,7 @@ public class TileManager {
             if(boss != null){
                 if(!boss.isDead()) {
                     if(hitboxSpecial){
-                        if (boss.getHitboxPorcata().intersects(e.getHitbox())) {
+                        if (boss.getHitboxSpecial().intersects(e.getHitbox())) {
                             boss.handleCollision(e);
                         }
                     }
@@ -429,7 +426,7 @@ public class TileManager {
             if(!boss.isDead()) {
 
                 if(hitboxSpecial){
-                    if (boss.getHitboxPorcata().intersects(bomber.getHitbox())){
+                    if (boss.getHitboxSpecial().intersects(bomber.getHitbox())){
                         bomber.handleCollision(boss);
                     }
                 }

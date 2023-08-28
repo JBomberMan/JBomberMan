@@ -6,6 +6,9 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * Classe per modellare l'esplosione
+ */
 public class Esplosione extends StationaryEntity implements Disegnabile {
 
     int raggio;
@@ -16,7 +19,15 @@ public class Esplosione extends StationaryEntity implements Disegnabile {
     private boolean espaso = false;
 
 
-
+    /**
+     * Costruttore dell'esplosione
+     * @param raggio raggio dell'esplosione
+     * @param Sprite sprite dell'esplosione
+     * @param x posizione x dell'esplosione
+     * @param y posizione y dell'esplosione
+     * @param play partita in cui si trova l'esplosione
+     * @param direzione direzione dell'esplosione
+     */
     public Esplosione(int raggio, BufferedImage Sprite, int x, int y, Partita play, String direzione){
         super(x, y, Sprite, play);
         this.raggio = raggio;
@@ -54,6 +65,9 @@ public class Esplosione extends StationaryEntity implements Disegnabile {
 
     }
 
+    /**
+     * Metodo per espandere l'esplosione
+     */
     public void espandi() {
         if (!espaso && this.direzione.equals("centrale")) {
             TileManager.AggiungiACoda(new Esplosione(raggio - 1, sprite, x, y, play, "destra"));
@@ -67,6 +81,10 @@ public class Esplosione extends StationaryEntity implements Disegnabile {
             espaso = true;}
 
     }
+
+    /**
+     * Metodo per aggiornare l'esplosione
+     */
     @Override
     public void update() {
 
@@ -78,6 +96,10 @@ public class Esplosione extends StationaryEntity implements Disegnabile {
 
     }
 
+    /**
+     * Metodo per disegnare l'esplosione
+     * @param g2 il contesto grafico
+     */
     @Override
     public void disegna(Graphics2D g2) {
         update();

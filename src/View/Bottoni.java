@@ -8,12 +8,17 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/***
+ * Rappresenta i bottoni che vengono utilizzati all'interno dell'editor
+ */
 public class Bottoni extends JPanel {
 
     private static Bottoni istanza;
 
 
-
+    /***
+     * Costruttore dei vari bottoni per selezionare quale oggetto selezionare
+     */
     private Bottoni(){
         setLayout(new GridLayout(5,2));
         ImageIcon grass = new ImageIcon("src/Images/grass.png");

@@ -6,25 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/EMouseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/EMouseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/KeyHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/MouseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MouseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileLivelli/livello8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileLivelli/livello8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Baloon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Baloon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Bomba.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Bomba.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/BombManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/BombManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/Bomberman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Bomberman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Boss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Boss1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Boss1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Boss2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Boss2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Collidable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Collidable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Coordinate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Coordinate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Disegnabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Disegnabile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/TileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/SchermataCompletamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SchermataCompletamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/SchermataSconfitta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SchermataSconfitta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/SchermataVittoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SchermataVittoria.java" afterDir="false" />
     </list>
     <list id="d8707499-0969-4e90-8527-29b34c0957ef" name="Changes by Lorenzo" comment="">
-      <change beforePath="$PROJECT_DIR$/src/View/Punteggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Punteggio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/SchermataSconfitta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SchermataSconfitta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/SchermataVittoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SchermataVittoria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Storico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Storico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Tempo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Tempo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Vite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Vite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/ELvlPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/ELvlPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Gettoni.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Gettoni.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/LivelloSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/LivelloSelect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Nickname.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Nickname.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/ProfiloUtente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/ProfiloUtente.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,24 +39,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/View/SchermataSconfitta.java">
-      <ranges>
-        <range start1="10" end1="10" start2="10" end2="13" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
-        <range start1="17" end1="18" start2="20" end2="23" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
-        <range start1="74" end1="74" start2="79" end2="83" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/View/SchermataVittoria.java">
-      <ranges>
-        <range start1="9" end1="9" start2="9" end2="12" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
-        <range start1="18" end1="19" start2="21" end2="25" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
-        <range start1="74" end1="75" start2="80" end2="81" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
-        <range start1="88" end1="88" start2="94" end2="99" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
-        <range start1="98" end1="98" start2="109" end2="113" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -219,7 +199,7 @@
       <workItem from="1692902493827" duration="17000" />
       <workItem from="1692907845308" duration="21000" />
       <workItem from="1692988045862" duration="280000" />
-      <workItem from="1693226276552" duration="4452000" />
+      <workItem from="1693226276552" duration="5838000" />
     </task>
     <servers />
   </component>
@@ -255,7 +235,7 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Model/TileManager.java</url>
-          <line>155</line>
+          <line>152</line>
           <properties class="Model.TileManager" method="loadMap">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
