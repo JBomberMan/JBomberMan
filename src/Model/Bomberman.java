@@ -13,6 +13,9 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+/**
+ * Classe per rappresentare il bomberman
+ */
 public class Bomberman implements Collidable {
     private int invTimer = 0;
     private int score = 0;
@@ -48,6 +51,16 @@ public class Bomberman implements Collidable {
         return gettoni;
     }
 
+    /**
+     * Costruttore del bomberman
+     * @param x posizione x
+     * @param y posizione y
+     * @param image immagine del bomberman
+     * @param puntiVita punti vita
+     * @param velocita velocità
+     * @param keyH riferimento a keyhandler
+     * @param play riferimento a partita
+     */
     public Bomberman(int x, int y,BufferedImage image, int puntiVita, int velocita, KeyHandler keyH, Partita play) {
         Bomberman.x = x;
         Bomberman.y = y;
@@ -63,35 +76,72 @@ public class Bomberman implements Collidable {
         movimentoMouse = false;
     }
 
+    /**
+     * Metodo per avere la posizione x del bomberman
+     * @return posizione x
+     */
     public static int getX() {
             return x;
     }
+
+    /**
+     * Metodo per avere la posizione y del bomberman
+     * @return posizione y
+     */
     public static int getY() {
             return y;
     }
 
+    /**
+     * Metodo per settare il bomberman come morto
+     * @param death booleano che indica se il bomberman è morto
+     */
     public static void setDead(Boolean death){
         dead = death;
     }
+
+    /**
+     * Metodo per avere le vite del bomberman
+     * @return vite
+     */
     public static int getVite() {
             return vite;
     }
 
+    /**
+     * metodo per resettare i getoni del bomberman
+     */
     public static void resetVite() {
             gettoni = 1;
     }
 
+    /**
+     * metodo per avere la hitbox del bomberman
+     * @return hitbox
+     */
     public Rectangle getHitbox() {
             return hitbox;
     }
 
+    /**
+     * metodo per aggiungere tempo di vita al bomberman
+     * @param extraTime il tempo da aggiungere
+     */
     public void setExtraTime(int extraTime) {
         play.tempoManager.addSec(extraTime);
     }
+
+    /**
+     * metodo per settare il raggio delle eslosioni
+     * @param raggioEsplosione il raggio delle esplosioni
+     */
     public void setRaggioEsplosione(int raggioEsplosione) {
             play.bombM.setRaggioBombe(raggioEsplosione);
     }
 
+    /**
+     * metodo per caricare le immagini del bomberman
+     */
     public void getPlayerImage() {
             try {
                 up1 = ImageIO.read(getClass().getResourceAsStream("/Images/BomberMan_up1.png"));
@@ -112,6 +162,10 @@ public class Bomberman implements Collidable {
             }
         }
 
+    /**
+     * metodo per gestire il movimento con mouse del bomberman
+     * @param pathh Percorso di coordinate da far intraprendere al bomberman
+     */
     public static void switchMovimentoMouse(ArrayList<Coordinate> pathh) {
         movimentoMouse = !movimentoMouse;
         path = pathh;
@@ -130,7 +184,9 @@ public class Bomberman implements Collidable {
     }
 
 
-
+    /**
+     * metodo per gestire il movimento del bomberman
+     */
     public void muovi(){
         if(!dead){
             if(movimentoMouse){
@@ -172,7 +228,10 @@ public class Bomberman implements Collidable {
     }
 
 
-
+    /**
+     * metodo per disegnare il bomberman
+     * @param g2 il contesto grafico
+     */
     public void disegna(Graphics2D g2) {
 
         BufferedImage image = down1;
@@ -231,6 +290,9 @@ public class Bomberman implements Collidable {
 
     }
 
+    /**
+     * metodo per aggiornare lo stato del bomberman
+     */
     public void update(){
         this.hitbox.setBounds(x+10, y+10, play.tileSize-10, play.tileSize-10);
         muovi();
@@ -252,6 +314,10 @@ public class Bomberman implements Collidable {
         }
     }
 
+    /**
+     * metodo per gestire la collisione con un'entità stazionaria
+     * @param e l'entità stazionaria con cui si è verificata la collisione
+     */
     @Override
     public void handleCollision(StationaryEntity e) {
             if(powerUps.get(PowerUp.Tipo.SuperaBlocchi) > 0 && e.isDistruttibile){
@@ -263,10 +329,18 @@ public class Bomberman implements Collidable {
             }
     }
 
+    /**
+     * metodo per gestire la collisione con un powerup
+     * @param p il powerup con cui si è verificata la collisione
+     */
     public void handleCollision(PowerUp p){
             p.raccogli(this);
     }
 
+    /**
+     * metodo per gestire la collisione con una bomba
+     * @param b la bomba con cui si è verificata la collisione
+     */
     public void handleCollision(Bomba b){
 
             if(powerUps.get(PowerUp.Tipo.SuperaBombe) > 0){
@@ -276,10 +350,18 @@ public class Bomberman implements Collidable {
             }
     }
 
+    /**
+     * metodo per settare lo score del bomberman
+     * @param score incremento
+     */
     public void setScore(int score){
             this.play.punteggioManager.addPunteggio(score);
     }
 
+    /**
+     * metodo per gestire la collisione con un'esplosione
+     * @param e l'esplosione con cui si è verificata la collisione
+     */
     public void handleCollision(Esplosione e){
             if(this.invTimer == 0){
                 this.vite--;
@@ -292,6 +374,10 @@ public class Bomberman implements Collidable {
 
     }
 
+    /**
+     * metodo per gestire la collisione con un nemico
+     * @param n il nemico con cui si è verificata la collisione
+     */
     public void handleCollision(MovingEntity n){
 
         if(this.invTimer == 0){
@@ -307,6 +393,10 @@ public class Bomberman implements Collidable {
 
     }
 
+    /**
+     * metodo per aggiungere un powerup alla mappa
+     * @param p il tipo di powerup da aggiungere
+     */
     public void addToMap(PowerUp.Tipo p){
             if(powerUps.containsKey(p)){
                 powerUps.put(p ,600);
@@ -316,10 +406,19 @@ public class Bomberman implements Collidable {
             }
     }
 
+    /**
+     * metodo per settare le vite del bomberman
+     * @param vite il numero di vite da settare
+     */
     public void setVite(int vite){
         this.vite += vite;
     }
 
+
+    /**
+     *
+     * @param obj
+     */
     void solidCollision(GameEntity obj) {
         Rectangle2D intersection = this.hitbox.createIntersection(obj.hitbox);
 

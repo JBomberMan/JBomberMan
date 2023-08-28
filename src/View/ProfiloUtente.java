@@ -3,6 +3,9 @@ package View;
 import javax.swing.*;
 import java.awt.*;
 
+/***
+ * Classe che rappresenta la schermata iniziale del gioco
+ */
 public class ProfiloUtente extends JFrame{
     static AudioManager audioManager = new AudioManager(); //i panel hanno bisogno di un audio manager, quindi lo dichiaro statico
     private String nickname;

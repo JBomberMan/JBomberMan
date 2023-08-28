@@ -7,6 +7,9 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+/**
+ * Classe per rappresentare il nemico Baloon
+ */
 public class Baloon  extends MovingEntity implements Collidable{
 
         private int velocita;
@@ -20,9 +23,16 @@ public class Baloon  extends MovingEntity implements Collidable{
         private int invTimer;
         public boolean dead = false;
         public int dtimer = 50;
-        
-        
 
+    /**
+     * Costruttore del nemico Baloon
+     * @param x coordinata x iniziale
+     * @param y coordinata y iniziale
+     * @param image immagine del nemico
+     * @param puntiVita punti vita del nemico
+     * @param velocita velocità del nemico
+     * @param play riferimento alla partita
+     */
     public Baloon(int x, int y,BufferedImage image, int puntiVita, int velocita, Partita play) {
         super(x, y, image, velocita, puntiVita, play);
         this.velocita = velocita;
@@ -30,6 +40,9 @@ public class Baloon  extends MovingEntity implements Collidable{
     }
 
 
+    /**
+     * Metodo che carica gli sprite del nemico
+     */
     public void getEnemiesImage() {
         try {
             up1 = ImageIO.read(getClass().getResourceAsStream("/Images/Baloon/Baloon (1).png"));
@@ -50,6 +63,9 @@ public class Baloon  extends MovingEntity implements Collidable{
         }
     }
 
+    /**
+     *Metodo che gestisce l'aggiornamento del nemico
+     */
     @Override
     public void update() {
         this.hitbox.setBounds(x+5, y+5, play.tileSize-10, play.tileSize-10);
@@ -64,6 +80,9 @@ public class Baloon  extends MovingEntity implements Collidable{
         
     }
 
+    /**
+     * Metodo che gestisce i movimenti del nemico
+     */
     @Override
     public void muovi() {
         if(invTimer == 0 && !dead) {
@@ -101,6 +120,10 @@ public class Baloon  extends MovingEntity implements Collidable{
     }
 
 
+    /**
+     * Metodo che gestisce il disegno del nemico
+     * @param g2d il contesto grafico
+     */
     @Override
     public void disegna(Graphics2D g2d) {
         BufferedImage image = down1;
@@ -160,6 +183,10 @@ public class Baloon  extends MovingEntity implements Collidable{
     }
 
 
+    /**
+     * Metodo che gestisce le collisioni del nemico con le esplosioni
+     * @param e Esplosione con cui si è verificata la collisione
+     */
     public void handleCollision(Esplosione e){
         if(this.invTimer == 0){
             this.vite--;
@@ -173,6 +200,10 @@ public class Baloon  extends MovingEntity implements Collidable{
         }
     }
 
+    /**
+     * Metodo che gestisce le collisioni del nemico con le entità stazionarie
+     * @param se Entità stazionaria con cui si è verificata la collisione
+     */
     public void handleCollision(StationaryEntity se){
         if(se.isDistruttibile){
         }
@@ -184,6 +215,10 @@ public class Baloon  extends MovingEntity implements Collidable{
         
     }
 
+    /**
+     * Metodo che gestisce le collisioni del nemico con le bombe
+     * @param b Bomba con cui si è verificata la collisione
+     */
     public void handleCollision(Bomba b){
         this.solidCollision(b);
         probabilitàDirezione = (probabilitàDirezione +1) % 4;
@@ -191,8 +226,11 @@ public class Baloon  extends MovingEntity implements Collidable{
             
     }
 
-    
 
+    /**
+     * Metodo che implementa la collisione solida tra due entità
+     * @param obj entità con cui si è verificata la collisione
+     */
     void solidCollision(GameEntity obj) {
         Rectangle2D intersection = this.hitbox.createIntersection(obj.hitbox);
 

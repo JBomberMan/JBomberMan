@@ -5,16 +5,26 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.*;
 
+/**
+ * Classe che gestisce il movimento del bomberman tramite mouse
+ */
 public class MouseHandler extends MouseAdapter{
 
     private Partita play;
 
+    /**
+     * Costruttore
+     * @param play riferimento alla partita
+     */
     public MouseHandler(Partita play){
         this.play = play;
     }
 
 
-
+    /**
+     * Metodo che gestisce il click del mouse
+     * @param e evento del mouse
+     */
     public void mouseClicked(MouseEvent e){
         if (e.getButton() == MouseEvent.BUTTON1){
             System.out.println(e.getX() + " " + e.getY());
@@ -69,6 +79,15 @@ public class MouseHandler extends MouseAdapter{
 
     }
 
+    /**
+     * Metodo che trova il percorso più breve tra due punti
+     * @param bomberx posizione x del bomberman
+     * @param bombery posizione y del bomberman
+     * @param mousex posizione x del mouse
+     * @param mousey posizione y del mouse
+     * @param map mappa di gioco
+     * @return lista di coordinate che rappresentano il percorso più breve
+     */
     public static ArrayList<Coordinate> findShortestPath(int bomberx, int bombery, int mousex, int mousey, ArrayList<ArrayList<Integer>> map) {
         int[][] directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}}; // Direzioni possibili: sinistra, destra, alto, basso
         Queue<Coordinate> queue = new LinkedList<>();
@@ -134,6 +153,13 @@ public class MouseHandler extends MouseAdapter{
         return path;
     }
 
+    /**
+     * Metodo che controlla se una casella è valida
+     * @param x coordinata x della casella
+     * @param y coordinata y della casella
+     * @param map mappa di gioco
+     * @return booleano che indica se la casella è valida
+     */
     private static boolean isValid(int x, int y, ArrayList<ArrayList<Integer>> map) {
         return x >= 0 && x < map.get(0).size() && y >= 0 && y < map.size();
     }

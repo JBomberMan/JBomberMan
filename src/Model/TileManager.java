@@ -53,7 +53,7 @@ public class TileManager {
     private Boss boss;
     public Bomberman bomber;
     private int indexBomberman;
-    private static int livello = 1;
+    private static int livello = 8;
     BufferedReader br;
     File path;
     int numero;

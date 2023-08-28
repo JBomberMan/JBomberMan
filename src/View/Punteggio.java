@@ -3,8 +3,17 @@ package View;
 import javax.imageio.ImageIO;
 import java.awt.*;
 
+/***
+ * Classe per rappresentare a schermo il punteggio attuale
+ */
 public class Punteggio {
-
+    /***
+     *
+     * @param g il contesto grafico
+     * @param x la posizione x in cui deve essere disegnato il punteggio
+     * @param y la posizione y in cui devve essere disegnato il punteggio
+     * @param punteggio il valore attuale del punteggio
+     */
     public void disegna(Graphics2D g, int x, int y, int punteggio){
         g.setColor(Color.BLACK);
         g.setFont(new Font("Arial", Font.BOLD, 20));

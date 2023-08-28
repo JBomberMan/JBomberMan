@@ -8,6 +8,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/***
+ * Schermata che appare ad ogni sconfitta
+ */
 public class SchermataSconfitta extends JFrame{
 
     private JButton tornaALMenu;
@@ -15,7 +18,9 @@ public class SchermataSconfitta extends JFrame{
     private static SchermataSconfitta istanza;
     private Image bgImage;
 
-
+    /***
+     * Il costruttore della schermata
+     */
     private SchermataSconfitta(){
 
         setSize(300, 300);
@@ -72,6 +77,10 @@ public class SchermataSconfitta extends JFrame{
 
     }
 
+    /***
+     *
+     * @return l'istanza corrente della schermata
+     */
     public static SchermataSconfitta getIstanza(){
 
         istanza = new SchermataSconfitta();

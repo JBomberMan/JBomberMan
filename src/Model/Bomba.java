@@ -6,6 +6,9 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * Classe per rappresentare la bomba
+ */
 public class Bomba extends GameEntity {
     private int raggio; // Raggio della bomba
     private int timer; // Timer della bomba
@@ -15,6 +18,14 @@ public class Bomba extends GameEntity {
     Partita play;
     Boolean esplosa = false;
 
+    /**
+     * Costruttore della bomba
+     * @param x coordinate x della bomba
+     * @param y coordinate y della bomba
+     * @param image immagine della bomba
+     * @param play partita in cui si trova la bomba
+     * @param raggio raggio della bomba
+     */
     public Bomba(int x, int y,BufferedImage image, Partita play, int raggio) {
         super(x, y, image);
         this.play = play;
@@ -25,11 +36,9 @@ public class Bomba extends GameEntity {
         this.raggio = raggio; //per debug, da modificare andando a vedere quanto é il raggio effettivo della bomba
     }
 
-    public void setTimer(int timer) {
-        this.timer = timer;
-        System.out.println("Timer settato a " + timer);
-    }
-
+    /**
+     * Metodo per caricare le immagini dell'animazione
+     */
     private void loadAnimationFrames() {
         try {
             // Load the animation frames
@@ -45,6 +54,10 @@ public class Bomba extends GameEntity {
         }
     }
 
+    /**
+     * Metodo per disegnare la bomba
+     * @param g2 il contesto grafico
+     */
     @Override
     public void disegna(Graphics2D g2) {
         update();
@@ -56,6 +69,9 @@ public class Bomba extends GameEntity {
 
     }
 
+    /**
+     * Metodo che aggiorna l'animazione della bomba
+     */
     @Override
     public void update() {
         if(timing%20 == 0){
@@ -70,6 +86,9 @@ public class Bomba extends GameEntity {
         }
     }
 
+    /**
+     * Metodo che fa esplodere la bomba
+     */
     public void esplodi(){
         BombManager.addEsplosione(new Esplosione(raggio,null,x,y,play,"centrale"));
     }

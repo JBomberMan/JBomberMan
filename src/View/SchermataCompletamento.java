@@ -55,6 +55,7 @@ public class SchermataCompletamento extends JFrame {
 
             public void actionPerformed(ActionEvent e) {
 
+                Storico.addVittoria();
                 SwingUtilities.getWindowAncestor(Partita.getIstanza()).dispose();
                 dispose();
                 Partita.getIstanza().pulisci();

@@ -6,17 +6,26 @@ import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+/***
+ * Rappresenta lo storico delle partite giocate
+ */
 public class Storico extends JPanel {
 
     private static JLabel storico;
     private static Storico istanza;
-    private static String percorso = new String("src/FileLivelli/storico.json");
+    private static String percorso = "src/FileLivelli/storico.json";
 
+    /***
+     * costruttore dello storico
+     */
     private Storico(){
         setStorico();
         setVisible(true);
     }
 
+    /***
+     * Carica lo storico all'interno del gioco
+     */
     private void setStorico(){
         try{
             File file = new File(percorso);
@@ -30,7 +39,9 @@ public class Storico extends JPanel {
             e.printStackTrace();
         }
     }
-
+    /***
+     * Serve ad aggiungere una vittoria all'interno del file dello storico
+     */
     public static void addVittoria(){
         try{
             File file = new File(percorso);
@@ -47,6 +58,9 @@ public class Storico extends JPanel {
         }
     }
 
+    /***
+     * Serve ad aggiungere una sconfitta all'interno del file dello storico
+     */
     public static void addSconfitta(){
         try{
             File file = new File(percorso);
@@ -63,6 +77,10 @@ public class Storico extends JPanel {
         }
     }
 
+    /***
+     * Metodo per ottenere l'istanza corrente dello storico
+     * @return istanza dello storico
+     */
     public static Storico getStorico(){
 
         istanza = new Storico();

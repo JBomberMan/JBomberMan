@@ -5,12 +5,19 @@ import Model.Partita;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+/**
+ * Classe che gestisce gli input da tastiera
+ */
 public class KeyHandler implements KeyListener {
 
     public Boolean up, down, left, right, space, e;
     private int spaceTiming = 0;
     Partita play;
 
+    /**
+     * Costruttore
+     * @param play riferimento alla partita
+     */
     public KeyHandler(Partita play){
         up = false;
         down = false;
@@ -21,6 +28,9 @@ public class KeyHandler implements KeyListener {
         this.play = play;
     }
 
+    /**
+     * Pulisce gli input
+     */
     public void pulisci(){
         up = false;
         down = false;
@@ -31,13 +41,19 @@ public class KeyHandler implements KeyListener {
     }
 
 
-
-
+    /**
+     * Metodo invocato quando un tasto viene premuto
+     * @param e evento generato
+     */
     @Override
     public void keyTyped(KeyEvent e) {
 
     }
 
+    /**
+     * Metodo invocato quando un tasto viene rilasciato
+     * @param event evento generato
+     */
     @Override
     public void keyPressed(KeyEvent event) {
 
@@ -69,6 +85,10 @@ public class KeyHandler implements KeyListener {
 
     }
 
+    /**
+     * Metodo invocato quando un tasto viene rilasciato
+     * @param e evento generato
+     */
     @Override
     public void keyReleased(KeyEvent e) {
 

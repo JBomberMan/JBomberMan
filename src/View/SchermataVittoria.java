@@ -7,6 +7,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/***
+ * La finestra utilizzata ogni volta che si vince un livello
+ */
 public class SchermataVittoria extends JFrame {
 
     private JButton tornaALMenu;
@@ -16,7 +19,10 @@ public class SchermataVittoria extends JFrame {
     private Boolean personalizzato;
     private Image bgImage;
 
-
+    /***
+     * Costruttore della schermata
+     * @param persona serve al costruttore per capire se il ivello giocato è uno principale o uno custom e i base al livello ha un comportamento diverso
+     */
     private SchermataVittoria(Boolean persona){
 
         this.personalizzato = persona;
@@ -72,7 +78,7 @@ public class SchermataVittoria extends JFrame {
             public void actionPerformed(ActionEvent e) {
 
 
-                //TODO avvia il prossimo livello
+
                 Partita.getIstanza().riavvia();
                 Partita.getIstanza().startGameThread();
                 dispose();
@@ -86,6 +92,11 @@ public class SchermataVittoria extends JFrame {
 
     }
 
+    /***
+     * Metodo per ritornare l'istanza corrente della schermata
+     * @param pers per indicarese il livello è personalizzato o meno
+     * @return l'istanza della scermata
+     */
     public static SchermataVittoria getIstanza(Boolean pers){
         if(istanza==null){
             istanza = new SchermataVittoria(pers);
@@ -96,6 +107,10 @@ public class SchermataVittoria extends JFrame {
         return istanza;
     }
 
+    /***
+     * serve a modificare ogni volta la schermata
+     * @param b indica se il livello è personalizzato o meno
+     */
     public void setPersonalizzato(Boolean b){
         this.personalizzato = b;
         setSize(400, 250);
