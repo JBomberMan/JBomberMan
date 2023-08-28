@@ -7,7 +7,9 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 
-
+/**
+ * Classe per rappresentare il nemico Ovapi
+ */
 public class Ovapi  extends MovingEntity implements Collidable{
 
         private static int velocita;
@@ -22,14 +24,24 @@ public class Ovapi  extends MovingEntity implements Collidable{
         public int dtimer = 50;
         
         
-
+    /**
+     * Costruttore del nemico Ovapi
+     * @param x coordinata x iniziale
+     * @param y coordinata y iniziale
+     * @param image immagine del nemico
+     * @param puntiVita punti vita del nemico
+     * @param velocita velocità del nemico
+     * @param play riferimento alla partita
+     */
     public Ovapi(int x, int y,BufferedImage image, int puntiVita, int velocita, Partita play) {
         super(x, y, image, velocita, puntiVita, play);
         this.velocita = velocita;
         getEnemiesImage();
     }
 
-
+    /**
+     * Metodo che carica gli sprite del nemico
+     */
     public void getEnemiesImage() {
         try {
             up1 = ImageIO.read(getClass().getResourceAsStream("/Images/Ovapi/Ovapi (1).png"));
@@ -50,6 +62,10 @@ public class Ovapi  extends MovingEntity implements Collidable{
         }
     }
 
+
+    /**
+     *Metodo che gestisce l'aggiornamento del nemico
+     */
     @Override
     public void update() {
         this.hitbox.setBounds(x+5, y+5, play.tileSize-10, play.tileSize-10);
@@ -64,6 +80,10 @@ public class Ovapi  extends MovingEntity implements Collidable{
         
     }
 
+
+    /**
+     * Metodo che gestisce i movimenti del nemico
+     */
     @Override
     public void muovi() {
         if(invTimer == 0 && !dead) {
@@ -91,7 +111,10 @@ public class Ovapi  extends MovingEntity implements Collidable{
     
 
     
-
+    /**
+     * Metodo che gestisce il disegno del nemico
+     * @param g2d il contesto grafico
+     */
     @Override
     public void disegna(Graphics2D g2d) {
         BufferedImage image = down1;
@@ -150,7 +173,10 @@ public class Ovapi  extends MovingEntity implements Collidable{
         g2d.drawImage(image, x, y, play.tileSize, play.tileSize, null);
     }
 
-
+    /**
+     * Metodo che gestisce le collisioni del nemico con le esplosioni
+     * @param e Esplosione con cui si è verificata la collisione
+     */
     public void handleCollision(Esplosione e){
         if(this.invTimer == 0){
             this.vite--;
@@ -164,12 +190,22 @@ public class Ovapi  extends MovingEntity implements Collidable{
         }
     }
 
+
+    /**
+     * Metodo che gestisce le collisioni del nemico con le entità stazionarie
+     * @param se Entità stazionaria con cui si è verificata la collisione
+     */
     public void handleCollision(StationaryEntity se){
         this.solidCollision(se);
         probabilitàDirezione = (probabilitàDirezione + 1) % 2;
         
     }
 
+
+    /**
+     * Metodo che gestisce le collisioni del nemico con le bombe
+     * @param b Bomba con cui si è verificata la collisione
+     */
     public void handleCollision(Bomba b){
         this.solidCollision(b);
         probabilitàDirezione = (probabilitàDirezione + 1) % 2;
@@ -177,7 +213,10 @@ public class Ovapi  extends MovingEntity implements Collidable{
     }
 
     
-
+    /**
+     * Metodo che implementa la collisione solida tra due entità
+     * @param obj entità con cui si è verificata la collisione
+     */
     void solidCollision(GameEntity obj) {
         Rectangle2D intersection = this.hitbox.createIntersection(obj.hitbox);
 

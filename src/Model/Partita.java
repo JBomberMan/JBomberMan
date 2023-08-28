@@ -5,6 +5,9 @@ import Controller.*;
 import java.awt.*;
 import javax.swing.*;
 
+/**
+ * Classe che rappresenta e gestisce il thread su cui gira l'intero gioco
+ */
 public class Partita extends JPanel implements Runnable{ //equivale a GamePanel del tizio dei video che sto freebootando
 
 
@@ -43,7 +46,11 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
     private static Partita istanza;
     private MouseHandler mouseHandler = new MouseHandler(this); //gestisce gli input da mouse
 
-
+    /**
+     * 
+     * Costruttore della partita in caso si voglia giocare i livelli standard
+     * 
+     */  
     public Partita() {
         tileM = new TileManager(this, keyHandler);
         istanza = this;
@@ -62,6 +69,11 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
         this.setFocusable(true); //perché il pannello possa ricevere gli input da tastiera
     }
 
+    /**
+     * 
+     * Costruttore della partita in caso si voglia giocare uno dei livelli personalizzati
+     * @param livello è il percorso verso il file personalizzato salvato in locale
+     */
     public Partita(String livello) {
         tileM = new TileManager(this, keyHandler, livello);
         istanza = this;
@@ -79,6 +91,11 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
         this.setFocusable(true); //perché il pannello possa ricevere gli input da tastiera
     }
 
+    /**
+     * 
+     * Metodo che riavvia il gioco ricaricando il livello 
+     * 
+     */  
     public void riavvia(){
         //resetta il thread
         gameThread = null;
@@ -98,6 +115,11 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
 
     }
 
+    /**
+     * 
+     * Metodo che rimuove tutte le entita e resetta il tempo
+     * 
+     */ 
     public void pulisci(){
         gameThread = null;
 
@@ -113,6 +135,11 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
         tileM.pulisci();
     }
 
+    /**
+     * 
+     * Metodo che avvia il thread su cui gira il metodo run()
+     * 
+     */ 
     public void startGameThread(){
         if(gameThread == null){
             gameThread = new Thread(this); //crea il thread
@@ -120,11 +147,21 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
         }
     }
 
+    /**
+     * 
+     * Metodo per avere l'istanza della Partita
+     * @return istanza 
+     * 
+     */ 
     public static Partita getIstanza(){
         return istanza;
     }
 
-
+    /**
+     * 
+     * Metodo eseguito dal thread contiene il gameloop per sincronizzare il gioco con i vari aggiornamenti 
+     * 
+     */ 
     @Override
     public void run() { //il metodo che viene eseguito dal thread
                         //implementa il game loop fintanto che il thread esiste
@@ -184,6 +221,11 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
 
     }
 
+    /**
+     * 
+     * Metodo per stoppare il thread e quindi la funzione run()
+     * 
+     */ 
     public static void stopGameThread(){
         gameThread.stop();
          //ferma il thread
