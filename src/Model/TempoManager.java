@@ -1,10 +1,11 @@
 package Model;
-
-import Model.Bomberman;
 import View.Tempo;
 
 import java.awt.*;
 
+/**
+ * Classe per gestire il tempo di gioco
+ */
 public class TempoManager {
 
     private int minuti;
@@ -15,6 +16,9 @@ public class TempoManager {
     private int x;
     private int y;
 
+    /**
+     * Costruttore della classe TempoManager
+     */
     public TempoManager(){
         minuti = 5;
         secondi = 0;
@@ -25,11 +29,18 @@ public class TempoManager {
     }
 
 
+    /**
+     * metodo per resettare il tempo
+     */
     public void resetTempo(){
         minuti = 5;
         secondi = 0;
     }
 
+    /**
+     * metodo per disegnare il tempo
+     * @param g il contesto grafico
+     */
     public void disegna(Graphics2D g){
         if(System.currentTimeMillis() - countdown >= 1000){
             countdown = System.currentTimeMillis();
@@ -47,6 +58,11 @@ public class TempoManager {
 
         }
     }
+
+    /**
+     * metodo per aggiungere secondi al tempo
+     * @param s i secondi da aggiungere
+     */
     public void addSec(int s){
         if(secondi+s > 59){
             minuti+=1;

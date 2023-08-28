@@ -137,6 +137,10 @@ public class Bottoni extends JPanel {
 
     }
 
+    /***
+     *
+     * @return l'istanza corrente della schermata dei bottoni
+     */
     public static Bottoni getIstanza(){
 
         istanza = new Bottoni();
