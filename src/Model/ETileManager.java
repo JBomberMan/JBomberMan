@@ -18,6 +18,7 @@ public class ETileManager {
 
     public ETileManager(ELvlPanel eLvlPanel) {
         this.eLvlPanel = eLvlPanel;
+        //bomberman = false;
         tile = new Tile[16];
         mapTileNum = new int[17][13];
         tiles = new TileObject[17][13];
