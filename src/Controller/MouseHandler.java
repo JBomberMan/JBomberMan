@@ -154,11 +154,11 @@ public class MouseHandler extends MouseAdapter{
     }
 
     /**
-     * Metodo che controlla se una casella è valida
+     * Metodo che controlla se una casella e' valida
      * @param x coordinata x della casella
      * @param y coordinata y della casella
      * @param map mappa di gioco
-     * @return booleano che indica se la casella è valida
+     * @return booleano che indica se la casella e' valida
      */
     private static boolean isValid(int x, int y, ArrayList<ArrayList<Integer>> map) {
         return x >= 0 && x < map.get(0).size() && y >= 0 && y < map.size();

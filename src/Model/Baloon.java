@@ -185,7 +185,7 @@ public class Baloon  extends MovingEntity implements Collidable{
 
     /**
      * Metodo che gestisce le collisioni del nemico con le esplosioni
-     * @param e Esplosione con cui si è verificata la collisione
+     * @param e Esplosione con cui si e' verificata la collisione
      */
     public void handleCollision(Esplosione e){
         if(this.invTimer == 0){
@@ -202,7 +202,7 @@ public class Baloon  extends MovingEntity implements Collidable{
 
     /**
      * Metodo che gestisce le collisioni del nemico con le entità stazionarie
-     * @param se Entità stazionaria con cui si è verificata la collisione
+     * @param se Entità stazionaria con cui si e' verificata la collisione
      */
     public void handleCollision(StationaryEntity se){
         if(se.isDistruttibile){
@@ -217,7 +217,7 @@ public class Baloon  extends MovingEntity implements Collidable{
 
     /**
      * Metodo che gestisce le collisioni del nemico con le bombe
-     * @param b Bomba con cui si è verificata la collisione
+     * @param b Bomba con cui si e' verificata la collisione
      */
     public void handleCollision(Bomba b){
         this.solidCollision(b);
@@ -229,7 +229,7 @@ public class Baloon  extends MovingEntity implements Collidable{
 
     /**
      * Metodo che implementa la collisione solida tra due entità
-     * @param obj entità con cui si è verificata la collisione
+     * @param obj entità con cui si e' verificata la collisione
      */
     void solidCollision(GameEntity obj) {
         Rectangle2D intersection = this.hitbox.createIntersection(obj.hitbox);

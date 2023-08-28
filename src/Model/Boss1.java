@@ -276,7 +276,7 @@ public class Boss1 extends Boss implements Collidable{
 
     /**
      * metodo per controllare che il boss sia morto
-     * @return un booleano che rappresenta se il boss è morto
+     * @return un booleano che rappresenta se il boss e' morto
      */
     @Override
     public boolean isDead() {

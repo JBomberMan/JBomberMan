@@ -94,7 +94,7 @@ public class Bomberman implements Collidable {
 
     /**
      * Metodo per settare il bomberman come morto
-     * @param death booleano che indica se il bomberman è morto
+     * @param death booleano che indica se il bomberman e' morto
      */
     public static void setDead(Boolean death){
         dead = death;
@@ -316,7 +316,7 @@ public class Bomberman implements Collidable {
 
     /**
      * metodo per gestire la collisione con un'entità stazionaria
-     * @param e l'entità stazionaria con cui si è verificata la collisione
+     * @param e l'entità stazionaria con cui si e' verificata la collisione
      */
     @Override
     public void handleCollision(StationaryEntity e) {
@@ -331,7 +331,7 @@ public class Bomberman implements Collidable {
 
     /**
      * metodo per gestire la collisione con un powerup
-     * @param p il powerup con cui si è verificata la collisione
+     * @param p il powerup con cui si e' verificata la collisione
      */
     public void handleCollision(PowerUp p){
             p.raccogli(this);
@@ -339,7 +339,7 @@ public class Bomberman implements Collidable {
 
     /**
      * metodo per gestire la collisione con una bomba
-     * @param b la bomba con cui si è verificata la collisione
+     * @param b la bomba con cui si e' verificata la collisione
      */
     public void handleCollision(Bomba b){
 
@@ -360,7 +360,7 @@ public class Bomberman implements Collidable {
 
     /**
      * metodo per gestire la collisione con un'esplosione
-     * @param e l'esplosione con cui si è verificata la collisione
+     * @param e l'esplosione con cui si e' verificata la collisione
      */
     public void handleCollision(Esplosione e){
             if(this.invTimer == 0){
@@ -376,7 +376,7 @@ public class Bomberman implements Collidable {
 
     /**
      * metodo per gestire la collisione con un nemico
-     * @param n il nemico con cui si è verificata la collisione
+     * @param n il nemico con cui si e' verificata la collisione
      */
     public void handleCollision(MovingEntity n){
 
@@ -417,7 +417,7 @@ public class Bomberman implements Collidable {
 
     /**
      * Metodo che implementa la collisione solida tra due entità
-     * @param obj l'entità con cui si è verificata la collisione
+     * @param obj l'entità con cui si e' verificata la collisione
      */
     void solidCollision(GameEntity obj) {
         Rectangle2D intersection = this.hitbox.createIntersection(obj.hitbox);
