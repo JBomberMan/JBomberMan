@@ -50,9 +50,9 @@ public class TileManager {
     private Boss boss;
     public Bomberman bomber;
     private int indexBomberman;
-    private static int livello = 8;
+    private static int livello = 1;
     BufferedReader br;
-    File path;
+    static File path;
     int numero;
 
     Boolean personalizzato;
@@ -120,6 +120,7 @@ public class TileManager {
      */
     public static void setLivello(int liv){
         livello = liv;
+        path = new File("res/livelli/livello" + liv+ ".txt");
     }
 
 
@@ -244,10 +245,6 @@ public class TileManager {
 
     public void draw(Graphics2D g2){
 
-        /*
-        g2.drawImage(tile[0].immagine, 0, 0, partita.tileSize, partita.tileSize, null);
-        g2.drawImage(tile[1].immagine, 64, 0, partita.tileSize, partita.tileSize, null);
-        */
 
         int col = 0;
         int row = 0;
@@ -334,19 +331,24 @@ public class TileManager {
             if(boss.isDead()){
 
                 System.out.println("Hai vinto boss");
-                if(!personalizzato) livello++;
+                if(!personalizzato){
+                    System.out.println("aumento livello");
+                    livello++;
+                    path = new File("src/FileLivelli/livello" + livello + ".txt");
+
+                }
                 Partita.stopGameThread();
                 SchermataVittoria.getIstanza(personalizzato).setVisible(true);
 
-
-                //ferma il thread, carica prossimo livello
             }
         } else if (movingEntities.size() == 0){
 
             System.out.println("Hai vinto nemici");
             System.out.println(numero);
             if(!personalizzato) {
+                System.out.println("aumento livello");
                 livello++;
+                path = new File("src/FileLivelli/livello" + livello + ".txt");
             }
             Partita.stopGameThread();
             if(livello > 8) SchermataCompletamento.getIstanza().setVisible(true);

@@ -109,7 +109,7 @@ public class PowerUp extends StationaryEntity {
      */ 
     public PowerUp(int x, int y, Partita partita) {
         super(x, y, null, partita);
-        this.tipo = Tipo.TempoExtra;
+        this.tipo = getRandomTipo();
         this.isDistruttibile = false;
         this.loadSprite();
     }
