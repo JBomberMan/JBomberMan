@@ -5,7 +5,11 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-
+/**
+     * 
+     * Classe che Gestisce il proiettile sparato da uno dei boss
+     * 
+     */
 public class Proiettile extends MovingEntity implements Collidable {
 
     private int velocita;
@@ -16,7 +20,17 @@ public class Proiettile extends MovingEntity implements Collidable {
     private int direzione;
 
 
-
+    /**
+     * Costruttore della classe Nemico Generico
+     * @param x coordinata x iniziale
+     * @param y coordinata y iniziale
+     * @param image immagine del nemico
+     * @param velocità velocità del nemico
+     * @param puntiVita numero di vite del nemico
+     * @param play istanza della partita
+     * @param direzione direzione del proiettile
+     * 
+     */
     public Proiettile(int x, int y, BufferedImage image, int velocita, int vite, Partita play, int direzione) {
         super(x, y, image, velocita, vite, play);
         this.velocita = velocita;
@@ -26,6 +40,10 @@ public class Proiettile extends MovingEntity implements Collidable {
         getEnemiesImage();
     }
 
+
+    /**
+     * Metodo che carica gli sprite del nemico
+     */
     public void getEnemiesImage(){
         try{
             up = ImageIO.read(getClass().getResourceAsStream("/Images/proiettile/proiettileUp.png"));
@@ -38,6 +56,10 @@ public class Proiettile extends MovingEntity implements Collidable {
         this.hitbox = new Rectangle(x, y, up.getWidth(), up.getHeight());
     }
 
+
+     /**
+     *Metodo che gestisce l'aggiornamento del nemico
+     */
     @Override
     public void update() {
         this.hitbox.setBounds(x, y, up.getWidth(), up.getHeight());
@@ -46,6 +68,9 @@ public class Proiettile extends MovingEntity implements Collidable {
 
     }
 
+    /**
+     * Metodo che gestisce i movimenti del nemico
+     */
     @Override
     public void muovi() {
         switch(direzione){
@@ -88,6 +113,11 @@ public class Proiettile extends MovingEntity implements Collidable {
 
     }
 
+
+    /**
+     * Metodo che gestisce il disegno del nemico
+     * @param g2d il contesto grafico
+     */
     @Override
     public void disegna(Graphics2D g2d) {
         if (!dead) {
