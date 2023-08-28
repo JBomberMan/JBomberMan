@@ -15,7 +15,7 @@ public class TileObject extends GameEntity {
      * @param x coordinata x
      * @param y coordinata y
      * @param image immagine iniziale
-     * @param play partita in cui è contenuto
+     * @param play partita in cui e' contenuto
      */
     public TileObject(int x, int y, BufferedImage image, Partita play){
         super(x,y,image);

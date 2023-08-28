@@ -5,12 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileLivelli/profilo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileLivelli/profilo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Nickname.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Nickname.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/ProfiloUtente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/ProfiloUtente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Baloon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Baloon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Doll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Doll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Oneal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Oneal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Ovapi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Ovapi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/PowerUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/PowerUp.java" afterDir="false" />
     </list>
-    <list id="d8707499-0969-4e90-8527-29b34c0957ef" name="Changes by Lorenzo" comment="" />
+    <list id="d8707499-0969-4e90-8527-29b34c0957ef" name="Changes by Lorenzo" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Model/Oneal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Oneal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Ovapi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Ovapi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Partita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/PowerUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/PowerUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/StationaryEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/StationaryEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/TileObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/TileObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/SchermataVittoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SchermataVittoria.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +37,40 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/Model/Oneal.java">
+      <ranges>
+        <range start1="19" end1="20" start2="19" end2="20" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="90" end1="91" start2="90" end2="91" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="94" end1="95" start2="94" end2="95" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="177" end1="178" start2="177" end2="178" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="194" end1="195" start2="194" end2="195" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="198" end1="199" start2="198" end2="199" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="204" end1="205" start2="204" end2="205" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="208" end1="209" start2="208" end2="209" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="215" end1="216" start2="215" end2="216" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/Model/PowerUp.java">
+      <ranges>
+        <range start1="12" end1="13" start2="12" end2="13" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="95" end1="96" start2="95" end2="96" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/Model/Ovapi.java">
+      <ranges>
+        <range start1="18" end1="19" start2="18" end2="19" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="90" end1="91" start2="90" end2="91" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="94" end1="95" start2="94" end2="95" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="177" end1="178" start2="177" end2="178" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="195" end1="196" start2="195" end2="196" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="199" end1="200" start2="199" end2="200" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="206" end1="207" start2="206" end2="207" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="210" end1="211" start2="210" end2="211" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="217" end1="218" start2="217" end2="218" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -186,7 +231,7 @@
       <workItem from="1692902493827" duration="17000" />
       <workItem from="1692907845308" duration="21000" />
       <workItem from="1692988045862" duration="280000" />
-      <workItem from="1693226276552" duration="9580000" />
+      <workItem from="1693226276552" duration="10497000" />
     </task>
     <servers />
   </component>

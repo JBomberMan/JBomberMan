@@ -25,8 +25,8 @@ public abstract class StationaryEntity extends GameEntity implements Collidable,
 
 
     /**
-     * metodo per controllare se l'entità è distruttibile
-     * @return true se è distruttibile, false altrimenti
+     * metodo per controllare se l'entità e' distruttibile
+     * @return true se e' distruttibile, false altrimenti
      */
     public boolean isDistruttibile() {
         return isDistruttibile;

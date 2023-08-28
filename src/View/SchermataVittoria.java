@@ -21,7 +21,7 @@ public class SchermataVittoria extends JFrame {
 
     /***
      * Costruttore della schermata
-     * @param persona serve al costruttore per capire se il ivello giocato è uno principale o uno custom e i base al livello ha un comportamento diverso
+     * @param persona serve al costruttore per capire se il ivello giocato e' uno principale o uno custom e i base al livello ha un comportamento diverso
      */
     private SchermataVittoria(Boolean persona){
 
@@ -94,7 +94,7 @@ public class SchermataVittoria extends JFrame {
 
     /***
      * Metodo per ritornare l'istanza corrente della schermata
-     * @param pers per indicarese il livello è personalizzato o meno
+     * @param pers per indicarese il livello personalizzato o meno
      * @return l'istanza della scermata
      */
     public static SchermataVittoria getIstanza(Boolean pers){
@@ -109,7 +109,7 @@ public class SchermataVittoria extends JFrame {
 
     /***
      * serve a modificare ogni volta la schermata
-     * @param b indica se il livello è personalizzato o meno
+     * @param b indica se il livello personalizzato o meno
      */
     public void setPersonalizzato(Boolean b){
         this.personalizzato = b;

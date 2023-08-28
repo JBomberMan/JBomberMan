@@ -72,7 +72,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
     /**
      * 
      * Costruttore della partita in caso si voglia giocare uno dei livelli personalizzati
-     * @param livello è il percorso verso il file personalizzato salvato in locale
+     * @param livello e' il percorso verso il file personalizzato salvato in locale
      */
     public Partita(String livello) {
         tileM = new TileManager(this, keyHandler, livello);

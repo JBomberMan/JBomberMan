@@ -10,7 +10,7 @@ import java.util.Random;
      * Classe che definisce il funzionamento dei powerUp (Superpoteri)
      */ 
 public class PowerUp extends StationaryEntity {
-    private boolean isRaccolto = false;
+
 
 
     /**
@@ -93,7 +93,7 @@ public class PowerUp extends StationaryEntity {
     /**
      * 
      * Metodo per generare un tipo di superpotere casuale
-     * @return il valore del powerUp che è stato scelto randomicamente
+     * @return il valore del powerUp che e' stato scelto randomicamente
      */ 
     private static PowerUp.Tipo getRandomTipo()  {
         Random random = new Random();

@@ -17,7 +17,7 @@ public class Oneal  extends MovingEntity implements Collidable{
 
         public BufferedImage up1, up2, down1, down2, right1, right2, left1, left2, damaged1, damaged2, dead1, dead2;
         public static String direction = "down";
-        private int probabilitàDirezione = 0;
+        private int probabilitaDirezione = 0;
         public int spriteCounter = 0;
         public int spriteNum = 1;
         private int invTimer;
@@ -88,11 +88,11 @@ public class Oneal  extends MovingEntity implements Collidable{
     @Override
     public void muovi() {
         if(invTimer == 0 && !dead) {
-            if (probabilitàDirezione == 0) {
+            if (probabilitaDirezione == 0) {
                 direction = "up";
                 y -= velocita;
             }
-            else if (probabilitàDirezione == 1) {
+            else if (probabilitaDirezione == 1) {
                 direction = "down";
                 y += velocita;
             }
@@ -175,7 +175,7 @@ public class Oneal  extends MovingEntity implements Collidable{
 
     /**
      * Metodo che gestisce le collisioni del nemico con le esplosioni
-     * @param e Esplosione con cui si è verificata la collisione
+     * @param e Esplosione con cui si e' verificata la collisione
      */
     public void handleCollision(Esplosione e){
         if(this.invTimer == 0){
@@ -192,28 +192,28 @@ public class Oneal  extends MovingEntity implements Collidable{
 
     /**
      * Metodo che gestisce le collisioni del nemico con le entità stazionarie
-     * @param se Entità stazionaria con cui si è verificata la collisione
+     * @param se Entità stazionaria con cui si e' verificata la collisione
      */
     public void handleCollision(StationaryEntity se){
         this.solidCollision(se);
-        probabilitàDirezione = (probabilitàDirezione + 1) % 2;
+        probabilitaDirezione = (probabilitaDirezione + 1) % 2;
         
     }
 
     /**
      * Metodo che gestisce le collisioni del nemico con le bombe
-     * @param b Bomba con cui si è verificata la collisione
+     * @param b Bomba con cui si e' verificata la collisione
      */
     public void handleCollision(Bomba b){
         this.solidCollision(b);
-        probabilitàDirezione = (probabilitàDirezione + 1) % 2;
+        probabilitaDirezione = (probabilitaDirezione + 1) % 2;
     }
 
     
 
     /**
      * Metodo che implementa la collisione solida tra due entità
-     * @param obj entità con cui si è verificata la collisione
+     * @param obj entità con cui si e' verificata la collisione
      */
     void solidCollision(GameEntity obj) {
         Rectangle2D intersection = this.hitbox.createIntersection(obj.hitbox);

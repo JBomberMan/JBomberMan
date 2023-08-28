@@ -37,7 +37,7 @@ public class Muro extends StationaryEntity {
 
     /**
      * Metodo che gestisce le collisioni del Muro con le esplosioni
-     * @param e Esplosione con cui si è verificata la collisione
+     * @param e Esplosione con cui si e' verificata la collisione
      */
     @Override
     public void handleCollision(Esplosione e) {

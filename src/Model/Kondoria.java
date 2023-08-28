@@ -198,7 +198,7 @@ public class Kondoria  extends MovingEntity implements Collidable{
 
     /**
      * Metodo per gestire la collisione con un'esplosione
-     * @param e l'esplosione con cui si è verificata la collisione
+     * @param e l'esplosione con cui si e' verificata la collisione
      */
     public void handleCollision(Esplosione e){
         if(this.invTimer == 0){
@@ -215,7 +215,7 @@ public class Kondoria  extends MovingEntity implements Collidable{
 
     /**
      * Metodo per gestire la collisione con un'entitá stazionaria
-     * @param se l'entitá stazionaria con cui si è verificata la collisione
+     * @param se l'entitá stazionaria con cui si e' verificata la collisione
      */
     public void handleCollision(StationaryEntity se){
         if(!se.isDistruttibile()){
@@ -226,7 +226,7 @@ public class Kondoria  extends MovingEntity implements Collidable{
 
     /**
      * Metodo che implementa la collisione solida tra due entità
-     * @param obj l'entità con cui si è verificata la collisione
+     * @param obj l'entità con cui si e' verificata la collisione
      */
     void solidCollision(GameEntity obj) {
         Rectangle2D intersection = this.hitbox.createIntersection(obj.hitbox);

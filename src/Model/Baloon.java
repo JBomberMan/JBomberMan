@@ -16,7 +16,7 @@ public class Baloon  extends MovingEntity implements Collidable{
 
         public BufferedImage up1, up2, down1, down2, right1, right2, left1, left2, damaged1, damaged2, dead1, dead2;
         public static String direction = "down";
-        private int probabilitàDirezione ;
+        private int probabilitaDirezione;
         private int attesaMovimento = 30;
         public int spriteCounter = 0;
         public int spriteNum = 1;
@@ -87,23 +87,23 @@ public class Baloon  extends MovingEntity implements Collidable{
     public void muovi() {
         if(invTimer == 0 && !dead) {
             if(attesaMovimento > 20){
-                probabilitàDirezione = (int) (Math.random() * 4);
+                probabilitaDirezione = (int) (Math.random() * 4);
                 attesaMovimento = 0;
             }
             attesaMovimento++;
-            if (probabilitàDirezione == 0) {
+            if (probabilitaDirezione == 0) {
                 direction = "up";
                 y -= velocita;
             }
-            else if (probabilitàDirezione == 1) {
+            else if (probabilitaDirezione == 1) {
                 direction = "down";
                 y += velocita;
             }
-            else if (probabilitàDirezione == 2) {
+            else if (probabilitaDirezione == 2) {
                 direction = "left";
                 x -= velocita;
             }
-            else if (probabilitàDirezione == 3) {
+            else if (probabilitaDirezione == 3) {
                 direction = "right";
                 x += velocita;
             }
@@ -209,7 +209,7 @@ public class Baloon  extends MovingEntity implements Collidable{
         }
         else{
             this.solidCollision(se);
-            probabilitàDirezione = (probabilitàDirezione +1) % 4;
+            probabilitaDirezione = (probabilitaDirezione +1) % 4;
             attesaMovimento = 0;
         }
         
@@ -221,7 +221,7 @@ public class Baloon  extends MovingEntity implements Collidable{
      */
     public void handleCollision(Bomba b){
         this.solidCollision(b);
-        probabilitàDirezione = (probabilitàDirezione +1) % 4;
+        probabilitaDirezione = (probabilitaDirezione +1) % 4;
         attesaMovimento = 0;
             
     }
