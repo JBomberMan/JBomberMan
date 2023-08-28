@@ -6,17 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/StationaryEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/StationaryEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/TempoManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/TempoManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/TileObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/TileObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/ViteManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ViteManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/clown/clown1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/clown/clown1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/clown/cry1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/clown/cry1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/clown/cry2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/clown/cry2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/clown/cry3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/clown/cry3.png" afterDir="false" />
     </list>
-    <list id="d8707499-0969-4e90-8527-29b34c0957ef" name="Changes by Lorenzo" comment="">
-      <change beforePath="$PROJECT_DIR$/src/View/AudioManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/AudioManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Avatar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Avatar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Bottoni.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Bottoni.java" afterDir="false" />
-    </list>
+    <list id="d8707499-0969-4e90-8527-29b34c0957ef" name="Changes by Lorenzo" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -192,7 +187,7 @@
       <workItem from="1692902493827" duration="17000" />
       <workItem from="1692907845308" duration="21000" />
       <workItem from="1692988045862" duration="280000" />
-      <workItem from="1693226276552" duration="7197000" />
+      <workItem from="1693226276552" duration="8258000" />
     </task>
     <servers />
   </component>
