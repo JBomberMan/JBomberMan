@@ -19,7 +19,7 @@ public class Nickname extends JPanel {
     /***
      * Costruttore della classe
      */
-    private Nickname(){
+    public Nickname(){
         setNickname();
         setOpaque(false);
         setVisible(true);
@@ -38,6 +38,8 @@ public class Nickname extends JPanel {
             obj.put("nickname", nick);
             Files.write(Paths.get(file.toURI()), obj.toString().getBytes());
             nickname.setText(nick);
+            add(nickname);
+            System.out.println(nickname.getText());
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -63,15 +65,7 @@ public class Nickname extends JPanel {
         }
     }
 
-    /***
-     *
-     * @return l'istanza corrente del nickname
-     */
-    public static Nickname getNickname(){
 
-        istanza = new Nickname();
 
-        return istanza;
-    }
 
 }

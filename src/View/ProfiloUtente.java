@@ -7,6 +7,7 @@ import java.awt.*;
  * Classe che rappresenta la schermata iniziale del gioco
  */
 public class ProfiloUtente extends JFrame{
+    Nickname nick;
     static AudioManager audioManager = new AudioManager(); //i panel hanno bisogno di un audio manager, quindi lo dichiaro statico
     private String nickname;
     private String avatar;
@@ -62,7 +63,7 @@ public class ProfiloUtente extends JFrame{
         c.anchor = GridBagConstraints.FIRST_LINE_START;
         background.add(av, c);
 
-        Nickname nick = Nickname.getNickname();
+        nick = new Nickname();
         nick.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(Color.BLACK), BorderFactory.createLineBorder(Color.BLACK)));
         c.fill = GridBagConstraints.NONE;
         c.insets = new Insets(0,10,400,10); //specifica il padding rispetto ad altri elementi
@@ -99,7 +100,7 @@ public class ProfiloUtente extends JFrame{
      */
     public void setNickname(String nickname) {
         this.nickname = nickname;
-        Nickname.getNickname().setNickname(nickname);
+        nick.setNickname(nickname);
     }
 
     /***
