@@ -24,10 +24,10 @@ public class SchermataSconfitta extends JFrame{
      */
     private SchermataSconfitta(){
 
-        setSize(300, 300);
+        setSize(320, 288);
         tornaALMenu = new JButton("Torna al Menu Principale");
         riprova = new JButton("Riprova");
-        bgImage = new ImageIcon("src\\Images\\vittoria.png").getImage();
+        bgImage = new ImageIcon("src\\Images\\gameover.png").getImage();
         //setLayout(new GridBagLayout());
         JPanel panel = new JPanel() {
             @Override
