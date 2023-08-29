@@ -351,7 +351,10 @@ public class TileManager {
                 path = new File("src/FileLivelli/livello" + livello + ".txt");
             }
             Partita.stopGameThread();
-            if(livello > 8) SchermataCompletamento.getIstanza().setVisible(true);
+            if(livello > 8){
+                SchermataCompletamento.getIstanza().setVisible(true);
+                resetLivello();
+            }
             else SchermataVittoria.getIstanza(personalizzato).setVisible(true);
 
 
@@ -359,6 +362,13 @@ public class TileManager {
             //ferma il thread, carica prossimo livello
         }
 
+    }
+
+    /**
+     * Resetta il livello di gioco al primo livello
+     */
+    public static void resetLivello(){
+        livello = 1;
     }
 
 

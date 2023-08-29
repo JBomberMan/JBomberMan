@@ -55,6 +55,7 @@ public class SchermataCompletamento extends JFrame {
 
             public void actionPerformed(ActionEvent e) {
 
+                TileManager.resetLivello();
                 Storico.addVittoria();
                 SwingUtilities.getWindowAncestor(Partita.getIstanza()).dispose();
                 dispose();

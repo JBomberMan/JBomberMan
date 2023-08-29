@@ -65,6 +65,7 @@ public class SchermataVittoria extends JFrame {
 
             public void actionPerformed(ActionEvent e) {
 
+                TileManager.resetLivello();
                 SwingUtilities.getWindowAncestor(Partita.getIstanza()).dispose();
                 dispose();
                 Partita.getIstanza().riavvia();

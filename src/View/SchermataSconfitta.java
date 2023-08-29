@@ -2,6 +2,7 @@ package View;
 import Model.Bomberman;
 import Model.GettoniManager;
 import Model.Partita;
+import Model.TileManager;
 
 import javax.swing.*;
 import java.awt.*;
@@ -50,6 +51,7 @@ public class SchermataSconfitta extends JFrame{
         tornaALMenu.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
+                TileManager.resetLivello();
                 Storico.addSconfitta();
                 Bomberman.resetVite();
                 SwingUtilities.getWindowAncestor(Partita.getIstanza()).dispose();
