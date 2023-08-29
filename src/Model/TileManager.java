@@ -53,7 +53,7 @@ public class TileManager {
     private static int livello = 1;
     BufferedReader br;
     static File path;
-    int numero;
+
 
     Boolean personalizzato;
     Boolean hitboxSpecial;
@@ -73,7 +73,7 @@ public class TileManager {
         tile = new Tile[10]; //rappresenta il numero di tile diverse che abbiamo a disposizione
         mapTileNum = new int[partita.maxScreenCol][partita.maxScreenRow];
         this.keyH = keyH;
-        numero = 0;
+
         getTileImage();
         loadMap();
     }
@@ -124,7 +124,9 @@ public class TileManager {
     }
 
 
-
+    /**
+     * Metodo che carica le immagini delle tiles
+     */
     public void getTileImage(){
         try{
             tile[0] = new Tile();
@@ -151,6 +153,9 @@ public class TileManager {
         }
     }
 
+    /**
+     * Metodo che carica la mappa
+     */
     public void loadMap(){
         try{
 
@@ -239,10 +244,18 @@ public class TileManager {
         }
     }
 
+    /**
+     * Metodo che ritorna l'array delle entitá stazionarie presenti
+     * @return Entitá stazionarie
+     */
     public static ArrayList<StationaryEntity> getStationaryEntities(){
         return stationaryEntities;
     }
 
+    /**
+     * Metodo che disegna il livello di gioco aggiornato con le informazioni aggiornate
+     * @param g2 il contesto grafico
+     */
     public void draw(Graphics2D g2){
 
 
@@ -343,8 +356,7 @@ public class TileManager {
             }
         } else if (movingEntities.size() == 0){
 
-            System.out.println("Hai vinto nemici");
-            System.out.println(numero);
+
             if(!personalizzato) {
                 System.out.println("aumento livello");
                 livello++;
@@ -357,9 +369,6 @@ public class TileManager {
             }
             else SchermataVittoria.getIstanza(personalizzato).setVisible(true);
 
-
-
-            //ferma il thread, carica prossimo livello
         }
 
     }
@@ -372,6 +381,9 @@ public class TileManager {
     }
 
 
+    /**
+     * Metodo che controlla le collisioni tra entitá
+     */
     public void checkCollision(){
 
         stationaryEntities.forEach((entity)->{
@@ -451,6 +463,10 @@ public class TileManager {
         }
     }
 
+    /**
+     * Metodo che rimuove un'entitá dal gioco
+     * @param entity entitá da rimuovere
+     */
     public static void removeEntity(GameEntity entity){
         if(entity instanceof MovingEntity){
             movingEntities.remove(entity);
@@ -464,6 +480,10 @@ public class TileManager {
 
     }
 
+    /**
+     * Metodo che aggiunge un'entitá al gioco
+     * @param entity entitá da aggiungere
+     */
     public static void addEntity(GameEntity entity) {
         if (entity instanceof MovingEntity) {
             movingEntities.add((MovingEntity) entity);
@@ -473,6 +493,10 @@ public class TileManager {
             stationaryEntities.add((StationaryEntity) entity);
         }}
 
+    /**
+     * Aggiunge un'entitá alla lista di entitá da aggiungere
+     * @param entity entitá da aggiungere
+     */
     public static void addEntityR (GameEntity entity){
 
         if (entity instanceof MovingEntity) {
@@ -484,11 +508,15 @@ public class TileManager {
             System.out.println("Rimosso");
         }
     }
+
+    /**
+     * Aggiunge un'esplosione alla coda di esplosioni da aggiungere
+     * @param e esplosione da aggiungere
+     */
     public static void AggiungiACoda(Esplosione e){
         codaAggiunte.add(e);
     }
-    public void addNumero(){
-        numero++;
-    }
+
+
 
 }

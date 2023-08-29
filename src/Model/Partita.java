@@ -172,7 +172,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
         double nextDrawTime = System.nanoTime() + drawInterval; //tempo in nanosecondi del prossimo frame
 
         while(gameThread != null){
-            tileM.addNumero();
+
             //1: update delle informazioni su ció che accade su schermo
             //update();g
 
