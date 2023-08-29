@@ -19,8 +19,8 @@ public class PunteggioManager {
      */
     public PunteggioManager(){
         punteggio = 0;
-        x = 10;
-        y = 870;
+        x = 80;
+        y = 876;
     }
 
     /**

@@ -15,14 +15,14 @@ public class Punteggio {
      * @param punteggio il valore attuale del punteggio
      */
     public void disegna(Graphics2D g, int x, int y, int punteggio){
-        g.setColor(Color.BLACK);
-        g.setFont(new Font("Arial", Font.BOLD, 20));
+        g.setColor(Color.WHITE);
+        g.setFont(new Font("Arial", Font.BOLD, 35));
         try{
             g.drawImage(ImageIO.read(getClass().getResource("/Images/punteggio.png")), 0, 832, 1088, 64, null);
         }catch (Exception e){
             e.printStackTrace();
         }
-        g.drawString("Punteggio: " + punteggio, x, y);
+        g.drawString("" + punteggio, x, y);
 
 
     }

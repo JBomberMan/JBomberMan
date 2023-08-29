@@ -14,8 +14,8 @@ public class Vite {
      * @param y la posizione y in cui devono essere disegnate
      */
     public static void disegna(Graphics2D g, int vite, int x, int y){
-        g.setColor(Color.BLACK);
-        g.setFont(new Font("Arial", Font.BOLD, 20));
-        g.drawString("Vite: " + vite, x, y);
+        g.setColor(Color.WHITE);
+        g.setFont(new Font("Arial", Font.BOLD, 25));
+        g.drawString(""+vite, x, y);
     }
 }

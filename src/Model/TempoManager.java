@@ -22,8 +22,8 @@ public class TempoManager {
     public TempoManager(){
         minuti = 5;
         secondi = 0;
-        x = 600;
-        y = 870;
+        x = 606;
+        y = 873;
         countdown = System.currentTimeMillis();
 
     }

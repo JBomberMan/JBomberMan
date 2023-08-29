@@ -14,8 +14,8 @@ public class Gettoni {
      * @param y lla posizione y in cui deve essere disegnato
      */
     public static void disegna(Graphics2D g, int vite, int x, int y){
-        g.setColor(Color.BLACK);
-        g.setFont(new Font("Arial", Font.BOLD, 20));
-        g.drawString("Gettoni: " + vite, x, y);
+        g.setColor(Color.WHITE);
+        g.setFont(new Font("Arial", Font.BOLD, 30));
+        g.drawString("" + vite, x, y);
     }
 }

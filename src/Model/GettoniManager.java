@@ -16,7 +16,7 @@ public class GettoniManager {
      */
     public GettoniManager(){
         this.x = 400;
-        this.y = 870;
+        this.y = 876;
     }
 
     /**

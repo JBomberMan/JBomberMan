@@ -15,8 +15,8 @@ public class ViteManager {
      * costruttore
      */
     public ViteManager(){
-        this.x = 200;
-        this.y = 870;
+        this.x = 245;
+        this.y = 876;
     }
 
     /**
