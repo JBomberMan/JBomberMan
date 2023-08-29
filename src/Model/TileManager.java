@@ -2,6 +2,7 @@ package Model;
 
 import Controller.KeyHandler;
 
+import View.AudioManager;
 import View.SchermataCompletamento;
 import View.SchermataVittoria;
 
@@ -55,6 +56,7 @@ public class TileManager {
     static File path;
 
 
+
     Boolean personalizzato;
     Boolean hitboxSpecial;
 
@@ -74,6 +76,7 @@ public class TileManager {
         mapTileNum = new int[partita.maxScreenCol][partita.maxScreenRow];
         this.keyH = keyH;
 
+
         getTileImage();
         loadMap();
     }
@@ -92,8 +95,10 @@ public class TileManager {
         tile = new Tile[10]; //rappresenta il numero di tile diverse che abbiamo a disposizione
         mapTileNum = new int[partita.maxScreenCol][partita.maxScreenRow];
         this.keyH = keyH;
+
         getTileImage();
         loadMap();
+
     }
 
     /***
@@ -111,6 +116,7 @@ public class TileManager {
         codaAggiunte.clear();
         codaRimozioni.clear();
         boss = null;
+        AudioManager.getInstance().stop();
 
     }
 
@@ -157,6 +163,7 @@ public class TileManager {
      * Metodo che carica la mappa
      */
     public void loadMap(){
+
         try{
 
 
@@ -242,6 +249,7 @@ public class TileManager {
         }catch(Exception e){
             e.printStackTrace();
         }
+
     }
 
     /**
@@ -258,11 +266,6 @@ public class TileManager {
      */
     public void draw(Graphics2D g2){
 
-
-        int col = 0;
-        int row = 0;
-        int x = 0;
-        int y = 0;
         //uso stream per disegnare le tile
         tiles.forEach((tile) -> tile.disegna(g2));
 
@@ -343,31 +346,35 @@ public class TileManager {
         if(boss != null){
             if(boss.isDead()){
 
-                System.out.println("Hai vinto boss");
+
                 if(!personalizzato){
-                    System.out.println("aumento livello");
+
                     livello++;
                     path = new File("src/FileLivelli/livello" + livello + ".txt");
 
                 }
+                AudioManager.getInstance().stop();
                 Partita.stopGameThread();
                 SchermataVittoria.getIstanza(personalizzato).setVisible(true);
 
             }
         } else if (movingEntities.size() == 0){
 
-
+            AudioManager.getInstance().stop();
             if(!personalizzato) {
-                System.out.println("aumento livello");
+
                 livello++;
                 path = new File("src/FileLivelli/livello" + livello + ".txt");
             }
+
             Partita.stopGameThread();
             if(livello > 8){
+                AudioManager.getInstance().stop();
                 SchermataCompletamento.getIstanza().setVisible(true);
                 resetLivello();
             }
-            else SchermataVittoria.getIstanza(personalizzato).setVisible(true);
+            else {AudioManager.getInstance().stop();
+                SchermataVittoria.getIstanza(personalizzato).setVisible(true);}
 
         }
 

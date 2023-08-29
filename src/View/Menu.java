@@ -17,7 +17,7 @@ public class Menu extends JPanel {
     private JButton bottoneNickname;
     private JButton bottoneEditor;
     private JButton bottoneLivelliPers;
-    AudioManager audioManager = new AudioManager();
+
 
     /**
      * Costruttore che inizializza i bottoni e li aggiunge al pannello
@@ -72,12 +72,12 @@ public class Menu extends JPanel {
         bottonePartita.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ProfiloUtente.stop();
+
+                AudioManager.getInstance().stop();
+                AudioManager.getInstance().play(1);
                 Partita partita = new Partita();
                 JFrame frame = new JFrame("Bomberman");
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                //audioManager.setFile(1);
-                //audioManager.play();
                 frame.add(partita);
                 frame.pack();
                 frame.setVisible(true);
@@ -91,6 +91,7 @@ public class Menu extends JPanel {
         bottoneEditor.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                AudioManager.getInstance().stop();
                 EditorLiveli editorLiveli = new EditorLiveli();
 
             }
@@ -101,6 +102,7 @@ public class Menu extends JPanel {
         bottoneLivelliPers.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                AudioManager.getInstance().stop();
                 LivelloSelect livelloSelect = LivelloSelect.getIstanza();
 
             }

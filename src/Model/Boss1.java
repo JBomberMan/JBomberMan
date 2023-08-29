@@ -141,14 +141,14 @@ public class Boss1 extends Boss implements Collidable{
             sprite = standard;
         }
         g2d.drawImage(sprite, x, y, null);
-        g2d.draw(new Polygon(new int[]{this.x + 166,
+        /*g2d.draw(new Polygon(new int[]{this.x + 166,
                 this.x + 246, this.x + 294, this.x + 332, this.x + 412, this.x + 412, this.x + 363,
                 this.x + 332, this.x + 304, this.x + 206, this.x + 108, this.x + 80, this.x + 49,
                 this.x + 0, this.x + 0, this.x + 80, this.x + 118}, new int[]{this.y + 0,
                 this.y + 0, this.y + 27, this.y + 117, this.y + 172, this.y + 241, this.y + 278,
                 this.y + 254, this.y + 304, this.y + 348, this.y + 304, this.y + 254, this.y + 278,
                 this.y + 241, this.y + 172, this.y + 117, this.y + 27
-        }, 17));
+        }, 17));*/
 
 
     }

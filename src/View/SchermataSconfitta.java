@@ -18,6 +18,7 @@ public class SchermataSconfitta extends JFrame{
     private JButton riprova;
     private static SchermataSconfitta istanza;
     private Image bgImage;
+    AudioManager am = AudioManager.getInstance();
 
     /***
      * Il costruttore della schermata
@@ -47,10 +48,13 @@ public class SchermataSconfitta extends JFrame{
         c.gridx = 1;
         panel.add(riprova, c);
         setContentPane(panel);
+        am.stop();
+        am.play(9);
 
         tornaALMenu.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
+                am.stop();
                 TileManager.resetLivello();
                 Storico.addSconfitta();
                 Bomberman.resetVite();
@@ -66,6 +70,8 @@ public class SchermataSconfitta extends JFrame{
 
             public void actionPerformed(ActionEvent e) {
                 if(Bomberman.gettoni > 0){
+                    am.stop();
+                    am.play(1);
                     Bomberman.gettoni--;
                     Bomberman.setDead(false);
                     Partita.getIstanza().riavvia();

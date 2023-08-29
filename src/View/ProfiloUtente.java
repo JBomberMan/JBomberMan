@@ -8,7 +8,7 @@ import java.awt.*;
  */
 public class ProfiloUtente extends JFrame{
     Nickname nick;
-    static AudioManager audioManager = new AudioManager(); //i panel hanno bisogno di un audio manager, quindi lo dichiaro statico
+
     private String nickname;
     private String avatar;
     private static ProfiloUtente istanza;
@@ -28,7 +28,7 @@ public class ProfiloUtente extends JFrame{
         //Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.net.URL.toExternalForm()" because "url" is null
         JLabel background = new JLabel(bg);
         background.setLayout(new GridBagLayout());
-        background.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(Color.BLACK), BorderFactory.createLineBorder(Color.BLACK)));
+        //background.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(Color.BLACK), BorderFactory.createLineBorder(Color.BLACK)));
         GridBagConstraints backgroundconstrains = new GridBagConstraints();
         backgroundconstrains.gridx = 0;
         backgroundconstrains.gridy = 0;
@@ -41,7 +41,7 @@ public class ProfiloUtente extends JFrame{
         c.fill = GridBagConstraints.HORIZONTAL;
 
         Menu menu = new Menu();
-        menu.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(Color.BLACK), BorderFactory.createLineBorder(Color.BLACK)));
+        //menu.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(Color.BLACK), BorderFactory.createLineBorder(Color.BLACK)));
         c.weightx = 1; //si espande sulle x
         c.weighty = 0.1; //si espande sulle Y, GLI PERMETTE DI STARE IN CIMA
         c.fill = GridBagConstraints.HORIZONTAL;
@@ -53,7 +53,7 @@ public class ProfiloUtente extends JFrame{
 
 
         Avatar av = Avatar.getAvatar();
-        av.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(Color.BLACK), BorderFactory.createLineBorder(Color.BLACK)));
+        //av.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(Color.BLACK), BorderFactory.createLineBorder(Color.BLACK)));
         c.fill = GridBagConstraints.NONE;
         c.insets = new Insets(100,10,0,10); //specifica il padding rispetto ad altri elementi
         c.weightx = 0;
@@ -64,7 +64,7 @@ public class ProfiloUtente extends JFrame{
         background.add(av, c);
 
         nick = new Nickname();
-        nick.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(Color.BLACK), BorderFactory.createLineBorder(Color.BLACK)));
+        //nick.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(Color.BLACK), BorderFactory.createLineBorder(Color.BLACK)));
         c.fill = GridBagConstraints.NONE;
         c.insets = new Insets(0,10,400,10); //specifica il padding rispetto ad altri elementi
         c.weightx = 0;
@@ -73,10 +73,9 @@ public class ProfiloUtente extends JFrame{
         c.gridy = 1;
         c.anchor = GridBagConstraints.FIRST_LINE_START;
         background.add(nick, c);
-        audioManager.setFile(0);
 
         Storico storico = Storico.getStorico();
-        storico.setBackground(Color.gray);
+        storico.setBackground(Color.LIGHT_GRAY);
         storico.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(Color.BLACK), BorderFactory.createLineBorder(Color.BLACK)));
         c.fill = GridBagConstraints.BOTH;
         c.insets = new Insets(10,10,10,10); //specifica il padding rispetto ad altri elementi
@@ -87,8 +86,7 @@ public class ProfiloUtente extends JFrame{
         c.anchor = GridBagConstraints.FIRST_LINE_START;
         background.add(storico, c);
 
-        //audioManager.setFile(0);
-        //audioManager.play();
+        AudioManager.getInstance().play(0);
         //audioManager.loop();
         setVisible(true);
 
@@ -124,10 +122,7 @@ public class ProfiloUtente extends JFrame{
         return istanza;
     }
 
-    /***
-     * ferma la musica di sottofondo
-     */
-    public static void stop(){ //permettere di essere richiamato da altre classi per fermare la musica di sottofondo
-        audioManager.stop();
+    public static void stop(){
+        AudioManager.getInstance().stop();
     }
 }

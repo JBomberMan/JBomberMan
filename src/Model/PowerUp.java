@@ -1,5 +1,7 @@
 package Model;
 
+import View.AudioManager;
+
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -17,7 +19,8 @@ public class PowerUp extends StationaryEntity {
      * 
      * Enumerazione che elenca i vari tipi di superpoteri che esistono 
      * 
-     */ 
+     */
+
     public enum Tipo {
 
         EsplosioneRange(){

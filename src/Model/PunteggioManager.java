@@ -9,7 +9,7 @@ import java.awt.*;
  */
 public class PunteggioManager {
 
-    private int punteggio;
+    private static int punteggio;
     private Punteggio punteggioDisegno = new Punteggio();
     private int x;
     private int y;
@@ -29,6 +29,14 @@ public class PunteggioManager {
      */
     public void addPunteggio(int p){
         punteggio += p;
+    }
+
+    /**
+     * metodo per ritornare il punteggio
+     * @return il punteggio
+     */
+    public static int getPunteggio(){
+        return punteggio;
     }
 
     /**

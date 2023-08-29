@@ -7,8 +7,74 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="" />
-    <list id="d8707499-0969-4e90-8527-29b34c0957ef" name="Changes by Lorenzo" comment="" />
+    <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Music/Bomberman-Just-Died-OST.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Music/ItemGet.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Music/PlaceBomb.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Music/StageClear.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Music/bombExplosion.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Music/bomberman_battleMeme.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Music/hammer.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Music/placeBombNuovo.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Music/powerup.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileLivelli/livello1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileLivelli/livello1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileLivelli/storico.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileLivelli/storico.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/attacco1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/attacco1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/attacco1L.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/attacco1L.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/attacco1LL.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/attacco1LL.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/attacco1LLL.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/attacco1LLL.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/attacco1LLLL.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/attacco1LLLL.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/attacco1LLLLL.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/attacco1LLLLL.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/attacco2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/attacco2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/attacco2L.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/attacco2L.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/attacco2LL.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/attacco2LL.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/attacco2LLL.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/attacco2LLL.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/attacco2LLLL.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/attacco2LLLL.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/attacco2LLLLL.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/attacco2LLLLL.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/attacco3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/attacco3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/attacco3L.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/attacco3L.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/attacco3LL.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/attacco3LL.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/attacco3LLL.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/attacco3LLL.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/attacco3LLLL.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/attacco3LLLL.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/attacco3LLLLL.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/attacco3LLLLL.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/colpito.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/colpito.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/colpitoL.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/colpitoL.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/colpitoLL.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/colpitoLL.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/colpitoLLL.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/colpitoLLL.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/colpitoLLLL.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/colpitoLLLL.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/colpitoLLLLL.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/colpitoLLLLL.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/normale.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/normale.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/normaleL.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/normaleL.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/normaleLL.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/normaleLL.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/normaleLLL.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/normaleLLL.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/normaleLLLL.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/normaleLLLL.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/Ciccio/normaleLLLLL.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Martellatore/normaleLLLLL.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Boss1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Boss1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Boss2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Boss2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/ETileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ETileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Partita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/PunteggioManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/PunteggioManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/TileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Music/bomberman_battle.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/Music/bomberman_battle.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/AudioManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/AudioManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/ProfiloUtente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/ProfiloUtente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/SchermataSconfitta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SchermataSconfitta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/SchermataVittoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SchermataVittoria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Storico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Storico.java" afterDir="false" />
+    </list>
+    <list id="d8707499-0969-4e90-8527-29b34c0957ef" name="Changes by Lorenzo" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Model/BombManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/BombManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Bomberman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Bomberman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Partita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Partita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/PowerUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/PowerUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/TileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/AudioManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/AudioManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/ProfiloUtente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/ProfiloUtente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/SchermataVittoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SchermataVittoria.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +90,92 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/Model/Partita.java">
+      <ranges>
+        <range start1="3" end1="3" start2="3" end2="4" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="47" end1="47" start2="48" end2="50" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="69" end1="69" start2="72" end2="74" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="91" end1="91" start2="96" end2="98" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="100" end1="100" start2="107" end2="108" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="113" end1="113" start2="121" end2="123" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="135" end1="135" start2="145" end2="146" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="146" end1="146" start2="157" end2="158" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="229" end1="229" start2="241" end2="242" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="230" end1="230" start2="243" end2="244" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/View/ProfiloUtente.java">
+      <ranges>
+        <range start1="10" end1="11" start2="10" end2="11" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="30" end1="31" start2="30" end2="31" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="43" end1="44" start2="43" end2="44" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="55" end1="56" start2="55" end2="56" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="66" end1="67" start2="66" end2="67" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="75" end1="76" start2="75" end2="75" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="78" end1="79" start2="77" end2="78" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="89" end1="91" start2="88" end2="89" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="126" end1="131" start2="124" end2="126" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/Model/TileManager.java">
+      <ranges>
+        <range start1="4" end1="4" start2="4" end2="5" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="56" end1="56" start2="57" end2="58" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="75" end1="75" start2="77" end2="78" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="94" end1="94" start2="97" end2="98" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="96" end1="96" start2="100" end2="101" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="113" end1="113" start2="118" end2="119" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="159" end1="159" start2="165" end2="166" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="244" end1="244" start2="251" end2="252" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="260" end1="265" start2="268" end2="268" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="345" end1="346" start2="348" end2="349" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="347" end1="348" start2="350" end2="351" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="352" end1="352" start2="355" end2="356" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="358" end1="359" start2="362" end2="363" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="360" end1="361" start2="364" end2="365" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="364" end1="364" start2="368" end2="369" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="366" end1="366" start2="371" end2="372" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="369" end1="370" start2="375" end2="377" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/View/AudioManager.java">
+      <ranges>
+        <range start1="9" end1="11" start2="9" end2="12" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="15" end1="16" start2="16" end2="17" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="17" end1="19" start2="18" end2="28" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="28" end1="29" start2="37" end2="40" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="33" end1="33" start2="44" end2="45" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="41" end1="44" start2="53" end2="54" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="48" end1="50" start2="58" end2="63" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="51" end1="51" start2="64" end2="71" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/View/Menu.java">
+      <ranges>
+        <range start1="19" end1="20" start2="19" end2="20" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="74" end1="75" start2="74" end2="77" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="78" end1="80" start2="80" end2="80" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="93" end1="93" start2="93" end2="94" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="103" end1="103" start2="104" end2="105" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/View/SchermataVittoria.java">
+      <ranges>
+        <range start1="20" end1="20" start2="20" end2="21" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="54" end1="55" start2="55" end2="55" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="58" end1="58" start2="58" end2="60" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="67" end1="67" start2="69" end2="70" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="73" end1="73" start2="76" end2="77" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="80" end1="82" start2="84" end2="85" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="107" end1="107" start2="110" end2="111" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="146" end1="146" start2="150" end2="151" changelist="c7eac33b-747f-4198-9d8d-c85c450c5d46" />
+        <range start1="159" end1="159" start2="164" end2="165" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="171" end1="171" start2="177" end2="178" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+        <range start1="176" end1="177" start2="183" end2="184" changelist="d8707499-0969-4e90-8527-29b34c0957ef" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -186,7 +338,7 @@
       <workItem from="1692988045862" duration="280000" />
       <workItem from="1693226276552" duration="11760000" />
       <workItem from="1693258936411" duration="448000" />
-      <workItem from="1693301684135" duration="5591000" />
+      <workItem from="1693301684135" duration="14410000" />
     </task>
     <servers />
   </component>
@@ -220,15 +372,6 @@
           <properties class="java.util.NoSuchElementException" package="java.util" />
           <option name="timeStamp" value="17" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Model/TileManager.java</url>
-          <line>158</line>
-          <properties class="Model.TileManager" method="loadMap">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/View/Nickname.java</url>
           <line>31</line>

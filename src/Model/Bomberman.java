@@ -1,6 +1,7 @@
 package Model;
 
 import Controller.*;
+import View.AudioManager;
 import View.SchermataSconfitta;
 
 import javax.imageio.ImageIO;
@@ -39,6 +40,7 @@ public class Bomberman implements Collidable {
     private static Coordinate posizioneAttuale;
     private static Coordinate prossimaPosizione;
     private  static Coordinate arrivo;
+
 
     public static boolean dead = false;
     public int dtimer = 50;
@@ -335,6 +337,7 @@ public class Bomberman implements Collidable {
      */
     public void handleCollision(PowerUp p){
             p.raccogli(this);
+            AudioManager.getInstance().play(5);
     }
 
     /**

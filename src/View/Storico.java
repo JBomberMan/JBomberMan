@@ -1,4 +1,6 @@
 package View;
+import Model.Bomberman;
+import Model.PunteggioManager;
 import org.json.*;
 
 import javax.swing.*;
@@ -33,7 +35,8 @@ public class Storico extends JPanel {
             JSONObject obj = new JSONObject(content);
             storico = new JLabel("<html><h1>Partite giocate: " + obj.getInt("giocate")
                     + "<br>" + "Partite vinte: " + obj.getInt("vinte") + "<br>"
-                    + "Partite perse: " + obj.getInt("perse") + "</h1></html>");
+                    + "Partite perse: " + obj.getInt("perse") + "<br>" + "Esperienza: " + obj.getInt("esperienza") + "<br>" +
+                    "Livello: " + obj.getInt("esperienza")/300 + "</h1></html>");
             add(storico);
         }catch (Exception e){
             e.printStackTrace();
@@ -49,10 +52,12 @@ public class Storico extends JPanel {
             JSONObject obj = new JSONObject(content);
             obj.put("giocate", obj.getInt("giocate")+1);
             obj.put("vinte", obj.getInt("vinte")+1);
+            obj.put("esperienza", PunteggioManager.getPunteggio());
             Files.write(Paths.get(file.toURI()), obj.toString().getBytes());
             storico.setText("<html><h1>Partite giocate: " + obj.getInt("giocate")
                     + "<br>" + "Partite vinte: " + obj.getInt("vinte") + "<br>"
-                    + "Partite perse: " + obj.getInt("perse") + "</h1></html>");
+                    + "Partite perse: " + obj.getInt("perse") + "<br>" + "Esperienza: " + obj.getInt("esperienza") + "<br>" +
+                    "Livello: " + obj.getInt("esperienza")/300 + "</h1></html>");
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -71,7 +76,8 @@ public class Storico extends JPanel {
             Files.write(Paths.get(file.toURI()), obj.toString().getBytes());
             storico.setText("<html><h1>Partite giocate: " + obj.getInt("giocate")
                     + "<br>" + "Partite vinte: " + obj.getInt("vinte") + "<br>"
-                    + "Partite perse: " + obj.getInt("perse") + "</h1></html>");
+                    + "Partite perse: " + obj.getInt("perse") + "<br>" + "Esperienza: " + obj.getInt("esperienza") + "<br>" +
+                    "Livello: " + obj.getInt("esperienza")/300 + "</h1></html>");
         }catch (Exception e){
             e.printStackTrace();
         }

@@ -66,7 +66,7 @@ public class ETileManager {
             tile[14] = new Tile();
             tile[14].immagine = ImageIO.read(getClass().getResourceAsStream("/Images/clown/clown1.png"));
             tile[15] = new Tile();
-            tile[15].immagine = ImageIO.read(getClass().getResourceAsStream("/Images/Ciccio/normale.png"));
+            tile[15].immagine = ImageIO.read(getClass().getResourceAsStream("/Images/Martellatore/normale.png"));
 
         }catch(IOException e){
             e.printStackTrace();

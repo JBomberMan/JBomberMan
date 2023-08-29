@@ -1,6 +1,7 @@
 package Model;
 
 import Controller.*;
+import View.AudioManager;
 
 import java.awt.*;
 import javax.swing.*;
@@ -46,6 +47,8 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
     private static Partita istanza;
     private MouseHandler mouseHandler = new MouseHandler(this); //gestisce gli input da mouse
 
+
+
     /**
      * 
      * Costruttore della partita in caso si voglia giocare i livelli standard
@@ -67,6 +70,8 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
         this.addMouseListener(mouseHandler); //aggiunge il mouselistener al pannello
 
         this.setFocusable(true); //perché il pannello possa ricevere gli input da tastiera
+
+
     }
 
     /**
@@ -89,6 +94,8 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
         this.addMouseListener(mouseHandler); //aggiunge il mouselistener al pannello
 
         this.setFocusable(true); //perché il pannello possa ricevere gli input da tastiera
+
+
     }
 
     /**
@@ -98,6 +105,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
      */  
     public void riavvia(){
         //resetta il thread
+
         gameThread = null;
 
         //pulisce le esplosioni e le bombe
@@ -111,6 +119,8 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
         //pulisce il tile manager e il bomb manager
         tileM.pulisci();
         tileM.loadMap();
+
+
 
 
     }
@@ -133,6 +143,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
 
         //pulisce il tile manager e il bomb manager
         tileM.pulisci();
+        //am.stop();
     }
 
     /**
@@ -144,6 +155,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
         if(gameThread == null){
             gameThread = new Thread(this); //crea il thread
             gameThread.start(); //lo starta e chiama run() automaticamente
+
         }
     }
 
@@ -227,7 +239,9 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
      * 
      */ 
     public static void stopGameThread(){
+
         gameThread.stop();
+
          //ferma il thread
     }
 

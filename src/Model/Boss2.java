@@ -52,21 +52,21 @@ public class Boss2 extends Boss implements Collidable{
      */
     public void getEnemiesImage() {
         try {
-            risorse[0] = ImageIO.read(getClass().getResourceAsStream("/Images/Ciccio/normaleLLL.png")); //standard
-            risorse[1] = ImageIO.read(getClass().getResourceAsStream("/Images/Ciccio/colpitoLLL.png")); //hit
-            risorse[2] = ImageIO.read(getClass().getResourceAsStream("/Images/Ciccio/attacco1LLL.png")); //colpo1
-            risorse[3] = ImageIO.read(getClass().getResourceAsStream("/Images/Ciccio/attacco2LLL.png")); //colpo2
-            risorse[4] = ImageIO.read(getClass().getResourceAsStream("/Images/Ciccio/attacco3LLL.png")); //colpo3
-            risorse[5] = ImageIO.read(getClass().getResourceAsStream("/Images/Ciccio/normaleLLLL.png")); //standard
-            risorse[6] = ImageIO.read(getClass().getResourceAsStream("/Images/Ciccio/colpitoLLLL.png")); //hit
-            risorse[7] = ImageIO.read(getClass().getResourceAsStream("/Images/Ciccio/attacco1LLLL.png")); //colpo1
-            risorse[8] = ImageIO.read(getClass().getResourceAsStream("/Images/Ciccio/attacco2LLLL.png")); //colpo2
-            risorse[9] = ImageIO.read(getClass().getResourceAsStream("/Images/Ciccio/attacco3LLLL.png")); //colpo3
-            risorse[10] = ImageIO.read(getClass().getResourceAsStream("/Images/Ciccio/normaleLLLLL.png")); //standard
-            risorse[11] = ImageIO.read(getClass().getResourceAsStream("/Images/Ciccio/colpitoLLLLL.png")); //hit
-            risorse[12] = ImageIO.read(getClass().getResourceAsStream("/Images/Ciccio/attacco1LLLLL.png")); //colpo1
-            risorse[13] = ImageIO.read(getClass().getResourceAsStream("/Images/Ciccio/attacco2LLLLL.png")); //colpo2
-            risorse[14] = ImageIO.read(getClass().getResourceAsStream("/Images/Ciccio/attacco3LLLLL.png")); //colpo3
+            risorse[0] = ImageIO.read(getClass().getResourceAsStream("/Images/Martellatore/normaleLLL.png")); //standard
+            risorse[1] = ImageIO.read(getClass().getResourceAsStream("/Images/Martellatore/colpitoLLL.png")); //hit
+            risorse[2] = ImageIO.read(getClass().getResourceAsStream("/Images/Martellatore/attacco1LLL.png")); //colpo1
+            risorse[3] = ImageIO.read(getClass().getResourceAsStream("/Images/Martellatore/attacco2LLL.png")); //colpo2
+            risorse[4] = ImageIO.read(getClass().getResourceAsStream("/Images/Martellatore/attacco3LLL.png")); //colpo3
+            risorse[5] = ImageIO.read(getClass().getResourceAsStream("/Images/Martellatore/normaleLLLL.png")); //standard
+            risorse[6] = ImageIO.read(getClass().getResourceAsStream("/Images/Martellatore/colpitoLLLL.png")); //hit
+            risorse[7] = ImageIO.read(getClass().getResourceAsStream("/Images/Martellatore/attacco1LLLL.png")); //colpo1
+            risorse[8] = ImageIO.read(getClass().getResourceAsStream("/Images/Martellatore/attacco2LLLL.png")); //colpo2
+            risorse[9] = ImageIO.read(getClass().getResourceAsStream("/Images/Martellatore/attacco3LLLL.png")); //colpo3
+            risorse[10] = ImageIO.read(getClass().getResourceAsStream("/Images/Martellatore/normaleLLLLL.png")); //standard
+            risorse[11] = ImageIO.read(getClass().getResourceAsStream("/Images/Martellatore/colpitoLLLLL.png")); //hit
+            risorse[12] = ImageIO.read(getClass().getResourceAsStream("/Images/Martellatore/attacco1LLLLL.png")); //colpo1
+            risorse[13] = ImageIO.read(getClass().getResourceAsStream("/Images/Martellatore/attacco2LLLLL.png")); //colpo2
+            risorse[14] = ImageIO.read(getClass().getResourceAsStream("/Images/Martellatore/attacco3LLLLL.png")); //colpo3
 
         } catch(IOException e){
             e.printStackTrace();
@@ -167,7 +167,7 @@ public class Boss2 extends Boss implements Collidable{
             sprite = standard;
         }
         g2d.drawImage(sprite, x, y, null);
-        g2d.draw(hitbox);
+        //g2d.draw(hitbox);
 
     }
 

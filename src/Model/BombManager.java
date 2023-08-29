@@ -1,6 +1,7 @@
 package Model;
 
 import Controller.KeyHandler;
+import View.AudioManager;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -19,6 +20,7 @@ public class BombManager {
     public static ArrayList<Esplosione> esplosioni = new ArrayList<Esplosione>();
     public static ArrayList<Bomba> bombeR = new ArrayList<Bomba>();
     public static ArrayList<Esplosione> esplosioniR = new ArrayList<Esplosione>();
+
 
     /**
      * costruttore
@@ -69,6 +71,7 @@ public class BombManager {
      * metodo per piazzare una bomba sempre centrata nella tile di fronte al bomberman
      */
     public void piazzaBomba(){
+
         if(bombeAttive < numeroBombe){
             String direzione = Bomberman.getDirezione();
             int tileOrizzontale = 0;
@@ -100,6 +103,7 @@ public class BombManager {
             bombe.add(new Bomba(tileOrizzontale* play.tileSize,tileVerticale* play.tileSize,null, this.play, raggioBombe));
             bombeAttive++;
         }
+        AudioManager.getInstance().play(3);
     }
 
     /**
@@ -139,6 +143,7 @@ public class BombManager {
      */
     public static void addEsplosione(Esplosione esplosione){
         esplosioni.add(esplosione);
+        AudioManager.getInstance().play(4);
     }
 
     /**
