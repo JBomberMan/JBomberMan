@@ -86,7 +86,6 @@ public class ProfiloUtente extends JFrame{
         c.anchor = GridBagConstraints.FIRST_LINE_START;
         background.add(storico, c);
 
-        AudioManager.getInstance().play(0);
         //audioManager.loop();
         setVisible(true);
 
@@ -123,6 +122,6 @@ public class ProfiloUtente extends JFrame{
     }
 
     public static void stop(){
-        AudioManager.getInstance().stop();
+
     }
 }

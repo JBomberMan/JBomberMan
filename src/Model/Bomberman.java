@@ -337,7 +337,7 @@ public class Bomberman implements Collidable {
      */
     public void handleCollision(PowerUp p){
             p.raccogli(this);
-            AudioManager.getInstance().play(5);
+            AudioManager.getInstance().play("src/Music/powerup.wav");
     }
 
     /**

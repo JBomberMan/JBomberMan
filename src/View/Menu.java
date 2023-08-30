@@ -73,8 +73,6 @@ public class Menu extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                AudioManager.getInstance().stop();
-                AudioManager.getInstance().play(1);
                 Partita partita = new Partita();
                 JFrame frame = new JFrame("Bomberman");
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -91,7 +89,7 @@ public class Menu extends JPanel {
         bottoneEditor.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                AudioManager.getInstance().stop();
+
                 EditorLiveli editorLiveli = new EditorLiveli();
 
             }
@@ -102,7 +100,7 @@ public class Menu extends JPanel {
         bottoneLivelliPers.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                AudioManager.getInstance().stop();
+
                 LivelloSelect livelloSelect = LivelloSelect.getIstanza();
 
             }

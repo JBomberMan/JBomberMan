@@ -116,7 +116,7 @@ public class TileManager {
         codaAggiunte.clear();
         codaRimozioni.clear();
         boss = null;
-        AudioManager.getInstance().stop();
+        //AudioManager.getInstance().stop();
 
     }
 
@@ -353,14 +353,14 @@ public class TileManager {
                     path = new File("src/FileLivelli/livello" + livello + ".txt");
 
                 }
-                AudioManager.getInstance().stop();
+                //AudioManager.getInstance().stop();
                 Partita.stopGameThread();
                 SchermataVittoria.getIstanza(personalizzato).setVisible(true);
 
             }
         } else if (movingEntities.size() == 0){
 
-            AudioManager.getInstance().stop();
+            //AudioManager.getInstance().stop();
             if(!personalizzato) {
 
                 livello++;
@@ -369,11 +369,11 @@ public class TileManager {
 
             Partita.stopGameThread();
             if(livello > 8){
-                AudioManager.getInstance().stop();
+                //AudioManager.getInstance().stop();
                 SchermataCompletamento.getIstanza().setVisible(true);
                 resetLivello();
             }
-            else {AudioManager.getInstance().stop();
+            else {//AudioManager.getInstance().stop();
                 SchermataVittoria.getIstanza(personalizzato).setVisible(true);}
 
         }

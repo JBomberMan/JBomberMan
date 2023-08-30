@@ -57,7 +57,7 @@ public class SchermataVittoria extends JFrame {
 
         }
 
-        AudioManager.getInstance().play(6);
+        AudioManager.getInstance().play("src/Music/StageClear.wav");
 
         setContentPane(panel);
         setVisible(true);
@@ -67,7 +67,7 @@ public class SchermataVittoria extends JFrame {
 
             public void actionPerformed(ActionEvent e) {
 
-                AudioManager.getInstance().stop();
+                //AudioManager.getInstance().stop();
                 TileManager.resetLivello();
                 SwingUtilities.getWindowAncestor(Partita.getIstanza()).dispose();
                 dispose();
@@ -82,7 +82,7 @@ public class SchermataVittoria extends JFrame {
 
             public void actionPerformed(ActionEvent e) {
 
-                AudioManager.getInstance().stop();
+                //AudioManager.getInstance().stop();
                 Partita.getIstanza().riavvia();
                 Partita.getIstanza().startGameThread();
                 dispose();
@@ -148,7 +148,7 @@ public class SchermataVittoria extends JFrame {
 
         }
 
-        AudioManager.getInstance().stop();
+        //AudioManager.getInstance().stop();
         setContentPane(panel);
         setVisible(true);
 
@@ -162,7 +162,7 @@ public class SchermataVittoria extends JFrame {
                 Partita.getIstanza().riavvia();
                 TileManager.setLivello(1);
                 ProfiloUtente.getProfilo().setVisible(true);
-                AudioManager.getInstance().stop();
+                //AudioManager.getInstance().stop();
             }
         });
 
@@ -175,13 +175,13 @@ public class SchermataVittoria extends JFrame {
                 Partita.getIstanza().riavvia();
                 Partita.getIstanza().startGameThread();
                 dispose();
-               AudioManager.getInstance().stop();
+                //AudioManager.getInstance().stop();
 
 
 
             }
         });
-        AudioManager.getInstance().play(6);
+        AudioManager.getInstance().play("src/Music/StageClear.wav");
     }
 
     public void paint(Graphics g){

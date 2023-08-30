@@ -103,7 +103,7 @@ public class BombManager {
             bombe.add(new Bomba(tileOrizzontale* play.tileSize,tileVerticale* play.tileSize,null, this.play, raggioBombe));
             bombeAttive++;
         }
-        AudioManager.getInstance().play(3);
+        AudioManager.getInstance().play("src/Music/placeBombNuovo.wav");
     }
 
     /**
@@ -143,7 +143,7 @@ public class BombManager {
      */
     public static void addEsplosione(Esplosione esplosione){
         esplosioni.add(esplosione);
-        AudioManager.getInstance().play(4);
+        AudioManager.getInstance().play("src/Music/bombExplosion.wav");
     }
 
     /**
