@@ -16,10 +16,10 @@ public class Boss1 extends Boss implements Collidable{
     public BufferedImage standard, hit, cry1, cry2, cry3;
 
     public static String direction = "left";
-    private int invTimer = 0, incazzatoTimer = 0, invSprite = 0;
+    private int invTimer = 0, rageTimer = 0, invSprite = 0;
 
     public Boolean dead = false;
-    private Boolean collision = false, incazzato = false;
+    private Boolean collision = false, inRage = false;
     private Polygon hitboxSpecial;
 
 
@@ -88,7 +88,7 @@ public class Boss1 extends Boss implements Collidable{
      */
     @Override
     public void muovi() {
-        if(!incazzato){
+        if(!inRage){
             if(this.x + this.standard.getWidth()/2 < Bomberman.getX()){
                 x += velocita;
             }else{
@@ -112,44 +112,34 @@ public class Boss1 extends Boss implements Collidable{
 
         if(invTimer > 0){
             invTimer--;
-            //sprite = hit;
         }
         if(invSprite > 0){
             invSprite--;
             sprite = hit;
         }
-        else if(incazzato){
-            if(incazzatoTimer < 40){
+        else if(inRage){
+            if(rageTimer < 40){
                 sprite = cry1;
-                incazzatoTimer++;
-            } else if(incazzatoTimer < 80){
+                rageTimer++;
+            } else if(rageTimer < 80){
                 sprite = cry2;
-                incazzatoTimer++;
-            } else if(incazzatoTimer < 120){
+                rageTimer++;
+            } else if(rageTimer < 120){
                 sprite = cry3;
-                incazzatoTimer++;
+                rageTimer++;
             }
-            else if(incazzatoTimer < 160){
+            else if(rageTimer < 160){
                 sprite = cry2;
-                incazzatoTimer++;
+                rageTimer++;
             }
             else {
-                incazzato = false;
-                incazzatoTimer = 0;
+                inRage = false;
+                rageTimer = 0;
             }
         }else {
             sprite = standard;
         }
         g2d.drawImage(sprite, x, y, null);
-        /*g2d.draw(new Polygon(new int[]{this.x + 166,
-                this.x + 246, this.x + 294, this.x + 332, this.x + 412, this.x + 412, this.x + 363,
-                this.x + 332, this.x + 304, this.x + 206, this.x + 108, this.x + 80, this.x + 49,
-                this.x + 0, this.x + 0, this.x + 80, this.x + 118}, new int[]{this.y + 0,
-                this.y + 0, this.y + 27, this.y + 117, this.y + 172, this.y + 241, this.y + 278,
-                this.y + 254, this.y + 304, this.y + 348, this.y + 304, this.y + 254, this.y + 278,
-                this.y + 241, this.y + 172, this.y + 117, this.y + 27
-        }, 17));*/
-
 
     }
 
@@ -171,7 +161,7 @@ public class Boss1 extends Boss implements Collidable{
      * @param e esplosione
      */
     public void handleCollision(Esplosione e){
-        if(this.invTimer == 0){
+        if(this.invTimer == 0 && this.rageTimer == 0){
             this.vite--;
             if(this.vite == 4){
                 velocita = 2;
@@ -265,7 +255,7 @@ public class Boss1 extends Boss implements Collidable{
      * metodo per attivare la rage mode del boss
      */
     private void rage(){
-        incazzato = true;
+        inRage = true;
         int xp = this.x + (standard.getWidth()/2) - 30;
         int yp = this.y + (standard.getHeight()/2) -30;
         IntStream.range(0,8).forEach(i -> {

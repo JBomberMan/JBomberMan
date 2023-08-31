@@ -5,20 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7eac33b-747f-4198-9d8d-c85c450c5d46" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_20_2023_10_42_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_20_2023_10_42_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileLivelli/storico.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileLivelli/storico.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/BomberMan_left1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/BomberMan_left1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/BomberMan_right1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/BomberMan_right1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images/BomberMan_right2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/BomberMan_right2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JavaDoc/View/AudioManager.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Music/bombExplosion.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/Music/bombExplosion.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Music/placeBombNuovo.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/Music/placeBombNuovo.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Music/powerup.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/Music/powerup.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Boss1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Boss1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/TileManager.java" afterDir="false" />
     </list>
-    <list id="d8707499-0969-4e90-8527-29b34c0957ef" name="Changes by Lorenzo" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Controller/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/KeyHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/AudioManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/AudioManager.java" afterDir="false" />
-    </list>
+    <list id="d8707499-0969-4e90-8527-29b34c0957ef" name="Changes by Lorenzo" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -200,6 +192,7 @@
       <workItem from="1693334786243" duration="29000" />
       <workItem from="1693390396573" duration="1391000" />
       <workItem from="1693484998007" duration="3075000" />
+      <workItem from="1693491984153" duration="1991000" />
     </task>
     <servers />
   </component>
