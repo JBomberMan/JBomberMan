@@ -23,7 +23,7 @@ public class Kondoria  extends MovingEntity implements Collidable{
         public int dtimer = 50;
         public int trovaTimer = 0;
         private Iterator<Coordinate> pathIterator;
-        Coordinate prossimaPosizione;
+        private Coordinate prossimaPosizione;
 
 
     /**

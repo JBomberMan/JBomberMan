@@ -8,7 +8,7 @@ import java.awt.image.BufferedImage;
  * Classe per rappresentare un oggetto che può essere posizionato sulla mappa
  */
 public class TileObject extends GameEntity {
-    Partita play;
+    private Partita play;
 
     /**
      * Costruttore

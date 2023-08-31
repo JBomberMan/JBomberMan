@@ -27,12 +27,12 @@ public class Bomberman implements Collidable {
 
     public BufferedImage up1, up2, down1, down2, right1, right2, left1, left2, damaged1, damaged2, dead1, dead2;
     public static String direction;
-    KeyHandler keyH;
-    Partita play;
+    protected KeyHandler keyH;
+    protected Partita play;
     public static int spriteCounter = 0;
     public static int spriteNum = 1;
-    Rectangle hitbox;
-    Map<PowerUp.Tipo, Integer> powerUps = new HashMap<PowerUp.Tipo, Integer>();
+    protected Rectangle hitbox;
+    protected Map<PowerUp.Tipo, Integer> powerUps = new HashMap<PowerUp.Tipo, Integer>();
 
     private static Boolean movimentoMouse;
     private static ArrayList<Coordinate> path;

@@ -16,7 +16,7 @@ public class BombManager {
     private static int raggioBombe;
     private static int bombeAttive = 0;
     private KeyHandler keyHandler;
-    Partita play;
+    protected Partita play;
     public static ArrayList<Esplosione> esplosioni = new ArrayList<Esplosione>();
     public static ArrayList<Bomba> bombeR = new ArrayList<Bomba>();
     public static ArrayList<Esplosione> esplosioniR = new ArrayList<Esplosione>();

@@ -20,8 +20,8 @@ import javax.sound.sampled.Clip;
 public class AudioManager {
 
     private static AudioManager instance;
-    final AudioInputStream[] in = new AudioInputStream[10];
-    final Clip clips[] = new Clip[10];
+    private final AudioInputStream[] in = new AudioInputStream[10];
+    private final Clip clips[] = new Clip[10];
 
 
     /**

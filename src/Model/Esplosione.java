@@ -13,7 +13,7 @@ public class Esplosione extends StationaryEntity implements Disegnabile {
 
     int raggio;
 
-    BufferedImage sprite;
+    private BufferedImage sprite;
     private int counter = 0;
     private String direzione;
     private boolean espaso = false;

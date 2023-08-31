@@ -11,7 +11,7 @@ import java.io.*;
  */
 public class ETileManager {
 
-    ELvlPanel eLvlPanel;
+    protected ELvlPanel eLvlPanel;
     private static Boolean bomberman = false;
     private static int bombx, bomby;
     public static Tile[] tile;
