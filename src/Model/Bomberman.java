@@ -53,6 +53,7 @@ public class Bomberman implements Collidable {
         return gettoni;
     }
 
+
     /**
      * Costruttore del bomberman
      * @param x posizione x
@@ -301,7 +302,8 @@ public class Bomberman implements Collidable {
         if(dead){
             this.dtimer--;
             if(dtimer == 0) {
-                System.out.println("Hai perso!");
+                AudioManager.getInstance().stop(2);
+
                 SchermataSconfitta.getIstanza().setVisible(true);
                 Partita.stopGameThread();
             }
@@ -337,7 +339,7 @@ public class Bomberman implements Collidable {
      */
     public void handleCollision(PowerUp p){
             p.raccogli(this);
-            AudioManager.getInstance().play("src/Music/powerup.wav");
+            AudioManager.getInstance().play(5);
     }
 
     /**
@@ -369,7 +371,7 @@ public class Bomberman implements Collidable {
             if(this.invTimer == 0){
                 this.vite--;
                 this.invTimer = 71;
-                System.out.println("Vite rimaste: " + this.vite);
+
                 if (this.vite <= 0){
                     dead = true;
                 }
@@ -387,7 +389,7 @@ public class Bomberman implements Collidable {
             this.vite--;
             this.invTimer = 71;
         
-            System.out.println("Vite rimaste: " + this.vite);
+
             if (this.vite <= 0){
                 dead = true;
                 

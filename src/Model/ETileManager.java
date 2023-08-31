@@ -201,7 +201,7 @@ public class ETileManager {
 
         try{
             if(!bomberman) {
-                System.out.println("Bomberman non presente");
+
                 return;}
             String fileName = JOptionPane.showInputDialog("Inserisci nome filge");
             String path = "src/LivelliPersonalizzati";

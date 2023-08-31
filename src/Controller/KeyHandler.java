@@ -74,7 +74,7 @@ public class KeyHandler implements KeyListener {
         if(code == KeyEvent.VK_E){
             e = true;
             if(play.tileM.bomber.getDetona()) {
-                System.out.println("kaboom");
+
                 play.bombM.detonaDistanza();
             };
         }

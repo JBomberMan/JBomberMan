@@ -204,11 +204,11 @@ public class Kondoria  extends MovingEntity implements Collidable{
         if(this.invTimer == 0){
             this.vite--;
             this.invTimer = 50;
-            System.out.println("Vite rimaste Nemico: " + this.vite);
+
 
             if (this.vite <= 0){
                 dead = true;
-                System.out.println("Nemico Sconfitto!");
+
             }
         }
     }
@@ -331,13 +331,13 @@ public class Kondoria  extends MovingEntity implements Collidable{
         Map<Coordinate, Coordinate> parentMap = new HashMap<>();
 
         if (bomberx < 0 || bomberx >= map.get(0).size() || bombery < 0 || bombery >= map.size() || map.get(bombery).get(bomberx) == 1) {
-            System.out.println("Coordinate del giocatore non valide o posizione bloccata.");
+
             map.get(mousey).set(mousex,0);
 
         }
 
         if (mousex < 0 || mousex >= map.get(0).size() || mousey < 0 || mousey >= map.size() || map.get(mousey).get(mousex) == 1) {
-            System.out.println("Coordinate della casella premuta non valide o posizione bloccata.");
+
             map.get(mousey).set(mousex,0);
 
         }
@@ -381,7 +381,7 @@ public class Kondoria  extends MovingEntity implements Collidable{
 
             if (current == null) {
                 // Gestisci il caso in cui non esista un percorso
-                System.out.println("Percorso non trovato.");
+
                 return new ArrayList<>();
             }
         }

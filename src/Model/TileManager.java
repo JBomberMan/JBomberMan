@@ -54,6 +54,7 @@ public class TileManager {
     private static int livello = 1;
     BufferedReader br;
     static File path;
+    public int vitt;
 
 
 
@@ -353,27 +354,30 @@ public class TileManager {
                     path = new File("src/FileLivelli/livello" + livello + ".txt");
 
                 }
-                //AudioManager.getInstance().stop();
+                AudioManager.getInstance().stop(2);
                 Partita.stopGameThread();
                 SchermataVittoria.getIstanza(personalizzato).setVisible(true);
 
             }
         } else if (movingEntities.size() == 0){
+            Partita.stopGameThread();
+            AudioManager.getInstance().stop(2);
 
-            //AudioManager.getInstance().stop();
+
             if(!personalizzato) {
 
                 livello++;
                 path = new File("src/FileLivelli/livello" + livello + ".txt");
             }
 
-            Partita.stopGameThread();
+
             if(livello > 8){
-                //AudioManager.getInstance().stop();
+
                 SchermataCompletamento.getIstanza().setVisible(true);
                 resetLivello();
             }
-            else {//AudioManager.getInstance().stop();
+            else {
+
                 SchermataVittoria.getIstanza(personalizzato).setVisible(true);}
 
         }
@@ -512,7 +516,7 @@ public class TileManager {
             powerUpsR.add((PowerUp) entity);
         } else if (entity instanceof StationaryEntity) {
             stationaryEntitiesR.add((StationaryEntity) entity);
-            System.out.println("Rimosso");
+
         }
     }
 
@@ -525,5 +529,7 @@ public class TileManager {
     }
 
 
-
+    public void setVitt(int i){
+        vitt = i;
+    }
 }

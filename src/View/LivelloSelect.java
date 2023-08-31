@@ -32,6 +32,7 @@ public class LivelloSelect extends JFrame {
                     bottone.addActionListener(new ActionListener() {
                         @Override
                         public void actionPerformed(ActionEvent e) {
+                            AudioManager.getInstance().stop(7);
                             ProfiloUtente.stop();
                             Partita partita = new Partita(path.toString());
                             JFrame frame = new JFrame("Bomberman");

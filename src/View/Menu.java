@@ -23,7 +23,7 @@ public class Menu extends JPanel {
      * Costruttore che inizializza i bottoni e li aggiunge al pannello
      */
     public Menu(){
-
+        AudioManager.getInstance().play(7);
         bottoneAvatar = new JButton("Imposta avatar");
         bottonePartita = new JButton("Avvia partita");
         bottoneNickname = new JButton("Imposta nickname");
@@ -72,7 +72,7 @@ public class Menu extends JPanel {
         bottonePartita.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                AudioManager.getInstance().stop(7);
                 Partita partita = new Partita();
                 JFrame frame = new JFrame("Bomberman");
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -81,6 +81,7 @@ public class Menu extends JPanel {
                 frame.setVisible(true);
                 partita.startGameThread();
                 ProfiloUtente.getProfilo().dispose();
+
             }
         });
         /***
