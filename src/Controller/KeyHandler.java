@@ -11,8 +11,8 @@ import java.awt.event.KeyListener;
 public class KeyHandler implements KeyListener {
 
     public Boolean up, down, left, right, space, e;
-    private int spaceTiming = 0;
-    Partita play;
+
+    protected Partita play;
 
     /**
      * Costruttore

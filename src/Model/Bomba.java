@@ -15,8 +15,8 @@ public class Bomba extends GameEntity {
     private BufferedImage[] animationFrames; // Array delle immagini dell'animazione
     private int frameIndex; // Indice dell'immagine corrente dell'animazione
     private int timing = 0;
-    Partita play;
-    Boolean esplosa = false;
+    protected Partita play;
+    protected Boolean esplosa = false;
 
     /**
      * Costruttore della bomba

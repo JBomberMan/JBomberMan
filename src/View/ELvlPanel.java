@@ -13,9 +13,9 @@ public class ELvlPanel extends JPanel implements Runnable{
 
     private static ELvlPanel istanza;
 
-    ETileManager tileM = new ETileManager(this);
-    EMouseHandler mouseHandler = new EMouseHandler();
-    Thread thread;
+    private ETileManager tileM = new ETileManager(this);
+    private EMouseHandler mouseHandler = new EMouseHandler();
+    private Thread thread;
 
     /***
      * Costruttore della schermata

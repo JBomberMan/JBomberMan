@@ -31,7 +31,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
     static Thread gameThread; //thread che gestisce il gioco
                         //quando un Thread starta non si ferma finché nonglielo diciamo noi
                         //la classe implementa Runnable per usare i Threads
-    KeyHandler keyHandler = new KeyHandler(this); //gestisce gli input da tastiera
+    private KeyHandler keyHandler = new KeyHandler(this); //gestisce gli input da tastiera
 
 
     public static TileManager tileM;//instanziamo il tileManager
@@ -42,8 +42,8 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
 
     public PunteggioManager punteggioManager = new PunteggioManager(); //instanziamo il punteggioManager
     public TempoManager tempoManager = new TempoManager(); //instanziamo il tempoManager
-    ViteManager viteManager = new ViteManager(); //instanziamo il viteManager
-    GettoniManager gettoniManager = new GettoniManager(); //instanziamo il gettoniManager
+    private ViteManager viteManager = new ViteManager(); //instanziamo il viteManager
+    private GettoniManager gettoniManager = new GettoniManager(); //instanziamo il gettoniManager
     private static Partita istanza;
     private MouseHandler mouseHandler = new MouseHandler(this); //gestisce gli input da mouse
 

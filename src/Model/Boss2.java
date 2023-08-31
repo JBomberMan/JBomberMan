@@ -26,7 +26,7 @@ public class Boss2 extends Boss implements Collidable{
     private int invTimer = 0, incazzatoTimer = 0, invSprite = 0;
     public Boolean dead = false;
     private Boolean collision = false, rage = false, attaccando = false;
-    BufferedImage sprite = standard;
+    protected BufferedImage sprite = standard;
 
 
     /**

@@ -34,32 +34,32 @@ import java.util.ArrayList;
  */
 public class TileManager {
 
-    Partita partita; //equivale al suo gamepanel
+    private Partita partita; //equivale al suo gamepanel
     public Tile[] tile;
-    KeyHandler keyH;
-    int mapTileNum[][];
+    private KeyHandler keyH;
+    private int mapTileNum[][];
 
-    static ArrayList<MovingEntity> movingEntities = new ArrayList<>();
+    private static ArrayList<MovingEntity> movingEntities = new ArrayList<>();
     public static ArrayList<StationaryEntity> stationaryEntities = new ArrayList<>();
-    ArrayList<TileObject> tiles = new ArrayList<>();
-    static ArrayList<PowerUp> powerUps = new ArrayList<>();
-     static ArrayList<MovingEntity> movingEntitiesR = new ArrayList<>();
-     static ArrayList<StationaryEntity> stationaryEntitiesR = new ArrayList<>();
-     static ArrayList<PowerUp> powerUpsR = new ArrayList<>();
-    static ArrayList<Esplosione> codaAggiunte = new ArrayList<>();
-    static ArrayList<Esplosione> codaRimozioni = new ArrayList<>();
+    private ArrayList<TileObject> tiles = new ArrayList<>();
+    private static ArrayList<PowerUp> powerUps = new ArrayList<>();
+     private static ArrayList<MovingEntity> movingEntitiesR = new ArrayList<>();
+     private static ArrayList<StationaryEntity> stationaryEntitiesR = new ArrayList<>();
+     private static ArrayList<PowerUp> powerUpsR = new ArrayList<>();
+    private static ArrayList<Esplosione> codaAggiunte = new ArrayList<>();
+    private static ArrayList<Esplosione> codaRimozioni = new ArrayList<>();
     private Boss boss;
     public Bomberman bomber;
     private int indexBomberman;
     private static int livello = 1;
-    BufferedReader br;
-    static File path;
+    private BufferedReader br;
+    private static File path;
     public int vitt;
 
 
 
-    Boolean personalizzato;
-    Boolean hitboxSpecial;
+    private Boolean personalizzato;
+    private Boolean hitboxSpecial;
 
     /***
      * costruttore che inizializza il TileManager

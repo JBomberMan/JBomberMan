@@ -13,7 +13,7 @@ import java.nio.file.*;
  */
 public class LivelloSelect extends JFrame {
 
-    int livelli = 0;
+    private int livelli = 0;
     private static LivelloSelect istanza;
 
     /***
