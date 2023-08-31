@@ -196,12 +196,12 @@ public class Boss2 extends Boss implements Collidable{
             }
             this.invTimer = 60;
             this.invSprite = 60;
-            System.out.println("Vite rimaste Nemico: " + this.vite);
+
 
             if (this.vite <= 0){
                 dead = true;
                 TileManager.removeEntity(this);
-                System.out.println("Nemico Sconfitto!");
+
             }
             enterRage();
 

@@ -1,21 +1,17 @@
 package View;
-import java.net.URL;
-import javax.sound.sampled.*;
+
 
 /***
  * Classe per gestire l'audio all'interno del gioco
  */
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+
 
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-import javax.sound.sampled.LineUnavailableException;
-import javax.sound.sampled.UnsupportedAudioFileException;
+
 
 
 /**
@@ -24,8 +20,9 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 public class AudioManager {
 
     private static AudioManager instance;
+    final AudioInputStream[] in = new AudioInputStream[10];
+    final Clip clips[] = new Clip[10];
 
-    private Clip clip;
 
     /**
      * Restituisce l'istanza di AudioManager
@@ -41,40 +38,46 @@ public class AudioManager {
      * Costruttore privato di AudioManager
      */
     private AudioManager() {
+        try {
+            in[0] = AudioSystem.getAudioInputStream(new BufferedInputStream(new FileInputStream("src/Music/Bomberman-Just-Died-OST.wav")));
+            in[1] = AudioSystem.getAudioInputStream(new BufferedInputStream(new FileInputStream("src/Music/StageClear.wav")));
+            in[2] = AudioSystem.getAudioInputStream(new BufferedInputStream(new FileInputStream("src/Music/bomberman_battle.wav")));
+            in[3] = AudioSystem.getAudioInputStream(new BufferedInputStream(new FileInputStream("src/Music/placeBombNuovo.wav")));
+            in[4] = AudioSystem.getAudioInputStream(new BufferedInputStream(new FileInputStream("src/Music/bombExplosion.wav")));
+            in[5] = AudioSystem.getAudioInputStream(new BufferedInputStream(new FileInputStream("src/Music/powerup.wav")));
+            in[6] = AudioSystem.getAudioInputStream(new BufferedInputStream(new FileInputStream("src/Music/bomberman_battleMeme.wav")));
+            in[7] = AudioSystem.getAudioInputStream(new BufferedInputStream(new FileInputStream("src/Music/Bomberman_ost1.wav")));
+
+            for(int i = 0; i < 8; i++) {
+                clips[i] = AudioSystem.getClip();
+                clips[i].open(in[i]);
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
 
     }
 
     /**
      * Riproduce un file audio
-     * @param filename il path del file audio da riprodurre
+     * @param i indice del file da riprodurre
      */
-    public void play(String filename) {
+    public void play(int i) {
         //stop(); // Ferma la riproduzione corrente (se presente)
+        clips[i].setFramePosition(0); // Riavvolge il file audio
 
-        try {
-            InputStream in = new BufferedInputStream(new FileInputStream(filename));
-            AudioInputStream audioIn = AudioSystem.getAudioInputStream(in);
-            clip = AudioSystem.getClip();
-            clip.open(audioIn);
-            clip.start();
-        } catch (FileNotFoundException e1) {
-            e1.printStackTrace();
-        } catch (IOException e1) {
-            e1.printStackTrace();
-        } catch (UnsupportedAudioFileException e1) {
-            e1.printStackTrace();
-        } catch (LineUnavailableException e1) {
-            e1.printStackTrace();
-        }
+        clips[i].start();
     }
 
     /**
      * Ferma la riproduzione corrente
      */
-    public void stop() {
-        if (clip != null && clip.isRunning()) {
-            clip.stop();
-            clip.close();
+    public void stop(int i) {
+        if (clips[i] != null && clips[i].isRunning()) {
+            clips[i].stop();
+            clips[i].setFramePosition(0);
         }
     }
 }

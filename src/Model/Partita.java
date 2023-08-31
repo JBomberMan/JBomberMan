@@ -143,7 +143,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
 
         //pulisce il tile manager e il bomb manager
         tileM.pulisci();
-        //am.stop();
+
     }
 
     /**
@@ -182,6 +182,8 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
         double drawInterval = 1000000000 / 60.0; //intervallo di tempo tra un frame e l'altro
                                                 //in nanosecondi
         double nextDrawTime = System.nanoTime() + drawInterval; //tempo in nanosecondi del prossimo frame
+        AudioManager.getInstance().play(2);
+
 
         while(gameThread != null){
 
@@ -190,6 +192,7 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
 
             //2: disegna il frame
             repaint();
+
 
             //3: aspetta il tempo necessario per il prossimo frame
             double remainingTime = nextDrawTime - System.nanoTime();
@@ -209,7 +212,10 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
             }
 
 
+
+
         }
+
     }
 
 
@@ -240,9 +246,18 @@ public class Partita extends JPanel implements Runnable{ //equivale a GamePanel 
      */ 
     public static void stopGameThread(){
 
-        gameThread.stop();
+
+
+            gameThread.stop();
+
+
+
 
          //ferma il thread
     }
+
+
+
+
 
 }

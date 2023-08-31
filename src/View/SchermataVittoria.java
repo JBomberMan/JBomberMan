@@ -20,6 +20,7 @@ public class SchermataVittoria extends JFrame {
     private Image bgImage;
 
 
+
     /***
      * Costruttore della schermata
      * @param persona serve al costruttore per capire se il ivello giocato e' uno principale o uno custom e i base al livello ha un comportamento diverso
@@ -57,7 +58,8 @@ public class SchermataVittoria extends JFrame {
 
         }
 
-        AudioManager.getInstance().play("src/Music/StageClear.wav");
+
+       AudioManager.getInstance().play(1);
 
         setContentPane(panel);
         setVisible(true);
@@ -67,13 +69,15 @@ public class SchermataVittoria extends JFrame {
 
             public void actionPerformed(ActionEvent e) {
 
-                //AudioManager.getInstance().stop();
+
                 TileManager.resetLivello();
                 SwingUtilities.getWindowAncestor(Partita.getIstanza()).dispose();
                 dispose();
                 Partita.getIstanza().riavvia();
                 TileManager.setLivello(1);
                 ProfiloUtente.getProfilo().setVisible(true);
+                AudioManager.getInstance().stop(1);
+                AudioManager.getInstance().play(7);
 
             }
         });
@@ -86,7 +90,7 @@ public class SchermataVittoria extends JFrame {
                 Partita.getIstanza().riavvia();
                 Partita.getIstanza().startGameThread();
                 dispose();
-
+                AudioManager.getInstance().stop(1);
 
 
             }
@@ -148,7 +152,7 @@ public class SchermataVittoria extends JFrame {
 
         }
 
-        //AudioManager.getInstance().stop();
+        AudioManager.getInstance().stop(1);
         setContentPane(panel);
         setVisible(true);
 
@@ -162,7 +166,8 @@ public class SchermataVittoria extends JFrame {
                 Partita.getIstanza().riavvia();
                 TileManager.setLivello(1);
                 ProfiloUtente.getProfilo().setVisible(true);
-                //AudioManager.getInstance().stop();
+                AudioManager.getInstance().stop(1);
+                AudioManager.getInstance().play(7);
             }
         });
 
@@ -175,13 +180,14 @@ public class SchermataVittoria extends JFrame {
                 Partita.getIstanza().riavvia();
                 Partita.getIstanza().startGameThread();
                 dispose();
-                //AudioManager.getInstance().stop();
+                AudioManager.getInstance().stop(1);
 
 
 
             }
         });
-        AudioManager.getInstance().play("src/Music/StageClear.wav");
+
+        AudioManager.getInstance().play(1);
     }
 
     public void paint(Graphics g){

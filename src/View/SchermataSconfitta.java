@@ -19,6 +19,7 @@ public class SchermataSconfitta extends JFrame{
     private static SchermataSconfitta istanza;
     private Image bgImage;
 
+
     /***
      * Il costruttore della schermata
      */
@@ -48,13 +49,13 @@ public class SchermataSconfitta extends JFrame{
         panel.add(riprova, c);
         setContentPane(panel);
 
-        AudioManager.getInstance().play("src/Music/Bomberman-Just-Died-OST.wav");
+        AudioManager.getInstance().play(0);
 
         tornaALMenu.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
 
-                AudioManager.getInstance().stop();
+
                 TileManager.resetLivello();
                 Storico.addSconfitta();
                 Bomberman.resetVite();
@@ -63,6 +64,7 @@ public class SchermataSconfitta extends JFrame{
                 Bomberman.setDead(false);
                 istanza.dispose();
                 ProfiloUtente.getProfilo().setVisible(true);
+                AudioManager.getInstance().play(7);
             }
         });
 
@@ -71,8 +73,8 @@ public class SchermataSconfitta extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 if(Bomberman.gettoni > 0){
 
-                    AudioManager.getInstance().stop();
-                    AudioManager.getInstance().play("src/Music/bomberman_battle.wav");
+
+
                     Bomberman.gettoni--;
                     Bomberman.setDead(false);
                     Partita.getIstanza().riavvia();
@@ -91,7 +93,7 @@ public class SchermataSconfitta extends JFrame{
      * @return l'istanza corrente della schermata
      */
     public static SchermataSconfitta getIstanza(){
-        AudioManager.getInstance().stop();
+
 
         istanza = new SchermataSconfitta();
         return istanza;

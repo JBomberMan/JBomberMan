@@ -55,7 +55,7 @@ public class BombManager {
         bombeAttive = 0;
         numeroBombe = 3;
         raggioBombe = 1;
-        System.out.println(getBombeAttive());
+
     }
 
     /**
@@ -103,7 +103,7 @@ public class BombManager {
             bombe.add(new Bomba(tileOrizzontale* play.tileSize,tileVerticale* play.tileSize,null, this.play, raggioBombe));
             bombeAttive++;
         }
-        AudioManager.getInstance().play("src/Music/placeBombNuovo.wav");
+        AudioManager.getInstance().play(3);
     }
 
     /**
@@ -143,7 +143,7 @@ public class BombManager {
      */
     public static void addEsplosione(Esplosione esplosione){
         esplosioni.add(esplosione);
-        AudioManager.getInstance().play("src/Music/bombExplosion.wav");
+        AudioManager.getInstance().play(4);
     }
 
     /**

@@ -33,6 +33,6 @@ public class EMouseHandler extends MouseAdapter {
      */
     public static void setEntity(int number){
         selectedEntity = number;
-        System.out.println("Entity selected: " + selectedEntity);
+
     }
 }

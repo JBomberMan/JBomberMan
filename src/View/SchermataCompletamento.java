@@ -46,7 +46,7 @@ public class SchermataCompletamento extends JFrame {
 
 
 
-
+        AudioManager.getInstance().play(6);
         setContentPane(panel);
         setVisible(true);
 
@@ -61,6 +61,8 @@ public class SchermataCompletamento extends JFrame {
                 dispose();
                 Partita.getIstanza().pulisci();
                 TileManager.setLivello(1);
+                AudioManager.getInstance().play(6);
+                AudioManager.getInstance().play(7);
                 ProfiloUtente.getProfilo().setVisible(true);
             }
         });

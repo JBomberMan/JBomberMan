@@ -27,10 +27,10 @@ public class MouseHandler extends MouseAdapter{
      */
     public void mouseClicked(MouseEvent e){
         if (e.getButton() == MouseEvent.BUTTON1){
-            System.out.println(e.getX() + " " + e.getY());
+
             int mousex = e.getX()/64;
             int mousey = e.getY()/64;
-            System.out.println("casella " + mousex + " " + mousey);
+
 
             ArrayList<ArrayList<Integer>> map = new ArrayList<>();
             for (int i = 0; i < 13; i++) {
@@ -41,9 +41,9 @@ public class MouseHandler extends MouseAdapter{
                 map.add(row);
             }
             for(ArrayList<Integer> row : map){
-                System.out.println(row);
+
             }
-            System.out.println("--------------------");
+
 
             ArrayList<StationaryEntity> tiles = TileManager.getStationaryEntities();
             for(StationaryEntity tile : tiles){
@@ -54,24 +54,22 @@ public class MouseHandler extends MouseAdapter{
 
             }
             for(ArrayList<Integer> row : map){
-                System.out.println(row);
+
             }
             int bomberx = (Bomberman.getX() + 32)/64;
             int bombery = (Bomberman.getY() +32)/64;
             map.get(bombery).set(bomberx, 2);
-            System.out.println("--------------------");
-            System.out.println("bomberman " + bomberx + " " + bombery);
-            System.out.println("cliccato " + mousex + " " + mousey);
+
             ArrayList<Coordinate> path = findShortestPath(bomberx, bombery, mousex, mousey, map);
 
             for (Coordinate coordinate : path) {
-                System.out.println("Casella: " + coordinate.x + " " + coordinate.y);
+
             }
             Bomberman.switchMovimentoMouse(path);
 
         }
-        else if (e.getButton() == MouseEvent.BUTTON2)
-            System.out.println("Mouse Middle Clicked");
+
+
         else if (e.getButton() == MouseEvent.BUTTON3)
             play.bombM.piazzaBomba();
 
@@ -95,12 +93,12 @@ public class MouseHandler extends MouseAdapter{
         Map<Coordinate, Coordinate> parentMap = new HashMap<>();
 
         if (bomberx < 0 || bomberx >= map.get(0).size() || bombery < 0 || bombery >= map.size() || map.get(bombery).get(bomberx) == 1) {
-            System.out.println("Coordinate del giocatore non valide o posizione bloccata.");
+
             return new ArrayList<>();
         }
 
         if (mousex < 0 || mousex >= map.get(0).size() || mousey < 0 || mousey >= map.size() || map.get(mousey).get(mousex) == 1) {
-            System.out.println("Coordinate della casella premuta non valide o posizione bloccata.");
+
             return new ArrayList<>();
         }
 
@@ -143,7 +141,7 @@ public class MouseHandler extends MouseAdapter{
 
             if (current == null) {
                 // Gestisci il caso in cui non esista un percorso
-                System.out.println("Percorso non trovato.");
+
                 return new ArrayList<>();
             }
         }

@@ -196,12 +196,12 @@ public class Doll  extends MovingEntity implements Collidable{
         if(this.invTimer == 0){
             this.vite--;
             this.invTimer = 50;
-            System.out.println("Vite rimaste Nemico: " + this.vite);
+
 
             if (this.vite <= 0){
                 dead = true;
                 //play.bombM.piazzaBomba();
-                System.out.println("Nemico Sconfitto!");
+
             }
         }
     }
