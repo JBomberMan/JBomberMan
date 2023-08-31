@@ -65,7 +65,7 @@ public class AudioManager {
      * @param i indice del file da riprodurre
      */
     public void play(int i) {
-        //stop(); // Ferma la riproduzione corrente (se presente)
+        if(clips[i].isRunning()) clips[i].stop(); // Ferma la riproduzione corrente (se presente)
         clips[i].setFramePosition(0); // Riavvolge il file audio
 
         clips[i].start();
